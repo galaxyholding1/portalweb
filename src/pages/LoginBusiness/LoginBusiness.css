@@ -168,7 +168,7 @@
     font-size: 0.8em;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    
 }
 
 .footer-links {
@@ -188,7 +188,6 @@
 .shortcut-links {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 15px;
     margin-bottom: 15px;
 }
@@ -196,7 +195,6 @@
 .shortcut-item {
     display: flex;
     flex-direction: column;
-    align-items: center;
     text-decoration: none;
     color: #333;
     font-size: 0.85em;
@@ -212,7 +210,6 @@
 .legal-links {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 10px;
     margin-bottom: 10px;
 }

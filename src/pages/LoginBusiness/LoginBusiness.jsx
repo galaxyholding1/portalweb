@@ -417,7 +417,7 @@ export const LoginBusiness = () => {
                     <a href="#" className="legal-link">Política de Privacidad</a>
                     <a href="#" className="legal-link">Preguntas Frecuentes</a>
                     <a href="#" className="legal-link">Ayuda</a>
-                    <p className="copyright">Copyright 202021 galaxyapp. Todos los derechos reservados.</p>
+                    <a className="copyright">Copyright 202021 galaxyapp. Todos los derechos reservados.</a>
                 </div>
             </footer>
         </div>
