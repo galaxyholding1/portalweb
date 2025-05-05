@@ -380,9 +380,7 @@ export const LoginBusiness = () => {
                                 className="external-link"
                                 onClick={() =>
                                     window.open(
-                                        '/bcbancos/control/BoleExternal.bancolombia?processname=RemindMyPassword',
-                                        'SucursalVirtualEmpresas',
-                                        'width=850,height=600,scrollbars=yes,resizable=yes'
+                                        
                                     )
                                 }
                             >
@@ -394,9 +392,7 @@ export const LoginBusiness = () => {
                                 className="external-link"
                                 onClick={() =>
                                     window.open(
-                                        'https://portal.todo1.com/documents/12987/3744692/NoPuedeConectarse.html/95e90be0-a385-4e5d-8fe6-bbf151a395cf',
-                                        'SucursalVirtualEmpresas',
-                                        'width=565,height=540,scrollbars=yes,resizable=yes'
+                                       
                                     )
                                 }
                             >
