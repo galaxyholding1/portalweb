@@ -67,7 +67,6 @@
 
 .password-group {
     display: flex;
-    align-items: center;
     gap: 10px;
 }
 
@@ -198,7 +197,6 @@
     text-decoration: none;
     color: #333;
     font-size: 0.85em;
-    text-align: center;
 }
 
 .shortcut-item img {
@@ -260,13 +258,11 @@
     .footer-links a {
         display: block;
         margin: 5px 0;
-        text-align: center;
     }
 
     .legal-links a {
         display: block;
         margin: 5px 0;
-        text-align: center;
     }
 
     .password-group {
