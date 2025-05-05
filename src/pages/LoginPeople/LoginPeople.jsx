@@ -3,6 +3,7 @@ import { PasswordInput } from '../../components/Input/PasswordInput'
 
 import './LoginPeople.css'
 import { Link } from 'react-router'
+import AdSlider from '../../components/AdSlider'
 
 const initialFormState = {
   email: "",
@@ -58,6 +59,8 @@ export const LoginPeople = () => {
         </nav>
 
       </main>
+
+      <AdSlider/>
 
     </div>
   )
