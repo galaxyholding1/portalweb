@@ -40,6 +40,11 @@ export const LoginPeople = () => {
           />
           <br />
           <button type="submit">Iniciar sesión</button>
+
+          <nav className="login-links">
+            <Link>¿Olvidaste tu usuario?</Link><br />
+            <Link>¿Problemas para conectarte?</Link>
+          </nav>
         </form>
         
         <div className='banner'>
