@@ -22,7 +22,7 @@ const AdSlider: React.FC<AdSliderProps> = ({ speed = 8000 }) => {
         transition={{
           repeat: Infinity,
           ease: "linear",
-          duration: speed / 1000, // velocidad en segundos
+          duration: speed / 100, // velocidad en segundos
         }}
       >
         {/* Repetimos las imágenes para efecto continuo */}
