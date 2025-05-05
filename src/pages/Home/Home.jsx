@@ -33,8 +33,34 @@ export const Home = () => {
             </tr>
           </tbody>
         </table>
-  
+
+        {/* Hero principal */}
+        <table width="100%" cellPadding="20" border="1">
+          <tbody>
+            <tr>
+              <td width="50%" valign="top">
+                <p><strong>Galaxy App</strong></p>
+                <h2>Descarga la nueva app Galaxy App</h2>
+                <p>Desde la tienda de aplicaciones de tu celular e inscribe tu Clave Dinámica</p>
+                <button>Descárgala ya</button>
+              </td>
+              <td width="50%" valign="top" align="center">
+                [Se importa la imagen que necesitemos]
+                <br /><br />
+                <table border="1" width="90%">
+                  <tbody>
+                    <tr>
+                      <td align= "center">Descarga la nueva app Galaxy App. Conoce cómo</td>
+                      <td align="center">Elige "Tus llaves" en la app Mi Bancolombia.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>     
         
+          
       </div>
     );
   };
