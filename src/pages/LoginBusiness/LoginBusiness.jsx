@@ -310,16 +310,7 @@ export const LoginBusiness = () => {
                         action="AuthenticationTxGalaxyapp.login"
                         method="POST"
                     >
-                        <input type="hidden" name="processInstanceId" value="96A12CE28A15823777A3225950494E" />
-                        <input type="hidden" name="activityInstanceId" value="96A12CE28E74725A95A3225941494E" />
-                        <input type="hidden" name="USERTYPE" value="BUSINESS" />
-                        <input type="hidden" name="WFMODELNAME" value="BOLE" />
-                        <input type="hidden" name="TCOMPID_VK" value="" />
-                        <input type="hidden" name="TCLIID_VK" value="" />
-                        <input type="hidden" name="TKEY_VK" value="" />
-                        <input type="hidden" name="BOLEURL" value="" />
-                        <input type="hidden" name="deviceprint" value="" />
-                        <input type="hidden" name="OS_TYPE" value="WINDOWS" />
+                       
                         <div className="input-group">
                             <label htmlFor="COMPANYID">Por favor digite el NIT de la empresa:</label>
                             <input
