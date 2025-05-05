@@ -1,5 +1,5 @@
 import React from 'react'
-import { AdSlider } from './components/AdSlider';
+import AdSlider from '../../components/AdSlider';
 
 export const Home = () => {
   return (
@@ -37,15 +37,13 @@ export const Home = () => {
 
          {/* deslizador */}
         <table width="100%" cellPadding="20" border="1"></table> 
-                const App = () => {AdSlider
-          return (
+         
             <div className="p-4">
               <h1 className="text-xl mb-4">Deslizable de Publicidad</h1>
               <AdSlider speed={10000} /> {/* Velocidad: 10 segundos */}
               <marquee scrollamount="5">...</marquee>
             </div>
-          );
-        };
+          
 
         
 

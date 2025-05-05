@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './LoginBusiness.css';
+import AdSlider from '../../components/AdSlider';
 
 const VirtualKeyboard = ({ onKeyPress, targetInputRef }) => {
     const keyboardLayout = [
@@ -76,8 +77,6 @@ const VirtualKeyboard = ({ onKeyPress, targetInputRef }) => {
                                                                             fontWeight: 'bold',
                                                                             color: '#616161',
                                                                         }}
-                                                                        onMouseOver={() => console.log('cambiar a teclado estrella')}
-                                                                        onMouseOut={() => console.log('cambiar a teclado original')}
                                                                         onClick={() => handleKeyClick(key)}
                                                                     >
                                                                         <div
@@ -221,8 +220,6 @@ const NumericKeyboard = ({ onKeyPress, targetInputRef }) => {
                                                                             fontWeight: 'bold',
                                                                             color: '#616161',
                                                                         }}
-                                                                        onMouseOver={() => console.log('cambiar a teclado estrella')}
-                                                                        onMouseOut={() => console.log('cambiar a teclado original')}
                                                                         onClick={() => handleNumberClick(key)}
                                                                     >
                                                                         <div
@@ -354,7 +351,6 @@ export const LoginBusiness = () => {
                                 onKeyUp={() => console.log('Clave modificada')}
                                 onKeyDown={(e) => e.preventDefault()}
                                 onContextMenu={(e) => e.preventDefault()}
-                                onSelectStart={(e) => e.preventDefault()}
                                 style={{ background: 'white', border: 'thin solid rgb(204, 204, 204)' }}
                                 ref={passwordInputRef}
                                 value={password}
@@ -408,11 +404,15 @@ export const LoginBusiness = () => {
                     <a href="#" className="footer-link">Formato de Novedades</a>
                 </div>
                 <div className="shortcut-links">
-                    <a href="#" className="shortcut-item"><img src="https://sucursalempresas.transaccionesbancolombia.com/bancolombia/contenido/login_BOLE_BC_Zona_B_1.jpg" alt="Aprende SVE" /></a>
-                    <a href="#" className="shortcut-item"><img src="https://sucursalempresas.transaccionesbancolombia.com/bancolombia/contenido/login_BOLE_BC_Zona_B_2.jpg" alt="Aprende Seguridad" /></a>
-                    <a href="#" className="shortcut-item"><img src="https://sucursalempresas.transaccionesbancolombia.com/bancolombia/contenido/login_BOLE_BC_Zona_B_3.jpg" alt="Conversor PAB" /></a>
-                    <a href="#" className="shortcut-item"><img src="https://sucursalempresas.transaccionesbancolombia.com/bancolombia/contenido/login_BOLE_BC_Zona_B_2_1.jpg" alt="Conversor SAP" /> </a>
-                </div>
+
+                      {/* deslizador */}
+         
+            <div className="p-4" >
+              <AdSlider speed={10000} /> {/* Velocidad: 10 segundos */}
+              
+            </div>
+            
+              </div>
                 <div className="legal-links">
                     <a href="#" className="legal-link">Política de Privacidad</a>
                     <a href="#" className="legal-link">Preguntas Frecuentes</a>
