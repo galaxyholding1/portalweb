@@ -437,10 +437,11 @@ export const LoginBusiness = () => {
                 <button
                   type="Button"
                   name="Submit"
-                  value={"Aceptar"}
                   className="login-button"
                   onClick={handleAccept}
-                />
+                >
+                  Aceptar
+                </button>
               </div>
             </div>
 
