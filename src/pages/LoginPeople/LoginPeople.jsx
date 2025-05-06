@@ -1,57 +1,52 @@
-import { useForm } from '../../hooks/useForm'
-import { PasswordInput } from '../../components/Input/PasswordInput'
+import { Link } from "react-router";
 
-import './LoginPeople.css'
-import { Link } from 'react-router'
-import AdSlider from '../../components/AdSlider'
+import "./LoginPeople.css";
+
+import { useForm } from "../../hooks/useForm";
+import { PasswordInput } from "../../components/Input/PasswordInput";
+import { CustomInput } from "../../components/Input/CustomInput";
+import AdSlider from "../../components/AdSlider";
 
 const initialFormState = {
   email: "",
   password: "",
-}
+};
 
 export const LoginPeople = () => {
-  const { formValues, handleInputChange } = useForm(initialFormState)
+  const { formValues, handleInputChange } = useForm(initialFormState);
 
   const handleLogin = (e) => {
-    e.preventDefault()
-    console.log(formValues)
-  }
+    e.preventDefault();
+    console.log(formValues);
+  };
 
   return (
-    <div style={{padding: '1rem'}}>
-      <h1>Login Personas</h1>
+    <div className="login-screen">
 
-      <main>
+      <h1>Login Personas</h1>
+      <main className="login-container">
         <form onSubmit={handleLogin}>
-          <div>
-            <label>Correo electrónico</label>
-            <input 
-              type="email" 
-              name="email" 
-              value={formValues.email} 
-              onChange={handleInputChange} 
-            />
-          </div>
-          <br />
+
+          <CustomInput
+            handleInputChange={handleInputChange}
+            value={formValues.password}
+            name="email"
+          />
+
           <PasswordInput
-            handleInputChange={ handleInputChange }
-            value={ formValues.password }
+            handleInputChange={handleInputChange}
+            value={formValues.password}
             name="password"
           />
-          <br />
+
           <button type="submit">Iniciar sesión</button>
 
           <nav className="login-links">
-            <Link>¿Olvidaste tu usuario?</Link><br />
+            <Link>¿Olvidaste tu usuario?</Link>
+            <br />
             <Link>¿Problemas para conectarte?</Link>
           </nav>
         </form>
-        
-        <div className='banner'>
-          {/* Banner Visual */}
-          <img src="https://picsum.photos/500/400" alt="Banner Visual" />
-        </div>
 
         <nav>
           <Link to='/'> Ve al inicio </Link> <br />
@@ -59,10 +54,22 @@ export const LoginPeople = () => {
           <Link to='/home-empresas'> Ve al home de empresas </Link>
         </nav>
 
+        <div className="banner">
+          {/* Banner Visual */}
+          <img
+            src="https://fastly.picsum.photos/id/824/800/350.jpg?hmac=dHvkUD6menX6hf15MeTzYI5OaoC5svQduSTRSypV_Bk"
+            alt="Banner Visual"
+          />
+          <p>
+            ¿No conoces la Sucursal Virtual Personas de Galaxy? conoce más{" "}
+            <Link>aquí</Link>
+          </p>
+          <span className="dev-text">BANNER PROVISIONAL</span>
+        </div>
       </main>
-
-      <AdSlider/>
-
+      <aside className="ad-container">
+        <AdSlider />
+      </aside>
     </div>
-  )
-}
+  );
+};
