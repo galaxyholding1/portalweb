@@ -354,18 +354,7 @@ export const LoginBusiness = () => {
 
   return (
     <div className="login-business-container">
-      <header className="header">
-        <img
-          name="logo_sve"
-          src="../src/assets/images/logo-galaxy.png"
-          width="207"
-          height="49"
-          border="0"
-          id="logo_sve"
-          alt=""
-          align="left"
-        />
-      </header>
+      <header className="header"></header>
       <main className="main-content">
         <section className="login-section">
           <h2 className="login-title">Inicio - Sucursal Virtual Empresas</h2>
