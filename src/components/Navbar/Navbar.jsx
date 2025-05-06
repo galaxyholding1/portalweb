@@ -43,7 +43,7 @@ export const Navbar = () => {
         ))}
       </nav>
       <nav className="navbar-galaxy">
-        <img src="/logo-navbar.png" alt="logo" />
+        <img src="/logo-navbar.svg" alt="logo" />
 
         <ul>
           {navItems.map(({ name, path }) => (
