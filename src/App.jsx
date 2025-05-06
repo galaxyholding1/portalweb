@@ -1,12 +1,14 @@
-import './App.css'
+import { Navbar } from "./components/Navbar/Navbar";
+import "./App.css";
+import { Router } from "./routes/Router";
 
 function App() {
-
   return (
     <>
-      <p>Init View</p>
+      <Navbar/>
+      <Router/>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
