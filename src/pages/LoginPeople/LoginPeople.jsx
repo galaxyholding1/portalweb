@@ -21,10 +21,10 @@ export const LoginPeople = () => {
   };
 
   return (
-    <div class="login-screen">
+    <div className="login-screen">
 
       <h1>Login Personas</h1>
-      <main class="login-container">
+      <main className="login-container">
         <form onSubmit={handleLogin}>
 
           <CustomInput
@@ -66,7 +66,7 @@ export const LoginPeople = () => {
           <span className="dev-text">BANNER PROVISIONAL</span>
         </div>
       </main>
-      <aside class="ad-container">
+      <aside className="ad-container">
         <AdSlider />
       </aside>
     </div>

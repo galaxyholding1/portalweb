@@ -1,4 +1,4 @@
-import './Input.css'
+import './CustomInput.css'
 
 export const CustomInput = ({ value, handleInputChange, name, type = 'text' }) => (
   <div className="input-container">
