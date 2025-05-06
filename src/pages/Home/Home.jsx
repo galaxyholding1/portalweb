@@ -1,208 +1,146 @@
 import React from "react";
 import AdSlider from "../../components/AdSlider";
+import '../../pages/Home/Home.css'
+import miImagen from'../../assets/images/SVG/LOGO-GALAXY-PAY_hor-01.svg'
+import facebook from'../../assets/images/SVG/2023_Facebook_icon.svg.png'
+
 
 export const Home = () => {
   return (
-    <div style={{ fontFamily: "Arial, sans-serif" }}>
-      {/* Barra superior */}
-      <table
-        width="100%"
-        cellPadding="10"
-        style={{ backgroundColor: "#D29BFD" }}
-      >
-        <tbody>
-          <tr>
-            <td align="left">
-              Personas | Negocios | Corporativos | Negocios especializados |
-              Tu360 | Blog
-            </td>
-            <td align="right">Transparencia | Consumidor</td>
-          </tr>
-        </tbody>
-      </table>
+    <div className="allpage">
 
-      {/* Header principal */}
-      <table width="100%" cellPadding="15">
-        <tbody>
-          <tr>
-            <td>
-              <strong>Galaxy Pay</strong>
-            </td>
-            <td align="center">
-              Inicio | Necesidades | Productos y Servicios | Educación
-              Financiera |{" "}
-              <button>
-                <strong>Trámites digitales</strong>
-              </button>
-            </td>
-            <td align="right">
-              Sucursal Virtual Personas |{" "}
-              <button>
-                <strong>Entrar</strong>
-              </button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-
-      {/* deslizador */}
-
-      <div className="p-4">
-        <h1 className="text-xl mb-4">Deslizable de Publicidad</h1>
-        <AdSlider speed={10000} /> {/* Velocidad: 10 segundos */}
-        <marquee scrollamount="5">...</marquee>
-      </div>
-
-      {/* Hero principal */}
-      <table width="100%" cellPadding="20" border="1">
-        <tbody>
-          <tr>
-            <td width="50%" valign="top">
-              <p>
-                <strong>Galaxy App</strong>
-              </p>
-              <h2>Descarga la nueva app Galaxy App</h2>
-              <p>
-                Desde la tienda de aplicaciones de tu celular e inscribe tu
-                Clave Dinámica
-              </p>
-              <button>Descárgala ya</button>
-            </td>
-            <td width="50%" valign="top" align="center">
-              [Se importa la imagen que necesitemos]
-              <br />
-              <br />
-              <table border="1" width="90%">
-                <tbody>
-                  <tr>
-                    <td align="center">
-                      Descarga la nueva app Galaxy App. Conoce cómo
-                    </td>
-                    <td align="center">
-                      Elige "Tus llaves" en la app Mi Bancolombia.
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-
-      {/* Accesos rápidos */}
-      <table width="100%" cellPadding="15" border="1">
-        <tbody>
-          <tr align="center">
-            <td>Trámites digitales</td>
-            <td>Negociar deuda</td>
-            <td>Pagos</td>
-            <td>Centro de Ayuda</td>
-            <td>Certificados bancarios</td>
-            <td>Solicita tu turno</td>
-          </tr>
-        </tbody>
-      </table>
-
-      {/* Recomendaciones */}
-      <h3>Pensando en ti te recomendamos</h3>
-      <table width="100%" cellPadding="10" border="1">
-        <tbody>
-          <tr>
-            <td width="33%" valign="top">
-              <p>Tu360Inmobiliario</p>
-              <strong>Las visitas sorpresa no siempre son de tus amigos</strong>
-              <p>
-                Protege tu casa y familia con Prosegur Alarms. Gratis
-                instalación si pagas con tarjetas de crédito. *Aplican TyC ​
-              </p>
-              <button>Cotizar Kit</button>
-            </td>
-            <td width="33%" valign="top">
-              <p>Galaxy App</p>
-              <strong>¿Te cortaron la luz?</strong>
-              <p>
-                Que no te pase más. Activa el pago automático de tus facturas
-                desde la Galaxy App.
-              </p>
-              <button>Descubre cómo</button>
-            </td>
-            <td width="33%" valign="top">
-              <p>Pagos inmediatos</p>
-              <strong>1, 2, 3 tu plata llega de inmediato a donde estés</strong>
-              <p>
-                Los Pagos Inmediatos facilitan tus transacciones diarias, como
-                pagar a comercios o enviar dinero a amigos y familiares.
-              </p>
-              <button>Conoce más aquí</button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-
-      
-        {/* Preguntas frecuentes */}
-        <div className="grid md:grid-cols-2 gap-6">
-          {/* Tarjeta izquierda */}
-          <div className="bg-orange-400 text-white p-6 rounded-md">
-            <h4 className="text-sm">Háblale ahora</h4>
-            <h2 className="text-2xl font-bold mb-4">
-              Resuelve tus dudas preguntándole a Tabot.
-            </h2>
-            <button className="bg-white text-orange-500 px-4 py-2 rounded font-semibold">
-              Conoce más
-            </button>
-          </div>
-
-          {/* Preguntas más consultadas */}
-          <div>
-            <h3>Lo más consultado</h3>
-            <ul>
-              <li>¿Qué certificados puedo solicitar por la página web?</li>
-              <li>¿Cómo pido un Extracto Bancario?</li>
-              <li>¿Cómo consulto mi certificado tributario?</li>
-              <li>¿Cuáles son los canales para descargar los extractos?</li>
-            </ul>
-            <a href="#" className="text-blue-600 text-sm mt-4 inline-block">
-              Ver todas las preguntas frecuentes
-            </a>
-          </div>
+      {/* Barra superior */}      
+      <div className="banner-superior">
+        <div className="izquierda">
+            <a href="#">Personas</a>
+            <a href="#">Negocios</a>
+            <a href="#">Corporativo</a>
+            <a href="#">Negocios Especializados</a>
+            <img src={facebook} alt="Logo facebook" style={{width: '', height: '100px'}}/>
+            </div>        
         </div>
 
-        {/* Créditos */}
-        <h3>Conoce más de nuestros productos</h3>
-        <table width="100%" cellPadding="10" border="1">
-          <tbody>
-            <tr>
-              <td width="45%" valign="top">
-                <p>Créditos</p>
-                <strong>Financia lo que sueñas, quieres y necesitas.</strong>
-                <p>
-                  Es el momento de lograr tus sueños. Opciones ideales para esos
-                  proyectos o ideas que necesitan apoyo financiero.
-                </p>
-                <button>Saber más</button>
-              </td>
-              <td width="33%" valign="top">
-                <p>Tarjetas de crédito</p>
-                <strong>Paga, compra y gana puntos usando tus tarjetas</strong>
-                <p>Usando nuestras tarjetas de crédito tu también ganas</p>
-                <button>Saber más</button>
-              </td>
-              <td width="33%" valign="top">
-                <p>Seguros</p>
-                <strong>
-                  Tu seguridad es la de todos, con nuestros seguros
-                </strong>
-                <p>Pensamos es ti y en la seguridad de tu familia</p>
-                <button>Saber más</button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <a href="#" className="text-blue-600 text-sm mt-4 inline-block">
-          Ver todos los productos
-        </a>
+   {/* Header principal */}
+   <div className="header-principal">
+    <img src={miImagen} alt="Logo principal" style={{width: '200px'}}/>
+
+        <div className="centro">
+          <a href="#">Inicio</a>
+          <a href="#">Necesidades</a>
+          <a href="#">Productos y Servicios</a>
+          <a href="#">Educación Financiera</a>
+        </div>
+        <div className="derecha">
+          <button className="negocios-especializados">Negocios especializados</button>
+          <button className="entrar">Entrar</button>
+        </div>
       </div>
-    
+
+      {/* Deslizador */}
+      <section className="p-4">
+        <h1 className="text-xl mb-4">Deslizable de Publicidad</h1>
+        <AdSlider speed={10000} />
+        <marquee scrollamount="5">Contenido en movimiento o aviso...</marquee>
+      </section>
+
+      <div className="home-container">
+      {/* Hero principal */}
+      <section className="hero-principal">
+        <div className="hero-texto">
+          <h2>Descarga la nueva app Galaxy App</h2>
+          <p>Desde la tienda de aplicaciones de tu celular e inscribe tu Clave Dinámica</p>
+          <button className="btn-descargar">Descárgala ya</button>
+        </div>
+        <div className="hero-imagen">
+          <div className="info-box">
+            <p>Descarga la nueva app Galaxy App. Conoce cómo</p>
+            <p>Elige "Tus llaves" en la app Mi Bancolombia.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Accesos rápidos */}
+      <section className="accesos-rapidos">
+        <div>Trámites digitales</div>
+        <div>Negociar deuda</div>
+        <div>Pagos</div>
+        <div>Centro de Ayuda</div>
+        <div>Certificados bancarios</div>
+        <div>Solicita tu turno</div>
+      </section>
+
+      {/* Recomendaciones */}
+      <section className="recomendaciones">
+        <h3>Pensando en ti te recomendamos</h3>
+        <div className="tarjetas-recomendadas">
+          <div className="tarjeta">
+            <h4>Las visitas sorpresa no siempre son de tus amigos</h4>
+            <p>
+              Protege tu casa y familia con Prosegur Alarms. Gratis instalación con tarjetas de crédito.
+              *Aplican TyC
+            </p>
+            <button className="btn-negro">Cotizar Kit</button>
+          </div>
+          <div className="tarjeta">
+            <h4>¿Te cortaron la luz?</h4>
+            <p>Activa el pago automático de tus facturas desde la Galaxy App.</p>
+            <button className="btn-negro">Descubre cómo</button>
+          </div>
+          <div className="tarjeta">
+            <h4>1, 2, 3 tu plata llega de inmediato</h4>
+            <p>
+              Pagos Inmediatos facilitan transacciones diarias, envíos y pagos a comercios.
+            </p>
+            <button className="btn-negro">Conoce más</button>
+          </div>
+        </div>
+      </section>
+
+      {/* Preguntas frecuentes */}
+      <section className="faq">
+        <div className="faq-contacto">
+          <h4>Háblale ahora</h4>
+          <h2>Resuelve tus dudas con Tabot</h2>
+          <button className="btn-claro">Conoce más</button>
+        </div>
+        <div className="faq-lista">
+          <h3>Lo más consultado</h3>
+          <ul>
+            <li>¿Qué certificados puedo solicitar por la página web?</li>
+            <li>¿Cómo pido un Extracto Bancario?</li>
+            <li>¿Cómo consulto mi certificado tributario?</li>
+            <li>¿Dónde descargo los extractos?</li>
+          </ul>
+          <a href="#">Ver todas las preguntas frecuentes</a>
+        </div>
+      </section>
+
+      {/* Productos */}
+      <section className="productos">
+        <h3>Conoce más de nuestros productos</h3>
+        <div className="productos-grid">
+          <div className="producto">
+            <h4>Créditos</h4>
+            <p>Financia lo que sueñas, quieres y necesitas.</p>
+            <p>Oportunidades para tus proyectos o ideas que necesitan apoyo financiero.</p>
+            <button className="btn-azul">Saber más</button>
+          </div>
+          <div className="producto">
+            <h4>Tarjetas de crédito</h4>
+            <p>Paga, compra y gana puntos usando tus tarjetas.</p>
+            <p>Con nuestras tarjetas de crédito también ganas.</p>
+            <button className="btn-azul">Saber más</button>
+          </div>
+          <div className="producto">
+            <h4>Seguros</h4>
+            <p>Tu seguridad es la de todos, con nuestros seguros.</p>
+            <p>Protegemos a tu familia y a ti.</p>
+            <button className="btn-azul">Saber más</button>
+          </div>
+        </div>
+        <a href="#">Ver todos los productos</a>
+      </section>
+    </div>
+    </div>
   );
 };
