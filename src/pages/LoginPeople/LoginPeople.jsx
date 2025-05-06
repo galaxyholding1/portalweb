@@ -56,6 +56,7 @@ export const LoginPeople = () => {
         <nav>
           <Link to='/'> Ve al inicio </Link> <br />
           <Link to='/login-empresas'> Ve al login de empresas </Link>
+          <Link to='/home-empresas'> Ve al home de empresas </Link>
         </nav>
 
       </main>
