@@ -293,7 +293,46 @@ const NumericKeyboard = ({ onKeyPress, targetInputRef }) => {
 
 export const LoginBusiness = () => {
   const [password, setPassword] = useState("");
+
   const passwordInputRef = useRef(null);
+  const nitInputRef = useRef(null);
+  const userIdInputRef = useRef(null);
+
+  const handleAccept = (e) => {
+    e.preventDefault(); // Prevenir envío del formulario por defecto
+
+    const nit = nitInputRef.current?.value?.trim();
+    const userId = userIdInputRef.current?.value?.trim();
+    const pwd = password.trim();
+
+    if (!nit || !userId || !pwd) {
+      alert("Todos los campos son obligatorios.");
+      return;
+    }
+
+    if (!/^[a-zA-Z0-9]{5,15}$/.test(nit)) {
+      alert(
+        "El NIT debe contener solo letras y/o números y tener entre 5 y 15 caracteres."
+      );
+      return;
+    }
+
+    if (!/^\d{5,15}$/.test(userId)) {
+      alert(
+        "La identificación debe contener solo números y tener entre 5 y 15 dígitos."
+      );
+      return;
+    }
+
+    if (pwd.length < 4 || pwd.length > 8) {
+      alert("La clave debe tener entre 4 y 8 caracteres.");
+      return;
+    }
+
+    // Si todo está bien, puedes enviar el formulario o continuar el proceso
+    console.log("Formulario válido");
+    alert("Formulario válido");
+  };
 
   const handleVirtualKeyboardKeyPress = (key) => {
     if (key === "Backspace") {
@@ -348,13 +387,12 @@ export const LoginBusiness = () => {
                 size="20"
                 maxLength="15"
                 onFocus={() => console.log("Campo NIT enfocado")}
-                onKeyDown={(e) => /[0-9]/.test(e.key) || e.preventDefault()}
-                onClick={(e) => /[0-9]/.test(e.key) || e.preventDefault()}
                 type="text"
                 style={{
                   background: "white",
                   border: "thin solid rgb(204, 204, 204)",
                 }}
+                ref={nitInputRef}
               />
             </div>
             <div className="input-group">
@@ -367,13 +405,12 @@ export const LoginBusiness = () => {
                 size="20"
                 maxLength="15"
                 onFocus={() => console.log("Campo Usuario enfocado")}
-                onKeyDown={(e) => /[0-9]/.test(e.key) || e.preventDefault()}
-                onClick={(e) => /[0-9]/.test(e.key) || e.preventDefault()}
-                type="password"
+                type="text"
                 style={{
                   background: "white",
                   border: "thin solid rgb(204, 204, 204)",
                 }}
+                ref={userIdInputRef}
               />
             </div>
 
@@ -388,7 +425,6 @@ export const LoginBusiness = () => {
                   type="password"
                   onFocus={() => console.log("Campo Clave enfocado")}
                   onKeyUp={() => console.log("Clave modificada")}
-                  onKeyDown={(e) => e.preventDefault()}
                   onContextMenu={(e) => e.preventDefault()}
                   style={{
                     background: "white",
@@ -398,11 +434,12 @@ export const LoginBusiness = () => {
                   value={password}
                   readOnly
                 />
-                <input
-                  type="submit"
+                <button
+                  type="Button"
                   name="Submit"
-                  value="Aceptar"
+                  value={"Aceptar"}
                   className="login-button"
+                  onClick={handleAccept}
                 />
               </div>
             </div>
@@ -411,7 +448,13 @@ export const LoginBusiness = () => {
               <a
                 href="#"
                 className="external-link"
-                onClick={() => window.open()}
+                onClick={() =>
+                  window.open(
+                    "http://localhost:5173/",
+                    "SucursalVirtualEmpresas",
+                    "width=850,height=600,scrollbars=yes,resizable=yes"
+                  )
+                }
               >
                 ¿Olvidó su clave?
               </a>
@@ -419,7 +462,13 @@ export const LoginBusiness = () => {
               <a
                 href="#"
                 className="external-link"
-                onClick={() => window.open()}
+                onClick={() =>
+                  window.open(
+                    "http://localhost:5173/login-personas",
+                    "SucursalVirtualEmpresas",
+                    "width=850,height=600,scrollbars=yes,resizable=yes"
+                  )
+                }
               >
                 ¿No puede conectarse?
               </a>
@@ -463,7 +512,7 @@ export const LoginBusiness = () => {
           {/* deslizador */}
 
           <div className="p-4">
-            <AdSlider speed={10000} /> {/* Velocidad: 10 segundos */}
+            <AdSlider /> {/* Velocidad: 10 segundos */}
           </div>
         </div>
         <div className="legal-links">
