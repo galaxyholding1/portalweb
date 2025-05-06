@@ -1,0 +1,42 @@
+.allpage{
+    color: black;
+    font-family: Arial, sans-serif;
+    size: 20px;
+}
+
+.banner-superior{
+    background-color: black;
+    padding: 10px 20px;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    transition: color 0.3 ease;
+}
+
+.banner-superior a{
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+    transition: color 0.3 ease;
+}
+
+.banner-superior a:last-child {
+    margin-right: 0;
+}
+
+.banner-superior .derecha a {
+    margin-left: 15px;
+    margin-right: 0;
+}
+
+.banner-superior .derecha a:first-child{
+    margin-left: 0;
+}
+
+.banner-superior a:hover {
+    color: purple;
+}
+
+
+
+

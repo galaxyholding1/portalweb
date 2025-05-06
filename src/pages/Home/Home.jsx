@@ -1,25 +1,28 @@
 import React from "react";
 import AdSlider from "../../components/AdSlider";
+import '../../pages/Home/Home.css'
+import { link } from "framer-motion/client";
 
 export const Home = () => {
   return (
-    <div style={{ fontFamily: "Arial, sans-serif" }}>
-      {/* Barra superior */}
-      <table
-        width="100%"
-        cellPadding="10"
-        style={{ backgroundColor: "#D29BFD" }}
-      >
-        <tbody>
-          <tr>
-            <td align="left">
-              Personas | Negocios | Corporativos | Negocios especializados |
-              Tu360 | Blog
-            </td>
-            <td align="right">Transparencia | Consumidor</td>
-          </tr>
-        </tbody>
-      </table>
+    <div className="allpage">
+      
+      {/* Barra superior */}      
+      <div className="banner-superior">
+        <div className="izquierda">
+            <a href="#">Personas</a>
+            <a href="#">Negocios</a>
+            <a href="#">Corporativo</a>
+            <a href="#">Negocios Especializados</a>
+            <a href="#">Tu 360</a>
+            <a href="#">Blog</a>
+            </div>
+
+        <div className="derecha">
+          <a href="#">Transparencia</a>
+          <a href="#">Consumidor</a>
+        </div>
+        </div>
 
       {/* Header principal */}
       <table width="100%" cellPadding="15">
