@@ -19,7 +19,7 @@ const navItems = [
 
 const secondaryLinks = [
   { name: "Personas", path: "/" },
-  { name: "Negocios", path: "/login-empresas" },
+  { name: "Negocios", path: "/home-empresas" },
   { name: "Corporativos", path: "/corporativos" },
   { name: "Negocios especializados", path: "/especializados" },
 ]
