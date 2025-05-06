@@ -318,8 +318,8 @@ export const LoginBusiness = () => {
       <header className="header">
         <img
           name="logo_sve"
-          src="/logo_sve.gif"
-          width="150"
+          src="../src/assets/images/logo-galaxy.png"
+          width="207"
           height="49"
           border="0"
           id="logo_sve"
