@@ -227,6 +227,7 @@
     margin-top: 10px;
 }
 
+
 /* Media Queries para la responsividad */
 @media (max-width: 768px) {
     .main-content {
@@ -246,6 +247,13 @@
     .shortcut-item {
         width: calc(50% - 10px);
         margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .keyboards-container {
+        display: contents !important;
+        padding-top: 20px;
     }
 }
 
