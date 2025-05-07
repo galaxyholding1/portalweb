@@ -47,8 +47,15 @@ select {
 .navbar-galaxy-secondary {
   display: flex;
   justify-content: left;
+  align-items: center;
   gap: 1rem;
   padding: .5rem;
+}
+
+.social-media-icon {
+  aspect-ratio: 1;
+  align-self: center;
+  display: block;
 }
 
 @media screen and (max-width: 899px) {

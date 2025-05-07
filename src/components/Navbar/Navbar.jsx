@@ -24,6 +24,12 @@ const secondaryLinks = [
   { name: "Negocios especializados", path: "/especializados" },
 ]
 
+const socialIcons = [
+  { imgPath: "/facebook-icon.svg", href: "/" },
+  { imgPath: "/instagram-icon.svg", href: "/" },
+  { imgPath: "/x-icon.svg", href: "/" },
+]
+
 export const Navbar = () => {
   const { pathname } = useLocation();
   const haveSelectedLink = linksSelect.map( link => link.path ).includes( pathname );
@@ -40,6 +46,12 @@ export const Navbar = () => {
           >
             {name}
           </Link>
+        ))}
+
+        {socialIcons.map(({href, imgPath}) => (
+          <a href={href}>
+            <img src={imgPath} alt={imgPath.replace('.svg', '')} key={imgPath + href} className='social-media-icon'/>
+          </a>
         ))}
       </nav>
       <nav className="navbar-galaxy">

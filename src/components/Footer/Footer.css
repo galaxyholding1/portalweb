@@ -1,0 +1,19 @@
+footer {
+  box-sizing: border-box;
+  width: 100%;
+  bottom: 0;
+  padding: 2rem 4rem;
+
+  hr {
+    margin: 1em;
+    border: solid #dfdfdf 1.5px;
+  }
+}
+
+.footer-links, .footer-web-link {
+  display: flex;
+  justify-content: center;
+  a {
+    color: #333;
+  }
+}
