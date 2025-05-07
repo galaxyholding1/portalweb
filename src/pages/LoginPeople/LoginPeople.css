@@ -1,17 +1,12 @@
-.dev-text {
-  position: absolute;
-  left: 50%;
-  top: 15%;
-  transform: translate(-50%, -50%);
-}
-
 .login-container {
   max-width: 90vw;
   display: grid;
-  grid-template-columns: 40% 55%;
-  grid-template-rows: 1fr 1fr;
-  gap: 2rem;
+  grid-template-columns: min(30%, 400px) 1fr;
+  /* grid-template-columns: 30% 1fr; */
+  grid-template-rows: 1fr;
+  gap: 10rem;
   margin-inline: auto;
+  margin-top: 1rem;
 }
 
 .login-container form {
@@ -19,24 +14,29 @@
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  padding: 3em 0.5rem;
-  border: #ccc solid 1px;
+  padding: 0.5rem;
+  
+  p, h3 {
+    align-self: flex-start;
+    margin: 0;
+  }
 }
 
-.login-container > nav {
-  grid-column: 1 / 2;
-  grid-row: 2 / 3;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  padding: 3em 0.5rem;
-  border: #ccc solid 1px;
+#btn-login-people {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: #e7458e;
+  color: white;
+  font-size: 1rem;
 }
 
-.login-container form > nav {
+.login-container form>nav {
   display: flex;
   flex-direction: column;
-  align-items: baseline;
+  align-items: end;
   align-self: last baseline;
 }
 
@@ -59,16 +59,24 @@
   overflow: hidden;
 }
 
-.banner > img {
-  aspect-ratio: 800/350;
+.banner>img {
+  aspect-ratio: 519/333;
   max-width: 100%;
   cursor: pointer;
+  border-radius: 10px;
 }
 
-@media screen and (max-width: 870px) {
+.banner {
+  display: flex;
+  justify-content: center;
+}
+
+
+@media screen and (max-width: 900px) {
   .login-container {
     grid-template-columns: 1fr;
     justify-content: center;
+    gap: 2rem;
   }
 
   .banner {
@@ -76,7 +84,7 @@
     grid-row: span 1;
   }
 
-  .banner > img {
+  .banner>img {
     max-width: 90vw;
   }
 }
