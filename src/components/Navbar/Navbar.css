@@ -1,0 +1,58 @@
+.navbar-galaxy {
+  display: flex;
+  max-width: 100vw;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  padding: .75rem 1rem;
+  background-color: #f0f0f0;
+}
+
+.navbar-galaxy>img {
+  aspect-ratio: 877/208;
+  max-width: 250px;
+}
+
+.navbar-galaxy>ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  width: 40%;
+}
+
+a {
+  text-decoration: none;
+  color: #4f4e4d;
+}
+
+select {
+  all: unset;
+  padding: 0.2rem 0.5rem;
+  cursor: pointer;
+}
+
+.btn-go-login {
+  border-radius: 5px;
+  background-color: #e7458e;
+  color: white;
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+}
+
+.active-item {
+  color: #e7458e !important;
+}
+
+
+.navbar-galaxy-secondary {
+  display: flex;
+  justify-content: left;
+  gap: 1rem;
+  padding: .5rem;
+}
+
+@media screen and (max-width: 899px) {
+  .navbar-galaxy{
+    display: none;
+  }
+}
