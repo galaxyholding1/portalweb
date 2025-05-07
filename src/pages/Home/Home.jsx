@@ -1,18 +1,24 @@
 import React from "react";
 import AdSlider from "../../components/AdSlider";
 import "../../pages/Home/Home.css";
-import galaxyicon from "../../assets/images/SVG/LOGO-GALAXY-PAY_hor-01.svg";
-import face from "../../assets/images/SVG/facebookicon.svg";
-import instagram from "../../assets/images/SVG/instagramicon.svg";
-import xicon from "../../assets/images/SVG/xicon.svg";
+import imagendeprueba from "../../assets/images/SVG/imagendeprueba.jpg";
+import tramitesIcon from '../../assets/images/iconos-acceso-rapido/tramites-digitales.svg';
+import negociarIcon from '../../assets/images/iconos-acceso-rapido/negociar-deuda.svg';
+import pagosIcon from '../../assets/images/iconos-acceso-rapido/pago.svg';
+import ayudaIcon from '../../assets/images/iconos-acceso-rapido/centro-de-ayuda.svg';
+import certificadosIcon from '../../assets/images/iconos-acceso-rapido/certificados-bancarios.svg';
+import turnoIcon from '../../assets/images/iconos-acceso-rapido/solicita-turno.svg';
+
+
+import { image } from "framer-motion/client";
 
 const accesos = [
-  { icon: "🧾", label: "Trámites digitales" },
-  { icon: "💳", label: "Negociar deuda" },
-  { icon: "📲", label: "Pagos" },
-  { icon: "❓", label: "Centro de Ayuda" },
-  { icon: "📄", label: "Certificados bancarios" },
-  { icon: "🕐", label: "Solicita tu turno" },
+  { icon: tramitesIcon, label: "Trámites digitales" },
+  { icon: negociarIcon, label: "Negociar deuda" },
+  { icon: pagosIcon, label: "Pagos" },
+  { icon: ayudaIcon, label: "Centro de Ayuda" },
+  { icon: certificadosIcon, label: "Certificados bancarios" },
+  { icon: turnoIcon, label: "Solicita tu turno" },
 ];
 
 const servicios = [
@@ -21,55 +27,27 @@ const servicios = [
     color: "#f472b6",
     titulo: "Servicio 01",
     texto: "Protege tu casa y familia con Prosegur Alarms.",
+    imagen: imagendeprueba,
   },
   {
     id: 2,
     color: "#818cf8",
     titulo: "Servicio 02",
     texto: "Conoce los beneficios exclusivos para ti.",
+    imagen: imagendeprueba,
   },
   {
     id: 3,
     color: "#fbbf24",
     titulo: "Servicio 03",
     texto: "Descubre cómo ahorrar en tus facturas mensuales.",
+    imagen: imagendeprueba,
   },
 ];
 
 export const Home = () => {
   return (
     <div className="allpage">
-      {/* Barra superior */}
-      <div className="banner-superior">
-        <div className="izquierda">
-          <a href="#">Personas</a>
-          <a href="#">Negocios</a>
-          <a href="#">Corporativo</a>
-          <a href="#">Negocios Especializados</a>
-          <img src={face} alt="Logo facebook" />
-          <img src={instagram} alt="Logo instagram" />
-          <img src={xicon} alt="Logo X" />
-        </div>
-      </div>
-
-      {/* Header principal */}
-      <div className="header-principal">
-        <img src={galaxyicon} alt="Logo principal" style={{ width: "200px" }} />
-
-        <div className="centro">
-          <a href="#">Inicio</a>
-          <a href="#">Necesidades</a>
-          <a href="#">Productos y Servicios</a>
-          <a href="#">Educación Financiera</a>
-        </div>
-        <div className="derecha">
-          <button className="negocios-especializados">
-            Negocios especializados
-          </button>
-          <button className="entrar">Entrar</button>
-        </div>
-      </div>
-
       {/* Deslizador */}
       <section className="p-4">
         <h1 className="text-xl mb-4">Deslizable de Publicidad</h1>
@@ -100,7 +78,7 @@ export const Home = () => {
         <section className="accesos-rapidos">
           {accesos.map((item) => (
             <div className="acceso-item" key={item.label}>
-              <div className="icon">{item.icon}</div>
+              <img src={item.icon} alt={item.label} className="icon-img" />
               <div>{item.label}</div>
             </div>
           ))}
@@ -109,14 +87,20 @@ export const Home = () => {
         {/* Servicios */}
         <section className="servicios">
           {servicios.map((serv) => (
-            <div
-              className="servicio-card"
-              key={serv.id}
-              style={{ backgroundColor: serv.color }}
-            >
-              <h4>{serv.titulo}</h4>
-              <p>{serv.texto}</p>
-              <button className="btn-blanco">Más información</button>
+            <div className="servicio-card" key={serv.id}>
+              <img
+                src={serv.imagen}
+                alt={serv.titulo}
+                className="imagen-servicio"
+              />
+              <div
+                className="servicio-info"
+                style={{ backgroundColor: serv.color }}
+              >
+                <h4>{serv.titulo}</h4>
+                <p>{serv.texto}</p>
+                <button className="btn-blanco">Más información</button>
+              </div>
             </div>
           ))}
         </section>
