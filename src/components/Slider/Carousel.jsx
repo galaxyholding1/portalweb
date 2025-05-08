@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "./Carousel.css";
 import turnoIcon from "../../assets/images/banner-home.png";
+
 const Carousel = () => {
   const slides = [
     {
       title: "Abre tu cuenta de ahorros desde $0",
       description:
-        "Saca tu cuenta por Internet, desde el celular. Elige el plan que prefieras con cuota de manejo desde cero pesos, incluso cuenta nómina. Recibe la tarjeta gratis en casa.",
+        "Saca tu cuenta por Internet, desde el celular. Elige el plan que prefieras con cuota de manejo desde cero pesos, incluso cuenta nómina.",
       buttonText: "Abre tu cuenta",
       image: turnoIcon,
     },
@@ -32,7 +33,6 @@ const Carousel = () => {
       const interval = setInterval(() => {
         nextSlide();
       }, 5000);
-
       return () => clearInterval(interval);
     }
   }, [currentIndex, isPaused]);
@@ -51,50 +51,46 @@ const Carousel = () => {
 
   return (
     <div
-      className="carousel-wrapper"
+      className="carousel-fullscreen"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
-      <div className="carousel-container">
+      <div className="carousel-content">
         {slides.map((slide, index) => (
           <div
             key={index}
-            className={`carousel-slide ${
-              index === currentIndex ? "active" : ""
-            }`}
+            className={`slide ${index === currentIndex ? "active" : ""}`}
             style={{
               transform: `translateX(${100 * (index - currentIndex)}%)`,
             }}
           >
-            <div className="slide-content">
-              <div className="text-content">
-                <h2>{slide.title}</h2>
-                <p>{slide.description}</p>
-                <button className="cta-button">{slide.buttonText}</button>
-              </div>
-              <div className="image-content">
-                <img src={slide.image} alt={slide.title} />
-              </div>
+            <div className="text-section">
+              <h2>{slide.title}</h2>
+              <p>{slide.description}</p>
+              <button className="cta-button">{slide.buttonText}</button>
+            </div>
+            <div className="image-section">
+              <img src={slide.image} alt={slide.title} />
             </div>
           </div>
         ))}
+      </div>
 
-        <button className="carousel-button prev" onClick={prevSlide}>
-          <span>‹</span>
-        </button>
-        <button className="carousel-button next" onClick={nextSlide}>
-          <span>›</span>
-        </button>
+      <button className="nav-button prev" onClick={prevSlide}>
+        <span>‹</span>
+      </button>
+      <button className="nav-button next" onClick={nextSlide}>
+        <span>›</span>
+      </button>
 
-        <div className="progress-indicators">
-          {slides.map((_, index) => (
-            <div
-              key={index}
-              className={`indicator ${index === currentIndex ? "active" : ""}`}
-              onClick={() => setCurrentIndex(index)}
-            />
-          ))}
-        </div>
+      <div className="pagination">
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            className={`page-dot ${index === currentIndex ? "active" : ""}`}
+            onClick={() => setCurrentIndex(index)}
+          />
+        ))}
       </div>
     </div>
   );

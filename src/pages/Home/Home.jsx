@@ -2,6 +2,7 @@ import React from "react";
 import "../../pages/Home/Home.css";
 
 import Carosuel from "../../components/Slider/Carousel";
+import CarouselBackground from "../../components/Slider/CarouselBackground";
 import imagendeprueba from "../../assets/images/SVG/imagendeprueba.jpg";
 import tramitesIcon from "../../assets/images/iconos-acceso-rapido/tramites-digitales.svg";
 import negociarIcon from "../../assets/images/iconos-acceso-rapido/negociar-deuda.svg";
@@ -69,7 +70,12 @@ export const Home = () => {
                 onClick={() => (window.location.href = item.path)}
                 style={{ cursor: "pointer" }}
               >
-                <img src={item.icon} alt={item.label} className="icon-img" style={{fill:'red'}}/>
+                <img
+                  src={item.icon}
+                  alt={item.label}
+                  className="icon-img"
+                  style={{ fill: "red" }}
+                />
                 <div>{item.label}</div>
               </div>
             ))}
@@ -88,6 +94,8 @@ export const Home = () => {
                 flex: servicio.id === 1 ? 3 : 2,
               }}
             >
+              {/* Deslizador */}
+
               <img src={servicio.imagen} alt={servicio.titulo} />
               <div className="contenido">
                 <h3>{servicio.titulo}</h3>
@@ -98,6 +106,8 @@ export const Home = () => {
               </div>
             </div>
           ))}
+
+          <CarouselBackground />
         </div>
       </div>
     </div>
