@@ -17,7 +17,7 @@
 }
 
 .contenedor-accesos {
-  background: #f0f0f0;
+  background: var(--bg-secondary);
   border-radius: 12px;
   padding: 16px;
   display: grid;
@@ -46,13 +46,19 @@
   margin-bottom: 8px;
   object-fit: contain;
 }
-.contenedor-accesos {
-  background: var(--bg-secondary);
-  border-radius: 12px;
-  padding: 20px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 20px;
+
+.icon-img {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 8px;
+  object-fit: contain;
+  transition: filter 0.3s ease;
+}
+
+/* Modo oscuro */
+[data-theme='dark'] .icon-img {
+  
+  filter: invert(1) brightness(1.5);
 }
 
 /* Servicios */
@@ -84,6 +90,7 @@
   display: flex;
   flex-direction: column;
   height: calc(100% - 150px);
+  text-align: center;
 }
 
 .contenido h3 {
@@ -104,22 +111,28 @@
 }
 
 .contenido button {
-  padding: 8px 16px;
-  background: rgba(255, 255, 255, 0.9);
-  color: black;
-  border: none;
-  border-radius: 4px;
+  padding: 10px 24px;
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 25px;
   font-weight: bold;
   cursor: pointer;
   font-size: 14px;
-  align-self: flex-start;
+  margin: 0 auto;
   margin-top: auto;
+  display: inline-block;
   transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  min-width: 150px;
 }
 
 .contenido button:hover {
   background: white;
+  color: #333;
   transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Estilo especial para la primera tarjeta */
@@ -132,33 +145,38 @@
   .allpage {
     padding: 20px;
   }
-  
+
   .contenedor-accesos {
     grid-template-columns: repeat(3, 1fr);
     padding: 20px;
     gap: 20px;
   }
-  
+
   .servicios-wrapper {
     flex-direction: row;
     flex-wrap: wrap;
   }
-  
+
   .servicio {
     flex: 1 1 calc(50% - 8px);
     min-height: 320px;
   }
-  
+
   .servicio img {
     height: 160px;
   }
-  
+
   .contenido {
     padding: 16px;
   }
-  
+
   .tarjeta-1 {
     flex: 2 1 100%;
+  }
+
+  .contenido button {
+    padding: 12px 28px;
+    font-size: 15px;
   }
 }
 
@@ -167,29 +185,30 @@
   .contenedor-accesos {
     grid-template-columns: repeat(6, 1fr);
   }
-  
+
   .servicio {
     flex: 1 1 calc(33.333% - 14px);
     min-height: 340px;
   }
-  
+
   .servicio img {
     height: 170px;
   }
-  
+
   .tarjeta-1 {
     flex: 2 1 calc(66.666% - 10px);
   }
-  
+
   .acceso-item {
     font-size: 16px;
   }
-  
+
   .contenido h3 {
     font-size: 20px;
   }
-  
+
   .contenido button {
-    padding: 10px 16px;
+    padding: 12px 32px;
+    font-size: 16px;
   }
 }
