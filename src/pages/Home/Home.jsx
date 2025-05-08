@@ -1,6 +1,7 @@
 import React from "react";
-import AdSlider from "../../components/AdSlider";
 import "../../pages/Home/Home.css";
+
+import Carosuel from "../../components/Slider/Carousel";
 import imagendeprueba from "../../assets/images/SVG/imagendeprueba.jpg";
 import tramitesIcon from "../../assets/images/iconos-acceso-rapido/tramites-digitales.svg";
 import negociarIcon from "../../assets/images/iconos-acceso-rapido/negociar-deuda.svg";
@@ -57,11 +58,7 @@ export const Home = () => {
   return (
     <div className="allpage">
       {/* Deslizador */}
-      <section className="p-4">
-        <h1 className="text-xl mb-4">Deslizable de Publicidad</h1>
-        <AdSlider speed={10000} />
-        <marquee scrollamount="5">Contenido en movimiento o aviso...</marquee>
-      </section>
+      <Carosuel />
 
       <div className="home-container">
         {/* Accesos rápidos */}
