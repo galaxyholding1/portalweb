@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
 import "./CarouselFullscreen.css";
+import turnoIcon from "../../assets/images/banner-home.png";
 
-const CarouselFullscreen = () => {
+const FullscreenSlider = () => {
   const slides = [
     {
-      title: "Descarga la nueva app",
+      title: "Descarga la nueva app Mi Galaxy App",
       description: "Conocé cómo",
       buttonText: "Descargar app",
-      image: "/path/to/image2.jpg",
+      image: turnoIcon,
     },
     // ... más slides
   ];
@@ -37,40 +38,46 @@ const CarouselFullscreen = () => {
   };
 
   return (
-    <div className="carousel-fullscreen">
-      {slides.map((slide, index) => (
-        <div
-          key={index}
-          className={`slide-full ${index === currentIndex ? "active" : ""}`}
-          style={{
-            transform: `translateX(${100 * (index - currentIndex)}%)`,
-          }}
-        >
+    <div
+      className="slider-main-container"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+    >
+      <div className="slider-content-wrapper">
+        {slides.map((slide, index) => (
           <div
-            className="slide-background"
-            style={{ backgroundImage: `url(${slide.image})` }}
+            key={index}
+            className={`slider-item ${index === currentIndex ? "active" : ""}`}
+            style={{
+              transform: `translateX(${100 * (index - currentIndex)}%)`,
+            }}
           >
-            <div className="content-overlay">
-              <h2>{slide.title}</h2>
-              <p>{slide.description}</p>
-              <button className="cta-button">{slide.buttonText}</button>
+            <div
+              className="slider-background"
+              style={{ backgroundImage: `url(${slide.image})` }}
+            >
+              <div className="slider-overlay">
+                <h2 className="slider-title">{slide.title}</h2>
+                <p className="slider-description">{slide.description}</p>
+                <button className="slider-cta">{slide.buttonText}</button>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
 
-      <button className="nav-button-internal prev" onClick={prevSlide}>
+      <button className="slider-nav prev" onClick={prevSlide}>
         <span>‹</span>
       </button>
-      <button className="nav-button-internal next" onClick={nextSlide}>
+      <button className="slider-nav next" onClick={nextSlide}>
         <span>›</span>
       </button>
 
-      <div className="pagination-full">
+      <div className="slider-indicators">
         {slides.map((_, index) => (
           <button
             key={index}
-            className={`page-dot ${index === currentIndex ? "active" : ""}`}
+            className={`slider-dot ${index === currentIndex ? "active" : ""}`}
             onClick={() => setCurrentIndex(index)}
           />
         ))}
@@ -79,4 +86,4 @@ const CarouselFullscreen = () => {
   );
 };
 
-export default CarouselFullscreen;
+export default FullscreenSlider;

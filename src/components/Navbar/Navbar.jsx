@@ -11,6 +11,7 @@ import logoLight from "../../assets/images/SVG/logo-navbar.svg";
 import logoDark from "../../assets/images/SVG/logo-galaxy-dark.svg";
 import { useTheme } from "../../store/theme-store";
 
+const noLinksPaths = ["/login-personas"];
 const linksSelect = [
   { name: "Negocios especializados", path: "/" },
   { name: "Sucursal Personas", path: "/login-personas" },
@@ -38,9 +39,9 @@ const socialIcons = [
 ];
 
 const iconByTheme = {
-  "dark": logoDark,
-  "light": logoLight,
-}
+  dark: logoDark,
+  light: logoLight,
+};
 
 export const Navbar = () => {
   const { pathname } = useLocation();
@@ -61,7 +62,7 @@ export const Navbar = () => {
         {secondaryLinks.map(({ name, path }, i) => (
           <Link
             to={path}
-            key={i+path}
+            key={i + path}
             className={pathname == path ? "active-item" : ""}
           >
             {name}
@@ -72,21 +73,21 @@ export const Navbar = () => {
           <a href={href}>
             <img
               src={imgPath}
-              alt={''}
-              key={i+href}
+              alt={""}
+              key={i + href}
               className="social-media-icon"
             />
           </a>
         ))}
       </nav>
       <nav className="navbar-galaxy">
-        <img src={iconByTheme[ theme ]} alt="logo" />
+        <img src={iconByTheme[theme]} alt="logo" />
 
         <ul>
           {navItems.map(({ name, path }, i) => (
             <Link
               to={path}
-              key={i+path}
+              key={i + path}
               className={pathname == path ? "active-item" : ""}
             >
               {name}
@@ -102,7 +103,7 @@ export const Navbar = () => {
             onChange={(a) => setSelectedLink(a.target.value)}
           >
             {linksSelect.map(({ path, name }, i) => (
-              <option value={path} key={i+path}>
+              <option value={path} key={i + path}>
                 {name}
               </option>
             ))}

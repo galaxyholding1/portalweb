@@ -3,6 +3,7 @@ import "../../pages/Home/Home.css";
 
 import Carosuel from "../../components/Slider/Carousel";
 import CarouselBackground from "../../components/Slider/CarouselBackground";
+import CarouselFullscreen from "../../components/Slider/CarouselFullscreen";
 import imagendeprueba from "../../assets/images/SVG/imagendeprueba.jpg";
 import tramitesIcon from "../../assets/images/iconos-acceso-rapido/tramites-digitales.svg";
 import negociarIcon from "../../assets/images/iconos-acceso-rapido/negociar-deuda.svg";
@@ -106,9 +107,10 @@ export const Home = () => {
               </div>
             </div>
           ))}
-
-          <CarouselBackground />
         </div>
+        <CarouselFullscreen />
+
+        <CarouselBackground />
       </div>
     </div>
   );
