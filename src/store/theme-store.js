@@ -1,7 +1,4 @@
-
-
 import { create } from 'zustand'
-
 
 const getTheme = () => {
   const savedTheme = localStorage.getItem("theme");

@@ -7,9 +7,13 @@ import { Link } from "react-router-dom";
 import facebookIcon from "../../assets/images/SVG/facebook-icon.svg";
 import instagramIcon from "../../assets/images/SVG/instagram-icon.svg";
 import xIcon from "../../assets/images/SVG/x-icon.svg";
-import logoLight from "../../assets/images/SVG/logo-navbar.svg";
-import logoDark from "../../assets/images/SVG/logo-galaxy-dark.svg";
 import { useTheme } from "../../store/theme-store";
+import { iconByTheme } from "../../util/app-icon-by-theme";
+
+const noLinksPaths = [
+  "/login-personas",
+  "/login-",
+]
 
 const linksSelect = [
   { name: "Negocios especializados", path: "/" },
@@ -37,11 +41,6 @@ const socialIcons = [
   { imgPath: xIcon, href: "/" },
 ];
 
-const iconByTheme = {
-  "dark": logoDark,
-  "light": logoLight,
-}
-
 export const Navbar = () => {
   const { pathname } = useLocation();
 
@@ -49,6 +48,7 @@ export const Navbar = () => {
     .map((link) => link.path)
     .includes(pathname);
 
+  const enableLinks = !noLinksPaths.includes( pathname );
   const [selectedLink, setSelectedLink] = useState(
     haveSelectedLink ? pathname : "/"
   );
@@ -61,7 +61,7 @@ export const Navbar = () => {
         {secondaryLinks.map(({ name, path }, i) => (
           <Link
             to={path}
-            key={i+path}
+            key={i + path}
             className={pathname == path ? "active-item" : ""}
           >
             {name}
@@ -69,49 +69,50 @@ export const Navbar = () => {
         ))}
 
         {socialIcons.map(({ href, imgPath }, i) => (
-          <a href={href}>
-            <img
-              src={imgPath}
-              alt={''}
-              key={i+href}
-              className="social-media-icon"
-            />
+          <a href={href} key={i + href}>
+            <img src={imgPath} alt={""} className="social-media-icon" />
           </a>
         ))}
       </nav>
       <nav className="navbar-galaxy">
-        <img src={iconByTheme[ theme ]} alt="logo" />
+        <a href="/">
+          <img src={iconByTheme[theme]} alt="logo" />
+        </a>
 
-        <ul>
-          {navItems.map(({ name, path }, i) => (
-            <Link
-              to={path}
-              key={i+path}
-              className={pathname == path ? "active-item" : ""}
-            >
-              {name}
-            </Link>
-          ))}
-        </ul>
+        {enableLinks && (
+          <>
+            <ul>
+              {navItems.map(({ name, path }, i) => (
+                <Link
+                  to={path}
+                  key={i + path}
+                  className={pathname == path ? "active-item" : ""}
+                >
+                  {name}
+                </Link>
+              ))}
+            </ul>
 
-        <div>
-          <select
-            name=""
-            id=""
-            value={selectedLink}
-            onChange={(a) => setSelectedLink(a.target.value)}
-          >
-            {linksSelect.map(({ path, name }, i) => (
-              <option value={path} key={i+path}>
-                {name}
-              </option>
-            ))}
-          </select>
+            <div>
+              <select
+                name=""
+                id=""
+                value={selectedLink}
+                onChange={(a) => setSelectedLink(a.target.value)}
+              >
+                {linksSelect.map(({ path, name }, i) => (
+                  <option value={path} key={i + path}>
+                    {name}
+                  </option>
+                ))}
+              </select>
 
-          <a href={selectedLink} className="btn-go-login">
-            Entrar
-          </a>
-        </div>
+              <Link to={selectedLink} className="btn-go-login">
+                Entrar
+              </Link>
+            </div>
+          </>
+        )}
       </nav>
     </>
   );

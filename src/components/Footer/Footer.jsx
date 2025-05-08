@@ -1,11 +1,15 @@
 import "./Footer.css";
-import galaxyIcon from "../../assets/images/logo-galaxy.png" 
+import { useTheme } from "../../store/theme-store";
+import { iconByTheme } from "../../util/app-icon-by-theme";
 
 export const Footer = () => {
+
+  const { theme } = useTheme();
+
   return (
     <footer>
       <div className="footer-logo">
-        <img src={galaxyIcon} alt="Galaxy Icon" />
+        <img src={iconByTheme[theme]} alt="Galaxy Icon" />
       </div>
 
       <div className="footer-links">
@@ -59,7 +63,10 @@ export const Footer = () => {
         </div>
       </div>
 
-      
+      <div className="footer-terms">
+        <a href="#">Reglamento portal virtual</a>
+        <a href="#">Politicas de privacidad</a>
+      </div>
     </footer>
   );
 };
