@@ -90,7 +90,7 @@ export const Home = () => {
               className={`servicio tarjeta-${servicio.id}`}
               style={{
                 backgroundColor: servicio.color,
-                flex: servicio.id === 1 ? 3 : 2,
+                flex: servicio.id === 1 ? 2 : 1,
               }}
             >
               <img src={servicio.imagen} alt={servicio.titulo} />
