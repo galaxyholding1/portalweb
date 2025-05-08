@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Carousel.css";
-import turnoIcon from "../../assets/images/SVG/banner-home.png";
+import turnoIcon from "../../assets/images/banner-home.png";
 const Carousel = () => {
   const slides = [
     {
