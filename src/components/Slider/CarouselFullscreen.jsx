@@ -1,28 +1,16 @@
 import React, { useState, useEffect } from "react";
-import "./Carousel.css";
+import "./CarouselFullscreen.css";
 import turnoIcon from "../../assets/images/banner-home.png";
 
-const Carousel = () => {
+const FullscreenSlider = () => {
   const slides = [
-    {
-      title: "Abre tu cuenta de ahorros desde $0",
-      description:
-        "Saca tu cuenta por Internet, desde el celular. Elige el plan que prefieras con cuota de manejo desde cero pesos, incluso cuenta nómina.",
-      buttonText: "Abre tu cuenta",
-      image: turnoIcon,
-    },
     {
       title: "Descarga la nueva app Mi Galaxy App",
       description: "Conocé cómo",
       buttonText: "Descargar app",
       image: turnoIcon,
     },
-    {
-      title: 'Elige "Tus llaves" en la app Mi Galaxy App',
-      description: "Gestiona tus productos de manera segura",
-      buttonText: "Conoce más",
-      image: turnoIcon,
-    },
+    // ... más slides
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -51,43 +39,45 @@ const Carousel = () => {
 
   return (
     <div
-      className="carousel-fullscreen"
+      className="slider-main-container"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
-      <div className="carousel-content">
+      <div className="slider-content-wrapper">
         {slides.map((slide, index) => (
           <div
             key={index}
-            className={`slide ${index === currentIndex ? "active" : ""}`}
+            className={`slider-item ${index === currentIndex ? "active" : ""}`}
             style={{
               transform: `translateX(${100 * (index - currentIndex)}%)`,
             }}
           >
-            <div className="text-section">
-              <h2>{slide.title}</h2>
-              <p>{slide.description}</p>
-              <button className="cta-button">{slide.buttonText}</button>
-            </div>
-            <div className="image-section">
-              <img src={slide.image} alt={slide.title} />
+            <div
+              className="slider-background"
+              style={{ backgroundImage: `url(${slide.image})` }}
+            >
+              <div className="slider-overlay">
+                <h2 className="slider-title">{slide.title}</h2>
+                <p className="slider-description">{slide.description}</p>
+                <button className="slider-cta">{slide.buttonText}</button>
+              </div>
             </div>
           </div>
         ))}
       </div>
 
-      <button className="nav-button prev" onClick={prevSlide}>
+      <button className="slider-nav prev" onClick={prevSlide}>
         <span>‹</span>
       </button>
-      <button className="nav-button next" onClick={nextSlide}>
+      <button className="slider-nav next" onClick={nextSlide}>
         <span>›</span>
       </button>
 
-      <div className="pagination">
+      <div className="slider-indicators">
         {slides.map((_, index) => (
           <button
             key={index}
-            className={`page-dot ${index === currentIndex ? "active" : ""}`}
+            className={`slider-dot ${index === currentIndex ? "active" : ""}`}
             onClick={() => setCurrentIndex(index)}
           />
         ))}
@@ -96,4 +86,4 @@ const Carousel = () => {
   );
 };
 
-export default Carousel;
+export default FullscreenSlider;

@@ -7,8 +7,11 @@ import { Link } from "react-router-dom";
 import facebookIcon from "../../assets/images/SVG/facebook-icon.svg";
 import instagramIcon from "../../assets/images/SVG/instagram-icon.svg";
 import xIcon from "../../assets/images/SVG/x-icon.svg";
-import logo from "../../assets/images/SVG/logo-navbar.svg";
+import logoLight from "../../assets/images/SVG/logo-navbar.svg";
+import logoDark from "../../assets/images/SVG/logo-galaxy-dark.svg";
+import { useTheme } from "../../store/theme-store";
 
+const noLinksPaths = ["/login-personas"];
 const linksSelect = [
   { name: "Negocios especializados", path: "/" },
   { name: "Sucursal Personas", path: "/login-personas" },
@@ -35,22 +38,31 @@ const socialIcons = [
   { imgPath: xIcon, href: "/" },
 ];
 
+const iconByTheme = {
+  dark: logoDark,
+  light: logoLight,
+};
+
 export const Navbar = () => {
   const { pathname } = useLocation();
+
   const haveSelectedLink = linksSelect
     .map((link) => link.path)
     .includes(pathname);
+
   const [selectedLink, setSelectedLink] = useState(
     haveSelectedLink ? pathname : "/"
   );
 
+  const { theme } = useTheme();
+
   return (
     <>
       <nav className="navbar-galaxy-secondary">
-        {secondaryLinks.map(({ name, path }) => (
+        {secondaryLinks.map(({ name, path }, i) => (
           <Link
             to={path}
-            key={path}
+            key={i + path}
             className={pathname == path ? "active-item" : ""}
           >
             {name}
@@ -61,21 +73,21 @@ export const Navbar = () => {
           <a href={href}>
             <img
               src={imgPath}
-              alt={name}
-              key={i}
+              alt={""}
+              key={i + href}
               className="social-media-icon"
             />
           </a>
         ))}
       </nav>
       <nav className="navbar-galaxy">
-        <img src={logo} alt="logo" />
+        <img src={iconByTheme[theme]} alt="logo" />
 
         <ul>
-          {navItems.map(({ name, path }) => (
+          {navItems.map(({ name, path }, i) => (
             <Link
               to={path}
-              key={path}
+              key={i + path}
               className={pathname == path ? "active-item" : ""}
             >
               {name}
@@ -90,8 +102,8 @@ export const Navbar = () => {
             value={selectedLink}
             onChange={(a) => setSelectedLink(a.target.value)}
           >
-            {linksSelect.map(({ path, name }) => (
-              <option value={path} key={path}>
+            {linksSelect.map(({ path, name }, i) => (
+              <option value={path} key={i + path}>
                 {name}
               </option>
             ))}

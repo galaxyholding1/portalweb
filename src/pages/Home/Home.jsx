@@ -2,6 +2,8 @@ import React from "react";
 import "../../pages/Home/Home.css";
 
 import Carosuel from "../../components/Slider/Carousel";
+import CarouselBackground from "../../components/Slider/CarouselBackground";
+import CarouselFullscreen from "../../components/Slider/CarouselFullscreen";
 import imagendeprueba from "../../assets/images/SVG/imagendeprueba.jpg";
 import tramitesIcon from "../../assets/images/iconos-acceso-rapido/tramites-digitales.svg";
 import negociarIcon from "../../assets/images/iconos-acceso-rapido/negociar-deuda.svg";
@@ -9,8 +11,6 @@ import pagosIcon from "../../assets/images/iconos-acceso-rapido/pago.svg";
 import ayudaIcon from "../../assets/images/iconos-acceso-rapido/centro-de-ayuda.svg";
 import certificadosIcon from "../../assets/images/iconos-acceso-rapido/certificados-bancarios.svg";
 import turnoIcon from "../../assets/images/iconos-acceso-rapido/solicita-turno.svg";
-
-import { image } from "framer-motion/client";
 
 const accesos = [
   { icon: tramitesIcon, label: "Trámites digitales", path: "/tramites" },
@@ -71,7 +71,12 @@ export const Home = () => {
                 onClick={() => (window.location.href = item.path)}
                 style={{ cursor: "pointer" }}
               >
-                <img src={item.icon} alt={item.label} className="icon-img" />
+                <img
+                  src={item.icon}
+                  alt={item.label}
+                  className="icon-img"
+                  style={{ fill: "red" }}
+                />
                 <div>{item.label}</div>
               </div>
             ))}
@@ -90,6 +95,8 @@ export const Home = () => {
                 flex: servicio.id === 1 ? 2 : 1,
               }}
             >
+              {/* Deslizador */}
+
               <img src={servicio.imagen} alt={servicio.titulo} />
               <div className="contenido">
                 <h3>{servicio.titulo}</h3>
@@ -101,6 +108,9 @@ export const Home = () => {
             </div>
           ))}
         </div>
+        <CarouselFullscreen />
+
+        <CarouselBackground />
       </div>
     </div>
   );
