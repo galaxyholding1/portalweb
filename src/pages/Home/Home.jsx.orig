@@ -1,13 +1,12 @@
 import React from "react";
 import AdSlider from "../../components/AdSlider";
 import "../../pages/Home/Home.css";
-import miImagen from'../../assets/images/SVG/LOGO-GALAXY-PAY_hor-01.svg'
-import facebook from'../../assets/images/SVG/2023_Facebook_icon.svg.png'
-
+<<<<<<< HEAD
 import "../../components/Slider/Carousel.css";
 import miImagen from "../../assets/images/SVG/LOGO-GALAXY-PAY_hor-01.svg";
 import facebook from "../../assets/images/SVG/2023_Facebook_icon.svg.png";
 import Carousel from "../../components/Slider/Carousel";
+=======
 import imagendeprueba from "../../assets/images/SVG/imagendeprueba.jpg";
 import tramitesIcon from '../../assets/images/iconos-acceso-rapido/tramites-digitales.svg';
 import negociarIcon from '../../assets/images/iconos-acceso-rapido/negociar-deuda.svg';
@@ -16,21 +15,10 @@ import ayudaIcon from '../../assets/images/iconos-acceso-rapido/centro-de-ayuda.
 import certificadosIcon from '../../assets/images/iconos-acceso-rapido/certificados-bancarios.svg';
 import turnoIcon from '../../assets/images/iconos-acceso-rapido/solicita-turno.svg';
 
-import { image } from "framer-motion/client";
-            <a href="#">Personas</a>
-            <a href="#">Negocios</a>
-            <a href="#">Corporativo</a>
-            <a href="#">Negocios Especializados</a>
-          <img
-            src={facebook}
-            alt="Logo facebook"
-            style={{ width: "", height: "100px" }}
-          />
-        </div>
-      </div>
+>>>>>>> origin/develop
 
-      {/* Header principal */}
-      <div className="header-principal">
+import { image } from "framer-motion/client";
+
 const accesos = [
   { icon: tramitesIcon, label: "Trámites digitales" },
   { icon: negociarIcon, label: "Negociar deuda" },
@@ -67,6 +55,42 @@ const servicios = [
 export const Home = () => {
   return (
     <div className="allpage">
+<<<<<<< HEAD
+      {/* Barra superior */}
+      <div className="banner-superior">
+        <div className="izquierda">
+          <a href="#">Personas</a>
+          <a href="#">Negocios</a>
+          <a href="#">Corporativo</a>
+          <a href="#">Negocios Especializados</a>
+          <img
+            src={facebook}
+            alt="Logo facebook"
+            style={{ width: "", height: "100px" }}
+          />
+        </div>
+      </div>
+
+      {/* Header principal */}
+      <div className="header-principal">
+        <img src={miImagen} alt="Logo principal" style={{ width: "200px" }} />
+
+        <div className="centro">
+          <a href="#">Inicio</a>
+          <a href="#">Necesidades</a>
+          <a href="#">Productos y Servicios</a>
+          <a href="#">Educación Financiera</a>
+        </div>
+        <div className="derecha">
+          <button className="negocios-especializados">
+            Negocios especializados
+          </button>
+          <button className="entrar">Entrar</button>
+        </div>
+      </div>
+
+=======
+>>>>>>> origin/develop
       {/* Deslizador */}
 
       <Carousel />
@@ -85,17 +109,26 @@ export const Home = () => {
           <div className="hero-imagen">
             <div className="info-box">
               <p>Descarga la nueva app Galaxy App. Conoce cómo</p>
+<<<<<<< HEAD
               <p>Elige "Tus llaves" en la app Mi Galaxy.</p>
+=======
+              <p>Elige "Tus llaves" en la app Mi Bancolombia.</p>
+>>>>>>> origin/develop
             </div>
           </div>
         </section>
 
         {/* Accesos rápidos */}
         <section className="accesos-rapidos">
-          {accesos.map((item) => (
-            <div className="acceso-item" key={item.label}>
-              <img src={item.icon} alt={item.label} className="icon-img" />
-              <div>{item.label}</div>
+<<<<<<< HEAD
+          <div>Trámites digitales</div>
+          <div>Negociar deuda</div>
+          <div>Pagos</div>
+          <div>Centro de Ayuda</div>
+          <div>Certificados bancarios</div>
+          <div>Solicita tu turno</div>
+        </section>
+
         {/* Recomendaciones */}
         <section className="recomendaciones">
           <h3>Pensando en ti te recomendamos</h3>
@@ -125,6 +158,7 @@ export const Home = () => {
             </div>
           </div>
         </section>
+
         {/* Preguntas frecuentes */}
         <section className="faq">
           <div className="faq-contacto">
@@ -142,7 +176,6 @@ export const Home = () => {
             </ul>
             <a href="#">Ver todas las preguntas frecuentes</a>
           </div>
-          ))}
         </section>
 
         {/* Productos */}
@@ -156,14 +189,51 @@ export const Home = () => {
                 Oportunidades para tus proyectos o ideas que necesitan apoyo
                 financiero.
               </p>
+              <button className="btn-azul">Saber más</button>
+            </div>
+            <div className="producto">
+              <h4>Tarjetas de crédito</h4>
+              <p>Paga, compra y gana puntos usando tus tarjetas.</p>
+              <p>Con nuestras tarjetas de crédito también ganas.</p>
+              <button className="btn-azul">Saber más</button>
+            </div>
+            <div className="producto">
+              <h4>Seguros</h4>
+              <p>Tu seguridad es la de todos, con nuestros seguros.</p>
+              <p>Protegemos a tu familia y a ti.</p>
+              <button className="btn-azul">Saber más</button>
+            </div>
+          </div>
+          <a href="#">Ver todos los productos</a>
+=======
+          {accesos.map((item) => (
+            <div className="acceso-item" key={item.label}>
+              <img src={item.icon} alt={item.label} className="icon-img" />
+              <div>{item.label}</div>
+            </div>
+          ))}
+        </section>
+
+        {/* Servicios */}
+        <section className="servicios">
+          {servicios.map((serv) => (
+            <div className="servicio-card" key={serv.id}>
+              <img
+                src={serv.imagen}
+                alt={serv.titulo}
+                className="imagen-servicio"
+              />
+              <div
+                className="servicio-info"
                 style={{ backgroundColor: serv.color }}
               >
                 <h4>{serv.titulo}</h4>
                 <p>{serv.texto}</p>
                 <button className="btn-blanco">Más información</button>
+              </div>
             </div>
-          </div>
-          <a href="#">Ver todos los productos</a>
+          ))}
+>>>>>>> origin/develop
         </section>
       </div>
     </div>

@@ -8,16 +8,16 @@ export const PasswordInput = ({handleInputChange, value, name}) => {
 
   return (
     <div className="input-container">
-      <label>Contraseña</label>
       <div className="input-pass-container">
         <input
           type={visiblePass ? "text" : "password"}
           name={name}
           value={value}
           onChange={handleInputChange}
+          placeholder="Contraseña"
         />
         <button type="button" onClick={() => setVisiblePass(!visiblePass)}>
-          👁️
+          
         </button>
       </div>
     </div>
