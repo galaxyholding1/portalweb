@@ -1,16 +1,65 @@
-import './Footer.css'
+import "./Footer.css";
+import galaxyIcon from "../../assets/images/logo-galaxy.png" 
 
 export const Footer = () => {
   return (
     <footer>
-      <hr />
+      <div class="footer-logo">
+        <img src={galaxyIcon} alt="Galaxy Icon" />
+      </div>
+
       <div class="footer-links">
-        <a href="#">Politicas de privacidad</a>
-        <a href="#">Reglamento portal virtual</a>
+        <div>
+          <a href="#">Politicas</a>
+          <a href="#">Reglamento</a>
+          <a href="#">Galaxy Pay</a>
+          <a href="#">Lorem Ipsum</a>
+          <a href="#">dolor sit amet</a>
+          <a href="#">consectetur adipisicing</a>
+        </div>
+
+        <hr />
+        <div>
+          <a href="#">Politicas</a>
+          <a href="#">Reglamento</a>
+          <a href="#">Galaxy Pay</a>
+          <a href="#">Lorem Ipsum</a>
+          <a href="#">dolor sit amet</a>
+          <a href="#">consectetur adipisicing</a>
+        </div>
+
+        <hr />
+        <div>
+          <a href="#">Politicas</a>
+          <a href="#">Reglamento</a>
+          <a href="#">Galaxy Pay</a>
+          <a href="#">Lorem Ipsum</a>
+          <a href="#">dolor sit amet</a>
+          <a href="#">consectetur adipisicing</a>
+        </div>
+
+        <hr />
+        <div>
+          <a href="#">Politicas</a>
+          <a href="#">Reglamento</a>
+          <a href="#">Galaxy Pay</a>
+          <a href="#">Lorem Ipsum</a>
+          <a href="#">dolor sit amet</a>
+          <a href="#">consectetur adipisicing</a>
+        </div>
+
+        <hr />
+        <div>
+          <a href="#">Politicas</a>
+          <a href="#">Reglamento</a>
+          <a href="#">Galaxy Pay</a>
+          <a href="#">Lorem Ipsum</a>
+          <a href="#">dolor sit amet</a>
+          <a href="#">consectetur adipisicing</a>
+        </div>
       </div>
-      <div className="footer-web-link">
-        <a href="#">www.galaxypay.com</a>
-      </div>
+
+      
     </footer>
   );
 };

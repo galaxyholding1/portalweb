@@ -4,9 +4,10 @@ import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-import facebookIcon from "../../assets/images/SVG/facebook-icon.svg" 
-import instagramIcon from "../../assets/images/SVG/instagram-icon.svg" 
-import xIcon from "../../assets/images/SVG/x-icon.svg" 
+import facebookIcon from "../../assets/images/SVG/facebook-icon.svg";
+import instagramIcon from "../../assets/images/SVG/instagram-icon.svg";
+import xIcon from "../../assets/images/SVG/x-icon.svg";
+import logo from "../../assets/images/SVG/logo-navbar.svg";
 
 const linksSelect = [
   { name: "Negocios especializados", path: "/" },
@@ -26,18 +27,22 @@ const secondaryLinks = [
   { name: "Negocios", path: "/home-empresas" },
   { name: "Corporativos", path: "/corporativos" },
   { name: "Negocios especializados", path: "/especializados" },
-]
+];
 
 const socialIcons = [
   { imgPath: facebookIcon, href: "/" },
   { imgPath: instagramIcon, href: "/" },
   { imgPath: xIcon, href: "/" },
-]
+];
 
 export const Navbar = () => {
   const { pathname } = useLocation();
-  const haveSelectedLink = linksSelect.map( link => link.path ).includes( pathname );
-  const [selectedLink, setSelectedLink] = useState( haveSelectedLink ? pathname :  "/");
+  const haveSelectedLink = linksSelect
+    .map((link) => link.path)
+    .includes(pathname);
+  const [selectedLink, setSelectedLink] = useState(
+    haveSelectedLink ? pathname : "/"
+  );
 
   return (
     <>
@@ -52,14 +57,19 @@ export const Navbar = () => {
           </Link>
         ))}
 
-        {socialIcons.map(({href, imgPath}, i) => (
+        {socialIcons.map(({ href, imgPath }, i) => (
           <a href={href}>
-            <img src={imgPath} alt={name} key={i} className='social-media-icon'/>
+            <img
+              src={imgPath}
+              alt={name}
+              key={i}
+              className="social-media-icon"
+            />
           </a>
         ))}
       </nav>
       <nav className="navbar-galaxy">
-        <img src="/logo-navbar.svg" alt="logo" />
+        <img src={logo} alt="logo" />
 
         <ul>
           {navItems.map(({ name, path }) => (
