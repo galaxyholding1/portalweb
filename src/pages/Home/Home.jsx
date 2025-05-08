@@ -60,7 +60,7 @@ export const Home = () => {
           <div className="hero-imagen">
             <div className="info-box">
               <p>Descarga la nueva app Galaxy App. Conoce cómo</p>
-              <p>Elige "Tus llaves" en la app Mi Bancolombia.</p>
+              <p>Elige "Tus llaves" en la app Mi Galaxy.</p>
             </div>
           </div>
         </section>
