@@ -6,7 +6,8 @@ import { useForm } from "../../hooks/useForm";
 import { PasswordInput } from "../../components/Input/PasswordInput";
 import { CustomInput } from "../../components/Input/CustomInput";
 import AdSlider from "../../components/AdSlider";
-import { Footer } from "../../components/Footer/Footer";
+
+import bannerImage from "../../assets/images/banner-home.png"
 
 const initialFormState = {
   username: "",
@@ -53,7 +54,7 @@ export const LoginPeople = () => {
         <div className="banner">
           {/* Banner Visual */}
           <img
-            src="https://cdn.dynamicyield.com/api/8775742/images/5c9b01660f84.jpg"
+            src={bannerImage}
             alt="Banner Visual"
           />
         </div>
