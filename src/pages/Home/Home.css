@@ -46,6 +46,14 @@
   margin-bottom: 8px;
   object-fit: contain;
 }
+.contenedor-accesos {
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+}
 
 /* Servicios */
 .servicios-wrapper {
