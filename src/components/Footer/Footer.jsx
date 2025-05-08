@@ -4,11 +4,11 @@ import galaxyIcon from "../../assets/images/logo-galaxy.png"
 export const Footer = () => {
   return (
     <footer>
-      <div class="footer-logo">
+      <div className="footer-logo">
         <img src={galaxyIcon} alt="Galaxy Icon" />
       </div>
 
-      <div class="footer-links">
+      <div className="footer-links">
         <div>
           <a href="#">Politicas</a>
           <a href="#">Reglamento</a>

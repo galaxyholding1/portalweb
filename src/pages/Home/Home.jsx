@@ -10,8 +10,6 @@ import ayudaIcon from "../../assets/images/iconos-acceso-rapido/centro-de-ayuda.
 import certificadosIcon from "../../assets/images/iconos-acceso-rapido/certificados-bancarios.svg";
 import turnoIcon from "../../assets/images/iconos-acceso-rapido/solicita-turno.svg";
 
-import { image } from "framer-motion/client";
-
 const accesos = [
   { icon: tramitesIcon, label: "Trámites digitales", path: "/tramites" },
   { icon: negociarIcon, label: "Negociar deuda", path: "/negociar" },
@@ -71,7 +69,7 @@ export const Home = () => {
                 onClick={() => (window.location.href = item.path)}
                 style={{ cursor: "pointer" }}
               >
-                <img src={item.icon} alt={item.label} className="icon-img" />
+                <img src={item.icon} alt={item.label} className="icon-img" style={{fill:'red'}}/>
                 <div>{item.label}</div>
               </div>
             ))}
