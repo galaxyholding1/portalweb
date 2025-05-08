@@ -8,6 +8,8 @@ import facebookIcon from "../../assets/images/SVG/facebook-icon.svg"
 import instagramIcon from "../../assets/images/SVG/instagram-icon.svg" 
 import xIcon from "../../assets/images/SVG/x-icon.svg" 
 
+import galaxyIcon from "../../assets/images/logo-galaxy.png" 
+
 const linksSelect = [
   { name: "Negocios especializados", path: "/" },
   { name: "Sucursal Personas", path: "/login-personas" },
@@ -59,7 +61,7 @@ export const Navbar = () => {
         ))}
       </nav>
       <nav className="navbar-galaxy">
-        <img src="/logo-navbar.svg" alt="logo" />
+        <img src={galaxyIcon} alt="logo" />
 
         <ul>
           {navItems.map(({ name, path }) => (

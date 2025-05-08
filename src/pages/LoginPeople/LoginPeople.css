@@ -60,7 +60,7 @@
 }
 
 .banner>img {
-  aspect-ratio: 519/333;
+  /* aspect-ratio: 519/333; */
   max-width: 100%;
   cursor: pointer;
   border-radius: 10px;
