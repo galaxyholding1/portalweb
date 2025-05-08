@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Carousel.css";
-
+import turnoIcon from "../../assets/images/SVG/banner-home.png";
 const Carousel = () => {
   const slides = [
     {
@@ -8,19 +8,19 @@ const Carousel = () => {
       description:
         "Saca tu cuenta por Internet, desde el celular. Elige el plan que prefieras con cuota de manejo desde cero pesos, incluso cuenta nómina. Recibe la tarjeta gratis en casa.",
       buttonText: "Abre tu cuenta",
-      image: "/images/person-with-phone.jpg",
+      image: turnoIcon,
     },
     {
       title: "Descarga la nueva app Mi Galaxy App",
       description: "Conocé cómo",
       buttonText: "Descargar app",
-      image: "/images/app-banner.jpg",
+      image: turnoIcon,
     },
     {
       title: 'Elige "Tus llaves" en la app Mi Galaxy App',
       description: "Gestiona tus productos de manera segura",
       buttonText: "Conoce más",
-      image: "/images/keys-banner.jpg",
+      image: turnoIcon,
     },
   ];
 

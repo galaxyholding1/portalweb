@@ -1,5 +1,5 @@
 .carousel-wrapper {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     background: #f5f5f5;
     overflow: hidden;
@@ -22,7 +22,7 @@
     display: flex;
     height: 100%;
     padding: 0 15%;
-    background: linear-gradient(45deg, #FFD700, #FFE55C);
+    background: linear-gradient(45deg, #414141, #414141b5);
 }
 
 .text-content {
@@ -35,14 +35,14 @@
 
 .text-content h2 {
     font-size: 2.5rem;
-    color: #333;
+    color: #fff;
     margin-bottom: 20px;
     font-weight: bold;
 }
 
 .text-content p {
     font-size: 1.1rem;
-    color: #555;
+    color: #fff;
     margin-bottom: 30px;
     line-height: 1.6;
 }
