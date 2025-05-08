@@ -1,33 +1,27 @@
 import React from "react";
 import AdSlider from "../../components/AdSlider";
 import "../../pages/Home/Home.css";
-import miImagen from'../../assets/images/SVG/LOGO-GALAXY-PAY_hor-01.svg'
-import facebook from'../../assets/images/SVG/2023_Facebook_icon.svg.png'
+import imagendeprueba from "../../assets/images/SVG/imagendeprueba.jpg";
+import tramitesIcon from "../../assets/images/iconos-acceso-rapido/tramites-digitales.svg";
+import negociarIcon from "../../assets/images/iconos-acceso-rapido/negociar-deuda.svg";
+import pagosIcon from "../../assets/images/iconos-acceso-rapido/pago.svg";
+import ayudaIcon from "../../assets/images/iconos-acceso-rapido/centro-de-ayuda.svg";
+import certificadosIcon from "../../assets/images/iconos-acceso-rapido/certificados-bancarios.svg";
+import turnoIcon from "../../assets/images/iconos-acceso-rapido/solicita-turno.svg";
 
-import ayudaIcon from '../../assets/images/iconos-acceso-rapido/centro-de-ayuda.svg';
-import certificadosIcon from '../../assets/images/iconos-acceso-rapido/certificados-bancarios.svg';
-import turnoIcon from '../../assets/images/iconos-acceso-rapido/solicita-turno.svg';
+import { image } from "framer-motion/client";
 
-      {/* Barra superior */}      
-            <a href="#">Personas</a>
-            <a href="#">Negocios</a>
-            <a href="#">Corporativo</a>
-            <a href="#">Negocios Especializados</a>
-            <img src={facebook} alt="Logo facebook" style={{width: '', height: '100px'}}/>
-            src={facebook}
-            alt="Logo facebook"
-            style={{ width: "", height: "100px" }}
-          />
-            </div>        
-        </div>
-
-   {/* Header principal */}
-   <div className="header-principal">
-    <img src={miImagen} alt="Logo principal" style={{width: '200px'}}/>
-  { icon: pagosIcon, label: "Pagos" },
-  { icon: ayudaIcon, label: "Centro de Ayuda" },
-  { icon: certificadosIcon, label: "Certificados bancarios" },
-  { icon: turnoIcon, label: "Solicita tu turno" },
+const accesos = [
+  { icon: tramitesIcon, label: "Trámites digitales", path: "/tramites" },
+  { icon: negociarIcon, label: "Negociar deuda", path: "/negociar" },
+  { icon: pagosIcon, label: "Pagos", path: "/pagos" },
+  { icon: ayudaIcon, label: "Centro de Ayuda", path: "/ayuda" },
+  {
+    icon: certificadosIcon,
+    label: "Certificados bancarios",
+    path: "/certificados",
+  },
+  { icon: turnoIcon, label: "Solicita tu turno", path: "/turno" },
 ];
 
 const servicios = [
@@ -35,20 +29,27 @@ const servicios = [
     id: 1,
     color: "#f472b6",
     titulo: "Servicio 01",
-    texto: "Protege tu casa y familia con Prosegur Alarms.",
+    texto:
+      "Protege tu casa y familia con Prosegur Alarms. Gratis instalación si pagas con tarjeta Bancolombia. *Aplican TyC",
     imagen: imagendeprueba,
-          <button className="negocios-especializados">Negocios especializados</button>
-    color: "#818cf8",
+    link: "/servicio-01",
+  },
+  {
+    id: 2,
+    color: "#6366f1",
     titulo: "Servicio 02",
-    texto: "Conoce los beneficios exclusivos para ti.",
+    texto: "Protege tu casa y familia con Prosegur Alarms. Gratis.",
     imagen: imagendeprueba,
+    link: "/servicio-02",
   },
   {
     id: 3,
-    color: "#fbbf24",
+    color: "#f97316",
     titulo: "Servicio 03",
-    texto: "Descubre cómo ahorrar en tus facturas mensuales.",
+    texto:
+      "Protege tu casa y familia con Prosegur Alarms. Gratis instalación si pagas con tarjetas de crédito.",
     imagen: imagendeprueba,
+    link: "/servicio-03",
   },
 ];
 
@@ -56,111 +57,53 @@ export const Home = () => {
   return (
     <div className="allpage">
       {/* Deslizador */}
-
-      <Carousel />
+      <section className="p-4">
+        <h1 className="text-xl mb-4">Deslizable de Publicidad</h1>
+        <AdSlider speed={10000} />
+        <marquee scrollamount="5">Contenido en movimiento o aviso...</marquee>
+      </section>
 
       <div className="home-container">
-        {/* Hero principal */}
-        <section className="hero-principal">
-          <div className="hero-texto">
-            <h2>Descarga la nueva app Galaxy App</h2>
-            <p>
-              Desde la tienda de aplicaciones de tu celular e inscribe tu Clave
-              Dinámica
-            </p>
-            <button className="btn-descargar">Descárgala ya</button>
-          </div>
-          <div className="hero-imagen">
-            <div className="info-box">
-              <p>Descarga la nueva app Galaxy App. Conoce cómo</p>
-              <p>Elige "Tus llaves" en la app Mi Bancolombia.</p>
-            </div>
-          </div>
-        </section>
-
         {/* Accesos rápidos */}
         <section className="accesos-rapidos">
-        <div>Trámites digitales</div>
-        <div>Negociar deuda</div>
-        <div>Pagos</div>
-        <div>Centro de Ayuda</div>
-        <div>Certificados bancarios</div>
-        <div>Solicita tu turno</div>
-      </section>
-      {/* Recomendaciones */}
-      <section className="recomendaciones">
-        <h3>Pensando en ti te recomendamos</h3>
-        <div className="tarjetas-recomendadas">
-          <div className="tarjeta">
-            <h4>Las visitas sorpresa no siempre son de tus amigos</h4>
-            <p>
-              Protege tu casa y familia con Prosegur Alarms. Gratis instalación con tarjetas de crédito.
-              *Aplican TyC
-            </p>
-            <button className="btn-negro">Cotizar Kit</button>
+          <div className="contenedor-accesos">
+            {accesos.map((item) => (
+              <div
+                className="acceso-item"
+                key={item.label}
+                onClick={() => (window.location.href = item.path)}
+                style={{ cursor: "pointer" }}
+              >
+                <img src={item.icon} alt={item.label} className="icon-img" />
+                <div>{item.label}</div>
+              </div>
+            ))}
           </div>
-          <div className="tarjeta">
-            <h4>¿Te cortaron la luz?</h4>
-            <p>Activa el pago automático de tus facturas desde la Galaxy App.</p>
-                Activa el pago automático de tus facturas desde la Galaxy App.
-              </p>
-            <button className="btn-negro">Descubre cómo</button>
-          </div>
-          <div className="tarjeta">
-            <h4>1, 2, 3 tu plata llega de inmediato</h4>
-            <p>
-              Pagos Inmediatos facilitan transacciones diarias, envíos y pagos a comercios.
-                a comercios.
-            </p>
-            <button className="btn-negro">Conoce más</button>
-          </div>
-        </div>
-      </section>
-      {/* Preguntas frecuentes */}
-      <section className="faq">
-        <div className="faq-contacto">
-          <h4>Háblale ahora</h4>
-          <h2>Resuelve tus dudas con Tabot</h2>
-          <button className="btn-claro">Conoce más</button>
-        </div>
-        <div className="faq-lista">
-          <h3>Lo más consultado</h3>
-          <ul>
-            <li>¿Qué certificados puedo solicitar por la página web?</li>
-            <li>¿Cómo pido un Extracto Bancario?</li>
-            <li>¿Cómo consulto mi certificado tributario?</li>
-            <li>¿Dónde descargo los extractos?</li>
-          </ul>
-          <a href="#">Ver todas las preguntas frecuentes</a>
-        </div>
-          ))}
         </section>
 
-      {/* Productos */}
-      <section className="productos">
-        <h3>Conoce más de nuestros productos</h3>
-        <div className="productos-grid">
-          <div className="producto">
-            <h4>Créditos</h4>
-            <p>Financia lo que sueñas, quieres y necesitas.</p>
-            <p>Oportunidades para tus proyectos o ideas que necesitan apoyo financiero.</p>
-            <button className="btn-azul">Saber más</button>
-          </div>
-          <div className="producto">
-            <h4>Tarjetas de crédito</h4>
-            <p>Paga, compra y gana puntos usando tus tarjetas.</p>
-            <p>Con nuestras tarjetas de crédito también ganas.</p>
-            <button className="btn-azul">Saber más</button>
-          </div>
-          <div className="producto">
-            <h4>Seguros</h4>
-            <p>Tu seguridad es la de todos, con nuestros seguros.</p>
-            <p>Protegemos a tu familia y a ti.</p>
-            <button className="btn-azul">Saber más</button>
-          </div>
+        {/* Servicios */}
+
+        <div className="servicios-wrapper">
+          {servicios.map((servicio, index) => (
+            <div
+              key={servicio.id}
+              className={`servicio tarjeta-${servicio.id}`}
+              style={{
+                backgroundColor: servicio.color,
+                flex: servicio.id === 1 ? 3 : 2,
+              }}
+            >
+              <img src={servicio.imagen} alt={servicio.titulo} />
+              <div className="contenido">
+                <h3>{servicio.titulo}</h3>
+                <p>{servicio.texto}</p>
+                <a href={servicio.link}>
+                  <button>más información</button>
+                </a>
+              </div>
+            </div>
+          ))}
         </div>
-        <a href="#">Ver todos los productos</a>
-        </section>
       </div>
     </div>
   );
