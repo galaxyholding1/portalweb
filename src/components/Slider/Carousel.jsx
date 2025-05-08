@@ -11,13 +11,13 @@ const Carousel = () => {
       image: "/images/person-with-phone.jpg",
     },
     {
-      title: "Descarga la nueva app Mi Bancolombia",
+      title: "Descarga la nueva app Mi Galaxy App",
       description: "Conocé cómo",
       buttonText: "Descargar app",
       image: "/images/app-banner.jpg",
     },
     {
-      title: 'Elige "Tus llaves" en la app Mi Bancolombia',
+      title: 'Elige "Tus llaves" en la app Mi Galaxy App',
       description: "Gestiona tus productos de manera segura",
       buttonText: "Conoce más",
       image: "/images/keys-banner.jpg",

@@ -10,8 +10,8 @@
 
 body {
   margin: 0;
+<<<<<<< HEAD
   background-color: var(--bg-color);
-  min-height: 100dvh;
   color: var(--text-color);
   transition: background-color 0.3s, color 0.3s;
 }
@@ -19,3 +19,7 @@ body {
 
 
 
+=======
+  min-height: 100dvh;
+}
+>>>>>>> origin/develop
