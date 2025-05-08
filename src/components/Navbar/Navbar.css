@@ -5,7 +5,7 @@
   justify-content: space-between;
   align-items: center;
   padding: .75rem 1rem;
-  background-color: #f0f0f0;
+  background-color: var(--bg-secondary);
 }
 
 .navbar-galaxy>img {
@@ -22,7 +22,7 @@
 
 a {
   text-decoration: none;
-  color: #4f4e4d;
+  color: var(--text-primary);
 }
 
 select {
@@ -33,14 +33,14 @@ select {
 
 .btn-go-login {
   border-radius: 5px;
-  background-color: #e7458e;
+  background-color: var(--primary-color);
   color: white;
   padding: 1rem 1.5rem;
   text-decoration: none;
 }
 
 .active-item {
-  color: #e7458e !important;
+  color: var(--primary-color) !important;
 }
 
 
