@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 
 import "./LoginPeople.css";
 
@@ -16,10 +16,11 @@ const initialFormState = {
 
 export const LoginPeople = () => {
   const { formValues, handleInputChange } = useForm(initialFormState);
-
+  const navigate = useNavigate();
   const handleLogin = (e) => {
     e.preventDefault();
     console.log(formValues);
+    navigate("/portal-personas/home")
   };
 
   return (
