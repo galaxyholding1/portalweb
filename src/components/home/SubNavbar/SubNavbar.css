@@ -1,14 +1,6 @@
-:root {
-  --nav-bg: #2D2D2D;
-  --nav-text: #626262;
-  --nav-active: #0066ff;
-  --nav-hover: rgba(0, 102, 255, 0.1);
-  --nav-active-bg: rgba(0, 102, 255, 0.1);
-  --nav-border: rgba(255, 255, 255, 0.1);
-}
 
 .navbar {
-  background-color: var(--nav-bg);
+  background-color: var(--bg-primary);
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;

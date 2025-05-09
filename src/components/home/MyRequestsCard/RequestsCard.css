@@ -22,12 +22,15 @@
     padding: 10px 0;
     background:var(--bg-tertiary);
     border-radius: 12px;
+    padding: 10px;
+    color: var(--text-color);
 }
 
 .section-header h3 {
     font-size: 1rem;
     font-weight: 500;
-    color: #fff;
+    color: var(--text-color);
+    font-weight: bold;
     margin: 0;
 }
 
@@ -35,6 +38,7 @@
     color: var(--accent-pink);
     text-decoration: none;
     font-size: 0.875rem;
+    color: var(-secondary-color);
 }
 
 .requests-list {
@@ -95,12 +99,13 @@
 .request-title {
     margin: 0;
     font-size: 0.875rem;
-    color: #fff;
+    color: var(--primary-color);
+    font-weight: bold;
 }
 
 .request-time {
     font-size: 0.75rem;
-    color: var(--nav-text);
+    color: var(--text-color);
     display: block;
     margin-top: 4px;
 }
@@ -115,8 +120,8 @@
 }
 
 .transfers-section {
-    margin-top: 24px;
-    padding: 16px;
+    margin-top: 15px;
+    padding: 10px;
     background:var(--bg-secondary);
     border-radius: 12px;
     box-shadow: var(--bg-secondary);
@@ -150,7 +155,7 @@ th {
 
 td {
     padding: 12px 16px;
-    color: #fff;
+    color: var(--primary-color);
     font-size: 0.875rem;
 }
 
@@ -226,4 +231,10 @@ tbody tr:hover {
         padding: 8px;
         font-size: 0.8rem;
     }
+}
+
+.notification-icon{
+    color: var( --bg-primary);
+    font-size: 1.5rem;
+    width: 60%;
 }
