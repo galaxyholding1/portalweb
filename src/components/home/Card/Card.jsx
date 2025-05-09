@@ -1,16 +1,11 @@
 import { Link } from "react-router";
 import "./Card.css";
+import { CardHeader } from "./CardHeader/CardHeader";
 
 export const Card = ({children, icon, title, morePath}) => {
   return (
     <div className="card-container">
-      <span className="card-header">
-        <div>
-          {icon}
-          <h3>{title}</h3>
-        </div>
-        <Link to={morePath}>Ver más</Link>
-      </span>
+      <CardHeader icon={icon} title={title} morePath={morePath}/>
       <div className="card-content">
         { children }
       </div>

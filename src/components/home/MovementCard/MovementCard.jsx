@@ -1,6 +1,5 @@
-import { Card } from "./Card";
-import { MovementItem } from "./movements/movementItem";
-// import "./home.css";
+import { Card } from "../Card/Card";
+import { MovementItem } from "../movements/movementItem";
 
 const movements = [
   { 

@@ -1,5 +1,5 @@
-import { Formatter } from "../../../../util/formatter"
-import MoneyIcon from "../../../../assets/images/SVG/money.svg"
+import { Formatter } from "../../../util/formatter"
+import MoneyIcon from "../../../assets/images/SVG/money.svg"
 import "./movements.css"
 
 export const MovementItem = ({amount, conceptTitle, date}) => {

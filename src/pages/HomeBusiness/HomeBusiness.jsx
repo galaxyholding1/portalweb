@@ -1,11 +1,10 @@
-import React from "react";
-import SubNabvar from "../Home/SubNavbar";
+import SubNavbar from "../../components/home/SubNavbar/SubNavbar";
 
 export const HomeBusiness = () => {
   return (
     <div>
       <p>Home Business</p>
-      <SubNabvar />
+      <SubNavbar/>
     </div>
   );
 };
