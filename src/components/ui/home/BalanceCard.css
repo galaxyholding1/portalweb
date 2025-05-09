@@ -1,0 +1,16 @@
+.balance-table{
+  font-weight: 500;
+  width: 100%;
+}
+
+
+.balance-table-header th{
+  color: var( --primary-color);
+  text-align: left;
+  font-weight: 500;
+  width: 33.33%;
+}
+
+.balance-table-body tr{
+  height: 3rem;
+}
