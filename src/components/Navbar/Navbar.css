@@ -78,4 +78,10 @@ select {
   .navbar-galaxy-secondary {
     font-size: .75rem;
   }
+  
+}.full-width-section {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  position: relative;
+  left: 0;
 }
