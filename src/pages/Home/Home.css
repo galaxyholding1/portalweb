@@ -28,8 +28,7 @@
 .acceso-item {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  font-weight: 500;
+  align-items: center;  
   transition: transform 0.2s;
   padding: 8px;
   text-align: center;

@@ -1,10 +1,9 @@
-import React from "react";
 import { Home } from "../pages/Home/Home";
 import { LoginBusiness } from "../pages/LoginBusiness/LoginBusiness";
 import { LoginPeople } from "../pages/LoginPeople/LoginPeople";
 import { Route, Routes } from "react-router";
-import { HomeBusiness } from "../pages/HomeBusiness/HomeBusiness";
-import { HomePeople } from "../pages/HomePeople/HomePeople";
+import { ProtectedRoutesBusiness } from "./ProtectedRoutesBusiness";
+import { ProtectedRoutesPeople } from "./ProtectedRoutesPeople";
 
 export const Router = () => {
   return (
@@ -12,8 +11,8 @@ export const Router = () => {
       <Route path="/" element={<Home/>} />
       <Route path="/login-personas" element={<LoginPeople />} />
       <Route path="/login-empresas" element={<LoginBusiness />} />
-       <Route path="/home-empresas" element={<HomeBusiness />} />
-      <Route path="/home-personas" element={<HomePeople />} />
+      <Route path="/portal-personas/*" element={<ProtectedRoutesPeople />} />
+      <Route path="/portal-empresas/*" element={<ProtectedRoutesBusiness />} />
     </Routes>
   );
 };
