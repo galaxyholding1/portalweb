@@ -1,8 +1,10 @@
 :root {
   --text-color: black;
   --primary-color: #e7458e;
+  --secondary-color: #F0813A;
   --bg-primary: #fff;
   --bg-secondary: #f0f0f0;
+  --bg-tertiary: #626262;
   --text-primary: #4f4e4d;
   --text-secondary: #fff;
 }
@@ -22,9 +24,16 @@ body {
   min-height: 100dvh;
   color: var(--text-color);
   transition: background-color 0.3s, color 0.3s;
-  font-family: "Arial", sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
+.app {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
-
-
+.app > .content {
+  flex: 1;
+}

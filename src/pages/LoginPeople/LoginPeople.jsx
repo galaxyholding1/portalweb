@@ -59,9 +59,6 @@ export const LoginPeople = () => {
           />
         </div>
       </main>
-      <aside className="ad-container">
-        <AdSlider />
-      </aside>
     </div>
   );
 };

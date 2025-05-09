@@ -58,6 +58,7 @@ export const Home = () => {
   return (
     <div className="allpage">
       {/* Deslizador */}
+
       <Carosuel />
 
       <div className="home-container">

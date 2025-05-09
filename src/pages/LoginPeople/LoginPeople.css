@@ -6,7 +6,7 @@
   grid-template-rows: 1fr;
   gap: 10rem;
   margin-inline: auto;
-  margin-top: 1rem;
+  margin-block: 2rem;
 }
 
 .login-container form {
@@ -15,7 +15,8 @@
   align-items: center;
   gap: 1rem;
   padding: 0.5rem;
-  
+  padding-left: 3rem;
+  padding-top: 4rem;
   p, h3 {
     align-self: flex-start;
     margin: 0;

@@ -3,7 +3,8 @@ footer {
   box-sizing: border-box;
   width: 100%;
   bottom: 0; 
-  padding: 1rem 0;
+  padding-top: 2rem;
+  background-color: var(--bg-secondary);
   hr {
     margin: 1em;
     border: solid #dfdfdf 1.5px;
@@ -24,15 +25,25 @@ footer {
   justify-content: center;
   margin-top: 3rem;
   gap: 1.5rem;
+  padding-bottom: 4.5rem;
   a {
-    color: #333;
+    color: var(--text-primary);
   }
 }
 
 .footer-links > div {
   display: flex;
   flex-direction: column;
-  gap: .75rem
+  gap: .75rem;
+}
+
+.footer-terms {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  background-color: var(--primary-color);
+  color: var(--text-secondary);
+  padding: 1rem 0;
 }
 
 @media screen and (max-width: 900px ) {
