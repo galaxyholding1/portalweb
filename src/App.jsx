@@ -13,11 +13,13 @@ function App() {
   }, []);
 
   return (
-    <>
+    <div className="app">
       <Navbar />
-      <Router />
+      <div className="content">
+        <Router />
+      </div>
       <Footer/>
-    </>
+    </div>
   );
 }
 

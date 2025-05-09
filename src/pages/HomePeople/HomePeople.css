@@ -1,0 +1,32 @@
+.page-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  padding: 2.25rem;
+}
+
+.dashboard-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 228px 336px;
+  gap: 1.5rem;
+}
+
+.grid-area-movements{
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.grid-area-balance{
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.grid-area-applications {
+  /* SECTION estilos provisionales mientras implementa card */
+  background-color: var(--bg-secondary);
+  border-radius: 1rem;
+  /* !SECTION */
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+}
