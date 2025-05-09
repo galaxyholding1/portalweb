@@ -27,7 +27,7 @@ export class Formatter {
   static formatCurrency(amount) {
     return (
       "$" +
-      new Intl.NumberFormat("es-ES", {
+      new Intl.NumberFormat("es-CO", {
         style: "decimal",
         minimumFractionDigits: 2,
         maximumFractionDigits: 2,
