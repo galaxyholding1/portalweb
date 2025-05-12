@@ -1,5 +1,9 @@
 import { Card } from "../Card/Card";
 import "./RequestsCard.css";
+import Bell_Ringing from "../../../assets/images/SVG/Bell_Ring.svg";
+import Note_Search from "../../../assets/images/SVG/Note_Search.svg";
+import File_Document from "../../../assets/images/SVG/File_Document.svg";
+import Arrow_Left_Right from "../../../assets/images/SVG/Arrow_Left_Right.svg";
 
 const requestsList = [
   {
@@ -44,27 +48,23 @@ const transfersList = [
 ];
 
 export const RequestsCard = () => {
+  const screenType = "Business";
   return (
     <div className="requests-container">
       <div className="requests-section">
-        <div className="section-header">
-          <h3>mis solicitudes</h3>
-          <a href="#" className="ver-mas">
-            ver más
-          </a>
-        </div>
+        <Card
+          title="mis solicitudes"
+          icon={
+            <img src={File_Document} alt="documento" className="card-icon" />
+          }
+          morePath={`/${screenType}/requests`}
+        />
         <div className="requests-list">
           {requestsList.map((request) => (
             <div key={request.id} className="request-item">
               <div className="request-icon">
                 <div className="request-icon">
-                  <svg
-                    className="notification-icon"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                  >
-                    <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z" />
-                  </svg>
+                  <img src={Bell_Ringing} alt="" />
                 </div>
               </div>
               <div className="request-content">
@@ -72,7 +72,9 @@ export const RequestsCard = () => {
                 <span className="request-time">{request.time}</span>
               </div>
               <div className="request-status">
-                <span className="status-icon">→</span>
+                <div className="request-icon">
+                  <img src={Note_Search} alt="" />
+                </div>
               </div>
             </div>
           ))}
@@ -80,12 +82,13 @@ export const RequestsCard = () => {
       </div>
 
       <div className="transfers-section">
-        <div className="section-header">
-          <h3>transferencias</h3>
-          <a href="#" className="ver-mas">
-            ver más
-          </a>
-        </div>
+        <Card
+          title="Transferencias"
+          icon={
+            <img src={Arrow_Left_Right} alt="documento" className="card-icon" />
+          }
+          morePath={`/${screenType}/requests`}
+        />
         <div className="transfers-table">
           <table>
             <thead>
