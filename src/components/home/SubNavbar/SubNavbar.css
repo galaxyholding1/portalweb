@@ -49,6 +49,7 @@
 
 .nav-item:hover  {
   background-color: var(--nav-active-bg);
+  color: var(--text-secondary);
 }
 
 .nav-item.active {
