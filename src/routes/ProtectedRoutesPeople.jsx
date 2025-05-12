@@ -5,6 +5,6 @@ import { ConsignmentsPeople } from "../pages/ConsignmentsPeople/ConsignmentsPeop
 export const ProtectedRoutesPeople = () => (
   <Routes>
     <Route path="/home" element={<HomePeople />} />
-    <Route path="/consignments" element={<ConsignmentsPeople />} />
+    <Route path="/remesas" element={<ConsignmentsPeople />} />
   </Routes>
 );

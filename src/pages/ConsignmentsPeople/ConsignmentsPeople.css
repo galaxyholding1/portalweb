@@ -1,8 +1,6 @@
-.consignments-container{
-  
-}
+.consignments-container { overflow: hidden; }
 
-.consignments-presentation{
+.consignments-presentation {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
@@ -10,22 +8,24 @@
   align-items: center;
 }
 
-.consignments-text > p {
+.consignments-text>p {
   margin-left: 2rem;
   font-weight: 400;
 }
-.consignments-text > h4 {
+
+.consignments-text>h4 {
   font-weight: 400;
   font-size: 1.5rem;
   margin-block: .75rem;
 }
-.consignments-text > h1 {
+
+.consignments-text>h1 {
   font-weight: 600;
   font-size: 3rem;
   margin-block: .75rem;
 }
 
-.consignments-hero > img {
+.consignments-hero>img {
   width: 100%;
 }
 
@@ -63,4 +63,21 @@
 
 .tab-content {
   padding: 16px;
+}
+
+@media (max-width: 768px) {
+  .consignments-presentation {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 1rem;
+  }
+
+  .tabs {
+    padding: 0 1rem;
+  }
+
+  .consignments-text>p {
+    text-align: center;
+    margin-block: 1rem;
+  }
 }

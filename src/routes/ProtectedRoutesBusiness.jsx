@@ -10,7 +10,7 @@ export const ProtectedRoutesBusiness = () => {
   return (
     <Routes>
       <Route path="/home" element={<HomeBusiness />} />
-      <Route path="/consignments" element={<ConsignmentsBusiness />} />
+      <Route path="/remesas" element={<ConsignmentsBusiness />} />
     </Routes>
   );
 };
