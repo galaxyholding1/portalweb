@@ -27,7 +27,7 @@ export const ConsignmentsPeople = () => {
             a través de las empresas de remesas de todo el mundo que tienen convenio con Galaxy Pay.
           </h4>
           <p>
-            Este producto es ofrecido por Galaxy Pay. <br />
+            Este producto es ofrecido por Galaxy Pay.
             Establecimiento Bancario.
           </p>
         </div>
