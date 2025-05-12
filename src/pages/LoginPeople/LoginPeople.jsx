@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 
 import "./LoginPeople.css";
 
@@ -7,7 +7,7 @@ import { PasswordInput } from "../../components/Input/PasswordInput";
 import { CustomInput } from "../../components/Input/CustomInput";
 import AdSlider from "../../components/AdSlider";
 
-import bannerImage from "../../assets/images/banner-home.png"
+import bannerImage from "../../assets/images/banner-home.png";
 
 const initialFormState = {
   username: "",
@@ -16,19 +16,21 @@ const initialFormState = {
 
 export const LoginPeople = () => {
   const { formValues, handleInputChange } = useForm(initialFormState);
-
+  const navigate = useNavigate();
   const handleLogin = (e) => {
     e.preventDefault();
     console.log(formValues);
+    navigate("/portal-personas/home")
   };
 
   return (
     <div className="login-screen">
-
       <main className="login-container">
         <form onSubmit={handleLogin}>
           <h3>Inicio de sesión</h3>
-          <p>Si no tienes un usuario asignado ingresa tu número de identidad.</p>
+          <p>
+            Si no tienes un usuario asignado ingresa tu número de identidad.
+          </p>
           <CustomInput
             handleInputChange={handleInputChange}
             value={formValues.username}
@@ -42,7 +44,9 @@ export const LoginPeople = () => {
             name="password"
           />
 
-          <button type="submit" id="btn-login-people">Iniciar sesión</button>
+          <button type="submit" id="btn-login-people">
+            Iniciar sesión
+          </button>
 
           <nav className="login-links">
             <Link>¿Olvidaste tu usuario?</Link>
@@ -53,10 +57,7 @@ export const LoginPeople = () => {
 
         <div className="banner">
           {/* Banner Visual */}
-          <img
-            src={bannerImage}
-            alt="Banner Visual"
-          />
+          <img src={bannerImage} alt="Banner Visual" />
         </div>
       </main>
     </div>

@@ -1,3 +1,4 @@
+import { Formatter } from "../../../util/formatter";
 import { Card } from "../Card/Card";
 import "./BalanceCard.css";
 
@@ -24,11 +25,11 @@ export const BalanceCard = () => {
             </tr>
           </thead>
           <tbody className="balance-table-body">
-            {balanceByProduct.map(({ type, balance, productId }) => (
-              <tr>
+            {balanceByProduct.map(({ type, balance, productId }, i) => (
+              <tr key={`${productId}${i}`}>
                 <td>{type}</td>
-                <td>{balance}</td>
                 <td>{productId}</td>
+                <td>{Formatter.formatCurrency(balance)}</td>
               </tr>
             ))}
           </tbody>

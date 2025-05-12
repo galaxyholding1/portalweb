@@ -7,7 +7,7 @@
 
 .dashboard-grid{
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 48% 52%;
   grid-template-rows: 228px 336px;
   gap: 1.5rem;
 }

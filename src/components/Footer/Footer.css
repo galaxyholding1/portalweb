@@ -3,12 +3,15 @@ footer {
   box-sizing: border-box;
   width: 100%;
   bottom: 0; 
+  padding: 2rem 5rem 0 5rem;
   padding-top: 2rem;
   background-color: var(--bg-secondary);
   hr {
     margin: 1em;
     border: solid #dfdfdf 1.5px;
   }
+  position: relative;
+  
 }
 
 .footer-logo {
@@ -22,10 +25,9 @@ footer {
 
 .footer-links {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   margin-top: 3rem;
   gap: 1.5rem;
-  padding-bottom: 4.5rem;
   a {
     color: var(--text-primary);
   }

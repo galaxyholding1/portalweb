@@ -1,0 +1,20 @@
+.footer-social-container{
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  width: 100%;
+  align-self: center;
+}
+
+.footer-social-container > div{
+  display: flex;
+  width: 290px;
+}
+
+.footer-social-container > span{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100px;
+}
