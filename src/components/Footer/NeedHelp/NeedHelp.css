@@ -13,10 +13,64 @@
 }
 
 .btn-need-help:hover {
+  /* box-shadow:  0 0 5rem .5rem var(--primary-color); */
   transform: translateX(-50%) translateY(-8px) scale(1.05);
 }
 
-.btn-need-help > img {
+.btn-need-help>img {
   display: block;
   width: 100%;
+}
+
+.tooltip-container {
+  transition: scale .5s ease-in-out allow-discrete;
+
+  @starting-style {
+    scale: 1;
+  }
+  
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes bounce-down {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+.tooltip {
+  position: absolute;
+  top: -125px;
+  background-color: #58a16c;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  white-space: nowrap;
+  animation: bounce-down 2s ease-in-out infinite;
+}
+
+/* flecha */
+.tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: #58a16c transparent transparent transparent;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(circle at 30% 30%, #f06, #a0f, #60f);
+  border-radius: 50%;
 }
