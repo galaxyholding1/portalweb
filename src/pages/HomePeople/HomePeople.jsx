@@ -4,16 +4,7 @@ import { RequestsCard } from "../../components/home/MyRequestsCard/RequestsCard"
 import SubNavbar from "../../components/home/SubNavbar/SubNavbar";
 import "./HomePeople.css";
 
-import "./HomePeople.css";
-import { useAuthStore } from "../../store/auth-store";
-
 export const HomePeople = () => {
-  const { testAuth, isAuthenticated } = useAuthStore();
-
-  useEffect(() => {
-    testAuth();
-  }, [testAuth, isAuthenticated]);
-
   return (
     <div className="page-container">
       <SubNavbar />
