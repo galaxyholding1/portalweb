@@ -2,7 +2,7 @@ import { useLocation } from 'react-router-dom';
 
 export const pathByClient = {
   people: '/portal-personas',
-  business: '/portal-business',
+  business: '/portal-empresas',
 }
 
 export const getModeClient = (location: string) => {
