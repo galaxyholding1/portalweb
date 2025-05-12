@@ -7,6 +7,7 @@
   --bg-tertiary: #626262;
   --text-primary: #4f4e4d;
   --text-secondary: #fff;
+  --nav-text: #333333;
 }
 
 [data-theme="dark"] {
@@ -17,6 +18,7 @@
   --bg-tertiary: #626262;
   --text-primary: #fff;
   --text-secondary: #fff;
+  --nav-text: #ffffff;
 }
 
 body {

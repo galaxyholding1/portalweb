@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import "./SubNavbar.css";
 import { MenuTooltip } from "../../../components/home/SubNavbar/tooltip/MenuTooltip";
-import certificadosIcon from "../../../assets/images/SVG/Bell_Ring.svg";
+import Homesubmenu from "../../../assets/images/SVG/Homesubmenu.svg";
+import Credit_Card_01 from "../../../assets/images/SVG/Credit_Card_01.svg";
+import Remesas from "../../../assets/images/SVG/remesas.svg";
 
 const SubNavbar = () => {
   const [activeItem, setActiveItem] = useState("inicio");
@@ -11,18 +13,7 @@ const SubNavbar = () => {
   const menuItems = [
     {
       id: "inicio",
-      icon: (
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="currentColor"
-          stroke="currentColor"
-          strokeWidth="2"
-        >
-          <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
-        </svg>
-      ),
+      icon: <img src={Homesubmenu} alt="inicio" className="nav-icon-img" />,
       text: "inicio",
     },
     {
@@ -84,19 +75,7 @@ const SubNavbar = () => {
     },
     {
       id: "pagos",
-      icon: (
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-        >
-          <rect x="2" y="5" width="20" height="14" rx="2" />
-          <path d="M2 10h20" />
-        </svg>
-      ),
+      icon: <img src={Credit_Card_01} alt="inicio" className="nav-icon-img" />,
       text: "pagos",
     },
     {
@@ -115,6 +94,11 @@ const SubNavbar = () => {
         </svg>
       ),
       text: "documentos",
+    },
+    {
+      id: "remesas",
+      icon: <img src={Remesas} alt="inicio" className="nav-icon-img" />,
+      text: "Remesas",
     },
   ];
 
