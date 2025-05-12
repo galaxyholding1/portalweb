@@ -53,11 +53,11 @@
 
 .nav-item.active {
   background-color: var(--nav-active-bg);
-  color: var(--nav-bg-primary)
+  color: var(--text-secondary);
 }
 
 .nav-item.active .nav-icon {
-  color: #ffffff;
+  color: var(--text-secondary);
 }
 
 .nav-icon {
