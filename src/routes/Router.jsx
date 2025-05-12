@@ -8,9 +8,12 @@ import { ProtectedRoutesPeople } from "./ProtectedRoutesPeople";
 export const Router = () => {
   return (
     <Routes>
+      // Rutas publicas.
       <Route path="/" element={<Home/>} />
       <Route path="/login-personas" element={<LoginPeople />} />
       <Route path="/login-empresas" element={<LoginBusiness />} />
+
+      // Enrutadores adicionales. (TODO: Implementar protección)
       <Route path="/portal-personas/*" element={<ProtectedRoutesPeople />} />
       <Route path="/portal-empresas/*" element={<ProtectedRoutesBusiness />} />
     </Routes>
