@@ -11,7 +11,7 @@
 }
 
 [data-theme="dark"] {
-  --text-color: #fff;
+  --text-color: black;;
   --primary-color: #e7458e;
   --bg-primary: #282828;
   --bg-secondary: #414141;
