@@ -4,12 +4,11 @@ import "./NeedHelp.css";
 
 export const NeedHelp = () => {
   const [hover, setHover] = useState(false);
-  const handleMouseOver = () => {
-    if( !hover ) {
-      setTimeout(() => {
-        setHover(true);
-      }, 1500);
-    }
+  
+  const handleMouseLeave = () => {
+    if( hover ) return;
+    setTimeout(() => setHover(true), 750);
+    setTimeout(() => setHover(false), 10000);
   }
 
   return (
@@ -17,7 +16,7 @@ export const NeedHelp = () => {
       <div className="tooltip-container" style={{ scale: hover ? 0 : 1 }}>
         <div className="tooltip">¿Necesitas ayuda?</div>
       </div>
-      <button className="btn-need-help" onMouseOver={handleMouseOver}>
+      <button className="btn-need-help" onMouseLeave={handleMouseLeave}>
         <img src={Logo} alt=""/>
       </button>
     </>
