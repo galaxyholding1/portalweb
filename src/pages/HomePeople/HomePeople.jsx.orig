@@ -1,11 +1,18 @@
+<<<<<<< HEAD
 import { BalanceCard } from "../../components/home/BalanceCard/BalanceCard";
 import { MovementCard } from "../../components/home/MovementCard/MovementCard";
 import { RequestsCard } from "../../components/home/MyRequestsCard/RequestsCard";
 import SubNavbar from "../../components/home/SubNavbar/SubNavbar";
 import "./HomePeople.css";
+=======
+import { useEffect } from "react";
+import { BalanceCard } from "../../components/home/BalanceCard/BalanceCard";
+import { MovementCard } from "../../components/home/MovementCard/MovementCard";
+import SubNavbar from "../../components/home/SubNavbar/SubNavbar";
 
 import "./HomePeople.css";
 import { useAuthStore } from "../../store/auth-store";
+>>>>>>> origin/develop
 
 export const HomePeople = () => {
   const { testAuth, isAuthenticated } = useAuthStore();
@@ -20,9 +27,13 @@ export const HomePeople = () => {
       <div className="dashboard-grid">
         <BalanceCard />
         <MovementCard />
+<<<<<<< HEAD
         <div className="grid-area-applications">
           <RequestsCard />
         </div>
+=======
+        <div className="grid-area-applications"></div>
+>>>>>>> origin/develop
       </div>
     </div>
   );

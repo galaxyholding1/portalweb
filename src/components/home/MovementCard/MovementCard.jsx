@@ -33,8 +33,8 @@ export const MovementCard = () => {
         icon={"icon"}
         morePath={`/${screenType}/movements`}
       >
-        {movements.map((mov) => (
-          <MovementItem {...mov} />
+        {movements.map((mov, i) => (
+          <MovementItem key={`${mov.conceptTitle}${i}`} {...mov} />
         ))}
       </Card>
     </div>

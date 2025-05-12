@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../../pages/Home/Home.css";
 
 import Carosuel from "../../components/Slider/Carousel";
@@ -11,6 +11,7 @@ import pagosIcon from "../../assets/images/iconos-acceso-rapido/pago.svg";
 import ayudaIcon from "../../assets/images/iconos-acceso-rapido/centro-de-ayuda.svg";
 import certificadosIcon from "../../assets/images/iconos-acceso-rapido/certificados-bancarios.svg";
 import turnoIcon from "../../assets/images/iconos-acceso-rapido/solicita-turno.svg";
+import { useAuthStore } from "../../store/auth-store";
 
 const accesos = [
   { icon: tramitesIcon, label: "Trámites digitales", path: "/tramites" },
@@ -55,6 +56,14 @@ const servicios = [
 ];
 
 export const Home = () => {
+  /*SECTION: simulo logout*/
+  const { logout, isAuthenticated } = useAuthStore();
+  
+  useEffect(() => {
+    logout(); 
+  }, [logout, isAuthenticated]);
+  /*!SECTION*/
+
   return (
     <div className="allpage">
       {/* Deslizador */}
