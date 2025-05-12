@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./SubNavbar.css";
 
+import certificadosIcon from "../../../assets/images/SVG/Bell_Ring.svg";
+
 const SubNavbar = () => {
   const [activeItem, setActiveItem] = useState("inicio");
   const [isMenuOpen, setIsMenuOpen] = useState(false);

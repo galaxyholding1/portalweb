@@ -53,7 +53,7 @@ export const RequestsCard = () => {
     <div className="requests-container">
       <div className="requests-section">
         <Card
-          title="mis solicitudes"
+          title="Mis solicitudes"
           icon={
             <img src={File_Document} alt="documento" className="card-icon" />
           }
