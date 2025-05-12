@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import "./SubNavbar.css";
-
+import { MenuTooltip } from "../../../components/home/SubNavbar/tooltip/MenuTooltip";
 import certificadosIcon from "../../../assets/images/SVG/Bell_Ring.svg";
 
 const SubNavbar = () => {
   const [activeItem, setActiveItem] = useState("inicio");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [tooltipData, setTooltipData] = useState(null);
 
   const menuItems = [
     {
@@ -40,6 +41,30 @@ const SubNavbar = () => {
         </svg>
       ),
       text: "productos",
+      submenu: [
+        {
+          title: "Cuentas galaxy pay",
+          items: [
+            { text: "Consultar cuentas", link: "#" },
+            { text: "Ver detalle de transacciones", link: "#" },
+          ],
+        },
+        {
+          title: "Créditos",
+          items: [
+            { text: "Consultar créditos", link: "#" },
+            { text: "Pagar créditos", link: "#" },
+            { text: "Desembolsar", link: "#" },
+          ],
+        },
+        {
+          title: "Administrar productos",
+          items: [
+            { text: "Inscribir productos", link: "#" },
+            { text: "Productos propios", link: "#" },
+          ],
+        },
+      ],
     },
     {
       id: "transferencias",
@@ -93,6 +118,23 @@ const SubNavbar = () => {
     },
   ];
 
+  const handleItemClick = (item, event) => {
+    if (item.submenu) {
+      const rect = event.currentTarget.getBoundingClientRect();
+      setTooltipData({
+        sections: item.submenu,
+        position: {
+          top: rect.bottom + 10,
+          left: rect.left,
+        },
+      });
+    } else {
+      setTooltipData(null);
+    }
+    setActiveItem(item.id);
+    setIsMenuOpen(false);
+  };
+
   return (
     <nav className="navbar">
       <div
@@ -108,10 +150,7 @@ const SubNavbar = () => {
           <div
             key={item.id}
             className={`nav-item ${activeItem === item.id ? "active" : ""}`}
-            onClick={() => {
-              setActiveItem(item.id);
-              setIsMenuOpen(false);
-            }}
+            onClick={(e) => handleItemClick(item, e)}
           >
             <div className="nav-content">
               <span className="nav-icon">{item.icon}</span>
@@ -134,6 +173,14 @@ const SubNavbar = () => {
           </a>
         </div>
       </div>
+
+      {tooltipData && (
+        <MenuTooltip
+          sections={tooltipData.sections}
+          position={tooltipData.position}
+          onClose={() => setTooltipData(null)}
+        />
+      )}
     </nav>
   );
 };
