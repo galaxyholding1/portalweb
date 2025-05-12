@@ -9,11 +9,12 @@
   top: -40px;
   left: 50%;
   transform: translateX(-50%);
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, 
+    box-shadow 0.2s ease-in-out;
 }
 
 .btn-need-help:hover {
-  /* box-shadow:  0 0 5rem .5rem var(--primary-color); */
+  box-shadow: 0 0 48px 5px var(--primary-color);
   transform: translateX(-50%) translateY(-8px) scale(1.05);
 }
 

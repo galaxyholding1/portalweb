@@ -8,7 +8,7 @@ export const NeedHelp = () => {
     if( !hover ) {
       setTimeout(() => {
         setHover(true);
-      }, 500);
+      }, 1500);
     }
   }
 
