@@ -5,7 +5,6 @@ import "./LoginPeople.css";
 import { useForm } from "../../hooks/useForm";
 import { PasswordInput } from "../../components/Input/PasswordInput";
 import { CustomInput } from "../../components/Input/CustomInput";
-import AdSlider from "../../components/AdSlider";
 
 import bannerImage from "../../assets/images/banner-home.png";
 

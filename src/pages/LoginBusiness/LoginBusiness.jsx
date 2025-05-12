@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./LoginBusiness.css";
 import AdSlider from "../../components/AdSlider";
+import { useNavigate } from "react-router";
 
 const VirtualKeyboard = ({ onKeyPress, targetInputRef }) => {
   const keyboardLayout = [
@@ -298,6 +299,7 @@ export const LoginBusiness = () => {
   const nitInputRef = useRef(null);
   const userIdInputRef = useRef(null);
 
+  const navigate = useNavigate();
   const handleAccept = (e) => {
     e.preventDefault(); // Prevenir envío del formulario por defecto
 
@@ -332,6 +334,9 @@ export const LoginBusiness = () => {
     // Si todo está bien, puedes enviar el formulario o continuar el proceso
     console.log("Formulario válido");
     alert("Formulario válido");
+
+    e.preventDefault();
+    navigate("/portal-empresas/home");
   };
 
   const handleVirtualKeyboardKeyPress = (key) => {
