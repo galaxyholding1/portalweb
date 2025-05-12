@@ -23,7 +23,7 @@
 }
 
 .tooltip-container {
-  transition: scale 0.2s ease-in-out allow-discrete;
+  transition: scale .5s ease-in-out allow-discrete;
 
   @starting-style {
     scale: 1;
