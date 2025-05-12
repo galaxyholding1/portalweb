@@ -4,11 +4,17 @@ import { MenuTooltip } from "../../../components/home/SubNavbar/tooltip/MenuTool
 import Homesubmenu from "../../../assets/images/SVG/Homesubmenu.svg";
 import Credit_Card_01 from "../../../assets/images/SVG/Credit_Card_01.svg";
 import Remesas from "../../../assets/images/SVG/remesas.svg";
+import { useLocation, useNavigate } from "react-router";
+import { getModeClient, pathByClient } from "../../../util/getModeClient";
 
 const SubNavbar = () => {
   const [activeItem, setActiveItem] = useState("inicio");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [tooltipData, setTooltipData] = useState(null);
+
+  const { pathname } = useLocation();
+
+  const navigate = useNavigate();
 
   const menuItems = [
     {
@@ -102,7 +108,14 @@ const SubNavbar = () => {
     },
   ];
 
+  const menuItemsLinkIds = [ // Son items que no tienen submenu, solo redireccion (los ids)
+    'remesas'
+  ]
+
   const handleItemClick = (item, event) => {
+    if ( menuItemsLinkIds.includes(item.id) ) 
+      navigate(`${pathByClient[getModeClient(pathname)]}/${item.id}`)
+
     if (item.submenu) {
       const rect = event.currentTarget.getBoundingClientRect();
       setTooltipData({

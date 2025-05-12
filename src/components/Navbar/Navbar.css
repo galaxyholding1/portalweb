@@ -74,7 +74,7 @@ select {
   display: flex;
   justify-content: left;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
   padding: .5rem;
 }
 

@@ -20,9 +20,13 @@ const socialIconsGlow = [
 
 export const SocialMediaLinks = ({light}) => {
   const icons = light ? socialIconsGlow : socialIcons;
-  return icons.map(({ href, imgPath }, i) => (
-    <a href={href} key={i + href}>
-      <img src={imgPath} alt={""} className="social-media-icon" />
-    </a>
-  ));
+  return (
+    <span style={{display: "flex", gap: ".5rem"}}>
+      {icons.map(({ href, imgPath }, i) => (
+        <a href={href} key={i + href}>
+          <img src={imgPath} alt={""} className="social-media-icon" />
+        </a>
+      ))}
+    </span>
+  )
 };
