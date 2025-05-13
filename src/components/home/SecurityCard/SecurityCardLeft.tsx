@@ -11,13 +11,27 @@ export const SecurityCardLeft = () => {
       <div className="profile-content">
         {/* Primera columna - Foto */}
         <div className="profile-column photo-column">
-          <img
-            src="https://randomuser.me/api/portraits/men/1.jpg"
-            alt="Mi foto de perfil"
-            className="profile-photo"
-          />
-          <span className="photo-label">Mi foto de perfil</span>
-          <button className="change-photo-btn">Cambiar</button>
+          <div className="photo-container">
+            <img
+              src="https://randomuser.me/api/portraits/men/1.jpg"
+              alt="Mi foto de perfil"
+              className="profile-photo"
+            />
+            <div className="photo-info">
+              <span className="photo-label">Mi foto de perfil</span>
+              <button className="change-photo-btn">Cambiar</button>
+            </div>
+          </div>
+
+          <div className="info-group">
+            <label>Fecha de nacimiento</label>
+            <div className="info-value orange-text">00/00/0000</div>
+          </div>
+
+          <div className="info-group">
+            <label>Número de teléfono</label>
+            <div className="info-value orange-text">000 0000 0000</div>
+          </div>
         </div>
 
         {/* Segunda columna */}
@@ -26,26 +40,20 @@ export const SecurityCardLeft = () => {
             <label>Nombre</label>
             <div className="info-value orange-text">Nombre del usuario</div>
           </div>
+
           <div className="info-group">
-            <label>Fecha de nacimiento</label>
-            <div className="info-value orange-text">00/00/0000</div>
+            <label>Dirección</label>
+            <div className="info-value orange-text">Dirección</div>
           </div>
+
           <div className="info-group">
-            <label>Número de teléfono</label>
-            <div className="info-value orange-text">000 00 00 00</div>
+            <label>País</label>
+            <div className="info-value orange-text">España</div>
           </div>
         </div>
 
         {/* Tercera columna */}
         <div className="profile-column">
-          <div className="info-group">
-            <label>Dirección</label>
-            <div className="info-value orange-text">Dirección</div>
-          </div>
-          <div className="info-group">
-            <label>País</label>
-            <div className="info-value orange-text">España</div>
-          </div>
           <div className="info-group">
             <label>Localidad</label>
             <div className="info-value orange-text">Madrid</div>
