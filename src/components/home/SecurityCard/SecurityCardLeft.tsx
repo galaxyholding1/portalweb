@@ -49,7 +49,7 @@ export const SecurityCardLeft = () => {
           <div className="info-group">
             <label>País</label>
             <div className="info-value orange-text">España</div>
-          </div>
+          </div>  
         </div>
 
         {/* Tercera columna */}
