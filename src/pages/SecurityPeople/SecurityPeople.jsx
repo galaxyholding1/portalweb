@@ -1,5 +1,11 @@
+import { ProfileCard } from "../../components/home/ProfileCard/ProfileCard";
+import "./SecurityPeople.css";
+
 export const SecurityPeople = () => {
   return (
-    <div>SecurityPeople</div>
-  )
-}
+    <div className="security-page-container">
+      <ProfileCard/>
+      <ProfileCard/>
+    </div>
+  );
+};
