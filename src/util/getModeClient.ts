@@ -8,3 +8,7 @@ export const pathByClient = {
 export const getModeClient = (location: string) => {
   return location.includes('/portal-personas') ? 'people' : 'business';
 }
+
+export const getPathByClient = (location: string) => {
+  return location.includes('/portal-personas') ? pathByClient.people : pathByClient.business;
+}

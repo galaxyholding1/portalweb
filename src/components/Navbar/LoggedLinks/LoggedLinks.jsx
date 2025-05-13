@@ -1,6 +1,7 @@
 import { Link, Navigate, useLocation, useNavigate } from "react-router";
 import { useAuthStore } from "../../../store/auth-store";
 import logoutIcon from '../../../assets/images/SVG/logout.svg'
+import { getPathByClient } from "../../../util/getModeClient";
 
 const navItems = [
   { name: "Solicitud de productos", path: "/solicitud-productos" },
@@ -20,7 +21,7 @@ export const LoggedLinks = () => {
     <ul style={{width: "450px"}}>
       {navItems.map(({ name, path }, i) => (
         <Link
-          to={path}
+          to={getPathByClient(pathname) + path}
           key={i + path}
           className={pathname == path ? "active-item" : ""}
         >
