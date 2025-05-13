@@ -1,0 +1,9 @@
+.security-page-container {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 48% 1fr;
+  gap: 2rem;
+  padding: 0 2.25rem;
+  grid-template-rows: 1fr;
+  min-height: 591px;
+}

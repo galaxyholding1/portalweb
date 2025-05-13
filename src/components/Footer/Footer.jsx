@@ -1,6 +1,8 @@
 import "./Footer.css";
 import { FooterSocialLinks } from "./FooterSocialLinks/FooterSocialLinks";
 import { NeedHelp } from "./NeedHelp/NeedHelp";
+import { Link } from 'react-router-dom';
+
 
 export const Footer = () => {
   return (
@@ -63,7 +65,7 @@ export const Footer = () => {
       </footer>
       <div className="footer-terms">
         <a href="#">Reglamento portal virtual</a>
-        <a href="#">Politicas de privacidad</a>
+        <Link to="/politicas">Políticas de privacidad</Link>
       </div>
     </>
   );
