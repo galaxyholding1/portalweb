@@ -1,6 +1,8 @@
 import { Link, Navigate, useLocation, useNavigate } from "react-router";
 import { useAuthStore } from "../../../store/auth-store";
 import logoutIcon from '../../../assets/images/SVG/logout.svg'
+import chevronRight from '../../../assets/images/SVG/chevron_right.svg'
+import lock from '../../../assets/images/SVG/lock.svg'
 import { getPathByClient } from "../../../util/getModeClient";
 
 const navItems = [
@@ -18,7 +20,7 @@ export const LoggedLinks = () => {
     navigate("/");
   }
   return (
-    <ul style={{width: "450px"}}>
+    <ul className="logged-links">
       {navItems.map(({ name, path }, i) => (
         <Link
           to={getPathByClient(pathname) + path}
@@ -31,6 +33,14 @@ export const LoggedLinks = () => {
       <button className="btn-logout" onClick={handleLogout}>
         <img src={logoutIcon} alt="" />Salir
       </button>
+      <div className="dinamic-key-container">
+        <img src={lock} alt="" />
+        <div>
+          <span>Clave Dínamica</span>
+          <span className="dinamic-key">000 000</span>
+        </div>
+        <img src={chevronRight} alt="" />
+      </div>
     </ul>
   );
 };
