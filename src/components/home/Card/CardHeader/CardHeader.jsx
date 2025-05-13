@@ -7,7 +7,7 @@ export const CardHeader = ({icon, title, morePath}) => {
         {icon}
         <h3>{title}</h3>
       </div>
-      <Link to={morePath}>Ver más</Link>
+      {morePath && <Link to={morePath}>Ver más</Link>}
     </span>
   );
 };
