@@ -1,5 +1,6 @@
 import { Formatter } from "../../../util/formatter";
 import { Card } from "../Card/Card";
+import cents from "../../../assets/images/SVG/cents.svg";
 import "./BalanceCard.css";
 
 const balanceByProduct = [
@@ -13,7 +14,7 @@ export const BalanceCard = () => {
     <div className="grid-area-balance">
       <Card
         title="Saldo"
-        icon={"icon"}
+        icon={<img src={cents} alt="documento" className="card-icon" />}
         morePath={`/${screenType}/balance`}
       >
         <table className="balance-table">

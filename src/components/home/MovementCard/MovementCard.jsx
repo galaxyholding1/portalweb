@@ -1,5 +1,6 @@
 import { Card } from "../Card/Card";
 import { MovementItem } from "../movements/movementItem";
+import setup from "../../../assets/images/SVG/setup.svg";
 
 const movements = [
   { 
@@ -30,7 +31,7 @@ export const MovementCard = () => {
     <div className="grid-area-movements">
       <Card
         title="Ultimos movimientos"
-        icon={"icon"}
+        icon={<img src={setup}/>}
         morePath={`/${screenType}/movements`}
       >
         {movements.map((mov, i) => (

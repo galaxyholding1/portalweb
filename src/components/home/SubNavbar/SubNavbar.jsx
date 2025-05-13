@@ -1,25 +1,25 @@
 import React, { useState } from "react";
 import "./SubNavbar.css";
+import { MenuTooltip } from "../../../components/home/SubNavbar/tooltip/MenuTooltip";
+import Homesubmenu from "../../../assets/images/SVG/Homesubmenu.svg";
+import Credit_Card_01 from "../../../assets/images/SVG/Credit_Card_01.svg";
+import Remesas from "../../../assets/images/SVG/remesas.svg";
+import { useLocation, useNavigate } from "react-router";
+import { getModeClient, pathByClient } from "../../../util/getModeClient";
 
 const SubNavbar = () => {
   const [activeItem, setActiveItem] = useState("inicio");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [tooltipData, setTooltipData] = useState(null);
+
+  const { pathname } = useLocation();
+
+  const navigate = useNavigate();
 
   const menuItems = [
     {
       id: "inicio",
-      icon: (
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="currentColor"
-          stroke="currentColor"
-          strokeWidth="2"
-        >
-          <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
-        </svg>
-      ),
+      icon: <img src={Homesubmenu} alt="inicio" className="nav-icon-img" />,
       text: "inicio",
     },
     {
@@ -38,6 +38,30 @@ const SubNavbar = () => {
         </svg>
       ),
       text: "productos",
+      submenu: [
+        {
+          title: "Cuentas galaxy pay",
+          items: [
+            { text: "Consultar cuentas", link: "#" },
+            { text: "Ver detalle de transacciones", link: "#" },
+          ],
+        },
+        {
+          title: "Créditos",
+          items: [
+            { text: "Consultar créditos", link: "#" },
+            { text: "Pagar créditos", link: "#" },
+            { text: "Desembolsar", link: "#" },
+          ],
+        },
+        {
+          title: "Administrar productos",
+          items: [
+            { text: "Inscribir productos", link: "#" },
+            { text: "Productos propios", link: "#" },
+          ],
+        },
+      ],
     },
     {
       id: "transferencias",
@@ -57,19 +81,7 @@ const SubNavbar = () => {
     },
     {
       id: "pagos",
-      icon: (
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-        >
-          <rect x="2" y="5" width="20" height="14" rx="2" />
-          <path d="M2 10h20" />
-        </svg>
-      ),
+      icon: <img src={Credit_Card_01} alt="inicio" className="nav-icon-img" />,
       text: "pagos",
     },
     {
@@ -89,7 +101,36 @@ const SubNavbar = () => {
       ),
       text: "documentos",
     },
+    {
+      id: "remesas",
+      icon: <img src={Remesas} alt="inicio" className="nav-icon-img" />,
+      text: "Remesas",
+    },
   ];
+
+  const menuItemsLinkIds = [ // Son items que no tienen submenu, solo redireccion (los ids)
+    'remesas'
+  ]
+
+  const handleItemClick = (item, event) => {
+    if ( menuItemsLinkIds.includes(item.id) ) 
+      navigate(`${pathByClient[getModeClient(pathname)]}/${item.id}`)
+
+    if (item.submenu) {
+      const rect = event.currentTarget.getBoundingClientRect();
+      setTooltipData({
+        sections: item.submenu,
+        position: {
+          top: rect.bottom + 10,
+          left: rect.left,
+        },
+      });
+    } else {
+      setTooltipData(null);
+    }
+    setActiveItem(item.id);
+    setIsMenuOpen(false);
+  };
 
   return (
     <nav className="navbar">
@@ -106,10 +147,7 @@ const SubNavbar = () => {
           <div
             key={item.id}
             className={`nav-item ${activeItem === item.id ? "active" : ""}`}
-            onClick={() => {
-              setActiveItem(item.id);
-              setIsMenuOpen(false);
-            }}
+            onClick={(e) => handleItemClick(item, e)}
           >
             <div className="nav-content">
               <span className="nav-icon">{item.icon}</span>
@@ -132,6 +170,14 @@ const SubNavbar = () => {
           </a>
         </div>
       </div>
+
+      {tooltipData && (
+        <MenuTooltip
+          sections={tooltipData.sections}
+          position={tooltipData.position}
+          onClose={() => setTooltipData(null)}
+        />
+      )}
     </nav>
   );
 };
