@@ -4,7 +4,8 @@ import { LoginPeople } from "../pages/LoginPeople/LoginPeople";
 import { Route, Routes } from "react-router";
 import { ProtectedRoutesBusiness } from "./ProtectedRoutesBusiness";
 import { ProtectedRoutesPeople } from "./ProtectedRoutesPeople";
-import { SecurityBusiness } from "../pages/HomeBusiness/SecurityBusiness";
+import { Politics } from "../components/home/Politics/Politics";
+
 
 export const Router = () => {
   return (
@@ -16,7 +17,7 @@ export const Router = () => {
       // Enrutadores adicionales. (TODO: Implementar protección)
       <Route path="/portal-personas/*" element={<ProtectedRoutesPeople />} />
       <Route path="/portal-empresas/*" element={<ProtectedRoutesBusiness />} />
-      <Route path="/security-empresas/*" element={<SecurityBusiness />} />
+      <Route path="/politicas" element={<Politics/>}/>
     </Routes>
   );
 };
