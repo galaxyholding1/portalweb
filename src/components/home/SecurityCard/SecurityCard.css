@@ -38,6 +38,8 @@
   padding: 1.5rem;
   position: relative;
   overflow: hidden;
+  width: 90%;
+  height: 540px;
 }
 
 .security-header {
@@ -68,7 +70,7 @@
   display: grid;
   gap: 1rem;
   grid-template-columns: 50% 50%;
-  margin-bottom: 4rem;
+  margin-bottom: 0rem;
 }
 
 .security-column {
@@ -187,7 +189,6 @@ input:checked + .slider:before {
 }
 
 .save-button {
-  position: absolute;
   bottom: 1.5rem;
   right: 1.5rem;
   padding: 0.75rem 1.5rem;
@@ -209,6 +210,27 @@ input:checked + .slider:before {
   fill: currentColor;
   width: 20px;
   height: 20px;
+}
+
+.profile-footer-grid {
+  display: grid;
+  grid-template-columns: 80% 50%;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.identification-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.identification-select {
+  min-width: 200px;
+}
+
+.save-button {
+  justify-self: end;
 }
 
 @media (max-width: 768px) {
@@ -245,5 +267,160 @@ input:checked + .slider:before {
 
   .operation-item {
     font-size: 0.85rem;
+  }
+}
+
+.divButtonpading {
+  margin-top: 8rem;
+}
+
+.profile-content {
+  display: grid;
+  grid-template-columns: auto 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+
+.profile-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.photo-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding-right: 2rem;
+}
+
+.profile-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.photo-label {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.change-photo-btn {
+  color: var(--orange-title);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 0;
+}
+
+.info-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 170px;
+}
+
+.info-group label {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.orange-text {
+  color: var(--orange-title);
+}
+
+.profile-footer {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.identification-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.identification-select {
+  min-width: 200px;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-size: 0.9rem;
+}
+
+.save-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--button-primary);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .profile-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .photo-column {
+    padding-right: 0;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .profile-footer {
+    position: static;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .identification-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .identification-select {
+    width: 100%;
+  }
+
+  .save-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .profile-footer-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .identification-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .identification-select {
+    width: 100%;
+  }
+
+  .save-button {
+    justify-self: stretch;
   }
 }
