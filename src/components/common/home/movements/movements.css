@@ -1,0 +1,50 @@
+.movement-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.75rem;
+  gap: 1rem;
+  padding-inline: 0.5rem;
+}
+
+.movement-item-icon {
+  border-radius: 1rem;
+  background-color: var(--primary-color);
+  align-self: auto;
+  height: 100%;
+  aspect-ratio: 1/1;
+  padding: 0.78rem 0.92rem;
+}
+
+.movement-item-icon img {
+  display: block;
+}
+
+.movement-item-details {
+  flex: 1;
+}
+
+.movement-item-details p {
+  margin: 0;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.movement-item-details span {
+  font-size: 0.75rem;
+}
+
+.movement-item-amount {
+  align-self: auto;
+  width: 6rem;
+  background-color: var(--bg-tertiary);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.movement-item-amount-icon {
+  align-self: auto;
+  background-color: var(--bg-tertiary);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
