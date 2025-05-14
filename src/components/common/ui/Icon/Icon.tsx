@@ -15,7 +15,6 @@ export const Icon: React.FC<IconProps> = ({ name, selected = false }) => {
   const {theme} = useTheme();
 
   const iconName = name + (theme === 'dark' ? '_dark' : '') + (selected ? '-selected' : '');
-  console.log( iconName )
   const iconPath = icons[`../../../../assets/icons/${iconName}.svg`] as { default: string } | undefined;
 
   if (!iconPath) {
@@ -23,20 +22,17 @@ export const Icon: React.FC<IconProps> = ({ name, selected = false }) => {
     // Se busca el tema contrario y mismo select
     let newIconName = name + (theme === 'light' ? '_dark' : '') + (selected ? '-selected' : '');
     let newIconPath = icons[`../../../../assets/icons/${newIconName}.svg`] as { default: string } | undefined;
-    console.log({newIconName})
     if( newIconPath ) return <img src={newIconPath.default} alt={name} />;
     
     // Se busca el tema contrario y diferente select
     newIconName = name + (theme === 'light' ? '_dark' : '') + (!selected ? '-selected' : '');
     newIconPath = icons[`../../../../assets/icons/${newIconName}.svg`] as { default: string } | undefined;
-    console.log({newIconName})
     
     if( newIconPath ) return <img src={newIconPath.default} alt={name} />;
     
     // Se busca el mismo tema y diferente select
     newIconName = name + (theme === 'dark' ? '_dark' : '') + (!selected ? '-selected' : '');
     newIconPath = icons[`../../../../assets/icons/${newIconName}.svg`] as { default: string } | undefined;
-    console.log({newIconName})
 
     if( newIconPath ) return <img src={newIconPath.default} alt={name} />;
 
