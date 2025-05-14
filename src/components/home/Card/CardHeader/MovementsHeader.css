@@ -16,6 +16,7 @@
   border-radius: 0.5rem;
   cursor: pointer;
   font-size: 0.9rem;
+  transition: opacity 0.2s ease;
 }
 
 .filter-icon {
@@ -94,4 +95,28 @@
   border: none;
   border-radius: 0.5rem;
   cursor: pointer;
+}
+
+.movements-header-container {
+  position: relative;
+}
+
+.filter-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.filter-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  min-width: 200px;
+}
+
+.filter-button:hover {
+  opacity: 0.9;
 }
