@@ -6,6 +6,7 @@ import { SecurityBusiness } from "../pages/business/SecurityBusiness/SecurityBus
 import { ConsignmentsBusiness } from "../pages/business/ConsignmentsBusiness/ConsignmentsBusiness";
 import { BusinessPortalLayout } from "../layouts/BusinessPortalLayout";
 import { MovementsBusiness } from "../pages/business/MovementsBusiness/MovementsBusiness";
+import { MovementView } from "../pages/shared/MovementView";
 
 
 export const ProtectedRoutesBusiness = () => {
