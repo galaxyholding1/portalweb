@@ -1,5 +1,5 @@
-import logoLight from "../assets/images/SVG/logo-navbar.svg";
-import logoDark from "../assets/images/SVG/logo-galaxy-dark.svg";
+import logoLight from "../assets/icons/logo_galaxy.svg";
+import logoDark from "../assets/icons/logo_galaxy_dark.svg";
 
 export const iconByTheme = {
   "dark": logoDark,
