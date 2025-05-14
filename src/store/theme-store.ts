@@ -19,9 +19,13 @@ const getTheme = () => {
   return theme;
 }
 
+type ThemeStore = {
+  theme: 'dark' | 'light';
+  setTheme: () => void;
+}
 
-export const useTheme = create((set) => ({
+export const useTheme = create<ThemeStore>()((set) => ({
   theme: getTheme(),
-  setTheme: () => set((theme) => ({ theme })),
+  setTheme: () => set((theme) => ({theme: theme.theme})),
 }))
 

@@ -2,9 +2,9 @@ import facebookIcon from "../../../assets/icons/facebook_icon.svg";
 import instagramIcon from "../../../assets/icons/instagram_icon.svg";
 import xIcon from "../../../assets/icons/x_icon.svg";
 
-import facebookIconGlow from "../../../assets/icons/facebook_icon_white.svg";
-import instagramIconGlow from "../../../assets/icons/instagram_icon_white.svg";
-import xIconGlow from "../../../assets/icons/x_icon_white.svg";
+import facebookIconGlow from "../../../assets/icons/facebook_icon_dark.svg";
+import instagramIconGlow from "../../../assets/icons/instagram_icon_dark.svg";
+import xIconGlow from "../../../assets/icons/x_icon_dark.svg";
 
 const socialIcons = [
   { imgPath: facebookIcon, href: "/" },
