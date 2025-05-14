@@ -1,5 +1,4 @@
 import { ProfileCard } from "../../components/home/ProfileCard/ProfileCard";
-import { SecurityCard } from "../../components/home/SecurityCard/SecurityCard";
 import SubNavbar from "../../components/home/SubNavbar/SubNavbar";
 import "../SecurityPeople/SecurityPeople.css";
 
