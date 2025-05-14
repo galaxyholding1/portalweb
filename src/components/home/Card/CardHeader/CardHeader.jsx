@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 
-export const CardHeader = ({icon, title, morePath}) => {
+export const CardHeader = ({ icon, title, morePath }) => {
   return (
     <span className="card-header">
       <div>

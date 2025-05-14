@@ -1,10 +1,10 @@
-.movement-item{
+.movement-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: .75rem;
+  margin-top: 0.75rem;
   gap: 1rem;
-  padding-inline: .5rem;
+  padding-inline: 0.5rem;
 }
 
 .movement-item-icon {
@@ -13,14 +13,14 @@
   align-self: auto;
   height: 100%;
   aspect-ratio: 1/1;
-  padding: .78rem .92rem;
+  padding: 0.78rem 0.92rem;
 }
 
-.movement-item-icon img{
+.movement-item-icon img {
   display: block;
 }
 
-.movement-item-details{
+.movement-item-details {
   flex: 1;
 }
 
@@ -31,13 +31,20 @@
 }
 
 .movement-item-details span {
-  font-size: .75rem;
+  font-size: 0.75rem;
 }
 
-.movement-item-amount{
+.movement-item-amount {
   align-self: auto;
   width: 6rem;
   background-color: var(--bg-tertiary);
-  padding: .5rem 1rem;
-  border-radius: .5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.movement-item-amount-icon {
+  align-self: auto;
+  background-color: var(--bg-tertiary);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
 }
