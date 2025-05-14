@@ -1,0 +1,9 @@
+.movements-page-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.grid-area-movements {
+  grid-column: auto;
+}

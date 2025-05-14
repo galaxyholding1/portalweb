@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./SubNavbar.css";
 import { MenuTooltip } from "../../../components/home/SubNavbar/tooltip/MenuTooltip";
 import Homesubmenu from "../../../assets/images/SVG/Homesubmenu.svg";
+import switchIcon from "../../../assets/images/SVG/switch.svg";
 import Credit_Card_01 from "../../../assets/images/SVG/Credit_Card_01.svg";
 import Remesas from "../../../assets/images/SVG/remesas.svg";
 import { useLocation, useNavigate } from "react-router";
@@ -66,16 +67,7 @@ const SubNavbar = () => {
     {
       id: "transferencias",
       icon: (
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-        >
-          <path d="M17 8l4-4-4-4M3 12h18M7 16l-4 4 4 4" />
-        </svg>
+        <img src={switchIcon} alt="switch" className="nav-icon-img" />
       ),
       text: "transferencias",
     },
