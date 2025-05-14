@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./SecurityCard.css";
 import File_Document from "../../../assets/images/SVG/File_Document.svg";
+import saveIcon from "../../../assets/images/SVG/save.svg";
 
 export const SecurityCard = () => {
   const [authMethod, setAuthMethod] = useState("sms");
@@ -188,11 +189,9 @@ export const SecurityCard = () => {
         </div>
       </div>
 
-      <button className="save-button">
-        <svg className="save-icon" viewBox="0 0 24 24" width="20" height="20">
-          <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2zM12 17a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm-4-9h8v-2H8v2z" />
-        </svg>
-        Guardar
+      <button className="profile-card-save-button">
+        {" "}
+        <img src={saveIcon} alt="" /> Guardar
       </button>
     </div>
   );

@@ -18,7 +18,9 @@ export const ProfileCard = () => {
               <a className="update-link">Cambiar</a>
             </div>
           </div>
-          <ProfileData label="Nombre" className="grid-span-2">Nombre de usuario</ProfileData>
+          <ProfileData label="Nombre" className="grid-span-2">
+            Nombre de usuario
+          </ProfileData>
           <ProfileData label="Fecha de nacimiento">00/00/0000</ProfileData>
           <ProfileData label="Dirección">Dirección, 123, ABC</ProfileData>
           <ProfileData label="Localidad">Madrid</ProfileData>
@@ -31,7 +33,10 @@ export const ProfileCard = () => {
           </select>
           <ProfileData label="No. de Identificación">000 00 00 00</ProfileData>
         </div>
-        <button className="profile-card-save-button"> <img src={saveIcon} alt="" /> Guardar</button>
+        <button className="profile-card-save-button">
+          {" "}
+          <img src={saveIcon} alt="" /> Guardar
+        </button>
       </div>
     </Card>
   );
