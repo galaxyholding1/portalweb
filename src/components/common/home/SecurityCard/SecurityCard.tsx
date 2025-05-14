@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./SecurityCard.css";
 import File_Document from "../../../../assets/icons/file_document.svg";
-import saveIcon from "../../../assets/images/SVG/save.svg";
+import saveIcon from "../../../../assets/icons/save.svg";
 
 export const SecurityCard = () => {
   const [authMethod, setAuthMethod] = useState("sms");

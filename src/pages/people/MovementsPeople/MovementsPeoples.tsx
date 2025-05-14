@@ -5,8 +5,8 @@ import "./MovementsPeoples.css"
 export const MovementsPeoples = () => {
     return (
         <div className="movements-page-container">
-          <MovementCard/>
-          <MovementCard/>
+          <MovementCard filter/>
+          <MovementCard filter/>
         </div>
     )
 }

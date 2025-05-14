@@ -1,6 +1,7 @@
 import { CardMoments } from "../Card/CardMoments";
 import { MovementsItem } from "../movements/MovementsItem";
 import setup from "../../../../assets/icons/setup.svg";
+import { Card } from "../Card/Card";
 
 const movements = [
   {
@@ -25,11 +26,12 @@ const movements = [
   },
 ];
 
-export const MovementCard = () => {
+export const MovementCard = ({filter}) => {
   const screenType = "people"; // "Business"
+  const CardComponent = filter ? CardMoments : Card;
   return (
     <div className="grid-area-movements">
-      <CardMoments
+      <CardComponent
         title="Ultimos movimientos"
         icon={<img src={setup} />}
         morePath={`/${screenType}/movements`}
@@ -37,7 +39,7 @@ export const MovementCard = () => {
         {movements.map((mov, i) => (
           <MovementsItem key={`${mov.conceptTitle}${i}`} {...mov} />
         ))}
-      </CardMoments>
+      </CardComponent>
     </div>
   );
 };

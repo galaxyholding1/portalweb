@@ -5,8 +5,8 @@ import { HomeBusiness } from "../pages/business/HomeBusiness/HomeBusiness";
 import { SecurityBusiness } from "../pages/business/SecurityBusiness/SecurityBusiness";
 import { ConsignmentsBusiness } from "../pages/business/ConsignmentsBusiness/ConsignmentsBusiness";
 import { BusinessPortalLayout } from "../layouts/BusinessPortalLayout";
+import { MovementsBusiness } from "../pages/business/MovementsBusiness/MovementsBusiness";
 
-import { MovementsBusiness } from "../pages/MovementsBusiness/MovementsBusiness";
 
 export const ProtectedRoutesBusiness = () => {
   const { login } = useAuthStore();
@@ -17,8 +17,8 @@ export const ProtectedRoutesBusiness = () => {
         <Route path="/home" element={<HomeBusiness/>} />
         <Route path="/remesas" element={<ConsignmentsBusiness/>} />
         <Route path="/seguridad" element={<SecurityBusiness/>} />
-
-      <Route path="/movimientosBusiness" element={<MovementsBusiness />} />
+        <Route path="/movimientos" element={<MovementsBusiness />} />
+        <Route path="/movimientos/:id" element={<MovementView/>} />
       </Routes>
     </BusinessPortalLayout>
   );

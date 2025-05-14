@@ -4,6 +4,7 @@ import { ConsignmentsPeople } from "../pages/people/ConsignmentsPeople/Consignme
 import { SecurityPeople } from "../pages/people/SecurityPeople/SecurityPeople";
 import { MovementsPeoples } from "../pages/people/MovementsPeople/MovementsPeoples";
 import { PersonPortalLayout } from "../layouts/PeoplePortalLayout";
+import { MovementView } from "../pages/shared/MovementView";
 
 export const ProtectedRoutesPeople = () => (
   <PersonPortalLayout>
@@ -12,6 +13,7 @@ export const ProtectedRoutesPeople = () => (
       <Route path="/remesas" element={<ConsignmentsPeople />} />
       <Route path="/seguridad" element={<SecurityPeople />} />
       <Route path="/movimientos" element={<MovementsPeoples />} />
+      <Route path="/movimientos/:id" element={<MovementView/>} />
     </Routes>
   </PersonPortalLayout>
 );
