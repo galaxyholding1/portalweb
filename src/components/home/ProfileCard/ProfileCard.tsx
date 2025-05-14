@@ -1,8 +1,8 @@
 import "./ProfileCard.css";
 import { Card } from "../Card/Card";
-import { ProfileData } from "./ProfileData";
 
 import saveIcon from "../../../assets/images/SVG/save.svg";
+import { ProfileData } from "./ProfileData";
 
 export const ProfileCard = () => {
   return (
