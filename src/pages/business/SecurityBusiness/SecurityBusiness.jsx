@@ -5,7 +5,6 @@ import SubNavbar from "../../../components/common/home/SubNavbar/SubNavbar";
 export const SecurityBusiness = () => {
   return (
     <div className="page-container">
-      <SubNavbar />
       <div className="security-page-container">
         <ProfileCard />
         <SecurityCard />
