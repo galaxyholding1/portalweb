@@ -21,16 +21,11 @@ const movements = [
     date: new Date("2025-05-01T15:00:00"),
     amount: 100,
   },
-  {
-    conceptTitle: "Airbnb",
-    date: new Date("2025-05-01T15:00:00"),
-    amount: 100,
-  },
 ];
 
-export const MovementCard = ({filter}) => {
+export const MovementCard = ({ filter }) => {
   const CardComponent = filter ? CardMoments : Card;
-  const {pathname} = useLocation();
+  const { pathname } = useLocation();
   return (
     <div className="grid-area-movements">
       <CardComponent
