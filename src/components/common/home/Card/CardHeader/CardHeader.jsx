@@ -1,18 +1,23 @@
 import { Link } from "react-router";
+import verMas from "../../../../../assets/icons/ver_mas_icon.svg"
 
 export const CardHeader = ({ icon, title, morePath }) => {
   return (
-    <div> 
-      {/* card-header-container como clase y debe 
-      ocupar todo el espacio y alinear horizontalmente 
-      los dos elementos. pista flex*/}
-      <span className="card-header" > {/* este contenedor debe tener el 100% si viene morePath, sino 70% */}
-        <div>
+    <div className="card-header-container">
+      <div className="card-header-box">
+        <div className="header-title">
           {icon}
           <h3>{title}</h3>
         </div>
-      </span>
-      {morePath && <Link to={morePath}>Ver más</Link>} {/* Este link debe ser un botón con el estilo */}
+      </div>
+      
+      {morePath && (
+        <Link to={morePath} className="card-header-link">
+          <img src={verMas} alt="ver-mas" className="ver-mas-icon" />,
+          Ver más
+        </Link>
+      )}
     </div>
   );
 };
+
