@@ -61,19 +61,6 @@
   position: absolute;
   bottom: 1rem;
   right: 2rem;
-  background-color: var(--bg-tertiary);
-  color: var(--text-color);
-  font-family: Quicksand;
-  border-radius: 2.1rem;
-  padding: 0.4rem 1.5rem;
-  display: flex;
-  gap: .5rem;
-  align-items: center;
-
-  img {
-    max-width: 24px;
-    aspect-ratio: 1;
-  }
 }
 
 .profile-card-document {

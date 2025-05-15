@@ -189,7 +189,7 @@ export const SecurityCard = () => {
         </div>
       </div>
 
-      <button className="profile-card-save-button">
+      <button className="profile-card-save-button button-portal">
         {" "}
         <img src={saveIcon} alt="" /> Guardar
       </button>

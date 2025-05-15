@@ -33,7 +33,7 @@ export const ProfileCard = () => {
           </select>
           <ProfileData label="No. de Identificación">000 00 00 00</ProfileData>
         </div>
-        <button className="profile-card-save-button">
+        <button className="profile-card-save-button button-portal">
           {" "}
           <img src={saveIcon} alt="" /> Guardar
         </button>
