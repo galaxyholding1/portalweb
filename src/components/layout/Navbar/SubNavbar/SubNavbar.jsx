@@ -21,7 +21,7 @@ const SubNavbar = () => {
 
   const menuItems = [
     {
-      id: "inicio",
+      id: "home",
       icon: <img src={inicioIcon} alt="inicio" className="nav-icon-img" />,
       text: "inicio",
     },
