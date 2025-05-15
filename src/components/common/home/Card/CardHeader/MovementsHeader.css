@@ -84,3 +84,7 @@
   width: 180px;
   max-width: 100%;
 }
+
+card-header-container a { /*este debe tener el estilo del botón*/
+
+}

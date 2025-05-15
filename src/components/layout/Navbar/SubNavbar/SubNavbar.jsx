@@ -1,10 +1,12 @@
 import { useState } from "react";
 import "./SubNavbar.css";
-import { MenuTooltip } from "../SubNavbar/tooltip/MenuTooltip";
-import Homesubmenu from "../../../../assets/icons/home.svg";
+import { MenuTooltip } from "./tooltip/MenuTooltip";
 import switchIcon from "../../../../assets/icons/switch.svg";
 import Credit_Card_01 from "../../../../assets/icons/credit_card.svg";
-import Remesas from "../../../../assets/icons/remesas.svg";
+import inicioIcon from "../../../../assets/icons/inicio_icon.svg";
+import remesasIcon from "../../../../assets/icons/remesas_icon.svg";
+import documentsIcon from "../../../../assets/icons/documents_icon.svg";
+import productsIcon from "../../../../assets/icons/products_icon.svg";
 import { useLocation, useNavigate } from "react-router";
 import { getModeClient, pathByClient } from "../../../../util/getModeClient";
 
@@ -20,24 +22,12 @@ const SubNavbar = () => {
   const menuItems = [
     {
       id: "home",
-      icon: <img src={Homesubmenu} alt="inicio" className="nav-icon-img" />,
+      icon: <img src={inicioIcon} alt="inicio" className="nav-icon-img" />,
       text: "inicio",
     },
     {
       id: "productos",
-      icon: (
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-        >
-          <rect x="3" y="3" width="18" height="18" rx="2" />
-          <path d="M8 12h8M12 8v8" />
-        </svg>
-      ),
+      icon: <img src={productsIcon} alt="inicio" className="nav-icon-img" />,
       text: "productos",
       submenu: [
         {
@@ -66,9 +56,7 @@ const SubNavbar = () => {
     },
     {
       id: "transferencias",
-      icon: (
-        <img src={switchIcon} alt="switch" className="nav-icon-img" />
-      ),
+      icon: <img src={switchIcon} alt="switch" className="nav-icon-img" />,
       text: "transferencias",
     },
     {
@@ -78,24 +66,12 @@ const SubNavbar = () => {
     },
     {
       id: "documentos",
-      icon: (
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-        >
-          <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6z" />
-          <path d="M14 2v6h6M8 13h8M8 17h8" />
-        </svg>
-      ),
+      icon: <img src={documentsIcon} alt="inicio" className="nav-icon-img" />,
       text: "documentos",
     },
     {
       id: "remesas",
-      icon: <img src={Remesas} alt="inicio" className="nav-icon-img" />,
+      icon: <img src={remesasIcon} alt="inicio" className="nav-icon-img" />,
       text: "Remesas",
     },
   ];
@@ -106,8 +82,8 @@ const SubNavbar = () => {
   ]
 
   const handleItemClick = (item, event) => {
-    if ( menuItemsLinkIds.includes(item.id) ) 
-      navigate(`${pathByClient[getModeClient(pathname)]}/${item.id}`)
+    if (menuItemsLinkIds.includes(item.id))
+      navigate(`${pathByClient[getModeClient(pathname)]}/${item.id}`);
 
     if (item.submenu) {
       const rect = event.currentTarget.getBoundingClientRect();

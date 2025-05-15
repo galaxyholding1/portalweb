@@ -55,27 +55,30 @@ const Carousel = () => {
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
-      <div className="carousel-content">
-        {slides.map((slide, index) => (
-          <div
-            key={index}
-            className={`slide ${index === currentIndex ? "active" : ""}`}
-            style={{
-              transform: `translateX(${100 * (index - currentIndex)}%)`,
-            }}
-          >
-            <div className="text-section">
-              <h2>{slide.title}</h2>
-              <p>{slide.description}</p>
-              <button className="cta-button">{slide.buttonText}</button>
+      <div className="carousel-rounded-wrapper">
+        <div className="carousel-content">
+          {slides.map((slide, index) => (
+            <div
+              key={index}
+              className={`slide ${index === currentIndex ? "active" : ""}`}
+              style={{
+                transform: `translateX(${100 * (index - currentIndex)}%)`,
+              }}
+            >
+              <div className="text-section">
+                <h2>{slide.title}</h2>
+                <p>{slide.description}</p>
+                <button className="cta-button">{slide.buttonText}</button>
+              </div>
+              <div className="image-section">
+                <img src={slide.image} alt={slide.title} />
+              </div>
             </div>
-            <div className="image-section">
-              <img src={slide.image} alt={slide.title} />
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
 
+      {/* Flechas fuera del contenedor */}
       <button className="nav-button prev" onClick={prevSlide}>
         <span>‹</span>
       </button>

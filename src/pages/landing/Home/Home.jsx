@@ -65,63 +65,67 @@ export const Home = () => {
   /*!SECTION*/
 
   return (
-    <div className="allpage">
-      {/* Deslizador */}
+    <>
+      {/* Contenido centrado */}
+      <div className="allpage">
+        {/* Carrusel 1 */}
+        <Carosuel />
+        <div className="home-container">
+          {/* Accesos rápidos */}
+          <section className="accesos-rapidos">
+            <div className="contenedor-accesos">
+              {accesos.map((item) => (
+                <div
+                  className="acceso-item"
+                  key={item.label}
+                  onClick={() => (window.location.href = item.path)}
+                  style={{ cursor: "pointer" }}
+                >
+                  <img
+                    src={item.icon}
+                    alt={item.label}
+                    className="icon-img"
+                    style={{ fill: "red" }}
+                  />
+                  <div>{item.label}</div>
+                </div>
+              ))}
+            </div>
+          </section>
 
-      <Carosuel />
-
-      <div className="home-container">
-        {/* Accesos rápidos */}
-        <section className="accesos-rapidos">
-          <div className="contenedor-accesos">
-            {accesos.map((item) => (
+          {/* Servicios */}
+          <div className="servicios-wrapper">
+            {servicios.map((servicio) => (
               <div
-                className="acceso-item"
-                key={item.label}
-                onClick={() => (window.location.href = item.path)}
-                style={{ cursor: "pointer" }}
+                key={servicio.id}
+                className={`servicio tarjeta-${servicio.id}`}
+                style={{
+                  backgroundColor: servicio.color,
+                  flex: servicio.id === 1 ? 2 : 1,
+                }}
               >
-                <img
-                  src={item.icon}
-                  alt={item.label}
-                  className="icon-img"
-                  style={{ fill: "red" }}
-                />
-                <div>{item.label}</div>
+                <img src={servicio.imagen} alt={servicio.titulo} />
+                <div className="contenido">
+                  <h3>{servicio.titulo}</h3>
+                  <p>{servicio.texto}</p>
+                  <a href={servicio.link}>
+                    <button>más información</button>
+                  </a>
+                </div>
               </div>
             ))}
           </div>
-        </section>
 
-        {/* Servicios */}
+          {/* Sliders adicionales */}
+          <div className="full-width-section">
+            <CarouselFullscreen />
+          </div>
 
-        <div className="servicios-wrapper">
-          {servicios.map((servicio, index) => (
-            <div
-              key={servicio.id}
-              className={`servicio tarjeta-${servicio.id}`}
-              style={{
-                backgroundColor: servicio.color,
-                flex: servicio.id === 1 ? 3 : 2,
-              }}
-            >
-              {/* Deslizador */}
-
-              <img src={servicio.imagen} alt={servicio.titulo} />
-              <div className="contenido">
-                <h3>{servicio.titulo}</h3>
-                <p>{servicio.texto}</p>
-                <a href={servicio.link}>
-                  <button>más información</button>
-                </a>
-              </div>
-            </div>
-          ))}
+          <div className="full-width-section">
+            <CarouselBackground />
+          </div>
         </div>
-        <CarouselFullscreen />
-
-        <CarouselBackground />
       </div>
-    </div>
+    </>
   );
 };
