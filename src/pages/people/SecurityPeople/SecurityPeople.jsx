@@ -8,11 +8,7 @@ import "./SecurityPeople.css";
 export const SecurityPeople = () => {
   return (
     <div className="page-container">
-      <SubNavbar />
-      <div className="security-page-container">
-        <ProfileCard />
-        <SecurityCard />
-      </div>
+      <SecurityCard />
     </div>
   );
 };

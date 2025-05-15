@@ -12,7 +12,7 @@ const notFoundIcon = (
     | undefined
 ).default;
 
-type IconName = "money" | "moving_desk" | "cents" | "arrow_left_right";
+type IconName = "money" | "moving_desk" | "cents" | "arrow_left_right" | "file_document";
 
 interface IconProps {
   name: IconName;

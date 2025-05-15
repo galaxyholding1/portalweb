@@ -2,7 +2,7 @@ import { useState } from "react";
 import './PasswordInput.css'
 import './CustomInput.css'
 
-export const PasswordInput = ({handleInputChange, value, name}) => {
+export const PasswordInput = ({handleInputChange, value, name, placeholder, className}) => {
 
   const [ visiblePass, setVisiblePass ] = useState()
 
@@ -14,7 +14,8 @@ export const PasswordInput = ({handleInputChange, value, name}) => {
           name={name}
           value={value}
           onChange={handleInputChange}
-          placeholder="Contraseña"
+          placeholder={placeholder ? placeholder : "Contraseña"}
+          className={className ? className : ""}
         />
         <button type="button" onClick={() => setVisiblePass(!visiblePass)}>
           

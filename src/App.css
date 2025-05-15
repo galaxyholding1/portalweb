@@ -8,6 +8,8 @@
   --bg-tertiary: #D4D4D4;
   --text-primary: #4f4e4d;
   --text-secondary: #fff;
+  --active-color: #4caf50;
+  --border-color: #eaeaea;
   -nav-text: #333333;
 }
 
@@ -39,7 +41,7 @@ body {
   min-height: 100vh;
 }
 
-.app > .content {
+.app>.content {
   flex: 1;
 }
 
@@ -55,8 +57,14 @@ body {
   align-items: center;
   border: none;
   cursor: pointer;
+
   img {
     max-width: 24px;
     aspect-ratio: 1;
   }
+}
+
+input:focus {
+  outline: none;
+  box-shadow: none;
 }
