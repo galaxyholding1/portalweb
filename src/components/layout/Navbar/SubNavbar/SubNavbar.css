@@ -1,12 +1,12 @@
 :root {
   --nav-hover: rgba(255, 255, 255, 0.1);
   --nav-active: #ffffff;
-  --nav-active-bg: #4a90e2;
+  --nav-active-bg: #4d3b8f;
   --nav-inactive-bg: #333333;
   --nav-border: rgba(255, 255, 255, 0.1);
-  --tooltip-bg: #ffffff;
-  --tooltip-text: #666666;
-  --tooltip-title: #ff4081;
+  --tooltip-bg: #d9d5eb;
+  --tooltip-text: #4b4a49;
+  --tooltip-title: #4d3b8f;
   --nav-bg-primary : #282828;
 }
 
@@ -160,6 +160,7 @@
 .menu-tooltip {
   position: absolute;
   background: var(--tooltip-bg);
+  border: 2px solid var(--nav-active-bg);
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   padding: 1.5rem;

@@ -1,4 +1,5 @@
-import SubNavbar from "../components/common/home/SubNavbar/SubNavbar";
+import SubNavbar from "../components/layout/Navbar/SubNavbar/SubNavbar";
+
 
 export const BusinessPortalLayout = ({children}) => {
   return (
