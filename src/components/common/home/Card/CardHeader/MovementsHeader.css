@@ -1,3 +1,7 @@
+.movements-header-wrapper {
+  position: relative;
+}
+
 .card-header {
   display: flex;
   justify-content: space-between;
@@ -5,118 +9,78 @@
   padding: 1rem;
 }
 
+.header-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.header-title h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.filter-section {
+  position: relative;
+}
+
 .filter-button {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem 1rem;
-  background-color: #faad14;
+  background-color: #F0813A;
   color: white;
   border: none;
   border-radius: 0.5rem;
   cursor: pointer;
   font-size: 0.9rem;
-  transition: opacity 0.2s ease;
+  transition: background-color 0.2s ease;
+}
+
+.filter-button:hover {
+  background-color: #FF5252;
 }
 
 .filter-icon {
   fill: currentColor;
 }
 
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
+.filter-submenu {
+  position: absolute;
+  top: calc(100% + 0.5rem);
   right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background: #fdb284;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  min-width: 180px;
   z-index: 1000;
+  padding: 0.5rem;
+  border: 2px solid #FF5252;
 }
 
-.filter-modal {
-  background-color: white;
-  border-radius: 0.5rem;
-  padding: 1rem;
-  min-width: 200px;
-}
-
-.filter-options {
+.submenu-options {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
-.filter-options button {
-  padding: 0.75rem;
-  border: none;
-  background: none;
-  text-align: left;
-  cursor: pointer;
-  color: #333;
-}
-
-.calendar-modal {
-  background-color: white;
-  border-radius: 0.5rem;
-  padding: 1rem;
-  min-width: 300px;
-}
-
-.calendar-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1rem;
-}
-
-.name-modal {
-  background-color: white;
-  border-radius: 0.5rem;
-  padding: 1rem;
-  width: 300px;
-}
-
-.name-input {
-  width: 90%;
-  padding: 0.75rem;
-  border: 1px solid #e0e0e0;
-  border-radius: 0.5rem;
-  margin-bottom: 1rem;
-}
-
-.search-button {
+.submenu-option {
   width: 100%;
-  padding: 0.75rem;
-  background-color: #ff6b6b;
-  color: white;
+  padding: 1rem;
+  text-align: left;
+  background: none;
   border: none;
-  border-radius: 0.5rem;
+  color: #333;
   cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-size: 0.95rem;
+  border-radius: 0.5rem;
 }
 
-.movements-header-container {
-  position: relative;
-}
-
-.filter-wrapper {
-  position: relative;
-  display: inline-block;
-}
-
-.filter-menu {
-  position: absolute;
-  top: calc(100% + 8px);
-  right: 0;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  z-index: 1000;
-  min-width: 200px;
-}
-
-.filter-button:hover {
-  opacity: 0.9;
+.submenu-option:hover {
+  background-color: #FFE3E3;
+  width: 180px;
+  max-width: 100%;
 }
