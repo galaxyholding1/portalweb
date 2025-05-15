@@ -1,17 +1,14 @@
 import { useState } from "react";
 import "./SubNavbar.css";
-import { MenuTooltip } from "../SubNavbar/tooltip/MenuTooltip";
-import Homesubmenu from "../../../../assets/icons/home.svg";
+import { MenuTooltip } from "./tooltip/MenuTooltip";
 import switchIcon from "../../../../assets/icons/switch.svg";
 import Credit_Card_01 from "../../../../assets/icons/credit_card.svg";
-import Remesas from "../../../../assets/icons/remesas.svg";
-import inicioIcon from "../../../assets/images/SVG/inicio_icon.svg";
-import remesasIcon from "../../../assets/images/SVG/remesas_icon.svg";
-import documentsIcon from "../../../assets/images/SVG/documents_icon.svg"
-import productsIcon from "../../../assets/images/SVG/products_icon.svg";
+import inicioIcon from "../../../../assets/icons/inicio_icon.svg";
+import remesasIcon from "../../../../assets/icons/remesas_icon.svg";
+import documentsIcon from "../../../../assets/icons/documents_icon.svg";
+import productsIcon from "../../../../assets/icons/products_icon.svg";
 import { useLocation, useNavigate } from "react-router";
 import { getModeClient, pathByClient } from "../../../../util/getModeClient";
-
 
 const SubNavbar = () => {
   const [activeItem, setActiveItem] = useState("inicio");
@@ -30,7 +27,7 @@ const SubNavbar = () => {
     },
     {
       id: "productos",
-      icon:  <img src={productsIcon} alt="inicio" className="nav-icon-img" />,
+      icon: <img src={productsIcon} alt="inicio" className="nav-icon-img" />,
       text: "productos",
       submenu: [
         {
@@ -59,9 +56,7 @@ const SubNavbar = () => {
     },
     {
       id: "transferencias",
-      icon: (
-        <img src={switchIcon} alt="switch" className="nav-icon-img" />
-      ),
+      icon: <img src={switchIcon} alt="switch" className="nav-icon-img" />,
       text: "transferencias",
     },
     {
@@ -71,7 +66,7 @@ const SubNavbar = () => {
     },
     {
       id: "documentos",
-      icon:  <img src={documentsIcon} alt="inicio" className="nav-icon-img" />,
+      icon: <img src={documentsIcon} alt="inicio" className="nav-icon-img" />,
       text: "documentos",
     },
     {
@@ -81,13 +76,14 @@ const SubNavbar = () => {
     },
   ];
 
-  const menuItemsLinkIds = [ // Son items que no tienen submenu, solo redireccion (los ids)
-    'remesas'
-  ]
+  const menuItemsLinkIds = [
+    // Son items que no tienen submenu, solo redireccion (los ids)
+    "remesas",
+  ];
 
   const handleItemClick = (item, event) => {
-    if ( menuItemsLinkIds.includes(item.id) ) 
-      navigate(`${pathByClient[getModeClient(pathname)]}/${item.id}`)
+    if (menuItemsLinkIds.includes(item.id))
+      navigate(`${pathByClient[getModeClient(pathname)]}/${item.id}`);
 
     if (item.submenu) {
       const rect = event.currentTarget.getBoundingClientRect();
