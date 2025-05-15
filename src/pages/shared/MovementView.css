@@ -15,3 +15,15 @@ h3 {
   display: flex;  
   gap: 1rem;
 }
+
+.actions-movement-container {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 1rem;
+  button {
+    background-color: var(--tertiary-color);
+  }
+}
+
