@@ -19,7 +19,7 @@ const SubNavbar = () => {
 
   const menuItems = [
     {
-      id: "inicio",
+      id: "home",
       icon: <img src={Homesubmenu} alt="inicio" className="nav-icon-img" />,
       text: "inicio",
     },
@@ -101,7 +101,8 @@ const SubNavbar = () => {
   ];
 
   const menuItemsLinkIds = [ // Son items que no tienen submenu, solo redireccion (los ids)
-    'remesas'
+    'remesas',
+    'home'
   ]
 
   const handleItemClick = (item, event) => {

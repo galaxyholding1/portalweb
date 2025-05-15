@@ -1,7 +1,9 @@
 import { Formatter } from "../../../../util/formatter";
 import { Card } from "../Card/Card";
-import cents from "../../../../assets/icons/cents.svg";
 import "./BalanceCard.css";
+import { Icon } from "../../ui/Icon/Icon";
+import { getPathByClient } from "../../../../util/getModeClient";
+import { useLocation } from "react-router";
 
 const balanceByProduct = [
   { type: "Cuenta de ahorro", balance: 1000, productId: 1234567 },
@@ -9,13 +11,13 @@ const balanceByProduct = [
 ];
 
 export const BalanceCard = () => {
-  const screenType = "people"; // "Business"
+  const {pathname} = useLocation();
   return (
     <div className="grid-area-balance">
       <Card
         title="Saldo"
-        icon={<img src={cents} alt="documento" className="card-icon" />}
-        morePath={`/${screenType}/balance`}
+        icon={<Icon name="cents"/>}
+        morePath={`${getPathByClient(pathname)}/balance`}
       >
         <table className="balance-table">
           <thead className="balance-table-header">
