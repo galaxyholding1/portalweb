@@ -1,6 +1,7 @@
 import { Card } from "../Card/Card";
 import "./RequestsCard.css";
 import Arrow_Left_Right from "../../../../assets/icons/arrow_left_right.svg";
+import { Icon } from "../../ui/Icon/Icon";
 
 const transfersList = [
   {
@@ -30,7 +31,7 @@ export const TransfersCard = () => {
       <Card
         title="Transferencias"
         icon={
-          <img src={Arrow_Left_Right} alt="documento" className="card-icon" />
+          <Icon name="arrow_left_right"/>
         }
         morePath={`/${screenType}/requests`}
       />

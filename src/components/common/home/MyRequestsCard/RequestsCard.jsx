@@ -33,7 +33,7 @@ export const RequestsCard = () => {
     <div className="requests-section">
       <Card
         title="Mis solicitudes"
-        icon={<img src={File_Document} alt="documento" className="card-icon" />}
+        icon={<Icon name="file_document" alt="documento"/>}
         morePath={`/${screenType}/requests`}
       />
       <div className="requests-list">

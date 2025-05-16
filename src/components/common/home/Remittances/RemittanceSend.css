@@ -16,7 +16,7 @@
 }
 
 .remittance-header {
-  background-color: #d4d4d4;
+  background-color: var(--bg-tertiary);
   padding: 0.75rem 1rem;
   border-radius: 1rem;
   display: flex;
@@ -34,7 +34,7 @@
 }
 
 .card-header-box {
-  background-color: #d4d4d4;
+  background-color: var(--bg-tertiary);
   padding: 0.75rem 1rem;
   border-radius: 1rem;
   display: flex;
@@ -50,18 +50,15 @@
 }
 
 .header-title h2 {
-  margin: 20px;
   color: var(--secondary-color);
   margin-top: auto;
   margin-bottom: 0%;
 }
 
 .header-title h3 {
-  margin: 20px;
   display: block;
   font-size: 0.95rem;
-  font-weight: 500;
-  color: black;
+  font-weight: 500;  
 }
 
 .card {

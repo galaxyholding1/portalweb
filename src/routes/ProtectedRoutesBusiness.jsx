@@ -17,12 +17,11 @@ export const ProtectedRoutesBusiness = () => {
     <BusinessPortalLayout>
       <Routes>
         <Route path="/home" element={<HomeBusiness />} />
-        <Route path="/remesas" element={<ConsignmentsBusiness />} />
         <Route path="/seguridad" element={<SecurityBusiness />} />
         <Route path="/perfil" element={<ProfileBusiness />} />
         <Route path="/movimientos" element={<MovementsBusiness />} />
         <Route path="/movimientos/:id" element={<MovementView />} />
-        <Route path="/remesas2/" element={<Remittance />} />
+        <Route path="/remesas" element={<Remittance />} />
       </Routes>
     </BusinessPortalLayout>
   );
