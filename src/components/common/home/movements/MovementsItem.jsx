@@ -6,8 +6,8 @@ import { useNavigate } from "react-router";
 const statesById = {
   cancelled: "Cancelado",
   sucess: "Confirmado",
-  pending: "En proceso"
-}
+  pending: "En proceso",
+};
 
 export const MovementsItem = ({
   id,
@@ -27,9 +27,9 @@ export const MovementsItem = ({
     }
   };
 
-  const state = "pending";
+  const state = "sucess";
 
-  console.log(statesById[state])
+  console.log(statesById[state]);
   return (
     <div className="movement-item">
       <div className="movement-item-icon">
@@ -48,13 +48,11 @@ export const MovementsItem = ({
           <Icon name="note_search" alt="" />
         </div>
       )}
-      {
-        stateIndicator && (
-          <span className={`state-indicator state-${state}`}>
-            {statesById[state]}
-          </span>
-        )
-      }
+      {stateIndicator && (
+        <span className={`state-indicator state-${state}`}>
+          {statesById[state]}
+        </span>
+      )}
 
       <div className="movement-item-amount">
         {Formatter.formatCurrency(amount)}

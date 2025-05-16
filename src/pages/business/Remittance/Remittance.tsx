@@ -3,11 +3,10 @@ import { TransfersCard } from "../../../components/common/home/MyRequestsCard/Tr
 import { RemittanceForm } from "../../../components/common/home/Remittances/RemittanceForm";
 import { RemittanceSend } from "../../../components/common/home/Remittances/RemittanceSend";
 
-
 export const Remittance = () => {
   return (
     <div className="dashboard-grid">
-      <RemittanceSend />
+      <RemittanceForm  />
       <div>
         <MovementCard />
         <TransfersCard />

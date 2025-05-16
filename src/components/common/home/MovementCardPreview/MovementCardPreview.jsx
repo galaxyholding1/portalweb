@@ -3,25 +3,25 @@ import { Card } from "../Card/Card";
 import { MovementItem } from "../movements/movementItem";
 
 const movements = [
-  { 
-    conceptTitle: "Airbnb", 
-    date: new Date("2025-05-01T15:00:00"), 
-    amount: 100 
+  {
+    conceptTitle: "Airbnb",
+    date: new Date("2025-05-01T15:00:00"),
+    amount: 100,
   },
-  { 
-    conceptTitle: "Airbnb", 
-    date: new Date("2025-05-01T15:00:00"), 
-    amount: 100 
+  {
+    conceptTitle: "Airbnb",
+    date: new Date("2025-05-01T15:00:00"),
+    amount: 100,
   },
-  { 
-    conceptTitle: "Airbnb", 
-    date: new Date("2025-05-01T15:00:00"), 
-    amount: 100 
+  {
+    conceptTitle: "Airbnb",
+    date: new Date("2025-05-01T15:00:00"),
+    amount: 100,
   },
-  { 
-    conceptTitle: "Airbnb", 
-    date: new Date("2025-05-01T15:00:00"), 
-    amount: 100 
+  {
+    conceptTitle: "Airbnb",
+    date: new Date("2025-05-01T15:00:00"),
+    amount: 100,
   },
 ];
 
