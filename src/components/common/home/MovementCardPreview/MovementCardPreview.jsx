@@ -1,6 +1,8 @@
+import { useLocation } from "react-router";
 import { Icon } from "../../ui/Icon/Icon";
 import { Card } from "../Card/Card";
 import { MovementItem } from "../movements/movementItem";
+import { getPathByClient } from "../../../../util/getModeClient";
 
 const movements = [
   { 
@@ -26,13 +28,13 @@ const movements = [
 ];
 
 export const MovementCardPreview = () => {
-  const screenType = "people"; // "Business"
+  const { pathname } = useLocation();
   return (
     <div className="grid-area-movements">
       <Card
         title="Ultimos movimientos"
         icon={<Icon name="money" />}
-        morePath={`/${screenType}/movements`}
+        morePath={`${getPathByClient(pathname)}/movimientos`}
       >
         {movements.map((mov, i) => (
           <MovementItem key={`${mov.conceptTitle}${i}`} {...mov} />
