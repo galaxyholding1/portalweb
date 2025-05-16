@@ -4,6 +4,7 @@ import logoutIcon from '../../../../assets/icons/logout.svg'
 import chevronRight from '../../../../assets/icons/chevron_right.svg'
 import lock from '../../../../assets/icons/lock.svg'
 import { getPathByClient } from "../../../../util/getModeClient";
+import { Icon } from "../../../common/ui/Icon/Icon";
 
 const navItems = [
   { name: "Solicitud de productos", path: "/home" },
@@ -31,15 +32,15 @@ export const LoggedLinks = () => {
         </Link>
       ))}
       <button className="btn-logout" onClick={handleLogout}>
-        <img src={logoutIcon} alt="" />Salir
+        <Icon name={"logout"} alt="" color="primary"/>Salir
       </button>
       <div className="dinamic-key-container">
-        <img src={lock} alt="" />
+        <Icon name="lock" color="primary"/>
         <div>
           <span>Clave Dínamica</span>
           <span className="dinamic-key">000 000</span>
         </div>
-        <img src={chevronRight} alt="" />
+        <Icon name="chevron_right" color="border"/>
       </div>
     </ul>
   );

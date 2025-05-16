@@ -3,6 +3,8 @@ import "./RequestsCard.css";
 import Bell_Ringing from "../../../../assets/icons/bell_ring.svg";
 import Note_Search from "../../../../assets/icons/note_search.svg";
 import File_Document from "../../../../assets/icons/file_document.svg";
+import Arrow_Left_Right from "../../../../assets/icons/arrow_left_right.svg";
+import { Icon } from "../../ui/Icon/Icon";
 
 const requestsList = [
   {

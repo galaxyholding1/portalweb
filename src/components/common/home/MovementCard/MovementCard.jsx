@@ -1,9 +1,9 @@
 import { CardMoments } from "../Card/CardMoments";
 import { MovementsItem } from "../movements/MovementsItem";
-import setup from "../../../../assets/icons/setup.svg";
 import { Card } from "../Card/Card";
 import { getPathByClient } from "../../../../util/getModeClient";
 import { useLocation } from "react-router";
+import { Icon } from "../../ui/Icon/Icon";
 
 const movements = [
   {
@@ -30,7 +30,7 @@ export const MovementCard = ({ filter }) => {
     <div className="grid-area-movements">
       <CardComponent
         title="Ultimos movimientos"
-        icon={<img src={setup} />}
+        icon={<Icon name="setup" />}
         morePath={`${getPathByClient(pathname)}/movimientos`}
       >
         {movements.map((mov, i) => (

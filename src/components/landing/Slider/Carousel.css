@@ -39,7 +39,7 @@
 
 .text-section h2 {
   font-size: 2.5rem;
-  color: #333;
+  color: var(--text-color);
   margin-bottom: 20px;
   font-weight: bold;
   line-height: 1.2;
@@ -54,7 +54,7 @@
 }
 
 .cta-button {
-  background: #333;
+  background: var(--text-color);
   color: white;
   border: none;
   padding: 15px 40px;
@@ -87,7 +87,7 @@
   top: 50%;
   transform: translateY(-50%);
   background: rgba(255, 255, 255, 0.8);
-  color: #333;
+  color: var(--text-color);
   border: none;
   width: 50px;
   height: 50px;
@@ -142,7 +142,7 @@
 }
 
 .page-dot.active {
-  background: #333;
+  background: var(--text-color);
   transform: scale(1.2);
 }
 

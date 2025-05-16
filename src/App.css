@@ -9,8 +9,8 @@
   --text-primary: #4f4e4d;
   --text-secondary: #fff;
   --active-color: #4caf50;
-  --border-color: #eaeaea;
-  -nav-text: #333333;
+  --border-color: #AEAEAE;
+  -nav-text: var(--text-color)333;
 }
 
 [data-theme="dark"] {
@@ -31,7 +31,7 @@ body {
   color: var(--text-color);
   transition: background-color 0.3s, color 0.3s;
   font-family: "Quicksand", sans-serif;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .app {

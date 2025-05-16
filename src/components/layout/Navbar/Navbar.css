@@ -41,7 +41,7 @@ a {
   color: var(--text-primary);
   display: flex;
   align-items: center;
-
+  cursor: pointer;
   img {
     margin-right: 2px;
   }
@@ -54,7 +54,7 @@ select {
   color: var(--text-primary);
 
   option {
-    color: var(--text-secondary);
+    color: var(--text-primary);
     background-color: var(--bg-secondary);
   }
 }

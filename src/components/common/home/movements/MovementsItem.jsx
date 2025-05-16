@@ -1,8 +1,7 @@
 import { Formatter } from "../../../../util/formatter";
-import MoneyIcon from "../../../../assets/icons/money.svg";
-import note_search from "../../../../assets/icons/note_search.svg";
-import { useNavigate } from "react-router-dom";
 import "./movements.css";
+import { Icon } from "../../ui/Icon/Icon";
+import { useNavigate } from "react-router";
 
 export const MovementsItem = ({ amount, conceptTitle, date, id }) => {
   const navigate = useNavigate();
@@ -17,7 +16,7 @@ export const MovementsItem = ({ amount, conceptTitle, date, id }) => {
   return (
     <div className="movement-item">
       <div className="movement-item-icon">
-        <img src={MoneyIcon} alt="" />
+        <Icon name="money" color="white"/>
       </div>
       <div className="movement-item-details">
         <p>{conceptTitle}</p>
@@ -28,7 +27,7 @@ export const MovementsItem = ({ amount, conceptTitle, date, id }) => {
         onClick={handleClick}
         style={{ cursor: "pointer" }}
       >
-        <img src={note_search} alt="" />
+        <Icon name='note_search' alt="" />
       </div>
 
       <div className="movement-item-amount">

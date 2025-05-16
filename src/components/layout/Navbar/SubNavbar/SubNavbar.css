@@ -2,7 +2,7 @@
   --nav-hover: rgba(255, 255, 255, 0.1);
   --nav-active: #ffffff;
   --nav-active-bg: #4d3b8f;
-  --nav-inactive-bg: #333333;
+  --nav-inactive-bg: var(--text-color)333;
   --nav-border: rgba(255, 255, 255, 0.1);
   --tooltip-bg: #d9d5eb;
   --tooltip-text: #4b4a49;
@@ -15,7 +15,6 @@
 }
 
 .navbar {
-  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;

@@ -9,6 +9,7 @@ import documentsIcon from "../../../../assets/icons/documents_icon.svg";
 import productsIcon from "../../../../assets/icons/products_icon.svg";
 import { Link, useLocation, useNavigate } from "react-router";
 import { getModeClient, getPathByClient, pathByClient } from "../../../../util/getModeClient";
+import { Icon } from "../../../common/ui/Icon/Icon";
 
 const SubNavbar = () => {
   const [activeItem, setActiveItem] = useState("inicio");
@@ -22,12 +23,12 @@ const SubNavbar = () => {
   const menuItems = [
     {
       id: "home",
-      icon: <img src={inicioIcon} alt="inicio" className="nav-icon-img" />,
+      icon: <Icon name={'home'} className="nav-icon-img" />,
       text: "inicio",
     },
     {
       id: "productos",
-      icon: <img src={productsIcon} alt="inicio" className="nav-icon-img" />,
+      icon: <Icon name={'products_icon'} className="nav-icon-img" />,
       text: "productos",
       submenu: [
         {
@@ -56,22 +57,22 @@ const SubNavbar = () => {
     },
     {
       id: "transferencias",
-      icon: <img src={switchIcon} alt="switch" className="nav-icon-img" />,
+      icon: <Icon name={'switch'} className="nav-icon-img" />,
       text: "transferencias",
     },
     {
       id: "pagos",
-      icon: <img src={Credit_Card_01} alt="inicio" className="nav-icon-img" />,
+      icon: <Icon name={'credit_card'} className="nav-icon-img" />,
       text: "pagos",
     },
     {
       id: "documentos",
-      icon: <img src={documentsIcon} alt="inicio" className="nav-icon-img" />,
+      icon: <Icon name={'documents_icon'} className="nav-icon-img" />,
       text: "documentos",
     },
     {
       id: "remesas",
-      icon: <img src={remesasIcon} alt="inicio" className="nav-icon-img" />,
+      icon: <Icon name={'remesas_icon'} alt="inicio" className="nav-icon-img" />,
       text: "Remesas",
     },
   ];
