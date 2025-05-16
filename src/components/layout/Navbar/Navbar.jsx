@@ -27,7 +27,7 @@ export const Navbar = () => {
   const enableLinks = useMemo(() => guestLinks.includes(pathname), [pathname]);
   return (
     <>
-      { !isAuthenticated && <GuestNavbar/> }
+      {/*{ !isAuthenticated && <GuestNavbar/> }*/}
       <nav className="navbar-galaxy">
         <a href="/">
           <img src={iconByTheme[theme]} alt="logo" />
