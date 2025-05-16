@@ -6,11 +6,8 @@ import "./SecurityPeople.css";
 
 export const SecurityPeople = () => {
   return (
-    <div className="page-container">  
-      <div className="security-page-container">
-        <ProfileCard />
-        <SecurityCard />
-      </div>
+    <div className="page-container">
+      <SecurityCard />
     </div>
   );
 };

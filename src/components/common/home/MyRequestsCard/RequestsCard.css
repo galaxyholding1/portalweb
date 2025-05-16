@@ -63,11 +63,11 @@
 }
 
 .request-icon {
-    width: 36px;
-    height: 36px;
+    width: auto;
+    height: auto;
     background: #6B46C1;
-    border-radius: 50%;
     display: flex;
+    border-radius: 30%;
     align-items: center;
     justify-content: center;
     position: relative;

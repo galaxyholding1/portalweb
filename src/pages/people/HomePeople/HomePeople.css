@@ -3,6 +3,7 @@
   flex-direction: column;
   gap: 1.75rem;
   padding: 2.25rem;
+
 }
 
 .dashboard-grid{
@@ -26,6 +27,8 @@
   /* SECTION estilos provisionales mientras implementa card */
   background-color: var(--bg-secondary);
   border-radius: 1rem;
+  width: 705px;
+  
   /* !SECTION */
   grid-column: 2 / 3;
   grid-row: 1 / 3;

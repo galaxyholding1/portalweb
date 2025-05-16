@@ -18,22 +18,19 @@ export const ProfileCard = () => {
               <a className="update-link">Cambiar</a>
             </div>
           </div>
-          <ProfileData label="Nombre" className="grid-span-2">
-            Nombre de usuario
-          </ProfileData>
-          <ProfileData label="Fecha de nacimiento">00/00/0000</ProfileData>
-          <ProfileData label="Dirección">Dirección, 123, ABC</ProfileData>
-          <ProfileData label="Localidad">Madrid</ProfileData>
-          <ProfileData label="Número de teléfono">000 00 00 00</ProfileData>
-          <ProfileData label="País">España</ProfileData>
-        </div>
-        <div className="profile-card-document">
+          <ProfileData label="Nombre"> Nombre de usuario </ProfileData>
           <select>
             <option value="">Identificación</option>
           </select>
           <ProfileData label="No. de Identificación">000 00 00 00</ProfileData>
+          <ProfileData label="Fecha de nacimiento">00/00/0000</ProfileData>
+          <ProfileData label="País">España</ProfileData>
+          <ProfileData label="Número de teléfono">000 00 00 00</ProfileData>
+          <div className="grid-helper"></div> {/* Lo dejo aqui para que sea igual al diseño. */}
+          <ProfileData label="Dirección">Dirección, 123, ABC</ProfileData>
+          <ProfileData label="Localidad">Madrid</ProfileData>
         </div>
-        <button className="profile-card-save-button">
+        <button className="profile-card-save-button button-portal">
           {" "}
           <img src={saveIcon} alt="" /> Guardar
         </button>

@@ -30,7 +30,7 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem 1rem;
-  background-color: #F0813A;
+  background-color: #f0813a;
   color: white;
   border: none;
   border-radius: 0.5rem;
@@ -40,7 +40,7 @@
 }
 
 .filter-button:hover {
-  background-color: #FF5252;
+  background-color: #ff5252;
 }
 
 .filter-icon {
@@ -57,7 +57,7 @@
   min-width: 180px;
   z-index: 1000;
   padding: 0.5rem;
-  border: 2px solid #FF5252;
+  border: 2px solid #ff5252;
 }
 
 .submenu-options {
@@ -79,12 +79,39 @@
   border-radius: 0.5rem;
 }
 
-.submenu-option:hover {
-  background-color: #FFE3E3;
-  width: 180px;
-  max-width: 100%;
+
+
+.card-header-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
 }
 
-card-header-container a { /*este debe tener el estilo del botón*/
-
+/* Caja del título */
+.card-header-box {
+  flex-basis: 80%;
+  background-color: #d4d4d4;
+  padding: 0.75rem 1rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
+
+/* Botón "Ver más" */
+.card-header-link {
+  flex-basis: 20%;
+  background-color: #d4d4d4;
+  padding: 0.75rem 1rem;
+  border-radius: 1rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: 0.95rem;
+  height: 100%;
+  display: inline-flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+

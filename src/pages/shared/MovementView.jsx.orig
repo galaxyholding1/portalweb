@@ -1,7 +1,14 @@
+<<<<<<< HEAD
+import { CardSelect } from "../../components/common/home/Card/CardSelect"
+import { MovementItem } from "../../components/common/home/movements/movementItem"
+import { Icon } from "../../components/common/ui/Icon/Icon"
+import './MovementView.css' 
+=======
 import { CardSelect } from "../../components/common/home/Card/CardSelect";
 import { MovementItem } from "../../components/common/home/movements/movementItem";
 import { Icon } from "../../components/common/ui/Icon/Icon";
 import "./MovementView.css";
+>>>>>>> develop
 
 const movementData = [
   { title: "Fecha", description: "13 de mayo de 2025", haveSeparator: false },
@@ -52,7 +59,36 @@ const movementData = [
   },
 ];
 
+<<<<<<< HEAD
+
 export const MovementView = () => { 
+    return (
+        <div>
+            <CardSelect 
+                title={ "Detalle de movimientos" }
+                icon={ <Icon name="moving_desk" /> }
+            >
+                <MovementItem amount={4000} conceptTitle='Airbnb' date={ new Date() }/>
+                <h3> Movimiento de Transacción de Pago - Galaxy pay </h3>
+                <div className="movement-details">
+                    {
+                        movementData.map(({title, description, haveSeparator}, index) => (
+                            <>
+                                <div key={index} className='movement-detail-text'>
+                                    {title && <span>{title}:</span>}
+                                    <span>{description}</span>
+                                </div>
+                                { haveSeparator && <hr/> }
+                            </>
+                        ))
+                    }
+                </div>
+            </CardSelect>
+        </div>
+    )
+}    
+=======
+export const MovementView = () => {
   return (
     <div>
       <CardSelect
@@ -91,3 +127,4 @@ export const MovementView = () => {
     </div>
   );
 };
+>>>>>>> develop

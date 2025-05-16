@@ -7,8 +7,8 @@ import inicioIcon from "../../../../assets/icons/inicio_icon.svg";
 import remesasIcon from "../../../../assets/icons/remesas_icon.svg";
 import documentsIcon from "../../../../assets/icons/documents_icon.svg";
 import productsIcon from "../../../../assets/icons/products_icon.svg";
-import { useLocation, useNavigate } from "react-router";
-import { getModeClient, pathByClient } from "../../../../util/getModeClient";
+import { Link, useLocation, useNavigate } from "react-router";
+import { getModeClient, getPathByClient, pathByClient } from "../../../../util/getModeClient";
 
 const SubNavbar = () => {
   const [activeItem, setActiveItem] = useState("inicio");
@@ -134,9 +134,9 @@ const SubNavbar = () => {
         </div>
         <div className="profile-info">
           <p>Bienvenido, nombre usuario</p>
-          <a href="#" className="update-link">
+          <Link to={getPathByClient(pathname) + "/perfil"} className="update-link">
             actualizar mis datos
-          </a>
+          </Link>
         </div>
       </div>
 

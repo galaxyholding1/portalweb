@@ -7,6 +7,7 @@ import { ConsignmentsBusiness } from "../pages/business/ConsignmentsBusiness/Con
 import { BusinessPortalLayout } from "../layouts/BusinessPortalLayout";
 import { MovementsBusiness } from "../pages/business/MovementsBusiness/MovementsBusiness";
 import { MovementView } from "../pages/shared/MovementView";
+import { ProfileBusiness } from "../pages/business/ProfileBusiness/ProfileBusiness";
 
 
 export const ProtectedRoutesBusiness = () => {
@@ -18,6 +19,7 @@ export const ProtectedRoutesBusiness = () => {
         <Route path="/home" element={<HomeBusiness/>} />
         <Route path="/remesas" element={<ConsignmentsBusiness/>} />
         <Route path="/seguridad" element={<SecurityBusiness/>} />
+        <Route path="/perfil" element={<ProfileBusiness/>} />
         <Route path="/movimientos" element={<MovementsBusiness />} />
         <Route path="/movimientos/:id" element={<MovementView/>} />
       </Routes>

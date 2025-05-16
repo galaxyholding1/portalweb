@@ -6,7 +6,7 @@ import lock from '../../../../assets/icons/lock.svg'
 import { getPathByClient } from "../../../../util/getModeClient";
 
 const navItems = [
-  { name: "Solicitud de productos", path: "/solicitud-productos" },
+  { name: "Solicitud de productos", path: "/home" },
   { name: "Seguridad", path: "/seguridad" },
   { name: "Contactános", path: "/contactanos" },
 ]
