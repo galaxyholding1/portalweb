@@ -1,3 +1,4 @@
+import { Icon } from "../../ui/Icon/Icon";
 import { Card } from "../Card/Card";
 import { MovementItem } from "../movements/movementItem";
 

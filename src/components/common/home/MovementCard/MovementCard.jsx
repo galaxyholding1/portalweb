@@ -34,7 +34,7 @@ export const MovementCard = ({ filter }) => {
         morePath={`${getPathByClient(pathname)}/movimientos`}
       >
         {movements.map((mov, i) => (
-          <MovementsItem key={`${mov.conceptTitle}${i}`} {...mov} />
+          <MovementsItem key={`${mov.conceptTitle}${i}`} {...mov}/>
         ))}
       </CardComponent>
     </div>
