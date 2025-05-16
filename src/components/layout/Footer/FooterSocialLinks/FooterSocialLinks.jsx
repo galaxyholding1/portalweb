@@ -14,7 +14,7 @@ export const FooterSocialLinks = () => {
         <img src={icon}/>
       </div>
       <span>
-        <SocialMediaLinks light/>
+        <SocialMediaLinks/>
       </span>
     </div>
   )
