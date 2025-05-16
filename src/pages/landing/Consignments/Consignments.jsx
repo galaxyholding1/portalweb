@@ -1,6 +1,6 @@
 import { useState } from "react";
 import bannerImage from "../../../assets/images/banner-home.png";
-import "./ConsignmentsPeople.css";
+import "./Consignments.css";
 
 const tabs = [
   "Enviar y recibir",
