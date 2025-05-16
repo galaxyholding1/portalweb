@@ -1,7 +1,7 @@
 import { CardSelect } from "../../components/common/home/Card/CardSelect"
 import { MovementItem } from "../../components/common/home/movements/movementItem"
 import { Icon } from "../../components/common/ui/Icon/Icon"
-import './MovementView.css'
+import './MovementView.css' 
 
 const movementData = [
   { title: "Fecha", description: "13 de mayo de 2025", haveSeparator: false },
@@ -23,7 +23,7 @@ const movementData = [
 ];
 
 
-export const MovementView = () => {
+export const MovementView = () => { 
     return (
         <div>
             <CardSelect 
@@ -48,4 +48,4 @@ export const MovementView = () => {
             </CardSelect>
         </div>
     )
-}
+}    
