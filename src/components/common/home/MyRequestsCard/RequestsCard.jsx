@@ -41,7 +41,7 @@ export const RequestsCard = () => {
           <div key={request.id} className="request-item">
             <div className="request-icon">
               <div className="request-icon">
-                <img src={Bell_Ringing} alt="" />
+                <Icon name="bell_ring" />
               </div>
             </div>
             <div className="request-content">
@@ -50,7 +50,7 @@ export const RequestsCard = () => {
             </div>
             <div className="request-status">
               <div className="request-icon">
-                <img src={Note_Search} alt="" />
+                <Icon name="bell_ring" />
               </div>
             </div>
           </div>
