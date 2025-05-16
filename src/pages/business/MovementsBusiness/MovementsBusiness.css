@@ -6,4 +6,5 @@
 
 .grid-area-movements {
   grid-column: auto;
+  padding-bottom: 10px;
 }

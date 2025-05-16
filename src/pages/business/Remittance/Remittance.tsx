@@ -1,10 +1,15 @@
+import { MovementCard } from "../../../components/common/home/MovementCard/MovementCard";
+import { TransfersCard } from "../../../components/common/home/MyRequestsCard/TransfersCard";
 import { RemittanceForm } from "../../../components/common/home/Remittances/RemittanceForm";
 
 export const Remittance = () => {
   return (
-    <div className="movements-page-container">
+    <div className="dashboard-grid">
       <RemittanceForm />
-      <RemittanceForm />
+      <div>
+        <MovementCard />
+        <TransfersCard />
+      </div>
     </div>
   );
 };

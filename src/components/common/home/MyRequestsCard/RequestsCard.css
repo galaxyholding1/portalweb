@@ -236,3 +236,13 @@ tbody tr:hover {
     aspect-ratio: 1 / 1;
     padding: .78rem .92rem;
 }
+
+
+.requests-section{
+    box-sizing: border-box;
+    border-radius: 1rem;
+    background-color: var(--bg-secondary);
+    width: 100%;
+    position: relative;
+    margin-bottom: 5px;
+}

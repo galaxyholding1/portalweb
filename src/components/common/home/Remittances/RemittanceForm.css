@@ -1,6 +1,5 @@
 .remittance-container {
     margin: 0 auto;
-    padding: 2rem;
     border-radius: 1rem;
     transition: all 0.3s ease;
 }
@@ -165,9 +164,8 @@
 .remittance-wrapper  {
     background-color: #f5f5f5;
     border-radius: 1rem;
-    padding: 2rem;
+    padding: 1rem;
     min-height: calc(100vh - 4rem);
-    margin: 1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
