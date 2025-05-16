@@ -3,11 +3,6 @@ import { ProfileCard } from "../../../components/common/home/ProfileCard/Profile
 import SubNavbar from "../../../components/layout/Navbar/SubNavbar/SubNavbar";
 import { SecurityCard } from "../../../components/common/home/SecurityCard/SecurityCard";
 
-
 export const SecurityBusiness = () => {
-  return (
-    <div className="page-container">
-      <SecurityCard />
-    </div>
-  );
+  return <SecurityCard />;
 };

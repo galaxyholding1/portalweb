@@ -51,13 +51,13 @@
   color: var(--text-color);
   font-size: 0.9rem;
   margin-bottom: 1.25rem;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .main-section-title {
   margin: 0;
   color: var(--secondary-color);
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 1.25rem;
 }
 
@@ -105,9 +105,10 @@
   justify-self: end;
 }
 
-.password-input {
+.password-input-card-security {
+  box-sizing: border-box;
   background-color: transparent!important;
-  border: var(--text-color) 1px solid!important;
+  box-shadow: 0 0 0 0.5px var(--text-color);
   font-weight: 300!important;
   color: var(--text-color)!important;
   transition: border-color 0.3s ease!important;
@@ -115,10 +116,11 @@
   max-width: 326px;
 }
 
-.password-input:focus {
+
+
+.password-input-card-security:focus {
   outline: none;
-  border-color: var(--primary-color)!important;
-  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.1);
+  box-shadow: 0 0 0 0.5px var(--primary-color);
 }
 
 @media (max-width: 768px) {

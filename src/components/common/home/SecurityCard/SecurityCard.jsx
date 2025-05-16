@@ -75,21 +75,21 @@ export const SecurityCard = () => {
           <h3 className="section-title">Cambiar contraseña</h3>
           <div className="password-inputs">
             <PasswordInput
-              className='password-input'
+              className='password-input-card-security'
               handleInputChange={handlePasswordInputChange}
               value={passwordForm.oldPassword}
               name={"oldPassword"}
               placeholder={"Escribe la contraseña actual"}
             />
             <PasswordInput
-              className='password-input'
+              className='password-input-card-security'
               handleInputChange={handlePasswordInputChange}
               value={passwordForm.newPasswordConfirmation}
               name={"newPasswordConfirmation"}
               placeholder={"Escribe la nueva contraseña"}
             />
             <PasswordInput
-              className='password-input'
+              className='password-input-card-security'
               handleInputChange={handlePasswordInputChange}
               value={passwordForm.newPassword}
               name={"newPassword"}

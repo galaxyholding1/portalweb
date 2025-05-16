@@ -1,13 +1,13 @@
 
 import { Formatter } from "../../../../util/formatter";
-import MoneyIcon from "../../../../assets/icons/money.svg";
 import "./movements.css";
+import { Icon } from "../../ui/Icon/Icon";
 
 export const MovementsItem = ({ amount, conceptTitle, date }) => {
   return (
     <div className="movement-item">
       <div className="movement-item-icon">
-        <img src={MoneyIcon} alt="" />
+        <Icon name="money" color="white"/>
       </div>
       <div className="movement-item-details">
         <p>{conceptTitle}</p>

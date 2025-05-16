@@ -1,7 +1,8 @@
 import { Link } from "react-router";
-import verMas from "../../../../../assets/icons/ver_mas_icon.svg"
+import { Icon } from "../../../ui/Icon/Icon";
 
 export const CardHeader = ({ icon, title, morePath }) => {
+  // TODO: LOS COLORES NO ESTÁN BIEN EN DARK
   return (
     <div className="card-header-container">
       <div className="card-header-box">
@@ -13,8 +14,8 @@ export const CardHeader = ({ icon, title, morePath }) => {
       
       {morePath && (
         <Link to={morePath} className="card-header-link">
-          <img src={verMas} alt="ver-mas" className="ver-mas-icon" />,
-          Ver más
+          <Icon name="ver_mas_icon" alt="ver-mas" className="ver-mas-icon" />
+          ver más
         </Link>
       )}
     </div>

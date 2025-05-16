@@ -4,6 +4,7 @@ import Bell_Ringing from "../../../../assets/icons/bell_ring.svg";
 import Note_Search from "../../../../assets/icons/note_search.svg";
 import File_Document from "../../../../assets/icons/file_document.svg";
 import Arrow_Left_Right from "../../../../assets/icons/arrow_left_right.svg";
+import { Icon } from "../../ui/Icon/Icon";
 
 const requestsList = [
   {
@@ -54,9 +55,7 @@ export const RequestsCard = () => {
       <div className="requests-section">
         <Card
           title="Mis solicitudes"
-          icon={
-            <img src={File_Document} alt="documento" className="card-icon" />
-          }
+          icon={<Icon name="file_document" />}
           morePath={`/${screenType}/requests`}
         />
         <div className="requests-list">
@@ -64,7 +63,7 @@ export const RequestsCard = () => {
             <div key={request.id} className="request-item">
               <div className="request-icon">
                 <div className="request-icon">
-                  <img src={Bell_Ringing} alt="" />
+                  <Icon name="bell_ring" alt="" />
                 </div>
               </div>
               <div className="request-content">
@@ -73,7 +72,7 @@ export const RequestsCard = () => {
               </div>
               <div className="request-status">
                 <div className="request-icon">
-                  <img src={Note_Search} alt="" />
+                  <Icon name="note_search" alt="" />
                 </div>
               </div>
             </div>
@@ -85,7 +84,7 @@ export const RequestsCard = () => {
         <Card
           title="Transferencias"
           icon={
-            <img src={Arrow_Left_Right} alt="documento" className="card-icon" />
+            <Icon name='arrow_left_right' alt="documento" />
           }
           morePath={`/${screenType}/requests`}
         />

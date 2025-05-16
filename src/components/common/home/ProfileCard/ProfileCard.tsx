@@ -3,6 +3,7 @@ import { Card } from "../Card/Card";
 
 import saveIcon from "../../../../assets/icons/save.svg";
 import { ProfileData } from "./ProfileData";
+import { Icon } from "../../ui/Icon/Icon";
 
 export const ProfileCard = () => {
   return (
@@ -32,7 +33,7 @@ export const ProfileCard = () => {
         </div>
         <button className="profile-card-save-button button-portal">
           {" "}
-          <img src={saveIcon} alt="" /> Guardar
+          <Icon name="save" /> Guardar
         </button>
       </div>
     </Card>

@@ -21,7 +21,7 @@
 
 .modal-title {
   margin: 0 0 1rem 0;
-  color: #333;
+  color: var(--text-color);
   font-size: 1.1rem;
   font-weight: 500;
 }

@@ -6,7 +6,7 @@ export const MovementItem = ({ amount, conceptTitle, date }) => {
   return (
     <div className="movement-item">
       <div className="movement-item-icon">
-        <Icon name="money" />
+        <Icon name="money" color="white"/>
       </div>
       <div className="movement-item-details">
         <p>{conceptTitle}</p>

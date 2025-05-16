@@ -5,25 +5,20 @@ import Carosuel from "../../../components/landing/Slider/Carousel";
 import CarouselBackground from "../../../components/landing/Slider/CarouselBackground";
 import CarouselFullscreen from "../../../components/landing/Slider/CarouselFullscreen";
 import imagendeprueba from "../../../assets/images/imagendeprueba.jpg";
-import tramitesIcon from "../../../assets/icons/tramites_digitales.svg";
-import negociarIcon from "../../../assets/icons/negociar_deuda.svg";
-import pagosIcon from "../../../assets/icons/pago.svg";
-import ayudaIcon from "../../../assets/icons/help.svg";
-import certificadosIcon from "../../../assets/icons/certificados_bancarios.svg";
-import turnoIcon from "../../../assets/icons/solicita_turno.svg";
 import { useAuthStore } from "../../../store/auth-store";
+import { Icon } from "../../../components/common/ui/Icon/Icon";
 
 const accesos = [
-  { icon: tramitesIcon, label: "Trámites digitales", path: "/tramites" },
-  { icon: negociarIcon, label: "Negociar deuda", path: "/negociar" },
-  { icon: pagosIcon, label: "Pagos", path: "/pagos" },
-  { icon: ayudaIcon, label: "Centro de Ayuda", path: "/ayuda" },
+  { icon: "tramites_digitales", label: "Trámites digitales", path: "/tramites" },
+  { icon: "negociar_deuda", label: "Negociar deuda", path: "/negociar" },
+  { icon: "pago", label: "Pagos", path: "/pagos" },
+  { icon: "help", label: "Centro de Ayuda", path: "/ayuda" },
   {
-    icon: certificadosIcon,
+    icon: "certificados_bancarios",
     label: "Certificados bancarios",
     path: "/certificados",
   },
-  { icon: turnoIcon, label: "Solicita tu turno", path: "/turno" },
+  { icon: "solicita_turno", label: "Solicita tu turno", path: "/turno" },
 ];
 
 const servicios = [
@@ -81,12 +76,7 @@ export const Home = () => {
                   onClick={() => (window.location.href = item.path)}
                   style={{ cursor: "pointer" }}
                 >
-                  <img
-                    src={item.icon}
-                    alt={item.label}
-                    className="icon-img"
-                    style={{ fill: "red" }}
-                  />
+                  <Icon name={item.icon}/>
                   <div>{item.label}</div>
                 </div>
               ))}

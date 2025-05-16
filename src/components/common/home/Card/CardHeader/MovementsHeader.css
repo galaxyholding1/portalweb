@@ -18,7 +18,7 @@
 .header-title h3 {
   margin: 0;
   font-size: 1rem;
-  color: #333;
+  color: var(--text-color);
 }
 
 .filter-section {
@@ -72,7 +72,7 @@
   text-align: left;
   background: none;
   border: none;
-  color: #333;
+  color: var(--text-color);
   cursor: pointer;
   transition: background-color 0.2s ease;
   font-size: 0.95rem;
@@ -101,16 +101,18 @@
 
 /* Botón "Ver más" */
 .card-header-link {
+  gap: 0.5rem;
   flex-basis: 20%;
   background-color: #d4d4d4;
-  padding: 0.75rem 1rem;
+  padding: 0.75rem 0;
   border-radius: 1rem;
   text-align: center;
   text-decoration: none;
   font-size: 0.95rem;
+  font-weight: 500;
   height: 100%;
   display: inline-flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
 }
 
