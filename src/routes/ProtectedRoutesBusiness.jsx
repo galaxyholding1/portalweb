@@ -8,7 +8,7 @@ import { BusinessPortalLayout } from "../layouts/BusinessPortalLayout";
 import { MovementsBusiness } from "../pages/business/MovementsBusiness/MovementsBusiness";
 import { MovementView } from "../pages/shared/MovementView";
 import { ProfileBusiness } from "../pages/business/ProfileBusiness/ProfileBusiness";
-
+import { Remittance } from "../pages/business/Remittance/Remittance";
 
 export const ProtectedRoutesBusiness = () => {
   const { login } = useAuthStore();
@@ -16,12 +16,13 @@ export const ProtectedRoutesBusiness = () => {
   return (
     <BusinessPortalLayout>
       <Routes>
-        <Route path="/home" element={<HomeBusiness/>} />
-        <Route path="/remesas" element={<ConsignmentsBusiness/>} />
-        <Route path="/seguridad" element={<SecurityBusiness/>} />
-        <Route path="/perfil" element={<ProfileBusiness/>} />
+        <Route path="/home" element={<HomeBusiness />} />
+        <Route path="/remesas" element={<ConsignmentsBusiness />} />
+        <Route path="/seguridad" element={<SecurityBusiness />} />
+        <Route path="/perfil" element={<ProfileBusiness />} />
         <Route path="/movimientos" element={<MovementsBusiness />} />
-        <Route path="/movimientos/:id" element={<MovementView/>} />
+        <Route path="/movimientos/:id" element={<MovementView />} />
+        <Route path="/remesas2/" element={<Remittance />} />
       </Routes>
     </BusinessPortalLayout>
   );
