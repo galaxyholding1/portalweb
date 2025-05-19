@@ -45,25 +45,6 @@ body {
   flex: 1;
 }
 
-
-.button-portal {
-  background-color: var(--bg-tertiary);
-  color: var(--text-color);
-  font-family: Quicksand;
-  border-radius: 2.1rem;
-  padding: 0.4rem 1.5rem;
-  display: flex;
-  gap: .5rem;
-  align-items: center;
-  border: none;
-  cursor: pointer;
-
-  img {
-    max-width: 24px;
-    aspect-ratio: 1;
-  }
-}
-
 input:focus {
   outline: none;
   box-shadow: none;

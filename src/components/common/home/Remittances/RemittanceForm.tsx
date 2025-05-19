@@ -25,7 +25,6 @@ export const RemittanceForm: React.FC<RemittanceFormProps> = ({
   };
 
   return (
-    <div className={`remittance-wrapper ${isDarkMode ? "dark" : "light"}`}>
       <div className="remittance-container">
         <div className="remittance-header">
           <div className="header-icon">
@@ -160,6 +159,5 @@ export const RemittanceForm: React.FC<RemittanceFormProps> = ({
           </form>
         </div>
       </div>
-    </div>
   );
 };

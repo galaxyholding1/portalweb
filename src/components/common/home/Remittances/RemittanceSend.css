@@ -3,6 +3,8 @@
   border-radius: 1rem;
   transition: all 0.3s ease;
   margin: 0 auto;
+  grid-column: span 1;
+  grid-row: span 3;
 }
 
 .remittance-container.light {

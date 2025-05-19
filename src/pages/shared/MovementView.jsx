@@ -1,4 +1,5 @@
 import { CardSelect } from "../../components/common/home/Card/CardSelect";
+import { MovementDetail } from "../../components/common/home/movements/MovementDetail/MovementDetail";
 import { MovementItem } from "../../components/common/home/movements/movementItem";
 import { Icon } from "../../components/common/ui/Icon/Icon";
 import "./MovementView.css";
@@ -46,29 +47,22 @@ export const MovementView = () => {
 
         <div className="movement-details">
           {movementSections.map((section, sectionIndex) => (
-            <div key={sectionIndex} className="movement-section">
-              {section.map(({ title, description }, index) => (
-                <div key={index} className="movement-item">
-                  {title && (
-                    <span className="movement-title">
-                      {title}: {description}
-                    </span>
-                  )}
-                </div>
-              ))}
-            </div>
+            <MovementDetail key={sectionIndex} items={section}/>
           ))}
 
            <div className="actions-movement-container">
           <button className="button-portal">
             <Icon
               name="save"
-              filter="invert(100%) sepia(0%) saturate(1000%) hue-rotate(180deg) brightness(1100%)"
+              color="white"
             />
             Descargar PDF
           </button>
           <button className="button-portal">
-            <Icon name="printer" />
+            <Icon
+              name="printer"
+              color="white"
+            />
             Imprimir
           </button>
         </div>
