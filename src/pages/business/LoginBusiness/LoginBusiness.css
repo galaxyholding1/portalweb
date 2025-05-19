@@ -276,6 +276,10 @@
     border: 1px solid #ccc !important;
     border-radius: 11px !important;
   }
+
+  table {
+    min-width: 500px !important;
+  }
 }
 
 @media (max-width: 500px) {
@@ -307,6 +311,10 @@
   }
 
   .login-button {
-    width: 100%;
+    width: 95%;
+  }
+
+  table {
+    min-width: 300px !important;
   }
 }
