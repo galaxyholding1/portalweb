@@ -8,9 +8,7 @@
 .dashboard-grid {
   display: grid;
   grid-template-columns: 48% 52%;
-  grid-template-rows: 1fr 1fr;
   gap: 1.5rem;
-  
 }
 
 .grid-area-movements {

@@ -5,10 +5,9 @@ import { RemittanceForm } from "../../../components/common/home/Remittances/Remi
 export const Remittance = () => {
   return (
     <div className="dashboard-grid">
-      <RemittanceForm  />
+      <RemittanceForm />
       <div>
-        <MovementCard stateIndicator/>
-        <TransfersCard />
+        <MovementCard stateIndicator />
       </div>
     </div>
   );
