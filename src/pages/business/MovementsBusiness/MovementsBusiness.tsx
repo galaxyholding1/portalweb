@@ -5,8 +5,8 @@ import "./MovementsBusiness.css";
 export const MovementsBusiness = () => {
   return (
     <div className="movements-page-container">
-      <MovementCard filter/>
-      <MovementCard filter/>
+      <MovementCard filter enableLink/>
+      <MovementCard filter enableLink/>
     </div>
   );
 };

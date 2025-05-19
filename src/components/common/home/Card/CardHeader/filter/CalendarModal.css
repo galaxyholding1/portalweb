@@ -1,8 +1,9 @@
 .calendar-modal {
   background-color: white;
-  border-radius: 0.5rem;
+  border-radius: 11px;
   padding: 1.5rem;
-  min-width: 320px;
+  min-width: min(320px, 100%);
+  border: var(--secondary-color) solid 1px;
 }
 
 .calendar-header {
@@ -67,6 +68,6 @@
 }
 
 .calendar-day.selected {
-  background-color: #ff6b6b;
+  background-color: var(--secondary-color);
   color: white;
 }

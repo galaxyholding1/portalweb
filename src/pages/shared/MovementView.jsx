@@ -52,6 +52,8 @@ const movementData = [
   },
 ];
 
+
+
 export const MovementView = () => { 
   return (
     <div>

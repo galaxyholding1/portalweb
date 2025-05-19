@@ -8,7 +8,7 @@ export const Remittance = () => {
     <div className="dashboard-grid">
       <RemittanceForm  />
       <div>
-        <MovementCard />
+        <MovementCard stateIndicator/>
         <TransfersCard />
       </div>
     </div>

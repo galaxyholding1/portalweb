@@ -7,3 +7,15 @@
 .grid-area-movements {
   grid-column: auto;
 }
+
+
+@media screen and (max-width: 768px) {
+  .movements-page-container {
+    grid-template-columns: 1fr!important;
+    * {
+      grid-column: auto;
+      grid-row: auto;
+    }
+  }
+  
+}

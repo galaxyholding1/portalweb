@@ -21,9 +21,34 @@ const movements = [
     date: new Date("2025-05-01T15:00:00"),
     amount: 100,
   },
+  {
+    conceptTitle: "Airbnb",
+    date: new Date("2025-05-01T15:00:00"),
+    amount: 100,
+  },
+  {
+    conceptTitle: "Airbnb",
+    date: new Date("2025-05-01T15:00:00"),
+    amount: 100,
+  },
+  {
+    conceptTitle: "Airbnb",
+    date: new Date("2025-05-01T15:00:00"),
+    amount: 100,
+  },
+  {
+    conceptTitle: "Airbnb",
+    date: new Date("2025-05-01T15:00:00"),
+    amount: 100,
+  },
+  {
+    conceptTitle: "Airbnb",
+    date: new Date("2025-05-01T15:00:00"),
+    amount: 100,
+  },
 ];
 
-export const MovementCard = ({ filter }) => {
+export const MovementCard = ({ filter = false, stateIndicator = false, enableLink = false }) => {
   const CardComponent = filter ? CardMoments : Card;
   const { pathname } = useLocation();
   return (
@@ -37,7 +62,8 @@ export const MovementCard = ({ filter }) => {
           <MovementsItem
             key={`${mov.conceptTitle}${i}`}
             {...mov}
-            stateIndicator
+            stateIndicator={stateIndicator}
+            linkToDetail={enableLink}
           />
         ))}
       </CardComponent>
