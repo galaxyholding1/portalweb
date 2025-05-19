@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./LoginBusiness.css";
 import { useNavigate } from "react-router";
-import AdSlider from "../../../components/common/home/AdSlider/AdSlider";
 
 const VirtualKeyboard = ({ onKeyPress, targetInputRef }) => {
   const keyboardLayout = [
@@ -26,18 +25,18 @@ const VirtualKeyboard = ({ onKeyPress, targetInputRef }) => {
 
   return (
     <div className="virtual-keyboard-container">
-      <table border="0" cellSpacing="0" cellPadding="0">
+      <table
+        border="0"
+        cellSpacing="0"
+        cellPadding="0"
+        className="keyboard-table"
+      >
         <tbody>
           <tr>
             <td width="405" heigth="10" valign="top">
               <table border="0" cellSpacing="0" cellPadding="0">
                 <tbody>
                   <tr>
-                    <td height="0"></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td width="0"></td>
                     <td>
                       <table
                         border="0"
@@ -79,7 +78,6 @@ const VirtualKeyboard = ({ onKeyPress, targetInputRef }) => {
                                       fontSize: "12",
                                       backgroundRepeat: "no-repeat",
                                       fontWeight: "bold",
-                                      color: "#616161",
                                     }}
                                     onClick={() => handleKeyClick(key)}
                                   >
@@ -94,7 +92,6 @@ const VirtualKeyboard = ({ onKeyPress, targetInputRef }) => {
                                       style={{
                                         fontSize: "12px",
                                         fontWeight: "bold",
-                                        color: "rgb(97, 97, 97)",
                                       }}
                                     >
                                       {displayKey}
@@ -106,78 +103,11 @@ const VirtualKeyboard = ({ onKeyPress, targetInputRef }) => {
                           ))}
                         </tbody>
                       </table>
-                      <table
-                        className="bg_button"
-                        id="_CONSTRAST"
-                        valign="top"
-                        border="0"
-                        cellSpacing="0"
-                      >
-                        <tbody>
-                          <tr>
-                            <td>
-                              <map
-                                name="numericKeyboardMap"
-                                id="numericKeyboardMap"
-                              >
-                                <area
-                                  shape="circle"
-                                  className="cursorContrast"
-                                  coords="16,21,11"
-                                  onMouseOver={() =>
-                                    console.log("setHandCursor")
-                                  }
-                                  onClick={() =>
-                                    console.log("changeContrastLevel(1)")
-                                  }
-                                  onMouseOut={() =>
-                                    console.log("setDefaultCursor")
-                                  }
-                                  href="#"
-                                />
-                                <area
-                                  shape="circle"
-                                  coords="45,21,11"
-                                  onMouseOver={() =>
-                                    console.log("setHandCursor")
-                                  }
-                                  onClick={() =>
-                                    console.log("changeContrastLevel(2)")
-                                  }
-                                  onMouseOut={() =>
-                                    console.log("setDefaultCursor")
-                                  }
-                                  href="#"
-                                />
-                                <area
-                                  shape="circle"
-                                  coords="74,21,11"
-                                  onMouseOver={() =>
-                                    console.log("setHandCursor")
-                                  }
-                                  onClick={() =>
-                                    console.log("changeContrastLevel(3)")
-                                  }
-                                  onMouseOut={() =>
-                                    console.log("setDefaultCursor")
-                                  }
-                                  href="#"
-                                />
-                              </map>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
                     </td>
                   </tr>
                 </tbody>
               </table>
             </td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td height="0" width="0"></td>
           </tr>
         </tbody>
       </table>
@@ -210,11 +140,6 @@ const NumericKeyboard = ({ onKeyPress, targetInputRef }) => {
               <table border="0" cellSpacing="0" cellPadding="0">
                 <tbody>
                   <tr>
-                    <td height="0"></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td width="0"></td>
                     <td>
                       <table
                         border="0"
@@ -248,7 +173,6 @@ const NumericKeyboard = ({ onKeyPress, targetInputRef }) => {
                                       fontSize: "12",
                                       backgroundRepeat: "no-repeat",
                                       fontWeight: "bold",
-                                      color: "#616161",
                                     }}
                                     onClick={() => handleNumberClick(key)}
                                   >
@@ -263,7 +187,6 @@ const NumericKeyboard = ({ onKeyPress, targetInputRef }) => {
                                       style={{
                                         fontSize: "12px",
                                         fontWeight: "bold",
-                                        color: "rgb(97, 97, 97)",
                                       }}
                                     >
                                       {displayKey}
@@ -280,11 +203,6 @@ const NumericKeyboard = ({ onKeyPress, targetInputRef }) => {
                 </tbody>
               </table>
             </td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td height="0" width="0"></td>
           </tr>
         </tbody>
       </table>
@@ -468,10 +386,7 @@ export const LoginBusiness = () => {
                 ¿No puede conectarse?
               </a>
             </div>
-            <div
-              className="keyboards-container"
-              style={{ display: "flex", flexDirection: "row" }}
-            >
+            <div className="keyboards-container">
               <VirtualKeyboard
                 onKeyPress={handleVirtualKeyboardKeyPress}
                 targetInputRef={passwordInputRef}
@@ -491,40 +406,6 @@ export const LoginBusiness = () => {
           />
         </section>
       </main>
-      <footer className="footer">
-        <div className="footer-links">
-          <a href="#" className="footer-link">
-            Afiliar Nueva Empresa
-          </a>
-          <a href="#" className="footer-link">
-            Afiliar Nuevo Usuario
-          </a>
-          <a href="#" className="footer-link">
-            Formato de Novedades
-          </a>
-        </div>
-        <div className="shortcut-links">
-          {/* deslizador */}
-
-          <div className="p-4">
-            <AdSlider /> {/* Velocidad: 10 segundos */}
-          </div>
-        </div>
-        <div className="legal-links">
-          <a href="#" className="legal-link">
-            Política de Privacidad
-          </a>
-          <a href="#" className="legal-link">
-            Preguntas Frecuentes
-          </a>
-          <a href="#" className="legal-link">
-            Ayuda
-          </a>
-          <a className="copyright">
-            Copyright 202021 galaxyapp. Todos los derechos reservados.
-          </a>
-        </div>
-      </footer>
     </div>
   );
 };
