@@ -1,11 +1,6 @@
 import React from "react";
 import { useTheme } from "../../../../store/theme-store";
 
-const icons = import.meta.glob("../../../../assets/icons/*.svg?react", {
-  eager: true,
-  // import: "ReactComponent",
-});
-
 // Importaciones individuales
 import ArrowLeftRight from "../../../../assets/icons/arrow_left_right.svg?react";
 import BellRing from "../../../../assets/icons/bell_ring.svg?react";
@@ -128,21 +123,19 @@ export const Icon = ({
   className,
 }: IconProps) => {
   const { theme } = useTheme();
-  
-  if( color !== "var(--text-color)" ) {
+
+  if (color !== "var(--text-color)") {
     color = colorTransform(color);
   }
 
   //SECTION Verificación de existencia
 
   const iconKey =
-    theme === "dark" && iconsMap[`${name}_dark`]
-      ? `${name}_dark`
-      : name;
+    theme === "dark" && iconsMap[`${name}_dark`] ? `${name}_dark` : name;
 
   const IconComponent = iconsMap[iconKey] as
     | React.FC<React.SVGProps<SVGSVGElement>>
-    | undefined
+    | undefined;
 
   if (!IconComponent) return <NotFound width={24} color="red" />;
   //!SECTION
@@ -157,13 +150,21 @@ export const Icon = ({
 
 const colorTransform = (color: string) => {
   switch (color) {
-    case "primary": return "var(--primary-color)"; break;
-    case "secondary": return "var(--secondary-color)"; break;
-    case "tertiary": return "var(--tertiary-color)"; break;
-    case "bg-primary": return "var(--bg-primary)"; break;
-    case "bg-secondary": return "var(--bg-secondary)"; break;
-    case "bg-tertiary": return "var(--bg-tertiary)"; break;
-    case "border": return "var(--border-color)"; break;
-    default: return color; break;
+    case "primary":
+      return "var(--primary-color)";
+    case "secondary":
+      return "var(--secondary-color)";
+    case "tertiary":
+      return "var(--tertiary-color)";
+    case "bg-primary":
+      return "var(--bg-primary)";
+    case "bg-secondary":
+      return "var(--bg-secondary)";
+    case "bg-tertiary":
+      return "var(--bg-tertiary)";
+    case "border":
+      return "var(--border-color)";
+    default:
+      return color;
   }
-}
+};
