@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./RemittanceForm.css";
-import { Icon } from "../../../common/ui/Icon/Icon";
+import { Icon } from "../../ui/Icon/Icon";
 interface RemittanceForm {
   isDarkMode?: boolean;
 }

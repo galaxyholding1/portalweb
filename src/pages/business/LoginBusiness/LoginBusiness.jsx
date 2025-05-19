@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./LoginBusiness.css";
 import { useNavigate } from "react-router";
+import turnoIcon from "../../../assets/images/banner-home.png";
 
 const VirtualKeyboard = ({ onKeyPress, targetInputRef }) => {
   const keyboardLayout = [
@@ -400,7 +401,8 @@ export const LoginBusiness = () => {
         </section>
         <section className="promo-section">
           <img
-            src="https://sucursalempresas.transaccionesbancolombia.com/bancolombia/contenido/imgPublicidad25042025.png"
+            src={turnoIcon}
+            alt=""
             alt="Imagen Promocional"
             className="promo-image"
           />
