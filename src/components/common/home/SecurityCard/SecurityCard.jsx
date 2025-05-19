@@ -6,6 +6,7 @@ import { Icon } from "../../ui/Icon/Icon";
 import { useForm } from "../../../../hooks/useForm";
 import { RadioInput } from "../../ui/Input/RadioInput/RadioInput";
 import { LabelAreaSwitchs } from "../../ui/Input/LabelAreaSwitchs/LabelAreaSwitchs";
+import { SaveButton } from "../../ui/Button/SaveButton";
 
 const initialForm = {
   oldPassword: "",
@@ -106,6 +107,8 @@ export const SecurityCard = () => {
             options={operationOptions}
           />
         </div>
+
+        <SaveButton/>
       </div>
     </Card>
   );

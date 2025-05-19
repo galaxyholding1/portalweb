@@ -1,9 +1,8 @@
 import "./ProfileCard.css";
 import { Card } from "../Card/Card";
-
-import saveIcon from "../../../../assets/icons/save.svg";
 import { ProfileData } from "./ProfileData";
 import { Icon } from "../../ui/Icon/Icon";
+import { SaveButton } from "../../ui/Button/SaveButton";
 
 export const ProfileCard = () => {
   return (
@@ -31,10 +30,7 @@ export const ProfileCard = () => {
           <ProfileData label="Dirección">Dirección, 123, ABC</ProfileData>
           <ProfileData label="Localidad">Madrid</ProfileData>
         </div>
-        <button className="profile-card-save-button button-portal">
-          {" "}
-          <Icon name="save" /> Guardar
-        </button>
+        <SaveButton/>
       </div>
     </Card>
   );

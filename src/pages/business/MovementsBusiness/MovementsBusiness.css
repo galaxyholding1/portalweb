@@ -8,6 +8,9 @@
   grid-column: auto;
 }
 
+.space-b {
+  padding-bottom: 5rem;
+}
 
 @media screen and (max-width: 768px) {
   .movements-page-container {

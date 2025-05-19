@@ -3,5 +3,9 @@ import { ProfileCard } from '../../../components/common/home/ProfileCard/Profile
 import "../MovementsBusiness/MovementsBusiness.css";
 
 export const ProfileBusiness = () => {
-  return (<ProfileCard/>)
+  return (
+    <div className='space-b'>
+      <ProfileCard/>
+    </div>
+  )
 }

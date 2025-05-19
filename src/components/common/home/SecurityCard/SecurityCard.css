@@ -43,6 +43,7 @@
   grid-template-columns: 1fr 1fr;
   margin-bottom: 0rem;
   gap: 4rem;
+  position: relative;
 }
 
 .section-title {
