@@ -90,8 +90,8 @@
 }
 
 /* Caja del título */
-.card-header-box {
-  flex-basis: 80%;
+.card-header-box {  
+  flex-basis: 100%;
   background-color: var(--bg-tertiary);
   box-sizing: border-box;
   padding: 0.75rem 1rem;

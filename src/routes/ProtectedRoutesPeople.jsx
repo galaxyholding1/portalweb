@@ -6,16 +6,18 @@ import { MovementsPeoples } from "../pages/people/MovementsPeople/MovementsPeopl
 import { PersonPortalLayout } from "../layouts/PeoplePortalLayout";
 import { MovementView } from "../pages/shared/MovementView";
 import { ProfilePeople } from "../pages/people/ProfilePeople/ProfilePeople";
+import { RemittancePeople } from "../pages/people/RemittancePeople/RemittancePeople";
 
 export const ProtectedRoutesPeople = () => (
   <PersonPortalLayout>
     <Routes>
       <Route path="/home" element={<HomePeople />} />
-      <Route path="/remesas" element={<ConsignmentsPeople />} />
+      {/*<Route path="/remesas" element={<ConsignmentsPeople />} />*/} 
       <Route path="/seguridad" element={<SecurityPeople />} />
       <Route path="/perfil" element={<ProfilePeople />} />
       <Route path="/movimientos" element={<MovementsPeoples />} />
       <Route path="/movimientos/:id" element={<MovementView/>} />
+      <Route path="/remesas" element={<RemittancePeople />} />
     </Routes>
   </PersonPortalLayout>
 );
