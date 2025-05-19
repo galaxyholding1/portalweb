@@ -2,14 +2,13 @@ import { MovementCard } from "../../../components/common/home/MovementCard/Movem
 import { TransfersCard } from "../../../components/common/home/MyRequestsCard/TransfersCard";
 import { RemittanceForm } from "../../../components/common/home/Remittances/RemittanceForm";
 import { RemittanceSend } from "../../../components/common/home/Remittances/RemittanceSend";
-import './Remittance.css'
+import "./Remittance.css";
 
 export const Remittance = () => {
   return (
     <div className="grid-remittance">
-      <RemittanceForm  />
-      <MovementCard stateIndicator/>
-      <TransfersCard />
+      <RemittanceForm />
+      <MovementCard stateIndicator />
     </div>
   );
 };

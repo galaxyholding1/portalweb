@@ -1,12 +1,5 @@
 .grid-remittance {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 60% 40%;
-  gap: 16px;
-
-  * {
-    grid-column: auto;
-    grid-row: auto;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
-
