@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./CalendarModal.css";
-
+import { Icon } from "../../../../ui/Icon/Icon";
 interface CalendarModalProps {
   isOpen: boolean;
   onClose: () => void;
@@ -94,13 +94,18 @@ export const CalendarModal: React.FC<CalendarModalProps> = ({
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="calendar-modal" onClick={(e) => e.stopPropagation()}>
+        <label>Fecha:</label>
         <div className="calendar-header">
           <h4>{`${
             monthNames[currentDate.getMonth()]
           } ${currentDate.getFullYear()}`}</h4>
           <div className="calendar-nav">
-            <button onClick={handlePrevMonth}>&lt;</button>
-            <button onClick={handleNextMonth}>&gt;</button>
+            <button onClick={handlePrevMonth}>
+              <Icon name="leftarrow" width={25} />
+            </button>
+            <button onClick={handleNextMonth}>
+              <Icon name="rightarrow" width={25} />
+            </button>
           </div>
         </div>
         <div className="calendar-weekdays">

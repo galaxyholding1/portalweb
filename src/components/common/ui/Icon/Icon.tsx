@@ -51,6 +51,9 @@ import VerMasIcon from "../../../../assets/icons/ver_mas_icon.svg?react";
 import XIcon from "../../../../assets/icons/x_icon.svg?react";
 import XIconDark from "../../../../assets/icons/x_icon_dark.svg?react";
 
+import leftarrow from "../../../../assets/icons/arrow-circle-left.svg?react";
+import rightarrow from "../../../../assets/icons/arrow-circle-right.svg?react";
+
 // Mapeo
 export const iconsMap = {
   arrow_left_right: ArrowLeftRight,
@@ -101,6 +104,8 @@ export const iconsMap = {
   ver_mas_icon: VerMasIcon,
   x: XIcon,
   x_dark: XIconDark,
+  leftarrow: leftarrow,
+  rightarrow: rightarrow,
 };
 
 type IconName = keyof typeof iconsMap;

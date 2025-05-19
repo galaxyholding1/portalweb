@@ -51,7 +51,7 @@
   position: absolute;
   top: calc(100% + 0.5rem);
   right: 0;
-  background: #fff1e8;
+  background: var(--bg-primary);
   border-radius: 0.75rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   min-width: 180px;
@@ -78,8 +78,6 @@
   font-size: 0.95rem;
   border-radius: 0.5rem;
 }
-
-
 
 .card-header-container {
   display: flex;
@@ -118,5 +116,3 @@
   align-items: center;
   justify-content: center;
 }
-
-
