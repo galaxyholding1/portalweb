@@ -268,3 +268,20 @@ input::placeholder {
   color: white;
   opacity: 1; /* Asegura que se vea bien */
 }
+
+.btn-add-contact{
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 1rem;
+  width: 100%;
+  padding: 1rem;
+  font-size: 20px;
+  font-weight: 300;
+  font-family: Quicksand, sans-serif;
+  border: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  text-align: center;
+
+  margin-top: 2rem;
+}

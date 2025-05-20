@@ -7,9 +7,10 @@ import { Icon } from "../../ui/Icon/Icon";
 import { Card } from "../Card/Card";
 import { CardMoments } from "../Card/CardMoments";
 import { MovementsItem } from "../movements/MovementsItem";
-import { useLocation } from "react-router";
+import { Link, useLocation } from "react-router";
 
 import { getPathByClient } from "../../../../util/getModeClient";
+import { SaveButton } from "../../ui/Button/SaveButton";
 
 const contacts: RemittancesInterface[] = [
   {
@@ -70,28 +71,28 @@ export const RemittancesGrid = ({
         icon={<Icon name="setup" />}
         morePath={`${getPathByClient(pathname)}/movimientos`}
       >
-        <div class="remittance-grid">
-          <div class="remittance-info">
-            <h3 class="title">¿A quién deseas enviar dinero?</h3>
-            <p class="subtitle">Seleccionar uno de los contactos habituales</p>
-            <div class="habitual-contact">
-              <span class="icon">
+        <div className="remittance-grid">
+          <div className="remittance-info">
+            <h3 className="title">¿A quién deseas enviar dinero?</h3>
+            <p className="subtitle">Seleccionar uno de los contactos habituales</p>
+            <div className="habitual-contact">
+              <span className="icon">
                 <Icon name="icUser" />
               </span>
               <span> Contactos habituales</span>
             </div>
           </div>
-          <div class="remittance-search">
-            <div class="search-bar">
+          <div className="remittance-search">
+            <div className="search-bar">
               <input
                 type="text"
                 placeholder="Buscar por nombre, email, número..."
               />
-              <span class="search-icon">
+              <span className="search-icon">
                 <Icon name="icSearch" />
               </span>
             </div>
-            <a href="#" class="see-more">
+            <a href="#" className="see-more">
               ver más
             </a>
           </div>
@@ -102,10 +103,11 @@ export const RemittancesGrid = ({
             <RemittancesCard key={contact.id} data={contact} />
           ))}
         </div>
-        <div class="remittance-grid">
-          <div class="remittance-info">
-            <h5 class="title2">¿No encuentras a quíen estas buscando?</h5>
-            <p class="subtitle">Encontrar gente cerca de mís</p>
+        <div className="remittance-grid">
+          <div className="remittance-info">
+            <h5 className="title2">¿No encuentras a quíen estas buscando?</h5>
+            <p className="subtitle">Encontrar gente cerca de mís</p>
+            <Link className="btn-add-contact" to="/portal-empresas/remesas/enviar">Confirmar</Link>
           </div>
         </div>
       </CardComponent>
