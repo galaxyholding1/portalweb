@@ -2,15 +2,15 @@
   position: relative;
   width: auto;
   height: 80vh;
-  background: #ffffff;
+  background: var(--bg-primary);
   margin: 50px auto;
 }
 
 .carousel-rounded-wrapper {
-    border-radius: 40px; 
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
+  border-radius: 40px;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
 }
 
 .carousel-content {

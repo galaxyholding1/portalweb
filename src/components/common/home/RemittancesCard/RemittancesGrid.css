@@ -1,0 +1,270 @@
+.contact-card {
+  background-color: #626262;
+  color: var(--text-color);
+  border-radius: 12px;
+  padding: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.avatar {
+  background-color: #c7b9f5;
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+}
+
+.contact-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-info span {
+  font-size: 0.8rem;
+  color: var(--text-subtle);
+}
+
+.flag {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.checkbox {
+  margin-left: 0.5rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/*header*/
+
+.search-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1.5rem;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.header-left {
+  flex: 1 1 300px;
+}
+
+.title {
+  color: var(--accent-color);
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+.subtitle {
+  font-size: 14px;
+  margin-bottom: 1rem;
+}
+
+.contactos-habituales {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+.header-right {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 350px;
+  background-color: white;
+}
+
+.search-box input {
+  flex: 1;
+  border: none;
+  padding: 0.7rem 1rem;
+  outline: none;
+}
+
+.search-box .search-icon {
+  background-color: transparent;
+  padding: 0 1rem;
+  font-size: 1.2rem;
+  color: #888;
+}
+
+.ver-mas {
+  font-size: 0.85rem;
+  color: #e91e63;
+  text-decoration: none;
+  align-self: flex-end;
+}
+
+.ver-mas:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .search-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .header-right {
+    align-items: flex-start;
+  }
+}
+
+:root {
+  --bg: #ffffff;
+  --text: #222222;
+  --highlight: #f57c00;
+  --search-bg: #fff;
+  --search-border: #ccc;
+  --see-more: #c2185b;
+}
+
+[data-theme="dark"] {
+  --bg: #2d2d2d;
+  --text: #f5f5f5;
+  --search-bg: #3a3a3a;
+  --search-border: #555;
+  --see-more: #ff4081;
+}
+
+.remittance-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 1.5rem;
+  color: var(--text);
+}
+
+.remittance-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--highlight);
+  margin: 0;
+}
+
+.title2 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--highlight);
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 14px;
+  margin: 0;
+}
+
+.habitual-contact {
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  color: var(--highlight);
+}
+
+.remittance-search {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--text);
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: var(--search-bg);
+  width: 100%;
+  max-width: 360px;
+  height: 52px;
+  color: var(--text);
+  --text-color: var(--text);
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: none;
+  outline: none;
+  font-size: 13px;
+  background: transparent;
+  color: var(--text);
+}
+
+.search-icon {
+  padding: 0 1rem;
+  font-size: 1.2rem;
+  color: #aaa;
+}
+
+.see-more {
+  font-size: 0.85rem;
+  color: var(--see-more);
+  text-decoration: none;
+}
+
+.see-more:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .remittance-search {
+    align-items: flex-start;
+  }
+
+  .search-bar {
+    width: 100%;
+  }
+}
+
+.grid-remittance {
+  display: grid;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+input::placeholder {
+  color: white;
+  opacity: 1; /* Asegura que se vea bien */
+}

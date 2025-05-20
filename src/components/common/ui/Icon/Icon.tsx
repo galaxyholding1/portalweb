@@ -53,6 +53,8 @@ import XIconDark from "../../../../assets/icons/x_icon_dark.svg?react";
 
 import leftarrow from "../../../../assets/icons/arrow-circle-left.svg?react";
 import rightarrow from "../../../../assets/icons/arrow-circle-right.svg?react";
+import icSearch from "../../../../assets/icons/ic-search.svg?react";
+import icUser from "../../../../assets/icons/ic-user.svg?react";
 
 // Mapeo
 export const iconsMap = {
@@ -106,6 +108,8 @@ export const iconsMap = {
   x_dark: XIconDark,
   leftarrow: leftarrow,
   rightarrow: rightarrow,
+  icSearch: icSearch,
+  icUser: icUser,
 };
 
 type IconName = keyof typeof iconsMap;
