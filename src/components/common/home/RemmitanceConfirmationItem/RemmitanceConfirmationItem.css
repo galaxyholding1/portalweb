@@ -2,8 +2,7 @@
   background-color: var(--bg-tertiary);
   padding: 16px;
   border-radius: 12px;
-  color: var(--text-secondary);
-  width: 358px;
+  color: var(--text-secondary);  
   height: 225px;
   position: relative;
 }
