@@ -402,7 +402,6 @@ export const LoginBusiness = () => {
         <section className="promo-section">
           <img
             src={turnoIcon}
-            alt=""
             alt="Imagen Promocional"
             className="promo-image"
           />
