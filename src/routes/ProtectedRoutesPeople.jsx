@@ -7,6 +7,7 @@ import { PersonPortalLayout } from "../layouts/PeoplePortalLayout";
 import { MovementView } from "../pages/shared/MovementView";
 import { ProfilePeople } from "../pages/people/ProfilePeople/ProfilePeople";
 import { RemittancePeople } from "../pages/people/RemittancePeople/RemittancePeople";
+import { RemmitanceConfirmationItem } from "../components/common/home/RemmitanceConfirmationItem/RemmitanceConfirmationItem";
 import { RemmitanceProcess } from "../pages/shared/RemmitanceConfirmation/RemmitanceProcess";
 
 export const ProtectedRoutesPeople = () => (
@@ -19,6 +20,7 @@ export const ProtectedRoutesPeople = () => (
       <Route path="/movimientos/:id" element={<MovementView/>} />
       <Route path="/remesas" element={<RemittancePeople />} />
       <Route path="*" element={<Navigate to="/portal-personas/home" /> } />
+      <Route path="/confirmacion" element={<RemmitanceConfirmationItem/>} />
     </Routes>
   </PersonPortalLayout>
 );
