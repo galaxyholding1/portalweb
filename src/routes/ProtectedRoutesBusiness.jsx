@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router";
+import { Navigate, Route, Routes } from "react-router";
 import { useAuthStore } from "../store/auth-store";
 import { useEffect } from "react";
 import { HomeBusiness } from "../pages/business/HomeBusiness/HomeBusiness";
@@ -22,6 +22,7 @@ export const ProtectedRoutesBusiness = () => {
         <Route path="/movimientos" element={<MovementsBusiness />} />
         <Route path="/movimientos/:id" element={<MovementView />} />
         <Route path="/remesas" element={<Remittance />} />
+        <Route path="*" element={<Navigate to="/portal-empresas/home" /> } />
       </Routes>
     </BusinessPortalLayout>
   );
