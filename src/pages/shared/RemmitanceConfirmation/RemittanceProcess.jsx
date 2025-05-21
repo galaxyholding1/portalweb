@@ -4,11 +4,11 @@ import { Icon } from "../../../components/common/ui/Icon/Icon";
 import { AmountConfirmation } from "./AmountConfirmation/AmountConfirmation";
 
 import banner from "../../../assets/images/banner-large.png";
-import "./RemmitanceProcess.css";
+import "./RemittanceProcess.css";
 import "./RemittanceSteps.css";
 import { AmountConfiguration } from "./AmountConfiguration/AmountConfiguration";
 
-export const RemmitanceProcess = () => {
+export const RemittanceProcess = () => {
   const [step, setStep] = useState(1);
 
   // Provisional, dependiendo funcionamiento de capa de negocio
