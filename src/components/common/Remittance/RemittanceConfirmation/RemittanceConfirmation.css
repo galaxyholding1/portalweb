@@ -1,8 +1,11 @@
 .sendBox{
     text-align: center;
-    width: max-content;
-    
-    
+    width: 40%;
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
 }
 
 .sendText {
