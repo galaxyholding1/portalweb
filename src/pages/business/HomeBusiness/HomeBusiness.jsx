@@ -14,6 +14,6 @@ export const HomeBusiness = () => {
         <RequestsCard />
         <TransfersCard />
       </div>
-    </div>
+    </div> 
   );
 };

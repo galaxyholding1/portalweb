@@ -3,13 +3,17 @@ import { TransfersCard } from "../../../components/common/home/MyRequestsCard/Tr
 import { RemittanceForm } from "../../../components/common/home/Remittances/RemittanceForm";
 import { RemittanceSend } from "../../../components/common/home/Remittances/RemittanceSend";
 import { RemittancesGrid } from "../../../components/common/home/RemittancesCard/RemittancesGrid";
+import { LastConsignment } from "../../../components/common/home/RemittancesCard/LastConsignment";
 import "./Remittance.css";
 
 export const Remittance = () => {
   return (
-    <div className="grid-remittance">
+    <div className="dashboard-grid">
       <RemittancesGrid />
-      <MovementCard stateIndicator />
+      <div className="grid-area-applications">
+        <MovementCard stateIndicator />
+        <LastConsignment />
+      </div>
     </div>
   );
 };
