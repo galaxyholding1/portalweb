@@ -59,7 +59,6 @@
 /* Estilo de inputs y selects */
 .form-group {
   display: flex;
-  flex-direction: column;
 }
 
 .form-group input,
@@ -68,9 +67,10 @@
   font-size: 1rem;
   border-radius: 8px;
   border: 1px solid #ccc;
-  background-color: #fff;
-  color: #000;
+  background-color: var(--bg-tertiary);
+  color: var(--text-color);
   transition: border 0.3s;
+  width: 100%;
 }
 
 .form-group input:focus,
@@ -119,7 +119,8 @@
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg fill='%23666' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg fill='%23ccc' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+
   background-repeat: no-repeat;
   background-position: right 0.75rem center;
   background-size: 1rem;
@@ -127,7 +128,7 @@
 }
 
 .dark .form-group select {
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg fill='%23ccc' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg fill='%23666' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
 }
 
 .container-remesas {
@@ -151,4 +152,31 @@
 .grid-remittance > .grid-area-movements {
   flex: 1 1 300px; /* mínimo 300px, luego crece */
   box-sizing: border-box; /* para que padding no rompa el ancho */
+}
+
+.parent-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* En pantallas grandes: dos columnas */
+.habitual-contact,
+.remittance-search {
+  flex: 1 1 30%; /* casi la mitad cada una */
+}
+
+/* En pantallas pequeñas: una columna */
+@media (max-width: 768px) {
+  .habitual-contact,
+  .remittance-search {
+    flex: 1 1 100%;
+  }
+}
+
+input::placeholder {
+  color: var(--text-color);
+  opacity: 1; /* Asegura que se vea bien */
 }

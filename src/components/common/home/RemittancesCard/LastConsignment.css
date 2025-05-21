@@ -1,5 +1,5 @@
 .contact-card {
-  background-color: #626262;
+  background-color: var(--bg-tertiary);
   color: var(--text-color);
   border-radius: 12px;
   padding: 0.75rem;
@@ -197,7 +197,7 @@
   align-items: center;
   gap: 0.5rem;
   font-weight: 500;
-  color: var(--highlight);
+  color: var(--secondary-color);
 }
 
 .remittance-search {
@@ -215,8 +215,7 @@
   border-radius: 16px;
   overflow: hidden;
   background-color: var(--search-bg);
-  width: 100%;
-  max-width: 360px;
+  max-width: 250px;
   height: 52px;
   color: var(--text);
   --text-color: var(--text);
@@ -265,7 +264,7 @@
 }
 
 input::placeholder {
-  color: white;
+  color: var(--text-color);
   opacity: 1; /* Asegura que se vea bien */
 }
 
@@ -302,4 +301,8 @@ input::placeholder {
   line-height: 19px;
   /* identical to box height */
   text-transform: capitalize;
+}
+
+.grid-area-applications {
+  background-color: var(--bg-primary);
 }

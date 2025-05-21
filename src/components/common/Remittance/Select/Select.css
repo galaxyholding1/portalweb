@@ -15,10 +15,23 @@
 
 .select-remittance option:checked {
   background-color: var(--primary-color); /* fondo rosado claro */
+  color: #fff; /* texto blanco */
 }
 
 .select-remittance {
+  padding: 0.75rem;
+  padding-right: 2.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-tertiary);
+  color: var(--text-color);
+  transition: border 0.3s;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
   background-repeat: no-repeat;
   background-position: right 0.75rem center;
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg fill='%23ccc' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg fill='%23fff' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
 }
