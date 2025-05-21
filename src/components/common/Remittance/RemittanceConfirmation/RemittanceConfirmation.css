@@ -1,0 +1,15 @@
+.sendBox{
+    text-align: center;
+    width: max-content;
+    
+    
+}
+
+.sendText {
+    text-align: center;
+    font-size: 18;
+    color: var(--primary-color);
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.225px;
+}
