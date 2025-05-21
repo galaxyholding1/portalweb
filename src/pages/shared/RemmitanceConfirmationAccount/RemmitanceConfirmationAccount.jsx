@@ -15,6 +15,7 @@ export const RemmitanceConfirmationAccount = () => {
   const componentByStep = {
     1: <AmountConfiguration />,
     2: <AmountConfirmation />,
+    3: <div>Comprobante</div>,
   };
 
   console.log(componentByStep[step]);
