@@ -4,14 +4,14 @@
   height: 100%;
 }
 
-.remittance-step-container h1{
+.remittance-step-container h1 {
   font-size: 20px;
   font-weight: 600;
   margin: 0;
   color: var(--secondary-color);
 }
 
-.remittance-step-container p{
+.remittance-step-container p {
   line-height: 137%;
   font-weight: 300;
   margin: 0;
@@ -30,6 +30,7 @@
   display: flex;
   width: 100%;
   gap: 1rem;
+
   .remmitance-item {
     flex: 1;
   }
@@ -38,4 +39,26 @@
 .remittance-detail-container {
   position: relative;
   padding-bottom: 8rem;
+}
+
+.remittance-detail-button {
+  background-color: var(--tertiary-color);
+  color: var(--text-color);
+  font-size: 12px;
+  font-weight: 500;
+  right: 1rem;
+}
+
+.remittance-detail-header {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+  align-items: center;
+  h1 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+    color: var(--secondary-color);
+    white-space: nowrap;
+  }
 }
