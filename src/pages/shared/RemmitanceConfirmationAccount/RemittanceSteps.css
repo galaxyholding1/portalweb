@@ -17,10 +17,11 @@
   margin: 0;
 }
 
-.remittance-step-columns {
+.remittance-step-unique-column {
   flex: 1;
   margin-top: 1.5rem;
   display: grid;
   gap: 1rem;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 201px;
 }

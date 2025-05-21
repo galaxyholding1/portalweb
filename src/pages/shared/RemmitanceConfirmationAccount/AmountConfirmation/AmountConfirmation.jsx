@@ -4,17 +4,17 @@ import { AmountContactConfirmation } from '../../../../components/common/Remitta
 import { RemittanceForm } from '../../../../components/common/home/Remittances/RemittanceForm'
 import { RemmitanceConfirmationItem } from '../../../../components/common/home/RemmitanceConfirmationItem/RemmitanceConfirmationItem'
 import { Select } from '../../../../components/common/Remittance/Select/Select'
+import { ConfirmationWarning } from '../../../../components/common/Remittance/ConfirmationWarning/ConfirmationWarning'
 
 export const AmountConfirmation = () => {
   return (
-    <div className='remittance-step-container'>
-      { /* Acá nicolas pone el sucess */ }
-      <Select
-        options={[
-          { label: "el label", value: "valor" },
-          { label: "el label 2", value: "valor 2" },
-        ]}
-      />
+    <div className="">
+      <div className='remittance-step-container'>
+        <h1>Revision y Confirmación</h1>
+        { /* Acá nicolas pone el sucess */ }
+        <RemmitanceConfirmationItem large/>
+      </div>
+      <ConfirmationWarning/>
     </div>
   )
 }
