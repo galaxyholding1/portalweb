@@ -2,7 +2,6 @@ import { CardSelect } from "../../home/Card/CardSelect";
 import { MovementDetail } from "../../home/movements/MovementDetail/MovementDetail";
 import { MovementItem } from "../../home/movements/movementItem";
 import { Icon } from "../../ui/Icon/Icon";
-import "./RemittanceTransaction.css";
 
 const movementData = [
   { title: "Fecha", description: "13 de mayo de 2025" },
