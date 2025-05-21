@@ -9,7 +9,7 @@ import "./Remittance.css";
 export const Remittance = () => {
   return (
     <div className="dashboard-grid">
-      <RemittancesGrid />
+      <RemittanceForm />
       <div className="grid-area-applications">
         <MovementCard stateIndicator />
         <LastConsignment />

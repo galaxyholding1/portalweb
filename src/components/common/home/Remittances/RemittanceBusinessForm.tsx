@@ -1,14 +1,12 @@
 import { useState } from "react";
 import "./RemittanceForm.css";
 import { Icon } from "../../ui/Icon/Icon";
-import { Select } from "../../../../components/common/Remittance/Select/Select";
-
 import { Flag } from "../../Flag/Flag";
 interface RemittanceForm {
   isDarkMode?: boolean;
 }
 
-export const RemittanceForm: React.FC<RemittanceForm> = ({
+export const RemittanceBusinessForm: React.FC<RemittanceForm> = ({
   isDarkMode = false,
 }) => {
   const [formData, setFormData] = useState({
@@ -45,7 +43,10 @@ export const RemittanceForm: React.FC<RemittanceForm> = ({
         </div>
         <div className="remittance-search">
           <div className="search-bar">
-            <input type="text" placeholder="Buscar por nombre, número..." />
+            <input
+              type="text"
+              placeholder="Buscar por nombre, email, número..."
+            />
             <span className="search-icon">
               <Icon name="icSearch" />
             </span>
@@ -67,7 +68,7 @@ export const RemittanceForm: React.FC<RemittanceForm> = ({
               <div className="form-group">
                 <input
                   type="text"
-                  placeholder="Nombre"
+                  placeholder="Nombre a quien envías"
                   value={formData.recipientName}
                   onChange={(e) =>
                     setFormData({ ...formData, recipientName: e.target.value })
@@ -75,52 +76,63 @@ export const RemittanceForm: React.FC<RemittanceForm> = ({
                 />
               </div>
               <div className="form-group">
-                <Select
-                  options={[
-                    { label: "Documento de identidad", value: "di" },
-                    { label: "DNI", value: "dni" },
-                    { label: "Pasaporte", value: "passport" },
-                  ]}
-                />
+                <select
+                  value={formData.identification}
+                  onChange={(e) =>
+                    setFormData({ ...formData, identification: e.target.value })
+                  }
+                >
+                  <option value="">Identificación</option>
+                  <option value="dni">DNI</option>
+                  <option value="passport">Pasaporte</option>
+                </select>
               </div>
               <div className="form-group">
-                <input
-                  type="text"
-                  placeholder="Apellidos"
-                  value={formData.recipientName}
+                <select
+                  value={formData.accountType}
                   onChange={(e) =>
-                    setFormData({ ...formData, recipientName: e.target.value })
+                    setFormData({ ...formData, accountType: e.target.value })
                   }
-                />
+                >
+                  <option value="">Tipo de cuenta</option>
+                  <option value="savings">Ahorros</option>
+                  <option value="checking">Corriente</option>
+                </select>
               </div>
               <div className="form-group">
-                <input
-                  type="text"
-                  placeholder="Número de cuenta IBAN"
-                  value={formData.recipientName}
+                <select
+                  value={formData.currency}
                   onChange={(e) =>
-                    setFormData({ ...formData, recipientName: e.target.value })
+                    setFormData({ ...formData, currency: e.target.value })
                   }
-                />
+                >
+                  <option value="">Moneda</option>
+                  <option value="USD">USD</option>
+                  <option value="EUR">EUR</option>
+                </select>
               </div>
             </div>
 
             <div className="form-grid">
               <div className="form-group">
-                <Select
-                  options={[
-                    { label: "País", value: "" },
-                    { label: "España", value: "es" },
-                    { label: "Colombia", value: "co" },
-                    { label: "Perú", value: "pr" },
-                    { label: "Venezuela", value: "vn" },
-                  ]}
-                />
+                <select
+                  value={formData.remittanceType}
+                  onChange={(e) =>
+                    setFormData({
+                      ...formData,
+                      remittanceType: e.target.value,
+                    })
+                  }
+                >
+                  <option value="">Tipo de remesa</option>
+                  <option value="instant">Instantánea</option>
+                  <option value="regular">Regular</option>
+                </select>
               </div>
               <div className="form-group">
                 <input
                   type="text"
-                  placeholder="Código BIC/SWIFT"
+                  placeholder="Número de identificación"
                   value={formData.identificationNumber}
                   onChange={(e) =>
                     setFormData({
@@ -131,13 +143,29 @@ export const RemittanceForm: React.FC<RemittanceForm> = ({
                 />
               </div>
               <div className="form-group">
-                <Select
-                  options={[
-                    { label: "Moenda", value: "" },
-                    { label: "USD", value: "USD" },
-                    { label: "EUR", value: "EUR" },
-                    { label: "VENZ", value: "VENZ" },
-                  ]}
+                <input
+                  type="text"
+                  placeholder="Número de cuenta"
+                  value={formData.accountNumber}
+                  onChange={(e) =>
+                    setFormData({
+                      ...formData,
+                      accountNumber: e.target.value,
+                    })
+                  }
+                />
+              </div>
+              <div className="form-group">
+                <input
+                  type="number"
+                  placeholder="Monto a transferir"
+                  value={formData.amount}
+                  onChange={(e) =>
+                    setFormData({
+                      ...formData,
+                      amount: e.target.value,
+                    })
+                  }
                 />
               </div>
             </div>
