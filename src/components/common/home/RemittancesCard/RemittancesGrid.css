@@ -269,7 +269,7 @@ input::placeholder {
   opacity: 1; /* Asegura que se vea bien */
 }
 
-.btn-add-contact{
+.btn-add-contact {
   background-color: var(--primary-color);
   color: white;
   border-radius: 1rem;
@@ -284,4 +284,26 @@ input::placeholder {
   text-align: center;
 
   margin-top: 2rem;
+}
+
+.parent-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* En pantallas grandes: dos columnas */
+.habitual-contact,
+.remittance-search {
+  flex: 1 1 30%; /* casi la mitad cada una */
+}
+
+/* En pantallas pequeñas: una columna */
+@media (max-width: 768px) {
+  .habitual-contact,
+  .remittance-search {
+    flex: 1 1 100%;
+  }
 }

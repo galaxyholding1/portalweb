@@ -215,8 +215,7 @@
   border-radius: 16px;
   overflow: hidden;
   background-color: var(--search-bg);
-  width: 100%;
-  max-width: 360px;
+  max-width: 250px;
   height: 52px;
   color: var(--text);
   --text-color: var(--text);

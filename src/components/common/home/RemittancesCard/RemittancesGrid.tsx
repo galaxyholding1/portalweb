@@ -74,27 +74,31 @@ export const RemittancesGrid = ({
         <div className="remittance-grid">
           <div className="remittance-info">
             <h3 className="title">¿A quién deseas enviar dinero?</h3>
-            <p className="subtitle">Seleccionar uno de los contactos habituales</p>
+            <p className="subtitle">
+              Seleccionar uno de los contactos habituales
+            </p>
+          </div>
+          <div className="parent-container">
             <div className="habitual-contact">
               <span className="icon">
                 <Icon name="icUser" />
               </span>
               <span> Contactos habituales</span>
             </div>
-          </div>
-          <div className="remittance-search">
-            <div className="search-bar">
-              <input
-                type="text"
-                placeholder="Buscar por nombre, email, número..."
-              />
-              <span className="search-icon">
-                <Icon name="icSearch" />
-              </span>
+            <div className="remittance-search">
+              <div className="search-bar">
+                <input
+                  type="text"
+                  placeholder="Buscar por nombre, email, número..."
+                />
+                <span className="search-icon">
+                  <Icon name="icSearch" />
+                </span>
+              </div>
+              <a href="#" className="see-more">
+                ver más
+              </a>
             </div>
-            <a href="#" className="see-more">
-              ver más
-            </a>
           </div>
         </div>
 
@@ -107,7 +111,12 @@ export const RemittancesGrid = ({
           <div className="remittance-info">
             <h5 className="title2">¿No encuentras a quíen estas buscando?</h5>
             <p className="subtitle">Encontrar gente cerca de mís</p>
-            <Link className="btn-add-contact" to="/portal-empresas/remesas/enviar">Confirmar</Link>
+            <Link
+              className="btn-add-contact"
+              to="/portal-empresas/remesas/enviar"
+            >
+              Confirmar
+            </Link>
           </div>
         </div>
       </CardComponent>
