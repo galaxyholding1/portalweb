@@ -285,3 +285,21 @@ input::placeholder {
 
   margin-top: 2rem;
 }
+
+.price {
+  color: var(--secondary-color);
+  /* 674,40 VEF */
+
+  width: 67px;
+  height: 19px;
+  left: calc(50% - 67px / 2 + 627.5px);
+  top: 763px;
+
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 19px;
+  /* identical to box height */
+  text-transform: capitalize;
+}
