@@ -58,7 +58,7 @@ import rightarrow from "../../../../assets/icons/arrow-circle-right.svg?react";
 import icSearch from "../../../../assets/icons/ic-search.svg?react";
 import icUser from "../../../../assets/icons/ic-user.svg?react";
 import icStatePending from "../../../../assets/icons/ic-state-pending.svg?react";
-import bdgeOk from "../../../../assets/icons/bdge-ok.svg?react";
+import bdgeOk from "../../../../assets/icons/bdge_ok.svg?react";
 
 // Mapeo
 export const iconsMap = {
@@ -160,6 +160,7 @@ export const Icon = ({
     <IconComponent
       color={selected ? selectedColor : color}
       width={width}
+      height={width}
       className={className ?? ""}
     />
   );
