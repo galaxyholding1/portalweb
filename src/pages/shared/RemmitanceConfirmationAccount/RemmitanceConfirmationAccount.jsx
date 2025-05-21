@@ -6,16 +6,17 @@ import { AmountConfirmation } from "./AmountConfirmation/AmountConfirmation";
 import banner from "../../../assets/images/banner-large.png";
 import "./RemmitanceConfirmationAccount.css";
 import "./RemittanceSteps.css";
-import { AmountConfiguration } from "./AmountConfiguration/AmountConfiguration";
+import { TransactionResult } from "./TransactionResult/TransactionResult";
+import { RemittanceDetail } from "./RemittanceDetail/RemittanceDetail";
 
 export const RemmitanceConfirmationAccount = () => {
   const [step, setStep] = useState(1);
-
+  const handlerNext = () => setStep((step) => step + 1);
   // Provisional, dependiendo funcionamiento de capa de negocio
   const componentByStep = {
-    1: <AmountConfiguration />,
-    2: <AmountConfirmation />,
-    3: <div>Comprobante</div>,
+    1: <AmountConfirmation />,
+    2: <TransactionResult handlerContinue={ handlerNext }/>,
+    3: <RemittanceDetail />,
   };
 
   console.log(componentByStep[step]);

@@ -4,7 +4,7 @@ import userIcon from "../../../../assets/icons/user_icon.svg";
 import { Link } from "react-router";
 import { Icon } from "../../ui/Icon/Icon";
 
-export const RemmitanceConfirmationItem = ({ large, path }) => {
+export const RemmitanceConfirmationItem = ({ large, onClick }) => {
   const infoGeneral = [
     { label: "País", value: "Colombia" },
     { label: "Moneda", value: "COF" },
@@ -38,9 +38,9 @@ export const RemmitanceConfirmationItem = ({ large, path }) => {
 
       <div className="amount">Monto: {monto}</div>
 
-      {path ? (
+      {onClick ? (
         <>
-          <Link to={path}>
+          <Link to={onClick}>
             <Icon name="add_plus" /> detalles
           </Link>
           <div
@@ -49,7 +49,7 @@ export const RemmitanceConfirmationItem = ({ large, path }) => {
           </div>
         </>
       ) : (
-        <div className="details" style={large ? { marginTop: "-3rem" } : {}}>
+        <div className="details" style={large ? { marginTop: "-3rem", marginLeft: '.5rem' } : {}}>
           <div className="left-info">
             {infoGeneral.map((item, index) => (
               <div
