@@ -59,7 +59,7 @@ export const LastConsignment = ({
     <div className="grid-area-movements">
       <CardComponent
         title="Últimas Remesas"
-        icon={<Icon name="setup" />}
+        icon={<Icon name="arrow_left_right" />}
         morePath={`${getPathByClient(pathname)}/movimientos`}
       >
         <div className="contact-grid">

@@ -19,8 +19,10 @@ export const LastRemittancesCard: React.FC<Props> = ({ data }) => {
         <strong>{data.name}</strong>
         <span>{data.business}</span>
       </div>
-      <div className="contact-info"></div>
-      <img src={data.flagUrl} alt="flag" className="flag" />
+
+      <div className="avatar2">
+        <img src={data.flagUrl} alt="flag" className="flag" />
+      </div>
       <div className="contact-info">
         <strong className="price">
           {Formatter.formatCurrency(data.price)}
@@ -29,7 +31,9 @@ export const LastRemittancesCard: React.FC<Props> = ({ data }) => {
         <span> {data.date}</span>
       </div>
 
-      <Icon name="bdgeOk" />
+      <div className="avatar2">
+        <Icon name="bdgeOk" />
+      </div>
     </div>
   );
 };
