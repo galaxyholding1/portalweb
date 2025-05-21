@@ -1,5 +1,5 @@
 .contact-card {
-  background-color:var(--bg-tertiary);
+  background-color: var(--bg-tertiary);
   color: var(--text-color);
   border-radius: 12px;
   padding: 0.75rem;
@@ -301,4 +301,8 @@ input::placeholder {
   line-height: 19px;
   /* identical to box height */
   text-transform: capitalize;
+}
+
+.grid-area-applications {
+  background-color: var(--bg-primary);
 }
