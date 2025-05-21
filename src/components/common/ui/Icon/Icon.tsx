@@ -133,7 +133,7 @@ interface IconProps {
 
 export const Icon = ({
   name,
-  width,
+  width = 24,
   selected,
   selectedColor,
   color = "var(--text-color)",
@@ -160,7 +160,6 @@ export const Icon = ({
     <IconComponent
       color={selected ? selectedColor : color}
       width={width}
-      height={width}
       className={className ?? ""}
     />
   );
