@@ -1,0 +1,12 @@
+.confirmation-warning {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  justify-content: right;
+  p {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 137%;
+    letter-spacing: 1%;
+  }
+}

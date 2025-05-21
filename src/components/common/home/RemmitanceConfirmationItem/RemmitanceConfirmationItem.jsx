@@ -1,8 +1,10 @@
 import { Flag } from "../../Flag/Flag";
 import "./RemmitanceConfirmationItem.css";
 import userIcon from "../../../../assets/icons/user_icon.svg";
+import { Link } from "react-router";
+import { Icon } from "../../ui/Icon/Icon";
 
-export const RemmitanceConfirmationItem = () => {
+export const RemmitanceConfirmationItem = ({ large, path }) => {
   const infoGeneral = [
     { label: "País", value: "Colombia" },
     { label: "Moneda", value: "COF" },
@@ -36,18 +38,41 @@ export const RemmitanceConfirmationItem = () => {
 
       <div className="amount">Monto: {monto}</div>
 
-      <div className="details">
-        <div className="left-info">
-          {infoGeneral.map((item, index) => (
-            <div key={index} className="info-item">
-              {item.label}: {item.value}
-            </div>
-          ))}
+      {path ? (
+        <>
+          <Link to={path}>
+            <Icon name="add_plus" /> detalles
+          </Link>
+          <div
+            className="right-info date-absolute">
+            <div className="date">{fecha}</div>
+          </div>
+        </>
+      ) : (
+        <div className="details" style={large ? { marginTop: "-3rem" } : {}}>
+          <div className="left-info">
+            {infoGeneral.map((item, index) => (
+              <div
+                key={index}
+                className="info-item"
+                style={large ? { fontSize: "1rem" } : {}}
+              >
+                {item.label}: {item.value}
+              </div>
+            ))}
+          </div>
+          <div
+            className="right-info"
+            style={
+              /* Se le agrega el que se quitó para conservar la ubicación */
+              large ? { marginTop: "3rem" } : {}
+            }
+          >
+            {" "}
+            <div className="date">{fecha}</div>
+          </div>
         </div>
-        <div className="right-info">
-          <div className="date">{fecha}</div>
-        </div>
-      </div>
+      )}
 
       <div className="icon-container">
         <img src={userIcon} alt="userIcon" />

@@ -50,6 +50,8 @@ import TramitesDigitales from "../../../../assets/icons/tramites_digitales.svg?r
 import VerMasIcon from "../../../../assets/icons/ver_mas_icon.svg?react";
 import XIcon from "../../../../assets/icons/x_icon.svg?react";
 import XIconDark from "../../../../assets/icons/x_icon_dark.svg?react";
+import TriangleWarning from "../../../../assets/icons/triangle_warning.svg?react";
+import AddPlus from "../../../../assets/icons/add_plus.svg?react";
 
 import leftarrow from "../../../../assets/icons/arrow-circle-left.svg?react";
 import rightarrow from "../../../../assets/icons/arrow-circle-right.svg?react";
@@ -114,6 +116,8 @@ export const iconsMap = {
   icUser: icUser,
   icStatePending: icStatePending,
   bdgeOk: bdgeOk,
+  triangle_warning: TriangleWarning,
+  add_plus: AddPlus,
 };
 
 type IconName = keyof typeof iconsMap;

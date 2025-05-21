@@ -7,7 +7,7 @@ export const AmountConfiguration = () => {
     <div className='remittance-step-container'>
       <h1>Monto / Cantidad</h1>
       <p>Cambios</p>
-      <div className='remittance-step-columns'>
+      <div className='remittance-step-unique-column'>
         <AmountContactConfirmation/>
         <AmountContactConfirmation/>
       </div>

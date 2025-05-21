@@ -1,9 +1,9 @@
 .remmitance-item {
+  margin-top: 16px;
   background-color: var(--bg-tertiary);
   padding: 16px;
   border-radius: 12px;
-  color: var(--text-secondary);  
-  height: 225px;
+  color: var(--text-secondary);
   position: relative;
 }
 
@@ -90,4 +90,21 @@
 .profile-icon {
   width: 24px;
   height: 24px;
+}
+
+.remmitance-item > a {
+  border: var(--text-color) solid 1px;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  padding: 5px 9px;
+  font-size: .75rem;
+  font-weight: 500;
+}
+
+.date-absolute {
+  position: absolute;
+  bottom: 50%;
+  right: 1rem;
 }
