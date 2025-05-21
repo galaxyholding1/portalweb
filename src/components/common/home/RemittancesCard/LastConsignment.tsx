@@ -62,7 +62,7 @@ export const LastConsignment = ({
         icon={<Icon name="arrow_left_right" />}
         morePath={`${getPathByClient(pathname)}/movimientos`}
       >
-        <div className="contact-grid">
+        <div className="contact-grid2">
           {contacts.map((contact) => (
             <LastRemittancesCard key={contact.id} data={contact} />
           ))}
