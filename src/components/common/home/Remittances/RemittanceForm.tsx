@@ -28,7 +28,10 @@ export const RemittanceForm: React.FC<RemittanceForm> = ({
   };
 
   return (
-    <div className={`remittance-container ${isDarkMode ? "dark" : ""}`}>
+    <div
+      style={{gridRow: 'span 2'}}
+      className={`remittance-container ${isDarkMode ? "dark" : ""}`} 
+    >
       <div className="remittance-header">
         <div className="header-icon">
           <Icon name={"credit_card"} className="nav-icon-img" />

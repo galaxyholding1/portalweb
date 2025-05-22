@@ -65,7 +65,7 @@ export const RemittancesGrid = ({
   const CardComponent = filter ? CardMoments : Card;
   const { pathname } = useLocation();
   return (
-    <div className="grid-area-movements">
+    <div className="grid-area-movements" style={{gridRow: 'span 2'}}>
       <CardComponent
         title="Remesas"
         icon={<Icon name="setup" />}

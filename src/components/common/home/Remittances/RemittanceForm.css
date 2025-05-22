@@ -150,7 +150,7 @@
 /* Aplica flex a los hijos directos de .grid-remittance */
 .grid-remittance > .remittance-container,
 .grid-remittance > .grid-area-movements {
-  flex: 1 1 300px; /* mínimo 300px, luego crece */
+  flex: 1 1 300px; /* mínimo 300px luego crece */
   box-sizing: border-box; /* para que padding no rompa el ancho */
 }
 
