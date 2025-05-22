@@ -21,7 +21,6 @@ export const ProtectedRoutesPeople = () => (
       <Route path="/movimientos/:id" element={<MovementView/>} />
       <Route path="/remesas" element={<RemittancePeople />} />
       <Route path="/remesas/enviar" element={<RemittanceProcess />} />
-      <Route path="/remesas/enviar2" element={<RemmitanceConfirmationAccount />} />
       <Route path="*" element={<Navigate to="/portal-personas/home" /> } />
     </Routes>
   </PersonPortalLayout>
