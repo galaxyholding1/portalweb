@@ -1,13 +1,11 @@
 import React from 'react'
 import './Select.css'
-// [
-//   { label: "el label", value: "valor" }
-// ]
 
-export const Select = ({options, onChange, className}) => {
+export const Select = ({options, onChange, className, placeholder}) => {
   const newClassName = className ? 'select-remittance ' + className : 'select-remittance'
   return (
     <select name="" id="" className={newClassName}>
+      {placeholder && <option value="" disabled>{placeholder}</option>}
       {options.map((option, index) => (
         <option key={index} value={option.value} onChange={onChange}>
           {option.label}
