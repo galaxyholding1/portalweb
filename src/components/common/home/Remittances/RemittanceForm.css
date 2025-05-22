@@ -97,6 +97,9 @@
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s;
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: center;
 }
 
 .form-group select option:checked {
@@ -150,7 +153,7 @@
 /* Aplica flex a los hijos directos de .grid-remittance */
 .grid-remittance > .remittance-container,
 .grid-remittance > .grid-area-movements {
-  flex: 1 1 300px; /* mínimo 300px, luego crece */
+  flex: 1 1 300px; /* mínimo 300px luego crece */
   box-sizing: border-box; /* para que padding no rompa el ancho */
 }
 

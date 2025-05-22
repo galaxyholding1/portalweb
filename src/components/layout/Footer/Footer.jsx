@@ -1,4 +1,5 @@
 import "./Footer.css";
+import { FooterBg } from "./FooterBg/FooterBg";
 import { FooterSocialLinks } from "./FooterSocialLinks/FooterSocialLinks";
 import { NeedHelp } from "./NeedHelp/NeedHelp";
 import { Link } from 'react-router-dom';
@@ -8,7 +9,8 @@ export const Footer = () => {
   return (
     <>
       <footer>
-        <NeedHelp />
+        <FooterBg/>
+        <NeedHelp/>
 
         <div className="footer-links">
           <div>

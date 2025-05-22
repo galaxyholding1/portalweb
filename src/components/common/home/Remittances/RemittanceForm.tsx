@@ -4,6 +4,8 @@ import { Icon } from "../../ui/Icon/Icon";
 import { Select } from "../../../../components/common/Remittance/Select/Select";
 
 import { Flag } from "../../Flag/Flag";
+import { Link, useLocation } from "react-router";
+import { getPathByClient, pathByClient } from "../../../../util/getModeClient";
 interface RemittanceForm {
   isDarkMode?: boolean;
 }
@@ -22,13 +24,18 @@ export const RemittanceForm: React.FC<RemittanceForm> = ({
     amount: "",
   });
 
+  const {pathname} = useLocation();
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Datos del formulario:", formData);
   };
 
   return (
-    <div className={`remittance-container ${isDarkMode ? "dark" : ""}`}>
+    <div
+      style={{gridRow: 'span 2'}}
+      className={`remittance-container ${isDarkMode ? "dark" : ""}`} 
+    >
       <div className="remittance-header">
         <div className="header-icon">
           <Icon name={"credit_card"} className="nav-icon-img" />
@@ -143,9 +150,9 @@ export const RemittanceForm: React.FC<RemittanceForm> = ({
             </div>
           </div>
 
-          <button type="submit" className="submit-button">
+          <Link type="submit" className="submit-button" to={`${getPathByClient(pathname)}/remesas/enviar`}>
             Confirmar
-          </button>
+          </Link>
         </form>
       </div>
     </div>
