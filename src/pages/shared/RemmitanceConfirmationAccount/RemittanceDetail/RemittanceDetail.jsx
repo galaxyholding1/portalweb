@@ -8,6 +8,7 @@ import { MovementView } from "../../MovementView";
 import { RemittanceTransaction } from "../../../../components/common/Remittance/RemittanceTransaction/RemittanceTransaction";
 import { Button } from "../../../../components/common/ui/Button/Button";
 import { Icon } from "../../../../components/common/ui/Icon/Icon";
+<<<<<<< HEAD
 
 export const RemittanceDetail = () => {
   return (
@@ -28,5 +29,26 @@ export const RemittanceDetail = () => {
         </Button>
       </SimpleCard>
     </div>
+=======
+import { DetailsButton } from "../../../../components/common/Remittance/DetailsButton/DetailsButton";
+
+export const RemittanceDetail = () => {
+  return (
+    <SimpleCard className="remittance-detail-container">
+      <div className="remittance-detail-header">
+        <ContactHeader />
+        <h1>Monto: 80,00 VEF</h1>
+        <Icon name="bdgeOk" width={25} />
+      </div>
+      <RemittanceTransaction />
+      <DetailsButton />
+      <Button
+        icon={<Icon name="printer" />}
+        className="remittance-detail-button"
+      >
+        Descargar PDF
+      </Button>
+    </SimpleCard>
+>>>>>>> galaxyportalweb-nm
   );
 };
