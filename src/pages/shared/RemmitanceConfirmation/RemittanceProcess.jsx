@@ -7,6 +7,8 @@ import banner from "../../../assets/images/banner-large.png";
 import "./RemittanceProcess.css";
 import "./RemittanceSteps.css";
 import { AmountConfiguration } from "./AmountConfiguration/AmountConfiguration";
+import { TransactionResult } from "./TransactionResult/TransactionResult";
+import { RemittanceDetail } from "./RemittanceDetail/RemittanceDetail";
 
 export const RemittanceProcess = () => {
   const [step, setStep] = useState(1);
@@ -15,9 +17,9 @@ export const RemittanceProcess = () => {
   const componentByStep = {
     1: <AmountConfiguration />,
     2: <AmountConfirmation />,
+    3: <TransactionResult handlerContinue={ () => {} } />,
+    4: <RemittanceDetail />,
   };
-
-  console.log(componentByStep[step]);
 
   const totalSteps = Object.values(componentByStep).length;
 
