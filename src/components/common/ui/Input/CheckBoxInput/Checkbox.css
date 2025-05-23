@@ -48,3 +48,40 @@
 .checkbox-label:hover .checkbox-text {
     color: var(--primary-color);
 }
+
+/* Custom checkbox */
+.checkbox-input {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.checkbox-input {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--text-color);
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+}
+
+.checkbox-input:checked {
+    background-color: transparent;
+    border-color: var(--text-color);
+}
+
+.checkbox-input:checked::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 6px;
+    width: 4px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
