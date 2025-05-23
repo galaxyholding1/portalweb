@@ -33,10 +33,10 @@ export const RemittanceList = () => {
         <h1>Listado de remesas</h1>
         <hr />
         <div className="remittance-list-filters">
-          <Input type="text" icon={<Icon name="search" color='white'/>}/>
+          <Input type="text" icon={<Icon name="search" />}/>
           
           <button onClick={ handleOpenFilter } >
-            <Icon name="slider" /> Filtrar por
+            <Icon name="slider" color='white'/> Filtrar por
           </button>
         </div>
         <div className="remittance-list-result">
