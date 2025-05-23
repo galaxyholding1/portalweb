@@ -9,9 +9,9 @@ import imgThree from "../../../../assets/images/Rectangle 970.png";
 export const RemittanceInformation = () => {
   return (
     <div className="remittanceInformationBox">
-      <div className="topText">
-        Envía dinero al instante. <br /> Donde quieras, como quieras.
-      </div>
+      <p className="topText">
+        Envía dinero al instante. Donde quieras, como quieras.
+      </p>
 
       <div className="informationBox">
         <div className="cardBox">

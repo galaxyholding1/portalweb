@@ -23,11 +23,8 @@ export const ProtectedRoutesPeople = () => (
       <Route path="/movimientos/:id" element={<MovementView/>} />
       <Route path="/remesas" element={<RemittancePeople />} />
       <Route path="/remesas/enviar" element={<RemittanceProcess />} />
-<<<<<<< HEAD
       <Route path="/remesas/filtrar" element={<RemittanceFilters />} />
-=======
       <Route path="/remesas/informacion" element={<RemittanceInformation/>}/>
->>>>>>> galaxyportalweb-nm
       <Route path="*" element={<Navigate to="/portal-personas/home" /> } />
     </Routes>
   </PersonPortalLayout>
