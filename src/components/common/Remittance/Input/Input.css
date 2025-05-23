@@ -17,3 +17,13 @@
 .input-remittance::placeholder {
   color: var(--text-color);
 }
+
+.input-container {
+  position: relative;
+  svg {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+  }
+}

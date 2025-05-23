@@ -46,22 +46,3 @@
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
 }
-
-.state-indicator {
-  border-radius: 17.5px;
-  font-size: 14px;
-  padding: 0.6rem 0.5rem;
-}
-
-.state-pending {
-  background-color: #efad43;
-  color: #fff;
-}
-.state-cancelled {
-  background-color: #ff8d8d;
-  color: #fff;
-}
-.state-sucess {
-  background-color: #4f975a;
-  color: #fff;
-}

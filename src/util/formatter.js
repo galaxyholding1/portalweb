@@ -24,6 +24,15 @@ export class Formatter {
     return result;
   }
 
+  static formatDateLiteral = (date) => (
+    new Intl.DateTimeFormat("es-CO", {
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric',
+    }).format(date)
+  );
+  
+
   static formatCurrency(amount) {
     return (
       "$" +

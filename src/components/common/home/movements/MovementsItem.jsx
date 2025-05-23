@@ -2,12 +2,7 @@ import { Formatter } from "../../../../util/formatter";
 import "./movements.css";
 import { Icon } from "../../ui/Icon/Icon";
 import { useNavigate } from "react-router";
-
-const statesById = {
-  cancelled: "Cancelado",
-  sucess: "Confirmado",
-  pending: "En proceso",
-};
+import { StateIndicator } from "./StateIndicator/StateIndicator";
 
 export const MovementsItem = ({
   id,
@@ -28,8 +23,6 @@ export const MovementsItem = ({
   };
 
   const state = "sucess";
-
-  console.log(statesById[state]);
   return (
     <div className="movement-item">
       <div className="movement-item-icon">
@@ -49,9 +42,7 @@ export const MovementsItem = ({
         </div>
       )}
       {stateIndicator && (
-        <span className={`state-indicator state-${state}`}>
-          {statesById[state]}
-        </span>
+        <StateIndicator state={state}/>
       )}
 
       <div className="movement-item-amount">

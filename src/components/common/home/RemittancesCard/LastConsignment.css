@@ -8,6 +8,23 @@
   gap: 0.75rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-top: 1rem;
+  justify-content: space-between;
+  .column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.contact-card > div {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 0.5rem;
+}
+
+.contact-card-detail {
+  justify-content: end;
 }
 
 .avatar2 {
@@ -23,7 +40,7 @@
 }
 
 .contact-info {
-  flex: 1;
+  /* flex: 1; */
   display: grid;
   flex-direction: column;
 }
