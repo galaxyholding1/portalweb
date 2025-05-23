@@ -16,7 +16,7 @@ export const RemittanceProcess = () => {
   // Provisional, dependiendo funcionamiento de capa de negocio
   const componentByStep = {
     1: <AmountConfiguration />,
-    2: <AmountConfirmation />,
+    2: <AmountConfirmation />, 
     3: <TransactionResult handlerContinue={ () => {} } />,
     4: <RemittanceDetail />,
   };
