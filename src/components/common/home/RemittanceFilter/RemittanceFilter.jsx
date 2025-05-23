@@ -103,58 +103,55 @@ export const RemittanceFilter = ({ onApplyFilters, onClose }) => {
       </div>
 
       <div className="filter-section">
-        <Select
-          label="Tipo de remesa"
-          value={filters.type}
-          onChange={(value) => handleChange("type", value)}
-          options={[
-            { label: "Todas", value: "" },
-            { label: "Nacional", value: "nacional" },
-            { label: "Internacional", value: "internacional" },
-          ]}
-        />
-      </div>
+        <div className="filter-selects">
+          <Select
+            className="form-group"
+            label="Tipo de remesa"
+            value={filters.type}
+            onChange={(value) => handleChange("type", value)}
+            options={[
+              { label: "Todas", value: "" },
+              { label: "Nacional", value: "nacional" },
+              { label: "Internacional", value: "internacional" },
+            ]}
+          />
 
-      <div className="filter-section">
-        <Select
-          label="Origen del dinero"
-          value={filters.origin}
-          onChange={(value) => handleChange("origin", value)}
-          options={[
-            { label: "Todos", value: "" },
-            { label: "Cuenta bancaria", value: "cuenta" },
-            { label: "Efectivo", value: "efectivo" },
-            { label: "Tarjeta", value: "tarjeta" },
-          ]}
-        />
-      </div>
+          <Select
+            label="Origen del dinero"
+            value={filters.origin}
+            onChange={(value) => handleChange("origin", value)}
+            options={[
+              { label: "Todos", value: "" },
+              { label: "Cuenta bancaria", value: "cuenta" },
+              { label: "Efectivo", value: "efectivo" },
+              { label: "Tarjeta", value: "tarjeta" },
+            ]}
+          />
 
-      <div className="filter-section">
-        <Select
-          label="País"
-          value={filters.country}
-          onChange={(value) => handleChange("country", value)}
-          options={[
-            { label: "Todos", value: "" },
-            { label: "Venezuela", value: "VE" },
-            { label: "Colombia", value: "CO" },
-            { label: "Perú", value: "PE" },
-          ]}
-        />
-      </div>
+          <Select
+            label="País"
+            value={filters.country}
+            onChange={(value) => handleChange("country", value)}
+            options={[
+              { label: "Todos", value: "" },
+              { label: "Venezuela", value: "VE" },
+              { label: "Colombia", value: "CO" },
+              { label: "Perú", value: "PE" },
+            ]}
+          />
 
-      <div className="filter-section">
-        <Select
-          label="Moneda"
-          value={filters.currency}
-          onChange={(value) => handleChange("currency", value)}
-          options={[
-            { label: "Todas", value: "" },
-            { label: "USD", value: "USD" },
-            { label: "EUR", value: "EUR" },
-            { label: "VES", value: "VES" },
-          ]}
-        />
+          <Select
+            label="Moneda"
+            value={filters.currency}
+            onChange={(value) => handleChange("currency", value)}
+            options={[
+              { label: "Todas", value: "" },
+              { label: "USD", value: "USD" },
+              { label: "EUR", value: "EUR" },
+              { label: "VES", value: "VES" },
+            ]}
+          />
+        </div>
       </div>
 
       <div className="filter-section">

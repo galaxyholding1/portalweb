@@ -9,6 +9,7 @@ const DateInput = ({ label, value, onChange, id }) => {
         type="date"
         id={id}
         value={value}
+        placeholder={label}
         onChange={(e) => onChange(e.target.value)}
         className="date-input__field"
       />
