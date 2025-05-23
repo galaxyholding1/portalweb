@@ -10,9 +10,9 @@
 }
 
 .date-input__field {
-    padding: 0.5rem;
+    padding: 0.75rem;
     border: 1px solid var(--border-color);
-    border-radius: 0.25rem;
+    border-radius: 1rem;
     background-color: var(--bg-secondary);
     color: var(--text-primary);
     font-size: 0.875rem;
@@ -22,16 +22,6 @@
 
 .date-input__field:focus {
     border-color: var(--primary-color);
-}
-
-
-.date-input__field{
-    background-color: var(--bg-secondary);
-        border-radius: 1rem;
-        padding: 1.5rem;
-        border-radius: 11px;
-        padding: 1.5rem;
-        border: var(--text-color) solid 1px;
 }
 
 /* Tema claro */

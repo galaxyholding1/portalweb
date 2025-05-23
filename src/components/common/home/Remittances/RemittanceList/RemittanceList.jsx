@@ -28,7 +28,7 @@ export const RemittanceList = () => {
 
   return (
     <>
-      {isOpenModalFilter && <RemittanceFilterM/>}
+      {isOpenModalFilter && <RemittanceFilterM onClose={() => setIsOpenModalFilter(false)}/>}
       <div className="remittance-list-container">
         <h1>Listado de remesas</h1>
         <hr />
