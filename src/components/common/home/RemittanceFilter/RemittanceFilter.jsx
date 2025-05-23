@@ -7,7 +7,7 @@ import { Select } from "../../../../components/common/Remittance/Select/Select";
 import NumberInput from "../../ui/Input/NumberInput/NumberInput";
 import Button from "../../ui/Input/ButtonInput/Button";
 
-export const RemittanceFilter = ({ onApplyFilters, onClose }) => {
+export const RemittanceFilterM = ({ onApplyFilters, onClose }) => {
   const [filters, setFilters] = useState({
     startDate: "",
     endDate: "",

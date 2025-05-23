@@ -6,6 +6,10 @@
     width: 100%;
     max-width: 400px;
     box-shadow: var(--shadow-lg);
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1000;
 }
 
 .filter-header {
