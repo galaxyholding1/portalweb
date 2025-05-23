@@ -1,0 +1,55 @@
+.number-input-container {
+    width: 100%;
+}
+
+.number-input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.number-input-label {
+    color: var(--text-primary);
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.number-input-field {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.number-input {
+    width: 100%;
+    padding: 0.75rem 2.5rem 0.75rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 2rem;
+    background-color: transparent;
+    color: var(--text-primary);
+    font-size: 0.875rem;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.number-input:focus {
+    border-color: var(--primary-color);
+}
+
+.number-input::placeholder {
+    color: var(--text-secondary);
+}
+
+.number-input-icon {
+    position: absolute;
+    right: 1rem;
+    color: var(--text-primary);
+    font-size: 1.25rem;
+    line-height: 1;
+    pointer-events: none;
+}
+
+/* Tema oscuro */
+[data-theme="dark"] .number-input {
+    background-color: var(--bg-secondary);
+}

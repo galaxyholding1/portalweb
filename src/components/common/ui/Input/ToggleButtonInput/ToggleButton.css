@@ -1,0 +1,36 @@
+.toggle-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.75rem 1.25rem;
+    border: 1px solid var(--border-color);
+    border-radius: 2rem;
+    background-color: transparent;
+    color: var(--text-primary);
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-width: 150px;
+}
+
+.toggle-button:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.toggle-button:active {
+    transform: scale(0.98);
+}
+
+.toggle-button-text {
+    font-weight: 500;
+}
+
+.toggle-button-icon {
+    font-size: 1.25rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

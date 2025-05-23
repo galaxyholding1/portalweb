@@ -13,7 +13,7 @@ export const RemittanceDetail = () => {
   return (
     <div className="remittance-step-container">
       <h1>Detalle de remesas</h1>
-      <SimpleCard className="remittance-detail-container">
+      <SimpleCard className="remittance-detail-contain er">
         <div className='remittance-detail-header'>
           <ContactHeader/>
           <h1>Monto: 80,00 VEF</h1>
