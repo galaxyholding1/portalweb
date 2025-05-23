@@ -4,35 +4,37 @@ import "./RemittancesCard.css";
 import { RemittancesLastInterface } from "./RemittancesLastInterface";
 import { Icon } from "../../ui/Icon/Icon";
 import { Formatter } from "../../../../util/formatter";
+import { Flag } from "../../Flag/Flag";
+import { StateIndicator } from "../movements/StateIndicator/StateIndicator";
 
 interface Props {
   data: RemittancesLastInterface;
+  showStateIcon?: boolean;
+  showState?: boolean;
+  className?: string;
 }
 
-export const LastRemittancesCard: React.FC<Props> = ({ data }) => {
+export const LastRemittancesCard: React.FC<Props> = ({ data, className, showStateIcon = true, showState = false }) => {
   return (
-    <div className="contact-card">
-      <div className="avatar2">
+    <div className={"contact-card" + (className ? ` ${className}` : "")}>
+      <div>
         <Icon name="icUser" />
-      </div>
-      <div className="contact-info">
-        <strong>{data.name}</strong>
-        <span>{data.business}</span>
-      </div>
-
-      <div className="avatar2">
-        <img src={data.flagUrl} alt="flag" className="flag" />
-      </div>
-      <div className="contact-info">
-        <strong className="price">
-          {Formatter.formatCurrency(data.price)}
-        </strong>
-
-        <span> {data.date}</span>
+        <div className="contact-info">
+          <strong>{data.name}</strong>
+          <span>{data.business}</span>
+        </div>
       </div>
 
-      <div className="avatar2">
-        <Icon name="bdgeOk" />
+      <div className="contact-card-detail">
+        <Flag code="co"/>
+        { showState && ( <StateIndicator state="pending"/> ) }
+        <div className="column">
+          <strong className="price">
+            {Formatter.formatCurrency(data.price)}
+          </strong>
+          <span> {Formatter.formatDateLiteral(new Date(data.date))}</span>
+        </div>
+        {showStateIcon && <Icon name="bdgeOk" />}
       </div>
     </div>
   );

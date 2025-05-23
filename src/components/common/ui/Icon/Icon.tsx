@@ -52,6 +52,8 @@ import XIcon from "../../../../assets/icons/x_icon.svg?react";
 import XIconDark from "../../../../assets/icons/x_icon_dark.svg?react";
 import TriangleWarning from "../../../../assets/icons/triangle_warning.svg?react";
 import AddPlus from "../../../../assets/icons/add_plus.svg?react";
+import Search from "../../../../assets/icons/search.svg?react";
+import Slider from "../../../../assets/icons/slider.svg?react";
 
 import leftarrow from "../../../../assets/icons/arrow-circle-left.svg?react";
 import rightarrow from "../../../../assets/icons/arrow-circle-right.svg?react";
@@ -118,6 +120,8 @@ export const iconsMap = {
   bdgeOk: bdgeOk,
   triangle_warning: TriangleWarning,
   add_plus: AddPlus,
+  search: Search,
+  slider: Slider,
 };
 
 type IconName = keyof typeof iconsMap;

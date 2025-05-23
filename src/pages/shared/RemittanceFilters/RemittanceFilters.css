@@ -1,0 +1,53 @@
+.remittance-filters-container {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  h1 {
+    margin-block: .25rem;
+  }
+}
+
+.remittance-list-filters {
+  margin-top: 2rem;
+}
+
+.remittance-list-filters input {
+  box-shadow: none;
+  border: var(--border-color) 1px solid;
+  border-radius: 1rem;
+  padding: .85rem 1rem;
+}
+
+.remittance-list-filters button {
+  background-color: var(--secondary-color);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 1rem;
+  border: none;
+  min-width: 135px;
+  gap: .5rem;
+  justify-content: center;
+  color: white;
+  font-size: .75rem;
+}
+
+.remittance-list-pagination {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+  
+  a {
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  svg {
+    cursor: pointer;
+  }
+}
+
