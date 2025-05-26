@@ -1,18 +1,33 @@
 import { useState } from 'react';
 
+/**
+ * Hook reutilizable para formularios.
+ * 
+ * @template T
+ * @param {T} initialState - Estado inicial del formulario.
+ * @returns {{
+ *   formValues: T,
+ *   handleInputChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => void
+ * }}
+ */
+export const useForm = <T>(initialState: T) => {
+  const [formValues, setFormValues] = useState<T>(initialState);
 
-
-// Hook creado inicialmente para el formulario de login, pero se puede reutilizar en cualquier formulario
-// Author: ThJuanK
-export const useForm = ( initialState ) => {
-  const [ formValues, setFormValues ] = useState( initialState );
-
-  const handleInputChange = ( { target } ) => {
-    setFormValues( {
-      ...formValues,
-      [ target.name ]: target.value
-    } );
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormValues(prev => ({
+      ...prev,
+      [name]: value
+    }));
   };
 
-  return { formValues, handleInputChange };
+  const setValue = (values: Partial<T>) => {
+    setFormValues((oldValues) => ({...values, ...oldValues}))
+  }
+
+  const clear = () => {
+    setFormValues(initialState)
+  }
+
+  return { formValues, handleInputChange, clear, setValue };
 }

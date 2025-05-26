@@ -4,13 +4,16 @@ import { Icon } from "../../../../ui/Icon/Icon";
 interface CalendarModalProps {
   isOpen: boolean;
   onClose: () => void;
+  currentDate: Date;
+  setCurrentDate: (date: Date) => void;
 }
 
 export const CalendarModal: React.FC<CalendarModalProps> = ({
   isOpen,
   onClose,
+  currentDate, 
+  setCurrentDate
 }) => {
-  const [currentDate, setCurrentDate] = useState(new Date(2025, 4, 1));
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
 
   const getDaysInMonth = (date: Date) => {

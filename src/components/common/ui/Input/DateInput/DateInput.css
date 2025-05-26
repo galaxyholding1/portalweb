@@ -1,52 +1,70 @@
 .date-input__group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  height: 56px;
+  box-sizing: border-box;
 }
 
-.date-input__group label {
-    color: var(--text-secondary);
-    font-size: 0.875rem;
+.date-input__group div {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: var(--text-secondary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  background-color: var(--bg-secondary);
+  font-size: 1.125rem;
+  font-weight: 400;
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  margin: 0;
+  gap: 1rem;
+  justify-content: space-between;
+  padding-inline: 1rem;
+  box-sizing: border-box;
 }
 
 .date-input__field {
-    padding: 0.75rem;
-    border: 1px solid var(--border-color);
-    border-radius: 1rem;
-    background-color: var(--bg-secondary);
-    color: var(--text-primary);
-    font-size: 0.875rem;
-    outline: none;
-    transition: border-color 0.2s ease;
+  padding: 0.75rem;
+  border-radius: 1rem;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  outline: none;
+  transition: border-color 0.2s ease;
 }
 
 .date-input__field:focus {
-    border-color: var(--primary-color);
+  border-color: var(--primary-color);
 }
 
 /* Tema claro */
 [data-theme="light"] .date-input__field {
-    border: 1px solid var(--border-color);
-    color: var(--text-color);
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
 }
 
 [data-theme="light"] .date-input__field::-webkit-calendar-picker-indicator {
-    filter: invert(0);
-    cursor: pointer;
+  filter: invert(0);
+  cursor: pointer;
 }
 
 /* Tema oscuro */
 [data-theme="dark"] .date-input__field {
-    border: 1px solid var(--text-color);
-    color: var(--text-color);
+  border: 1px solid var(--text-color);
+  color: var(--text-color);
 }
 
 [data-theme="dark"] .date-input__field::-webkit-calendar-picker-indicator {
-    filter: invert(1);
-    cursor: pointer;
+  filter: invert(1);
+  cursor: pointer;
 }
-
-
 
 /* Custom checkbox */
 .checkbox {
