@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from "react";
 import "./Carousel.css";
 import turnoIcon from "../../../assets/images/banner-home.png";
+import arrowLeft from "../../../assets/icons/arrow-circle-left.svg";
+import arrowRight from "../../../assets/icons/arrow-circle-right.svg";
 
 const Carousel = () => {
   const slides = [
     {
-      title: "Abre tu cuenta de ahorros desde $0",
+      title: "Olvídate de memorizar números de cuenta",
       description:
-        "Saca tu cuenta por Internet, desde el celular. Elige el plan que prefieras con cuota de manejo desde cero pesos, incluso cuenta nómina.",
-      buttonText: "Abre tu cuenta",
+        "Si usas A la mano, pásate a Nequi y disfruta de más funcionalidades. En mayo de 2025, A la mano se despide. ¡Nos vemos en Nequi!",
+      buttonText: "elige tus llaves",
       image: turnoIcon,
     },
     {
@@ -68,11 +70,15 @@ const Carousel = () => {
               <div className="text-section">
                 <h2>{slide.title}</h2>
                 <p>{slide.description}</p>
-                <button className="cta-button">{slide.buttonText}</button>
+                <button className="carrousel-button">
+                  <a>{slide.buttonText}</a>
+                </button>
               </div>
-              <div className="image-section">
-                <img src={slide.image} alt={slide.title} />
-              </div>
+              <img
+                src={slide.image}
+                alt={slide.title}
+                className="image-section"
+              />
             </div>
           ))}
         </div>
@@ -80,21 +86,11 @@ const Carousel = () => {
 
       {/* Flechas fuera del contenedor */}
       <button className="nav-button prev" onClick={prevSlide}>
-        <span>‹</span>
+        <img src={arrowLeft} alt="boton_izquierdo" className="left_button" />
       </button>
       <button className="nav-button next" onClick={nextSlide}>
-        <span>›</span>
+        <img src={arrowRight} alt="boton_derecho" className="right_button" />
       </button>
-
-      <div className="pagination">
-        {slides.map((_, index) => (
-          <button
-            key={index}
-            className={`page-dot ${index === currentIndex ? "active" : ""}`}
-            onClick={() => setCurrentIndex(index)}
-          />
-        ))}
-      </div>
     </div>
   );
 };
