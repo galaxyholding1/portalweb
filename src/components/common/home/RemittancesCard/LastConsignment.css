@@ -160,23 +160,6 @@
   }
 }
 
-:root {
-  --bg: #ffffff;
-  --text: #222222;
-  --highlight: #f57c00;
-  --search-bg: #fff;
-  --search-border: #ccc;
-  --see-more: #c2185b;
-}
-
-[data-theme="dark"] {
-  --bg: #2d2d2d;
-  --text: #f5f5f5;
-  --search-bg: #3a3a3a;
-  --search-border: #555;
-  --see-more: #ff4081;
-}
-
 .remittance-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -228,14 +211,13 @@
 .search-bar {
   display: flex;
   align-items: center;
-  border: 1px solid var(--text);
+  border: 1px solid var(--text-color);
   border-radius: 16px;
   overflow: hidden;
   background-color: var(--search-bg);
   width: 250px;
   height: 52px;
-  color: var(--text);
-  --text-color: var(--text);
+  color: var(--text-color);
 }
 
 .search-bar input {

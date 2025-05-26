@@ -35,6 +35,7 @@
 
 .remittance-list-filters button.link {
   background-color: var(--bg-secondary);
+  color: var(--text-color);
 }
 
 .remittance-list-pagination {

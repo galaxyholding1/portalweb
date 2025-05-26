@@ -41,7 +41,7 @@ export const RemittanceListPreview = () => {
             <Icon name="slider" color="white" /> Filtrar por
           </button>
           <button onClick={handleOpenFilter} className="link">
-            <Icon name="add_plus_circle" color="white" /> ver mas
+            <Icon name="add_plus_circle" /> ver mas
           </button>
         </div>
         <div className="remittance-list-result">
