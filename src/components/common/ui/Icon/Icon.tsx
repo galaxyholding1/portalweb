@@ -54,6 +54,7 @@ import TriangleWarning from "../../../../assets/icons/triangle_warning.svg?react
 import AddPlus from "../../../../assets/icons/add_plus.svg?react";
 import Search from "../../../../assets/icons/search.svg?react";
 import Slider from "../../../../assets/icons/slider.svg?react";
+import addPlusCircle from "../../../../assets/icons/add_plus_circle.svg?react";
 
 import leftarrow from "../../../../assets/icons/arrow-circle-left.svg?react";
 import rightarrow from "../../../../assets/icons/arrow-circle-right.svg?react";
@@ -124,6 +125,7 @@ export const iconsMap = {
   search: Search,
   slider: Slider,
   calendar_days: calendarDays,
+  add_plus_circle: addPlusCircle,
 };
 
 type IconName = keyof typeof iconsMap;

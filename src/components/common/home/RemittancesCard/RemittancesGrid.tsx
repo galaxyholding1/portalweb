@@ -1,16 +1,10 @@
-// ContactGrid.tsx
-import React from "react";
 import { RemittancesCard } from "./RemittancesCard";
 import { RemittancesInterface } from "./RemittancesInterface";
 import "./RemittancesGrid.css";
 import { Icon } from "../../ui/Icon/Icon";
 import { Card } from "../Card/Card";
 import { CardMoments } from "../Card/CardMoments";
-import { MovementsItem } from "../movements/MovementsItem";
 import { Link, useLocation } from "react-router";
-
-import { getPathByClient } from "../../../../util/getModeClient";
-import { SaveButton } from "../../ui/Button/SaveButton";
 
 const contacts: RemittancesInterface[] = [
   {
@@ -65,61 +59,44 @@ export const RemittancesGrid = ({
   const CardComponent = filter ? CardMoments : Card;
   const { pathname } = useLocation();
   return (
-    <div className="grid-area-movements" style={{gridRow: 'span 2'}}>
-      <CardComponent
-        title="Remesas"
-        icon={<Icon name="setup" />}
-        morePath={`${getPathByClient(pathname)}/movimientos`}
-      >
-        <div className="remittance-grid">
-          <div className="remittance-info">
-            <h3 className="title">¿A quién deseas enviar dinero?</h3>
-            <p className="subtitle">
-              Seleccionar uno de los contactos habituales
-            </p>
-          </div>
-          <div className="parent-container">
-            <div className="habitual-contact">
-              <span className="icon">
-                <Icon name="icUser" />
-              </span>
-              <span> Contactos habituales</span>
-            </div>
-            <div className="remittance-search">
-              <div className="search-bar">
-                <input
-                  type="text"
-                  placeholder="Buscar por nombre, email, número..."
-                />
-                <span className="search-icon">
-                  <Icon name="icSearch" />
-                </span>
-              </div>
-              <a href="#" className="see-more">
-                ver más
-              </a>
-            </div>
-          </div>
-        </div>
+    <div className="grid-area-movements" style={{ gridRow: "span 2" }}>
+      <h3 className="title">¿A quién deseas enviar dinero?</h3>
+      <hr />
+      <div className="habitual-contact">
+        <Icon name="icUser" />
+        <span> Contactos habituales</span>
+      </div>
 
-        <div className="contact-grid">
-          {contacts.map((contact) => (
-            <RemittancesCard key={contact.id} data={contact} />
-          ))}
+      <p className="text">Seleccionar uno de los contactos habituales</p>
+
+      <div className="search-container">
+        <div className="search-bar">
+          <input
+            type="text"
+            placeholder="Buscar por nombre, email, número..."
+          />
+          <span className="search-icon">
+            <Icon name="icSearch" />
+          </span>
         </div>
-        <div className="remittance-grid">
-          <div className="remittance-info">
-            <h5 className="title2">¿No encuentras a quíen estas buscando?</h5>
-            <p className="subtitle">Encontrar gente cerca de mís</p>
-            <Link
-              className="btn-add-contact"
-              to="/portal-empresas/remesas/enviar"
-            >
-              Confirmar
-            </Link>
-          </div>
-        </div>
-      </CardComponent>
+        <Link to="#" className="see-more">
+          <Icon name="add_plus_circle" />
+          ver más
+        </Link>
+      </div>
+
+      <div className="contact-grid">
+        {contacts.map((contact) => (
+          <RemittancesCard key={contact.id} data={contact} />
+        ))}
+      </div>
+
+      <div className="remittance-info">
+        <Link className="btn-add-contact" to="/portal-empresas/remesas/enviar">
+          Confirmar
+        </Link>
+        <p className="subtitle">¿No encuentras a quíen estas buscando? <a>Encontrar gente cerca de mí</a></p>
+      </div>
     </div>
   );
 };
