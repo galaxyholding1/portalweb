@@ -1,9 +1,9 @@
-import './RemittanceList.css'
+import "./RemittanceList.css";
 import { Icon } from "../../../ui/Icon/Icon";
 import { LastRemittancesCard } from "../../RemittancesCard/LastRemittancesCard";
 import { Input } from "../../../Remittance/Input/Input";
-import { useState } from 'react';
-import { RemittanceFilterM } from '../../RemittanceFilter/RemittanceFilter';
+import { useState } from "react";
+import { RemittanceFilterM } from "../../RemittanceFilter/RemittanceFilterM";
 
 const contact = {
   id: 3,
@@ -20,33 +20,35 @@ const contact = {
 export const RemittanceList = () => {
   const totalPages = 3;
 
-  const [isOpenModalFilter, setIsOpenModalFilter] = useState(false)
+  const [isOpenModalFilter, setIsOpenModalFilter] = useState(false);
 
   const handleOpenFilter = () => {
-    setIsOpenModalFilter(true)
-  }
+    setIsOpenModalFilter(true);
+  };
 
   return (
     <>
-      {isOpenModalFilter && <RemittanceFilterM onClose={() => setIsOpenModalFilter(false)}/>}
+      {isOpenModalFilter && (
+        <RemittanceFilterM onClose={() => setIsOpenModalFilter(false)} />
+      )}
       <div className="remittance-list-container">
         <h1>Listado de remesas</h1>
         <hr />
         <div className="remittance-list-filters">
-          <Input type="text" icon={<Icon name="search" />}/>
-          
-          <button onClick={ handleOpenFilter } >
-            <Icon name="slider" color='white'/> Filtrar por
+          <Input type="text" icon={<Icon name="search" />} />
+
+          <button onClick={handleOpenFilter}>
+            <Icon name="slider" color="white" /> Filtrar por
           </button>
         </div>
         <div className="remittance-list-result">
           {Array.from({ length: 7 }, (_, i) => (
-            <LastRemittancesCard 
-              data={contact} 
-              key={i} 
-              showState 
+            <LastRemittancesCard
+              data={contact}
+              key={i}
+              showState
               showStateIcon={false}
-              className="remittance-list-card"  
+              className="remittance-list-card"
             />
           ))}
         </div>
@@ -54,7 +56,9 @@ export const RemittanceList = () => {
           <Icon name="leftarrow" />
 
           {Array.from({ length: totalPages }, (_, i) => (
-            <a className="remmitance-list-page" key={i}>{i + 1}</a>
+            <a className="remmitance-list-page" key={i}>
+              {i + 1}
+            </a>
           ))}
 
           <Icon name="rightarrow" />

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import "./RemittanceFilter.css";
+import "./RemittanceFilterM.css";
 import DateInput from "../../ui/Input/DateInput/DateInput";
 import Checkbox from "../../ui/Input/CheckboxInput/Checkbox";
-import { Select } from "../../../../components/common/Remittance/Select/Select";
+import { Select } from "../../Remittance/Select/Select";
 
 import NumberInput from "../../ui/Input/NumberInput/NumberInput";
 import Button from "../../ui/Input/ButtonInput/Button";
