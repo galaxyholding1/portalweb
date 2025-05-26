@@ -25,7 +25,7 @@ footer {
 .footer-links {
   display: flex;
   justify-content: space-between;
-  margin-top: 3rem;
+  margin-top: .5rem;
   gap: 1.5rem;
   a {
     color: var(--text-primary);

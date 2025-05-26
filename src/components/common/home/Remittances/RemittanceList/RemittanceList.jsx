@@ -3,7 +3,7 @@ import { Icon } from "../../../ui/Icon/Icon";
 import { LastRemittancesCard } from "../../RemittancesCard/LastRemittancesCard";
 import { Input } from "../../../Remittance/Input/Input";
 import { useState } from "react";
-import { RemittanceFilterM } from "../../RemittanceFilter/RemittanceFilterM";
+import { RemittanceFilterListModal } from "../../RemittanceFilter/RemittanceFilterListModal";
 
 const contact = {
   id: 3,
@@ -28,9 +28,10 @@ export const RemittanceList = () => {
 
   return (
     <>
-      {isOpenModalFilter && (
-        <RemittanceFilterM onClose={() => setIsOpenModalFilter(false)} />
-      )}
+      <RemittanceFilterListModal
+        onClose={() => setIsOpenModalFilter(false)}
+        visible={isOpenModalFilter}
+      />
       <div className="remittance-list-container">
         <h1>Listado de remesas</h1>
         <hr />

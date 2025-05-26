@@ -4,14 +4,14 @@ import { RemittanceForm } from "../../../components/common/home/Remittances/Remi
 import { RemittanceSend } from "../../../components/common/home/Remittances/RemittanceSend";
 import { RemittancesGrid } from "../../../components/common/home/RemittancesCard/RemittancesGrid";
 import { LastConsignment } from "../../../components/common/home/RemittancesCard/LastConsignment";
-import { RemittanceFilterM } from "../../../components/common/home/RemittanceFilter/RemittanceFilterM";
+import { RemittanceFilterListModal } from "../../../components/common/home/RemittanceFilter/RemittanceFilterListModal";
 
 import "./Remittance.css";
 
 export const Remittance = () => {
   return (
     <div className="dashboard-grid">
-      <RemittanceFilterM />
+      <RemittanceFilterListModal />
       <div className="grid-area-applications">
         <MovementCard stateIndicator />
         <LastConsignment />
