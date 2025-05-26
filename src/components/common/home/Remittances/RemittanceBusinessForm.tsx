@@ -39,7 +39,7 @@ export const RemittanceBusinessForm: React.FC<RemittanceForm> = ({
           <span className="icon">
             <Icon name="icUser" />
           </span>
-          <span> ¿A quíen deseas menviar dinero?</span>
+          <span> ¿A quíen deseas enviar dinero?</span>
         </div>
         <div className="remittance-search">
           <div className="search-bar">
