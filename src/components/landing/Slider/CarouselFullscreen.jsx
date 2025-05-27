@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
 import "./CarouselFullscreen.css";
-import turnoIcon from "../../../assets/images/banner-home.png";
+import turnoIcon from "../../../assets/images/image_banner1.svg";
+import arrowLeft from "../../../assets/icons/arrow-circle-left.svg";
+import arrowRight from "../../../assets/icons/arrow-circle-right.svg";
 
 const FullscreenSlider = () => {
   const slides = [
     {
-      title: "Descarga la nueva app Mi Galaxy App",
-      description: "Conocé cómo",
-      buttonText: "Descargar app",
+      title: "Comienza a ahorrar con Galaxy Pay",
+      buttonText: "descúbrelo",
       image: turnoIcon,
     },
     // ... más slides
@@ -39,49 +40,44 @@ const FullscreenSlider = () => {
 
   return (
     <div
-      className="slider-main-container"
+      className="slider-container"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
-      <div className="slider-content-wrapper">
+      <div className="slider-wrapper">
         {slides.map((slide, index) => (
           <div
             key={index}
-            className={`slider-item ${index === currentIndex ? "active" : ""}`}
+            className={`slide ${index === currentIndex ? "active" : ""}`}
             style={{
+              backgroundImage: `url(${slide.image})`,
               transform: `translateX(${100 * (index - currentIndex)}%)`,
             }}
           >
-            <div
-              className="slider-background"
-              style={{ backgroundImage: `url(${slide.image})` }}
-            >
-              <div className="slider-overlay">
-                <h2 className="slider-title">{slide.title}</h2>
-                <p className="slider-description">{slide.description}</p>
-                <button className="slider-cta">{slide.buttonText}</button>
-              </div>
+            <div className="slide-overlay">
+              <h2>{slide.title}</h2>
+              <button>{slide.buttonText}</button>
             </div>
           </div>
         ))}
       </div>
 
-      <button className="slider-nav prev" onClick={prevSlide}>
-        <span>‹</span>
+      <button className="nav-button-fs pre" onClick={prevSlide}>
+        <img src={arrowLeft} alt="arrowLeft" className="left_button_fs" />
       </button>
-      <button className="slider-nav next" onClick={nextSlide}>
-        <span>›</span>
+      <button className="nav-button-fs nex" onClick={nextSlide}>
+        <img src={arrowRight} alt="arrowRight" className="right_button_fs" />
       </button>
 
-      <div className="slider-indicators">
+      {/*<div className="dots">
         {slides.map((_, index) => (
           <button
             key={index}
-            className={`slider-dot ${index === currentIndex ? "active" : ""}`}
-            onClick={() => setCurrentIndex(index)}
+            className={`dot ${index === currentIndex ? 'active' : ''}`}
+            onClick={() => goToSlide(index)}
           />
         ))}
-      </div>
+      </div> */}
     </div>
   );
 };

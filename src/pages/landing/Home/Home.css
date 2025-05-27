@@ -118,10 +118,4 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Slider full-width */
-.full-width-section {
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  position: relative;
-  left: 0;
-}
+

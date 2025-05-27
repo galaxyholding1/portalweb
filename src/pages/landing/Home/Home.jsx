@@ -128,15 +128,16 @@ export const Home = () => {
             ))}
           </div>
 
-          {/* Sliders adicionales */}
+          
+          </div>
+        </div>
+        {/* Sliders adicionales */}
           <div className="full-width-section">
             <CarouselFullscreen />
           </div>
 
           <div className="full-width-section">
             <CarouselBackground />
-          </div>
-        </div>
       </div>
     </>
   );
