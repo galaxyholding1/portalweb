@@ -16,7 +16,7 @@ interface Props {
 
 export const LastRemittancesCard: React.FC<Props> = ({ data, className, showStateIcon = true, showState = false }) => {
   return (
-    <div className={"contact-card" + (className ? ` ${className}` : "")}>
+    <div className={"contact-card-container" + (className ? ` ${className}` : "")}>
       <div>
         <Icon name="icUser" />
         <div className="contact-info">

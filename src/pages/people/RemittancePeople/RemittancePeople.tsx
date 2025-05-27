@@ -1,18 +1,15 @@
 import { MovementCard } from "../../../components/common/home/MovementCard/MovementCard";
-import { TransfersCard } from "../../../components/common/home/MyRequestsCard/TransfersCard";
-import { RemittanceForm } from "../../../components/common/home/Remittances/RemittanceForm";
-import { RemittanceSend } from "../../../components/common/home/Remittances/RemittanceSend";
 import { RemittancesGrid } from "../../../components/common/home/RemittancesCard/RemittancesGrid";
 
 import { LastConsignment } from "../../../components/common/home/RemittancesCard/LastConsignment";
+import { RemittanceFilterListModal } from "../../../components/common/home/RemittanceFilter/RemittanceFilterListModal";
+import { RemittanceList } from "../../../components/common/home/Remittances/RemittanceList/RemittanceList";
+import { RemittanceListPreview } from "../../../components/common/home/Remittances/RemittanceList/RemittanceListPreview";
 export const RemittancePeople = () => {
   return (
     <div className="dashboard-grid">
       <RemittancesGrid />
-      <div className="grid-area-applications">
-        <MovementCard stateIndicator />
-        <LastConsignment />
-      </div>
+      <RemittanceListPreview/>
     </div>
   );
 };

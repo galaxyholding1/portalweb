@@ -3,7 +3,7 @@ import Ve from "../../../assets/icons/flags/ve.svg?react";
 import Us from "../../../assets/icons/flags/us.svg?react";
 import Mx from "../../../assets/icons/flags/mx.svg?react";
 
-type CountryCode = "co" | "us" | "mx" | "ve";
+export type CountryCode = "co" | "us" | "mx" | "ve";
 
 const countryMap = {
   co: Co,

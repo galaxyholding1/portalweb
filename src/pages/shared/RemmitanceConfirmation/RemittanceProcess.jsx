@@ -24,7 +24,7 @@ export const RemittanceProcess = () => {
   const totalSteps = Object.values(componentByStep).length;
 
   return (
-    <Card title={"Remesas"} icon={<Icon name="remesas_icon" />}>
+    <Card title={"Remesas"} icon={<Icon name="remesas_icon" />} className="remittance-process-card">
       <div className="remittance-process-grid">
         <div className="remittance-process-content">
           {componentByStep[step]}

@@ -33,6 +33,11 @@
   font-size: .75rem;
 }
 
+.remittance-list-filters button.link {
+  background-color: var(--bg-secondary);
+  color: var(--text-color);
+}
+
 .remittance-list-pagination {
   margin-top: 1.5rem;
   display: flex;

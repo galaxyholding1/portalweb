@@ -26,26 +26,6 @@ const movements = [
     date: new Date("2025-05-01T15:00:00"),
     amount: 100,
   },
-  {
-    conceptTitle: "Airbnb",
-    date: new Date("2025-05-01T15:00:00"),
-    amount: 100,
-  },
-  {
-    conceptTitle: "Airbnb",
-    date: new Date("2025-05-01T15:00:00"),
-    amount: 100,
-  },
-  {
-    conceptTitle: "Airbnb",
-    date: new Date("2025-05-01T15:00:00"),
-    amount: 100,
-  },
-  {
-    conceptTitle: "Airbnb",
-    date: new Date("2025-05-01T15:00:00"),
-    amount: 100,
-  },
 ];
 
 export const MovementCard = ({ filter = false, stateIndicator = false, enableLink = false }) => {

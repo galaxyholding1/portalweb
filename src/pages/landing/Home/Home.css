@@ -1,34 +1,26 @@
-/* Estilos base (Mobile First) */
 .allpage {
-  font-family: "Arial", sans-serif;
   padding: 16px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .home-container {
-  font-family: Arial, sans-serif;
   padding: 0;
 }
 
 /* Accesos rápidos */
-.accesos-rapidos {
-  margin: 24px 0;
-}
-
 .contenedor-accesos {
+  grid-template-columns: repeat(6, 1fr);
   background: var(--bg-secondary);
-  border-radius: 12px;
-  padding: 16px;
+  border-radius: 20px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
+  justify-content: center;
 }
 
 .acceso-item {
   display: flex;
   flex-direction: column;
-  align-items: center;  
+  align-items: center;
   transition: transform 0.2s;
   padding: 8px;
   text-align: center;
@@ -36,49 +28,53 @@
   cursor: pointer;
 }
 
+.element-style {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.accesos-font {
+  margin-top: 2px;
+  font-size: 15px;
+}
+
 .acceso-item:hover {
   transform: scale(1.05);
 }
 
 .icon-img {
-  width: 32px;
-  height: 32px;
+  width: 50px;
+  height: 50px;
   margin-bottom: 8px;
   object-fit: contain;
   transition: filter 0.3s ease;
 }
 
 /* Modo oscuro */
-[data-theme='dark'] .icon-img {
+[data-theme="dark"] .icon-img {
   filter: invert(1) brightness(1.5);
 }
 
 /* Servicios */
 .servicios-wrapper {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 16px;
   margin: 24px 0;
 }
 
 .servicio {
-  border-radius: 12px;
-  overflow: hidden;
-  color: white;
+  border-radius: 16px;
+  color: var(--text-color);
   display: flex;
   flex-direction: column;
   position: relative;
-  min-height: 300px;
-}
-
-.servicio img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
 }
 
 .contenido {
-  padding: 12px;
+  padding: 16px;
   display: flex;
   flex-direction: column;
   height: calc(100% - 150px);
@@ -86,9 +82,12 @@
 }
 
 .contenido h3 {
-  font-size: 18px;
+  text-align: left;
   margin-bottom: 8px;
   font-weight: bold;
+  margin-top: auto;
+  font-size: 36px;
+  font-weight: 600;
 }
 
 .contenido p {
@@ -97,112 +96,26 @@
   margin-bottom: 12px;
   flex-grow: 1;
   overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
+  display: flex;
 }
 
 .contenido button {
-  padding: 10px 24px;
+  padding: 15px 30px;
   background: transparent;
-  color: white;
-  border: 2px solid white;
-  border-radius: 25px;
-  font-weight: bold;
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
+  border-radius: 16px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 20px;
   margin: 0 auto;
-  margin-top: auto;
-  display: inline-block;
+  margin-bottom: 10px;
+  display: flex;
   transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  min-width: 150px;
 }
 
 .contenido button:hover {
-  background: white;
-  color: var(--text-color);
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Estilo especial para la primera tarjeta */
-.tarjeta-1 .contenido p {
-  -webkit-line-clamp: 4;
-}
-
-/* Media Queries para Tablet */
-@media (min-width: 768px) {
-  .allpage {
-    padding: 20px;
-  }
-
-  .contenedor-accesos {
-    grid-template-columns: repeat(3, 1fr);
-    padding: 20px;
-    gap: 20px;
-  }
-
-  .servicios-wrapper {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  .servicio {
-    flex: 1 1 calc(50% - 8px);
-    min-height: 320px;
-  }
-
-  .servicio img {
-    height: 160px;
-  }
-
-  .contenido {
-    padding: 16px;
-  }
-
-  .tarjeta-1 {
-    flex: 2 1 100%;
-  }
-
-  .contenido button {
-    padding: 12px 28px;
-    font-size: 15px;
-  }
-}
-
-/* Media Queries para Desktop */
-@media (min-width: 1024px) {
-  .contenedor-accesos {
-    grid-template-columns: repeat(6, 1fr);
-  }
-
-  .servicio {
-    flex: 1 1 calc(33.333% - 14px);
-    min-height: 340px;
-  }
-
-  .servicio img {
-    height: 170px;
-  }
-
-  .tarjeta-1 {
-    flex: 2 1 calc(66.666% - 10px);
-  }
-
-  .acceso-item {
-    font-size: 16px;
-  }
-
-  .contenido h3 {
-    font-size: 20px;
-  }
-
-  .contenido button {
-    padding: 12px 32px;
-    font-size: 16px;
-  }
 }
 
 /* Slider full-width */

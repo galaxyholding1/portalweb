@@ -9,6 +9,8 @@ export const MovementsHeader = ({ icon, title, morePath }) => {
   const [showCalendar, setShowCalendar] = useState(false);
   const [showNameInput, setShowNameInput] = useState(false);
 
+  const [currentDate, setcurrentDate] = useState(new Date());
+
   const handleFilterClick = () => setShowFilterModal(!showFilterModal);
   const handleCloseModals = () => {
     setShowFilterModal(false);
@@ -62,9 +64,6 @@ export const MovementsHeader = ({ icon, title, morePath }) => {
           )}
         </div>
       </div>
-
-      <CalendarModal isOpen={showCalendar} onClose={handleCloseModals} />
-      <NameSearchModal isOpen={showNameInput} onClose={handleCloseModals} />
     </div>
   );
 };

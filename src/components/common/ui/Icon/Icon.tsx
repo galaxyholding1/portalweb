@@ -54,6 +54,7 @@ import TriangleWarning from "../../../../assets/icons/triangle_warning.svg?react
 import AddPlus from "../../../../assets/icons/add_plus.svg?react";
 import Search from "../../../../assets/icons/search.svg?react";
 import Slider from "../../../../assets/icons/slider.svg?react";
+import addPlusCircle from "../../../../assets/icons/add_plus_circle.svg?react";
 
 import leftarrow from "../../../../assets/icons/arrow-circle-left.svg?react";
 import rightarrow from "../../../../assets/icons/arrow-circle-right.svg?react";
@@ -61,6 +62,7 @@ import icSearch from "../../../../assets/icons/ic-search.svg?react";
 import icUser from "../../../../assets/icons/ic-user.svg?react";
 import icStatePending from "../../../../assets/icons/ic-state-pending.svg?react";
 import bdgeOk from "../../../../assets/icons/bdge_ok.svg?react";
+import calendarDays from "../../../../assets/icons/calendar_days.svg?react";
 
 // Mapeo
 export const iconsMap = {
@@ -122,6 +124,8 @@ export const iconsMap = {
   add_plus: AddPlus,
   search: Search,
   slider: Slider,
+  calendar_days: calendarDays,
+  add_plus_circle: addPlusCircle,
 };
 
 type IconName = keyof typeof iconsMap;
@@ -133,11 +137,13 @@ interface IconProps {
   width?: number;
   color?: string;
   className?: string;
+  height?: number;
 }
 
 export const Icon = ({
   name,
   width = 24,
+  height,
   selected,
   selectedColor,
   color = "var(--text-color)",
@@ -164,6 +170,7 @@ export const Icon = ({
     <IconComponent
       color={selected ? selectedColor : color}
       width={width}
+      height={height ?? 'auto'}
       className={className ?? ""}
     />
   );
@@ -185,6 +192,8 @@ const colorTransform = (color: string) => {
       return "var(--bg-tertiary)";
     case "border":
       return "var(--border-color)";
+    case "text":
+      return "var(--text-color)";
     default:
       return color;
   }
