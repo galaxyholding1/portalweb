@@ -34,7 +34,7 @@ export const RemittanceForm: React.FC<RemittanceForm> = ({
   return (
     <div
       style={{gridRow: 'span 2'}}
-      className={`remittance-container ${isDarkMode ? "dark" : ""}`} 
+      className={`remittance-container`} 
     >
       <div className="remittance-header">
         <div className="header-icon">
@@ -48,18 +48,13 @@ export const RemittanceForm: React.FC<RemittanceForm> = ({
           <span className="icon">
             <Icon name="icUser" />
           </span>
-          <span> ¿A quíen deseas menviar dinero?</span>
+          <span> ¿A quíen deseas enviar dinero?</span>
         </div>
-        <div className="remittance-search">
-          <div className="search-bar">
-            <input type="text" placeholder="Buscar por nombre, número..." />
-            <span className="search-icon">
-              <Icon name="icSearch" />
-            </span>
-          </div>
-          <a href="#" className="see-more">
-            ver más
-          </a>
+        <div className="search-bar">
+          <input type="text" placeholder="Buscar por nombre, número..." />
+          <span className="search-icon">
+            <Icon name="icSearch" />
+          </span>
         </div>
       </div>
 

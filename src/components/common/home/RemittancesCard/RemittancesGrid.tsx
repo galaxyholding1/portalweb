@@ -82,7 +82,7 @@ export const RemittancesGrid = ({
   return (
     <div className="grid-area-movements" style={{ gridRow: "span 2" }}>
       <h3 className="title">¿A quién deseas enviar dinero?</h3>
-      <hr />
+      <hr style={{marginBottom: '1rem'}}/>
       <div className="habitual-contact">
         <Icon name="icUser" />
         <span> Contactos habituales</span>
