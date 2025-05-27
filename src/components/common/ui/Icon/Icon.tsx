@@ -137,11 +137,13 @@ interface IconProps {
   width?: number;
   color?: string;
   className?: string;
+  height?: number;
 }
 
 export const Icon = ({
   name,
   width = 24,
+  height,
   selected,
   selectedColor,
   color = "var(--text-color)",
@@ -168,6 +170,7 @@ export const Icon = ({
     <IconComponent
       color={selected ? selectedColor : color}
       width={width}
+      height={height ?? 'auto'}
       className={className ?? ""}
     />
   );
@@ -189,6 +192,8 @@ const colorTransform = (color: string) => {
       return "var(--bg-tertiary)";
     case "border":
       return "var(--border-color)";
+    case "text":
+      return "var(--text-color)";
     default:
       return color;
   }
