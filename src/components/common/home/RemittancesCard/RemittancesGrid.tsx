@@ -5,6 +5,7 @@ import { Icon } from "../../ui/Icon/Icon";
 import { Card } from "../Card/Card";
 import { CardMoments } from "../Card/CardMoments";
 import { Link, useLocation } from "react-router";
+import { getPathByClient } from "../../../../util/getModeClient";
 
 const contacts: RemittancesInterface[] = [
   {
@@ -113,7 +114,7 @@ export const RemittancesGrid = ({
       </div>
 
       <div className="remittance-info">
-        <Link className="btn-add-contact" to="/portal-empresas/remesas/enviar">
+        <Link className="btn-add-contact" to={`${getPathByClient(pathname)}/remesas/enviar`}>
           Confirmar
         </Link>
         <p className="subtitle">¿No encuentras a quíen estas buscando? <a>Encontrar gente cerca de mí</a></p>
