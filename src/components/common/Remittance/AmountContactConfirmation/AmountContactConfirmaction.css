@@ -1,0 +1,8 @@
+.amount-input{
+  background-color: transparent!important;
+  border-radius: 1rem!important;
+}
+
+.amount-input:focus{
+  outline: solid 1px;
+}

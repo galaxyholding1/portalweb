@@ -3,12 +3,13 @@ import { SimpleCard } from '../../home/Card/SimpleCard/SimpleCard'
 import { ContactHeader } from '../../contact/ContactHeader/ContactHeader'
 import { Input } from '../Input/Input'
 import { Select } from '../Select/Select'
+import './AmountContactConfirmaction.css'
 
 export const AmountContactConfirmation = () => {
   return (
     <SimpleCard>
       <ContactHeader/>
-      <Input placeholder="Monto a enviar"/>
+      <Input placeholder="Monto a enviar" className="amount-input"/>
       <Select options={[
         { value: '1', label: 'Colombia' },
         { value: '2', label: 'Venezuela' },
