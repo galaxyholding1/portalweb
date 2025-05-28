@@ -11,29 +11,70 @@
 }
 
 .login-container form {
+  top: 20px;
+  position: relative;
+  left: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+<<<<<<< HEAD
   padding: 4rem 0.5rem 0.5rem 3rem;
   p, h3 {
+=======
+  padding: 0.5rem;
+  padding-left: 3rem;
+  padding-top: 4rem;
+  p,
+  h3 {
+>>>>>>> galaxyportalweb-nm
     align-self: flex-start;
     margin: 0;
   }
 }
 
-#btn-login-people {
+.login-title {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-align: center;
+}
+
+.login-description {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.form-container {
+  height: auto;
+  width: 358px;
+  border-radius: 80px;
+}
+
+.form-container input {
   width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.btn-login-people {
+  width: 358px;
   padding: 1rem;
   border-radius: 10px;
   border: none;
   cursor: pointer;
-  background-color: #e7458e;
-  color: white;
-  font-size: 1rem;
+  text-align: center;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  font-size: 20px;
+  font-weight: 400;
 }
 
-.login-container form>nav {
+.login-container form > nav {
   display: flex;
   flex-direction: column;
   align-items: end;
@@ -59,11 +100,13 @@
   overflow: hidden;
 }
 
-.banner>img {
+.banner > img {
   /* aspect-ratio: 519/333; */
-  max-width: 100%;
-  cursor: pointer;
-  border-radius: 10px;
+  width: 558px;
+  padding-top: 80px;
+  height: 419px;
+  flex-shrink: 0;
+  border-radius: 16px;
 }
 
 .banner {
@@ -71,20 +114,103 @@
   justify-content: center;
 }
 
-
-@media screen and (max-width: 900px) {
+@media (max-width: 1024px) {
   .login-container {
     grid-template-columns: 1fr;
-    justify-content: center;
-    gap: 2rem;
+    gap: 4rem;
+    padding-inline: 1rem;
   }
 
   .banner {
-    grid-column: span 1;
-    grid-row: span 1;
+    grid-column: auto;
+    grid-row: auto;
+    order: -1;
+    justify-content: center;
   }
 
-  .banner>img {
+  .banner > img {
+    padding-top: 0;
+    width: 100%;
     max-width: 90vw;
+    height: auto;
+  }
+
+  .form-container {
+    width: 100%;
+    max-width: 90vw;
+    border-radius: 40px;
+  }
+
+  .btn-login-people {
+    width: 100%;
+    max-width: 90vw;
+  }
+
+  .login-container form {
+    padding: 1rem;
+    left: 0;
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 600px) {
+  .login-title {
+    font-size: 18px;
+  }
+
+  .login-description {
+    font-size: 14px;
+  }
+
+  .form-container input {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .btn-login-people {
+    font-size: 18px;
+    padding: 0.8rem;
+  }
+}
+
+
+@media (max-width: 400px) {
+  .login-container {
+    padding-inline: 0.5rem;
+    gap: 2rem;
+  }
+
+  .login-container form {
+    padding: 0.5rem;
+  }
+
+  .form-container {
+    width: 100%;
+    border-radius: 30px;
+  }
+
+  .form-container input {
+    margin: 8px 0;
+    font-size: 15px;
+  }
+
+  .btn-login-people {
+    width: 100%;
+    font-size: 16px;
+    padding: 0.6rem;
+  }
+
+  .login-title {
+    font-size: 16px;
+  }
+
+  .login-description {
+    font-size: 13px;
+  }
+
+  .banner > img {
+    max-width: 100%;
+    height: auto;
+    padding-top: 0;
   }
 }
