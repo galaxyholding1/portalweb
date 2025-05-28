@@ -18,16 +18,8 @@
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-<<<<<<< HEAD
   padding: 4rem 0.5rem 0.5rem 3rem;
   p, h3 {
-=======
-  padding: 0.5rem;
-  padding-left: 3rem;
-  padding-top: 4rem;
-  p,
-  h3 {
->>>>>>> galaxyportalweb-nm
     align-self: flex-start;
     margin: 0;
   }
