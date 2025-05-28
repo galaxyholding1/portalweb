@@ -58,15 +58,14 @@ const Carousel = () => {
       onMouseLeave={() => setIsPaused(false)}
     >
       <div className="carousel-rounded-wrapper">
-        <div className="carousel-content">
+        <div
+          className="carousel-contentt"
+          style={{
+            transform: `translateX(-${currentIndex * 100}%)`,
+          }}
+        >
           {slides.map((slide, index) => (
-            <div
-              key={index}
-              className={`slide ${index === currentIndex ? "active" : ""}`}
-              style={{
-                transform: `translateX(${100 * (index - currentIndex)}%)`,
-              }}
-            >
+            <div key={index} className="slide">
               <div className="text-section">
                 <h2>{slide.title}</h2>
                 <p>{slide.description}</p>
