@@ -34,8 +34,8 @@ export const MovementCard = ({ filter = false, stateIndicator = false, enableLin
   return (
     <div className="grid-area-movements">
       <CardComponent
-        title="Ultimos movimientos" 
-        icon={<Icon name="setup" />}
+        title="Movimientos" 
+        icon={<Icon name="moving_desk" />}
         morePath={`${getPathByClient(pathname)}/movimientos`}
       >
         {movements.map((mov, i) => (
