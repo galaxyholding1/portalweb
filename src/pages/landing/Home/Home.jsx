@@ -9,6 +9,9 @@ import { Icon } from "../../../components/common/ui/Icon/Icon";
 import serviceOne from "../../../assets/images/image_service1.png";
 import serviceTwo from "../../../assets/images/image_service2.png";
 import serviceThree from "../../../assets/images/image_service3.png";
+import imageBanner1 from "../../../assets/images/image_banner_two_1.svg";
+import imageBanner2 from "../../../assets/images/image_banner_two_2.svg";
+import { CarouselCards } from "../../../components/layout/Carousel/CarouselCards/CarouselCards";
 
 const accesos = [
   {
@@ -72,6 +75,25 @@ const servicios = [
   },
 ];
 
+const slidesBG = [
+  {
+    title: "Pide un préstamo de hasta 30.000 €",
+    image: imageBanner1,
+  },
+  {
+    title: "Descárgate nuestra app",
+    image: imageBanner2,
+  },
+  {
+    title: "Pide un préstamo de hasta 30.000 €",
+    image: imageBanner1,
+  },
+  {
+    title: "Descárgate nuestra app",
+    image: imageBanner2,
+  },
+];
+
 export const Home = () => {
   /*SECTION: simulo logout*/
   const { logout, isAuthenticated } = useAuthStore();
@@ -127,17 +149,38 @@ export const Home = () => {
               </div>
             ))}
           </div>
-
-          
-          </div>
         </div>
-        {/* Sliders adicionales */}
-          <div className="full-width-section">
-            <CarouselFullscreen />
-          </div>
+      </div>
+      {/* Sliders adicionales */}
+      <div className="full-width-section">
+        <CarouselFullscreen />
+      </div>
 
-          <div className="full-width-section">
-            <CarouselBackground />
+      <div className="carousel-background-container">
+        <div className="carousel-background-content">
+          <h1>Nuestros créditos son todo ventajas</h1>
+          <p>
+            Tanto si buscas mejorar tus gastos con una tarjeta de crédito como
+            si estás pensando a largo plazo con nuestros préstamos, todas
+            nuestras opciones de crédito son competitivas, transparentes y
+            flexibles³.
+          </p>
+        </div>
+        <CarouselCards
+          cards={slidesBG.map((slide) => (
+            <div 
+              className="carousel-background-card" 
+              key={slide.title}
+              style={{
+                backgroundImage: `url(${slide.image})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            >
+              <h2>{slide.title}</h2>
+            </div>
+          ))}
+        />
       </div>
     </>
   );
