@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import "./Home.css";
 
 import Carosuel from "../../../components/landing/Slider/Carousel";
