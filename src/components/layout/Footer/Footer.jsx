@@ -66,8 +66,8 @@ export const Footer = () => {
         <FooterSocialLinks />
       </footer>
       <div className="footer-terms">
-        <a href="#">Reglamento portal virtual</a>
         <Link to="/politicas">Políticas de privacidad</Link>
+        <a href="#">Reglamento portal virtual</a>
       </div>
     </>
   );

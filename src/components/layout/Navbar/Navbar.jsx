@@ -22,12 +22,12 @@ export const Navbar = () => {
   const { pathname } = useLocation();
   
   const { theme } = useTheme();
-  const { isAuthenticated } = useAuthStore();
+  // const { isAuthenticated } = useAuthStore();
   
   const enableLinks = useMemo(() => guestLinks.includes(pathname), [pathname]);
   return (
     <>
-      {/*{ !isAuthenticated && <GuestNavbar/> }*/}
+      { enableLinks && <GuestNavbar/> }
       <nav className="navbar-galaxy">
         <a href="/">
           <img src={iconByTheme[theme]} alt="logo" />

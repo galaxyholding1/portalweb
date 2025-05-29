@@ -1,6 +1,5 @@
 .calendar-modal {
   background-color: var(--bg-primary);
-  border-radius: 11px;
   padding: 1.5rem;
   min-width: min(320px, 100%);
   border: var(--secondary-color) solid 1px;

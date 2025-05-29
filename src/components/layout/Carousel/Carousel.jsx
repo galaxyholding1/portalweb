@@ -2,6 +2,7 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Icon } from "../../common/ui/Icon/Icon";
 import "./Carousel.css";
+import { CarouselPagination } from "./CarouselPagination/CarouselPagination";
 
 export const Carousel = ({ components }) => {
   const [index, setIndex] = useState(0);
@@ -61,15 +62,11 @@ export const Carousel = ({ components }) => {
           />
         </button>
       </div>
-      <div className="carousel-indicator" >
-        {components.map((_, i) => (
-          <span
-            key={i}
-            className={`carousel-dot ${index === i ? "active" : ""}`}
-            onClick={() => setIndex(i)}
-          ></span>
-        ))}
-      </div>
+      <CarouselPagination
+        index={index}
+        setIndex={setIndex}
+        length={components.length}
+      />
     </div>
   );
 };

@@ -14,11 +14,18 @@
 }
 
 .slide {
-  position: absolute;
   width: 100%;
   display: flex;
   transition: transform 0.5s ease-in-out;
 }
+
+.carousel-contentt {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
 
 .text-section {
   flex: 1;
@@ -29,32 +36,36 @@
 }
 
 .text-section h2 {
-  font-size: 2.5rem;
-  margin-top: 3rem;
+  font-size: 50px;
+  margin-top: 2px;
+  font-weight: 500;
   color: var(--text-color);
   margin-bottom: 20px;
+  max-width: 100%;
 }
 
 .text-section p {
-  font-size: 1.1rem;
+  margin-top: 30px;
+  font-size: 16px;
   color: var(--text-color);
   line-height: 1.6;
-  max-width: 80%;
+  max-width: 100%;
 }
 
 .carrousel-button {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.5rem 1rem;
-  background-color: #f0813a;
-  color: white;
+  margin-top: 70px;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
   border: none;
   border-radius: 0.5rem;
   cursor: pointer;
   font-size: 0.9rem;
   transition: background-color 0.2s ease;
-  padding: 12px;
+  padding: 15px 50px;
+  
 }
 
 .carrousel-button a {
@@ -81,6 +92,7 @@
   top: 50%;
   background-color: transparent;
   border: none;
+  filter: invert(100%);
   transform: translateY(-50%);
   color: var(--secondary-color);
   cursor: pointer;
@@ -89,7 +101,6 @@
   justify-content: center;
   transition: all 0.3s ease;
 }
-
 
 .left_button {
   width: 50px;
@@ -115,8 +126,6 @@
   line-height: 1;
   user-select: none;
 }
-
-
 
 @media (max-width: 1024px) {
   .carousel-fullscreen {

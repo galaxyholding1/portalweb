@@ -138,6 +138,7 @@ interface IconProps {
   color?: string;
   className?: string;
   height?: number;
+  aspectRatio?: number;
 }
 
 export const Icon = ({
@@ -147,6 +148,7 @@ export const Icon = ({
   selected,
   selectedColor,
   color = "var(--text-color)",
+  aspectRatio = 1,
   className,
 }: IconProps) => {
   const { theme } = useTheme();
@@ -172,6 +174,7 @@ export const Icon = ({
       width={width}
       height={height ?? 'auto'}
       className={className ?? ""}
+      aspect-ratio={aspectRatio}
     />
   );
 };

@@ -5,37 +5,19 @@ import { getPathByClient } from "../../../../util/getModeClient";
 import { useLocation } from "react-router";
 import { Icon } from "../../ui/Icon/Icon";
 
-const movements = [
-  {
+export const MovementCard = ({ filter = false, stateIndicator = false, enableLink = false, totalItems = 4 }) => {
+  const movements = Array.from({ length: totalItems }, () => ({
     conceptTitle: "Airbnb",
     date: new Date("2025-05-01T15:00:00"),
     amount: 100,
-  },
-  {
-    conceptTitle: "Airbnb",
-    date: new Date("2025-05-01T15:00:00"),
-    amount: 100,
-  },
-  {
-    conceptTitle: "Airbnb",
-    date: new Date("2025-05-01T15:00:00"),
-    amount: 100,
-  },
-  {
-    conceptTitle: "Airbnb",
-    date: new Date("2025-05-01T15:00:00"),
-    amount: 100,
-  },
-];
-
-export const MovementCard = ({ filter = false, stateIndicator = false, enableLink = false }) => {
+  }));
   const CardComponent = filter ? CardMoments : Card;
   const { pathname } = useLocation();
   return (
     <div className="grid-area-movements">
       <CardComponent
-        title="Ultimos movimientos" 
-        icon={<Icon name="setup" />}
+        title="Movimientos" 
+        icon={<Icon name="moving_desk" />}
         morePath={`${getPathByClient(pathname)}/movimientos`}
       >
         {movements.map((mov, i) => (

@@ -1,0 +1,20 @@
+.carousel-cards-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.carousel-cards-content{
+  height: 95%;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-cards-pagination {
+  width: 50%;
+}
+
+.carousel-cards-card{
+  position: absolute;
+  transition: all .25s ease-in-out;
+  cursor: pointer;
+}

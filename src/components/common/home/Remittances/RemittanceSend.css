@@ -88,6 +88,7 @@
   flex: auto;
   align-items: center;
   gap: 0.5rem;
+  max-width: 24px;
 }
 
 .action-buttons button {

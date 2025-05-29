@@ -49,8 +49,8 @@ export const RequestsCard = () => {
               <span className="request-time">{request.time}</span>
             </div>
             <div className="request-status">
-              <div className="request-icon">
-                <Icon name="bell_ring" />
+              <div className="request-icon-2">
+                <Icon name="note_search" />
               </div>
             </div>
           </div>

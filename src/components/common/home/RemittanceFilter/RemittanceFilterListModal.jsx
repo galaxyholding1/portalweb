@@ -9,7 +9,6 @@ import NumberInput from "../../ui/Input/NumberInput/NumberInput";
 import Button from "../../ui/Input/ButtonInput/Button";
 import { CalendarModal } from "../Card/CardHeader/Filter/CalendarModal";
 import { useForm } from "../../../../hooks/useForm";
-import { useState } from "react";
 
 const initialValues = {
   startDate: "",
@@ -37,9 +36,7 @@ export const RemittanceFilterListModal = ({
     setFormValues,
     clear,
     setValue
-  } = useForm(initialValues);
-
-  
+  } = useForm(initialValues);  
 
   const setFilters = ( newFilters ) => {
     setFormValues(newFilters);
@@ -55,17 +52,6 @@ export const RemittanceFilterListModal = ({
   const handleApply = () => {
     onApplyFilters(filters);
   };
-
-  const setStartDate = (date) => {
-    setValue({ startDate: date })
-    setShowCalendarStart(false);
-  }
-  
-  const setEndDate = (date) => {
-    setValue({ endDate: date })
-    setShowCalendarEnd(false);
-  }
-
   return (
     <>
       <AnimatePresence>
@@ -134,7 +120,6 @@ export const RemittanceFilterListModal = ({
               <div className="filter-section">
                 <div className="filter-selects">
                   <Select
-                    className="form-group"
                     placeholder="Tipo de remesa"
                     value={filters.type}
                     onChange={setFormValues}

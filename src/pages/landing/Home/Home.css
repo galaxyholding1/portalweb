@@ -118,10 +118,43 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Slider full-width */
-.full-width-section {
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
+.carousel-background-container {
+  margin-top: 2rem;
+  gap: 6rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 475px;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.carousel-background-content {
+  h1 {
+    font-weight: 500;
+    font-size: 60px;
+    leading-trim: Cap height;
+    line-height: 60px;
+    letter-spacing: 0%;
+  }
+
+  p {
+    font-weight: 500;
+    font-size: 24px;
+    leading-trim: Cap height;
+    letter-spacing: 0%;
+    font-weight: 400;
+  }
+}
+
+.carousel-background-card {
   position: relative;
-  left: 0;
+  width: 290px;
+  aspect-ratio: 290/431;
+  background-size: cover;
+
+  h2 {
+    position: absolute;
+    bottom: 0;
+    padding: 0.5rem 1rem;
+  }
 }

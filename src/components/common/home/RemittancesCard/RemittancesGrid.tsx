@@ -114,7 +114,7 @@ export const RemittancesGrid = ({
       </div>
 
       <div className="remittance-info">
-        <Link className="btn-add-contact" to={`${getPathByClient(pathname)}/remesas/enviar`}>
+        <Link className="btn-add-contact" to={`${getPathByClient(pathname)}/remesas/enviar-usuario/proceso`}>
           Confirmar
         </Link>
         <p className="subtitle">¿No encuentras a quíen estas buscando? <a>Encontrar gente cerca de mí</a></p>

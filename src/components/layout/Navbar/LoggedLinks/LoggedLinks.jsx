@@ -34,14 +34,6 @@ export const LoggedLinks = () => {
       <button className="btn-logout" onClick={handleLogout}>
         <Icon name={"logout"} alt="" color="primary"/>Salir
       </button>
-      <div className="dinamic-key-container">
-        <Icon name="lock" color="primary"/>
-        <div>
-          <span>Clave Dínamica</span>
-          <span className="dinamic-key">000 000</span>
-        </div>
-        <Icon name="chevron_right" color="border"/>
-      </div>
     </ul>
   );
 };
