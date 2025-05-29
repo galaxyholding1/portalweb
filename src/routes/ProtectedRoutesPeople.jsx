@@ -12,6 +12,7 @@ import { RemittanceProcess } from "../pages/shared/RemmitanceConfirmation/Remitt
 import { RemittanceFilters } from "../pages/shared/RemittanceFilters/RemittanceFilters";
 import { RemmitanceConfirmationAccount } from "../pages/shared/RemmitanceConfirmationAccount/RemmitanceConfirmationAccount";
 import { RemittanceInformation } from "../components/common/Remittance/RemittanceInformation/RemittanceInformation";
+import { RemittanceShared } from "../pages/shared/RemittanceShared/RemittanceShared";
 
 export const ProtectedRoutesPeople = () => (
   <PersonPortalLayout>
@@ -21,7 +22,7 @@ export const ProtectedRoutesPeople = () => (
       <Route path="/perfil" element={<ProfilePeople />} />
       <Route path="/movimientos" element={<MovementsPeoples />} />
       <Route path="/movimientos/:id" element={<MovementView/>} />
-      <Route path="/remesas" element={<RemittancePeople />} />
+      <Route path="/remesas" element={<RemittanceShared />} />
       <Route path="/remesas/enviar" element={<RemittanceProcess />} />
       <Route path="/remesas/filtrar" element={<RemittanceFilters />} />
       <Route path="/remesas/informacion" element={<RemittanceInformation/>}/>
