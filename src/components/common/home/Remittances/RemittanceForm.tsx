@@ -142,7 +142,7 @@ export const RemittanceForm: React.FC<RemittanceForm> = ({
             </div>
           </div>
 
-          <Link type="submit" className="submit-button" to={`${getPathByClient(pathname)}/remesas/enviar`}>
+          <Link type="submit" className="submit-button" to={`${getPathByClient(pathname)}/remesas/enviar-cuenta/proceso`}>
             Confirmar
           </Link>
         </form>

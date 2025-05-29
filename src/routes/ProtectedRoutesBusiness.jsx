@@ -12,6 +12,8 @@ import { Remittance } from "../pages/business/Remittance/Remittance";
 import { RemittanceProcess } from "../pages/shared/RemmitanceConfirmation/RemittanceProcess";
 import { RemmitanceConfirmationAccount } from "../pages/shared/RemmitanceConfirmationAccount/RemmitanceConfirmationAccount";
 import { RemittanceFilters } from "../pages/shared/RemittanceFilters/RemittanceFilters";
+import { RemittanceShared } from "../pages/shared/RemittanceShared/RemittanceShared";
+import { RemittancePeople } from "../pages/people/RemittancePeople/RemittancePeople";
 
 export const ProtectedRoutesBusiness = () => {
   const { login } = useAuthStore();
@@ -24,10 +26,20 @@ export const ProtectedRoutesBusiness = () => {
         <Route path="/perfil" element={<ProfileBusiness />} />
         <Route path="/movimientos" element={<MovementsBusiness />} />
         <Route path="/movimientos/:id" element={<MovementView />} />
-        <Route path="/remesas" element={<Remittance />} />
-        <Route path="/remesas/enviar" element={<RemmitanceConfirmationAccount />} />
-        <Route path="/remesas/filtrar" element={<RemittanceFilters/>} />
-        <Route path="*" element={<Navigate to="/portal-empresas/home" /> } />
+        <Route path="/remesas/enviar-usuario" element={<RemittancePeople />} />
+        <Route
+          path="/remesas/enviar-usuario/proceso"
+          element={<RemittanceProcess />}
+        />
+
+        <Route path="/remesas/enviar-cuenta" element={<Remittance />} />
+        <Route
+          path="/remesas/enviar-cuenta/proceso"
+          element={<RemmitanceConfirmationAccount />}
+        />
+
+        <Route path="/remesas/filtrar" element={<RemittanceFilters />} />
+        <Route path="*" element={<Navigate to="/portal-personas/home" />} />
       </Routes>
     </BusinessPortalLayout>
   );

@@ -14,6 +14,9 @@ import { RemmitanceConfirmationAccount } from "../pages/shared/RemmitanceConfirm
 import { RemittanceInformation } from "../components/common/Remittance/RemittanceInformation/RemittanceInformation";
 import { RemittanceShared } from "../pages/shared/RemittanceShared/RemittanceShared";
 
+import { Remittance } from "../pages/business/Remittance/Remittance";
+import { RemittanceSend } from "../components/common/home/Remittances/RemittanceSend";
+
 export const ProtectedRoutesPeople = () => (
   <PersonPortalLayout>
     <Routes>
@@ -21,12 +24,23 @@ export const ProtectedRoutesPeople = () => (
       <Route path="/seguridad" element={<SecurityPeople />} />
       <Route path="/perfil" element={<ProfilePeople />} />
       <Route path="/movimientos" element={<MovementsPeoples />} />
-      <Route path="/movimientos/:id" element={<MovementView/>} />
+      <Route path="/movimientos/:id" element={<MovementView />} />
       <Route path="/remesas" element={<RemittanceShared />} />
-      <Route path="/remesas/enviar" element={<RemittanceProcess />} />
+
+      <Route path="/remesas/enviar-usuario" element={<RemittancePeople />} />
+      <Route
+        path="/remesas/enviar-usuario/proceso"
+        element={<RemittanceProcess />}
+      />
+
+      <Route path="/remesas/enviar-cuenta" element={<Remittance />} />
+      <Route
+        path="/remesas/enviar-cuenta/proceso"
+        element={<RemmitanceConfirmationAccount />}
+      />
+
       <Route path="/remesas/filtrar" element={<RemittanceFilters />} />
-      <Route path="/remesas/informacion" element={<RemittanceInformation/>}/>
-      <Route path="*" element={<Navigate to="/portal-personas/home" /> } />
+      <Route path="*" element={<Navigate to="/portal-personas/home" />} />
     </Routes>
   </PersonPortalLayout>
 );
