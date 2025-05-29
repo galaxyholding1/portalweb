@@ -3,6 +3,7 @@ require_once '../config/db.php';
 require_once '../models/UserModel.php';
 require_once '../utils/Hash.php';
 require_once '../utils/Validator.php';
+require_once '../models/OTPModel.php';
 
 $db = new DB();
 $conn = $db->connect();
@@ -36,11 +37,18 @@ if ($tipo_usuario === 'corporativo') {
     $direccion = isset($data->direccion) ? Validator::sanitize($data->direccion) : null;
 }
 
-// OTP, si no viene se genera o pone por defecto
-$otp = isset($data->otp) ? Validator::sanitize($data->otp) : '000000';
+// El OTP que se pasa a createUser aquí es un valor inicial/por defecto.
+// El OTP real para verificación se generará con OTPModel.
+$otp_initial = isset($data->otp) ? Validator::sanitize($data->otp) : '000000'; // Este OTP es para el SP de registro de usuario, no el de verificación.
 
 $userModel = new UserModel($conn);
 $id_usuario = null;
+
+
+if ($userModel->correoExiste($correo)) {
+    echo json_encode(["status" => "error", "message" => "El correo ya está registrado"]);
+    exit;
+}
 
 if ($userModel->createUser(
     $nombre,
@@ -55,10 +63,24 @@ if ($userModel->createUser(
     $representante_legal,
     $direccion,
     $contrasena_hash,
-    $otp,
+    $otp_initial, 
     $id_usuario
 )) {
-    echo json_encode(["status" => "success", "id_usuario" => $id_usuario]);
+    $otpModel = new OTPModel($conn);
+    
+    $otp_generado = $otpModel->generarOTP($id_usuario);
+
+    if ($otp_generado !== false) {
+        
+        echo json_encode([
+            "status" => "success",
+            "id_usuario" => $id_usuario,
+            "otp_generado" => $otp_generado 
+        ]);
+    } else {
+        
+        echo json_encode(["status" => "error", "message" => "Usuario registrado, pero falló la generación del OTP."]);
+    }
 } else {
     echo json_encode(["status" => "error", "message" => "Error al registrar usuario"]);
 }

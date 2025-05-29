@@ -26,6 +26,14 @@ class UserModel
         $otp,
         &$id_usuario_out
     ) {
+
+
+
+        if ($this->correoExiste($correo)) {
+            return false;
+        }
+
+
         $query = "CALL sp_registrar_usuario(
             :nombre, :apellido, :correo, :telefono, :tipo_usuario,
             :acepto_terminos, :acepto_politicas,
@@ -62,5 +70,26 @@ class UserModel
         }
 
         return $result;
+    }
+
+    public function correoExiste($correo)
+    {
+        $query = "SELECT id_usuario FROM usuario WHERE correo = :correo"; // CORREGIDO AQUÍ
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':correo', $correo);
+        $stmt->execute();
+        return $stmt->rowCount() > 0;
+    }
+
+
+    public function obtenerUsuarioPorCorreo($correo)
+    {
+        $sql = "CALL sp_obtener_usuario_por_correo(:correo)";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bindParam(':correo', $correo);
+        $result = $stmt->execute();
+
+
+        return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 }
