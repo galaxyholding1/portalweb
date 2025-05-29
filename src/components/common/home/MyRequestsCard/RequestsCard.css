@@ -75,9 +75,20 @@
     position: relative;
     box-shadow:var(--bg-secondary);
     padding: .5rem;
-    svg {
-        color: white;
-    }
+}
+
+.request-icon-2 {
+    width: auto;
+    height: auto;
+    aspect-ratio: 57/53;
+    display: flex;
+    right: 20px;
+    border-radius: 30%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow:var(--bg-secondary);
+    padding: .5rem;
 }
 
 .notification-dot {
@@ -112,6 +123,7 @@
 
 .request-status {
     margin-left: auto;
+
 }
 
 .status-icon {

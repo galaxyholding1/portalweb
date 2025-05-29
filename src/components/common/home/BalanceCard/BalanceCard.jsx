@@ -6,8 +6,8 @@ import { getPathByClient } from "../../../../util/getModeClient";
 import { useLocation } from "react-router";
 
 const balanceByProduct = [
-  { type: "Cuenta de ahorro", balance: 1000, productId: 1234567 },
-  { type: "Cuenta corriente", balance: 2000, productId: 1234567 },
+  { type: "cuenta galaxy pay", balance: 1000, productId: 1234567 },
+  { type: "IBAN", balance: 2000, productId: 1234567 },
 ];
 
 export const BalanceCard = () => {

@@ -32,8 +32,8 @@ export const MovementCardPreview = () => {
   return (
     <div className="grid-area-movements">
       <Card
-        title="Ultimos movimientos"
-        icon={<Icon name="money" />}
+        title="últimos movimientos"
+        icon={<Icon name="moving_desk" />}
         morePath={`${getPathByClient(pathname)}/movimientos`}
       >
         {movements.map((mov, i) => (

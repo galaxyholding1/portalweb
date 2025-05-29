@@ -39,6 +39,12 @@ const SubNavbar = () => {
           ],
         },
         {
+          title: "Inversiones",
+          items: [
+            { text: "Consultar inversiones", link: "#" },
+          ],
+        },
+        {
           title: "Créditos",
           items: [
             { text: "Consultar créditos", link: "#" },
