@@ -1,5 +1,4 @@
 .movements-header-wrapper {
-  padding: 0 1rem;
   margin-bottom: 0.5rem;
 }
 
@@ -31,10 +30,6 @@
   color: var(--text-color);
 }
 
-.filter-section {
-  display: flex;
-  align-items: center;
-}
 
 .filter-button {
   display: flex;
@@ -95,7 +90,6 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 1rem;
   gap: 1rem;
   box-sizing: border-box;
 }
@@ -126,4 +120,12 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+
+
+.select-header {
+  padding: 0 2.25rem 0 0 !important;
+  color: var(--secondary-color)!important;
+  border: none!important;
+  box-shadow: none!important;
 }

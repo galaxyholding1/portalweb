@@ -29,40 +29,38 @@ export const MovementsHeader = ({ icon, title, morePath }) => {
       </div>
     </div>
 
-    <div className="filter-section">
-      <button className="filter-button" onClick={handleFilterClick}>
-        <img src={filterIcon} alt="filter_icon" />
-        filtrar por
-      </button>
+    <button className="filter-button" onClick={handleFilterClick}>
+      <img src={filterIcon} alt="filter_icon" />
+      filtrar por
+    </button>
 
-      {showFilterModal && (
-        <div className="filter-submenu">
-          <div className="submenu-options">
-            <button
-              className="submenu-option"
-              onClick={() => {
-                setShowFilterModal(false);
-                setShowCalendar(true);
-              }}
-            >
-              Fecha
-            </button>
-            <button
-              className="submenu-option"
-              onClick={() => {
-                setShowFilterModal(false);
-                setShowNameInput(true);
-              }}
-            >
-              Nombre
-            </button>
-          </div>
+    {showFilterModal && (
+      <div className="filter-submenu">
+        <div className="submenu-options">
+          <button
+            className="submenu-option"
+            onClick={() => {
+              setShowFilterModal(false);
+              setShowCalendar(true);
+            }}
+          >
+            Fecha
+          </button>
+          <button
+            className="submenu-option"
+            onClick={() => {
+              setShowFilterModal(false);
+              setShowNameInput(true);
+            }}
+          >
+            Nombre
+          </button>
         </div>
-      )}
-    </div>
+      </div>
+    )}
   </div>
 
-  <CalendarModal isOpen={showCalendar} onClose={handleCloseModals} />
+  <CalendarModal isOpen={showCalendar} onClose={handleCloseModals} currentDate={currentDate} setCurrentDate={setcurrentDate}/>
   <NameSearchModal isOpen={showNameInput} onClose={handleCloseModals} />
 </div>
 

@@ -76,15 +76,14 @@ export const RemittanceForm: React.FC<RemittanceForm> = ({
                   }
                 />
               </div>
-              <div className="form-group">
-                <Select
-                  options={[
-                    { label: "Documento de identidad", value: "di" },
-                    { label: "DNI", value: "dni" },
-                    { label: "Pasaporte", value: "passport" },
-                  ]}
-                />
-              </div>
+              <Select
+                className="select-remittance-form"
+                options={[
+                  { label: "Documento de identidad", value: "di" },
+                  { label: "DNI", value: "dni" },
+                  { label: "Pasaporte", value: "passport" },
+                ]}
+              />
               <div className="form-group">
                 <input
                   type="text"
@@ -108,8 +107,8 @@ export const RemittanceForm: React.FC<RemittanceForm> = ({
             </div>
 
             <div className="form-grid">
-              <div className="form-group">
                 <Select
+                  className="select-remittance-form"
                   options={[
                     { label: "País", value: "" },
                     { label: "España", value: "es" },
@@ -118,7 +117,6 @@ export const RemittanceForm: React.FC<RemittanceForm> = ({
                     { label: "Venezuela", value: "vn" },
                   ]}
                 />
-              </div>
               <div className="form-group">
                 <input
                   type="text"
@@ -132,8 +130,8 @@ export const RemittanceForm: React.FC<RemittanceForm> = ({
                   }
                 />
               </div>
-              <div className="form-group">
                 <Select
+                  className="select-remittance-form"
                   options={[
                     { label: "Moenda", value: "" },
                     { label: "USD", value: "USD" },
@@ -141,7 +139,6 @@ export const RemittanceForm: React.FC<RemittanceForm> = ({
                     { label: "VENZ", value: "VENZ" },
                   ]}
                 />
-              </div>
             </div>
           </div>
 

@@ -193,3 +193,7 @@ input::placeholder {
   flex-direction: column;
   flex: 1;
 }
+
+.select-remittance-form{
+  border-radius: .5rem!important;
+}

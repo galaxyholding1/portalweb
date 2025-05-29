@@ -16,8 +16,9 @@ export const BalanceCard = () => {
     <div className="grid-area-balance">
       <Card
         title="Saldo"
-        icon={<Icon name="cents"/>}
+        icon={<Icon name="cents" width={16} />}
         morePath={`${getPathByClient(pathname)}/balance`}
+        
       >
         <table className="balance-table">
           <thead className="balance-table-header">
