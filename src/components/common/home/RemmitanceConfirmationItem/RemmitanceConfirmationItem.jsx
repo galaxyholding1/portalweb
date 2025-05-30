@@ -75,7 +75,7 @@ export const RemmitanceConfirmationItem = ({ large, onClick }) => {
       )}
 
       <div className="icon-container">
-        <img src={userIcon} alt="userIcon" />
+        <Icon name="user_icon"/>
       </div>
     </div>
   );

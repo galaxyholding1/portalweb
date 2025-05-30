@@ -21,7 +21,7 @@ export const RemittanceDetail = () => {
         </div>
         <RemittanceTransaction/>
         <Button 
-          icon={<Icon name='printer'/>}
+          icon={<Icon name='pdf_icon'/>}
           className="remittance-detail-button"
         >
           Descargar PDF

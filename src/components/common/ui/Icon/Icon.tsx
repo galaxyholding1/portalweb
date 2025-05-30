@@ -55,6 +55,10 @@ import AddPlus from "../../../../assets/icons/add_plus.svg?react";
 import Search from "../../../../assets/icons/search.svg?react";
 import Slider from "../../../../assets/icons/slider.svg?react";
 import addPlusCircle from "../../../../assets/icons/add_plus_circle.svg?react";
+import pdf from "../../../../assets/icons/pdf_icon.svg?react";
+import userIcon from "../../../../assets/icons/user_icon.svg?react";
+import minusIcon from "../../../../assets/icons/remove_minus_icon.svg?react";
+import sendSuccessful from "../../../../assets/icons/send-successful-icon.svg?react";
 
 import leftarrow from "../../../../assets/icons/arrow-circle-left.svg?react";
 import rightarrow from "../../../../assets/icons/arrow-circle-right.svg?react";
@@ -94,10 +98,12 @@ export const iconsMap = {
   logo_galaxy_dark: LogoGalaxyDark,
   money: Money,
   moving_desk: MovingDesk,
+  minus_icon: minusIcon,
   negociar_deuda: NegociarDeuda,
   note_search: NoteSearch,
   not_found: NotFound,
   pago: Pago,
+  pdf_icon: pdf,
   printer: Printer,
   products_icon: ProductsIcon,
   remesas: Remesas,
@@ -107,11 +113,13 @@ export const iconsMap = {
   setup: Setup,
   shield: Shield,
   solicita_turno: SolicitaTurno,
+  send_successful: sendSuccessful,
   square_help: SquareHelp,
   switch: Switch,
   ticket: Ticket,
   tramites_digitales: TramitesDigitales,
   ver_mas_icon: VerMasIcon,
+  user_icon:userIcon,
   x: XIcon,
   x_dark: XIconDark,
   leftarrow: leftarrow,

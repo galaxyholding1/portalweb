@@ -1,10 +1,10 @@
-import minusIcon from "../../../../assets/icons/remove_minus_icon.svg";
+import { Icon } from "../../ui/Icon/Icon";
 import "./DetailsButton.css";
 
 export const DetailsButton = () => {
   return (
     <button className="details-button">
-      <img src={minusIcon} alt="minusIcon" className="details-icon" />
+      <Icon name="minus_icon"/>
       detalles
     </button>
   );
