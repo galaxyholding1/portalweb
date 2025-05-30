@@ -9,10 +9,10 @@ import { useModalStore } from "../../../../store/modal-store";
 
 export const GlobalModal = () => {
 
-  const { modal, closeModal, showModal, resolve, isOpen } = useModalStore();
+  const { modal, closeModal, resolve, isOpen } = useModalStore();
   
-  const handleClose = (value) => {
-    resolve?.(value);
+  const handleClose = () => {
+    resolve?.();
     closeModal();
   };
 

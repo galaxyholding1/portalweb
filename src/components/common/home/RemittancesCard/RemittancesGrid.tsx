@@ -7,6 +7,7 @@ import { CardMoments } from "../Card/CardMoments";
 import { Link, useLocation, useNavigate } from "react-router";
 import { getPathByClient } from "../../../../util/getModeClient";
 import { useModalStore } from "../../../../store/modal-store";
+import { DinamicKeyModal } from "../../ui/modal/DinamicKeyModal/DinamicKeyModal";
 
 const contacts: RemittancesInterface[] = [
   {
@@ -81,11 +82,11 @@ export const RemittancesGrid = () => {
 
 
   const handleConfirm = async() => {
-    await showModal( 
-      <div 
-        style={{width: 100, height: 100}}
-        >Holaa</div> 
+    const response = await showModal( 
+      <DinamicKeyModal/>
     );
+
+    if (!response) return;
 
     navigate(`${getPathByClient(pathname)}/remesas/enviar-usuario/proceso`);
   };

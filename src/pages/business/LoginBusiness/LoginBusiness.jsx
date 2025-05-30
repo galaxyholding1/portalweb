@@ -1,411 +1,63 @@
-import React, { useState, useRef, useEffect } from "react";
+import { Link, useNavigate } from "react-router";
 import "./LoginBusiness.css";
-import { useNavigate } from "react-router";
-import turnoIcon from "../../../assets/images/banner-home.png";
+import { useForm } from "../../../hooks/useForm";
+import { PasswordInput } from "../../../components/common/ui/Input/PasswordInput";
+import { CustomInput } from "../../../components/common/ui/Input/CustomInput";
 
-const VirtualKeyboard = ({ onKeyPress, targetInputRef }) => {
-  const keyboardLayout = [
-    ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "←"],
-    ["A", "S", "D", "F", "G", "H", "J", "K", "L", "Ñ", "↓"],
-    ["Z", "X", "C", "V", "B", "N", "M", "Bl. May", " ", ""],
-    ["/", "-", "'", "Ü", "_", "."],
-  ];
+import bannerImage from "../../../assets/images/banner-home.png";
 
-  const handleKeyClick = (key) => {
-    if (key === "←") {
-      onKeyPress("Backspace"); // Simulate backspace
-    } else if (key === "Bl. May") {
-      //  Implement Caps Lock/Shift functionality if needed.
-      onKeyPress("CapsLock");
-    } else if (key === " ") {
-      onKeyPress(" "); // Simulate space
-    } else {
-      onKeyPress(key);
-    }
-  };
-
-  return (
-    <div className="virtual-keyboard-container">
-      <table
-        border="0"
-        cellSpacing="0"
-        cellPadding="0"
-        className="keyboard-table"
-      >
-        <tbody>
-          <tr>
-            <td width="405" heigth="10" valign="top">
-              <table border="0" cellSpacing="0" cellPadding="0">
-                <tbody>
-                  <tr>
-                    <td>
-                      <table
-                        border="0"
-                        align="left"
-                        valign="top"
-                        cellSpacing="0"
-                        cellPadding="1"
-                      >
-                        <tbody>
-                          {keyboardLayout.map((row, rowIndex) => (
-                            <tr key={rowIndex} align="left">
-                              {row.map((key, keyIndex) => {
-                                let width = "23";
-                                let height = "22";
-                                let id = `mykey${key}`;
-                                let displayKey = key;
-
-                                if (key === "←") {
-                                  displayKey = "←";
-                                  width = "47";
-                                } else if (key === "Bl. May") {
-                                  displayKey = "Mayús";
-                                  width = "47";
-                                } else if (key === " ") {
-                                  width = "86";
-                                }
-
-                                return (
-                                  <td
-                                    key={keyIndex}
-                                    width={width}
-                                    height={height}
-                                    background="/logo.gif"
-                                    align="center"
-                                    style={{
-                                      cursor: "default",
-                                      paddingLeft: "9px",
-                                      paddingRight: "8px",
-                                      fontSize: "12",
-                                      backgroundRepeat: "no-repeat",
-                                      fontWeight: "bold",
-                                    }}
-                                    onClick={() => handleKeyClick(key)}
-                                  >
-                                    <div
-                                      border="0"
-                                      id={id}
-                                      valign="center"
-                                      align="center"
-                                      onFocus={() =>
-                                        targetInputRef?.current?.blur()
-                                      }
-                                      style={{
-                                        fontSize: "12px",
-                                        fontWeight: "bold",
-                                      }}
-                                    >
-                                      {displayKey}
-                                    </div>
-                                  </td>
-                                );
-                              })}
-                            </tr>
-                          ))}
-                        </tbody>
-                      </table>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  );
-};
-
-const NumericKeyboard = ({ onKeyPress, targetInputRef }) => {
-  const numericKeyboardLayout = [
-    ["7", "8", "9"],
-    ["4", "5", "6"],
-    ["1", "2", "3"],
-    ["0", "Limpiar"],
-  ];
-
-  const handleNumberClick = (key) => {
-    if (key === "Limpiar") {
-      onKeyPress("Clear");
-    } else {
-      onKeyPress(key);
-    }
-  };
-
-  return (
-    <div className="numeric-keyboard-container">
-      <table border="0" cellSpacing="0" cellPadding="0">
-        <tbody>
-          <tr>
-            <td width="140" heigth="10" valign="top">
-              <table border="0" cellSpacing="0" cellPadding="0">
-                <tbody>
-                  <tr>
-                    <td>
-                      <table
-                        border="0"
-                        align="left"
-                        valign="top"
-                        cellSpacing="0"
-                        cellPadding="1"
-                      >
-                        <tbody>
-                          {numericKeyboardLayout.map((row, rowIndex) => (
-                            <tr key={rowIndex} align="left">
-                              {row.map((key, keyIndex) => {
-                                let width = "35";
-                                let height = "22";
-                                let id = `numkey${key}`;
-                                let displayKey = key;
-                                if (key === "Limpiar") {
-                                  width = "72";
-                                }
-                                return (
-                                  <td
-                                    key={keyIndex}
-                                    width={width}
-                                    height={height}
-                                    background="/logo.gif"
-                                    align="center"
-                                    style={{
-                                      cursor: "default",
-                                      paddingLeft: "9px",
-                                      paddingRight: "8px",
-                                      fontSize: "12",
-                                      backgroundRepeat: "no-repeat",
-                                      fontWeight: "bold",
-                                    }}
-                                    onClick={() => handleNumberClick(key)}
-                                  >
-                                    <div
-                                      border="0"
-                                      id={id}
-                                      valign="center"
-                                      align="center"
-                                      onFocus={() =>
-                                        targetInputRef?.current?.blur()
-                                      }
-                                      style={{
-                                        fontSize: "12px",
-                                        fontWeight: "bold",
-                                      }}
-                                    >
-                                      {displayKey}
-                                    </div>
-                                  </td>
-                                );
-                              })}
-                            </tr>
-                          ))}
-                        </tbody>
-                      </table>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  );
+const initialFormState = {
+  username: "",
+  password: "",
 };
 
 export const LoginBusiness = () => {
-  const [password, setPassword] = useState("");
-
-  const passwordInputRef = useRef(null);
-  const nitInputRef = useRef(null);
-  const userIdInputRef = useRef(null);
-
+  const { formValues, handleInputChange } = useForm(initialFormState);
   const navigate = useNavigate();
-  const handleAccept = (e) => {
-    e.preventDefault(); // Prevenir envío del formulario por defecto
-
-    const nit = nitInputRef.current?.value?.trim();
-    const userId = userIdInputRef.current?.value?.trim();
-    const pwd = password.trim();
-
-    if (!nit || !userId || !pwd) {
-      alert("Todos los campos son obligatorios.");
-      return;
-    }
-
-    if (!/^[a-zA-Z0-9]{5,15}$/.test(nit)) {
-      alert(
-        "El NIT debe contener solo letras y/o números y tener entre 5 y 15 caracteres."
-      );
-      return;
-    }
-
-    if (!/^\d{5,15}$/.test(userId)) {
-      alert(
-        "La identificación debe contener solo números y tener entre 5 y 15 dígitos."
-      );
-      return;
-    }
-
-    if (pwd.length < 4 || pwd.length > 8) {
-      alert("La clave debe tener entre 4 y 8 caracteres.");
-      return;
-    }
-
-    // Si todo está bien, puedes enviar el formulario o continuar el proceso
-    console.log("Formulario válido");
-    alert("Formulario válido");
-
+  const handleLogin = (e) => {
     e.preventDefault();
-    navigate("/portal-empresas/home");
+    console.log(formValues);
+    navigate("/portal-personas/home");
   };
-
-  const handleVirtualKeyboardKeyPress = (key) => {
-    if (key === "Backspace") {
-      setPassword((prev) => prev.slice(0, -1));
-    } else if (key === "Clear") {
-      setPassword("");
-    } else if (key === "CapsLock") {
-      // Handle CapsLock
-    } else {
-      setPassword((prev) => prev + key);
-    }
-  };
-
-  useEffect(() => {
-    if (passwordInputRef.current) {
-      passwordInputRef.current.value = password;
-    }
-  }, [password]);
 
   return (
-    <div className="login-business-container">
-      <header className="header"></header>
-      <main className="main-content">
-        <section className="login-section">
-          <h2 className="login-title">Inicio - Sucursal Virtual Empresas</h2>
-          <form
-            autoComplete="off"
-            name="forma"
-            id="forma"
-            onSubmit={() => console.log("Formulario enviado")}
-            action="AuthenticationTxGalaxyapp.login"
-            method="POST"
-          >
-            <div className="input-group">
-              <label htmlFor="COMPANYID">
-                Por favor digite el NIT de la empresa:
-              </label>
-              <input
-                name="COMPANYID"
-                id="COMPANYID"
-                size="20"
-                maxLength="15"
-                onFocus={() => console.log("Campo NIT enfocado")}
-                type="text"
-                style={{
-                  background: "white",
-                  border: "thin solid rgb(204, 204, 204)",
-                }}
-                ref={nitInputRef}
-              />
-            </div>
-            <div className="input-group">
-              <label htmlFor="CLIENTID">
-                Por favor digite la identificación del Usuario:
-              </label>
-              <input
-                name="CLIENTID"
-                id="CLIENTID"
-                size="20"
-                maxLength="15"
-                onFocus={() => console.log("Campo Usuario enfocado")}
-                type="text"
-                style={{
-                  background: "white",
-                  border: "thin solid rgb(204, 204, 204)",
-                }}
-                ref={userIdInputRef}
-              />
-            </div>
+    <div className="login-screen">
+      <main className="login-container">
+        <form onSubmit={handleLogin}>
+          <h3 className="login-title">Inicio de sesión</h3>
+          <p className="login-description">
+            si no tienes un usuario asignado ingresa tu número de identidad.
+          </p>
+          <div className="form-container">
+            <CustomInput
+              handleInputChange={handleInputChange}
+              value={formValues.username}
+              name="username"
+              placeholder="NIT o CFI"
+            />
 
-            <div>
-              <label htmlFor="USERPASS">Por favor digite su Clave:</label>
-              <div className="input-group password-group">
-                <input
-                  name="USERPASS"
-                  id="USERPASS"
-                  size="10"
-                  maxLength="8"
-                  type="password"
-                  onFocus={() => console.log("Campo Clave enfocado")}
-                  onKeyUp={() => console.log("Clave modificada")}
-                  onContextMenu={(e) => e.preventDefault()}
-                  style={{
-                    background: "white",
-                    border: "thin solid rgb(204, 204, 204)",
-                  }}
-                  ref={passwordInputRef}
-                  value={password}
-                  readOnly
-                />
-                <button
-                  type="Button"
-                  name="Submit"
-                  className="login-button"
-                  onClick={handleAccept}
-                >
-                  Aceptar
-                </button>
-              </div>
-            </div>
+            <PasswordInput
+              handleInputChange={handleInputChange}
+              value={formValues.password}
+              name="password"
+            />
+          </div>
 
-            <div className="links-group">
-              <a
-                href="#"
-                className="external-link"
-                onClick={() =>
-                  window.open(
-                    "http://localhost:5173/",
-                    "SucursalVirtualEmpresas",
-                    "width=850,height=600,scrollbars=yes,resizable=yes"
-                  )
-                }
-              >
-                ¿Olvidó su clave?
-              </a>
-              &nbsp; &nbsp;
-              <a
-                href="#"
-                className="external-link"
-                onClick={() =>
-                  window.open(
-                    "http://localhost:5173/login-personas",
-                    "SucursalVirtualEmpresas",
-                    "width=850,height=600,scrollbars=yes,resizable=yes"
-                  )
-                }
-              >
-                ¿No puede conectarse?
-              </a>
-            </div>
-            <div className="keyboards-container">
-              <VirtualKeyboard
-                onKeyPress={handleVirtualKeyboardKeyPress}
-                targetInputRef={passwordInputRef}
-              />
-              <NumericKeyboard
-                onKeyPress={handleVirtualKeyboardKeyPress}
-                targetInputRef={passwordInputRef}
-              />
-            </div>
-          </form>
-        </section>
-        <section className="promo-section">
-          <img
-            src={turnoIcon}
-            alt="Imagen Promocional"
-            className="promo-image"
-          />
-        </section>
+          <button type="submit" className="btn-login-people">
+            iniciar sesión
+          </button>
+
+          <nav className="login-links">
+            <Link>¿olvidaste tu usuario?</Link>
+            <br />
+            <Link>¿problemas para conectarte?</Link>
+          </nav>
+        </form>
+
+        <div className="banner">
+          {/* Banner Visual */}
+          <img src={bannerImage} alt="Banner Visual" />
+        </div>
       </main>
     </div>
   );

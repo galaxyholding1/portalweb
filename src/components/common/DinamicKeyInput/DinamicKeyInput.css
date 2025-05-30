@@ -7,7 +7,8 @@
     font-size: 24px;
     line-height: 50px;
     text-align: center;
-    color: var(--text-color);
+    color: var(--primary-color);
+    margin-block: 2rem;
     background-color: var(--border-color);
 }
 

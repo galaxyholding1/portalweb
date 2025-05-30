@@ -1,4 +1,5 @@
 .navbar-galaxy {
+  z-index: 30;
   display: flex;
   max-width: 100vw;
   box-sizing: border-box;
@@ -78,6 +79,8 @@ select {
   align-items: center;
   gap: 1.5rem;
   padding: .5rem;
+  background-color: var(--bg-primary);
+  
 }
 
 .social-media-icon {
@@ -96,28 +99,6 @@ select {
   }
 }
 
-.dinamic-key-container {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  background-color: var(--bg-tertiary);
-  border-radius: 15px;
-  padding: .25rem;
-  div {
-    display: flex;
-    flex-direction: column;
-    width: fit-content;
-    flex: 1;
-    align-items: center;
-  }
-  
-  span {
-    flex: 1;
-    font-size: .7rem;
-    font-weight: 400;
-    color: var(--text-secondary);
-  }
-}
 
 .dinamic-key {
   font-size: 1rem!important;
@@ -132,4 +113,12 @@ select {
   align-items: center;
   margin: 0;
   width: auto!important;
+}
+
+.navbar-container{
+  position: fixed;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  z-index: 30;
 }

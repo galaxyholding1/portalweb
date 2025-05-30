@@ -60,6 +60,7 @@ const FullscreenSlider = () => {
                 position: "absolute",
                 backgroundImage: `url(${slide.image})`,
                 transform: `translateX(${100 * (index - currentIndex)}%)`,
+                backgroundSize: "cover",
               }}
             >
               <div className="slide-overlay">

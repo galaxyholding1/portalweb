@@ -26,7 +26,7 @@ export const Navbar = () => {
   
   const enableLinks = useMemo(() => guestLinks.includes(pathname), [pathname]);
   return (
-    <>
+    <div className="navbar-container">
       { enableLinks && <GuestNavbar/> }
       <nav className="navbar-galaxy">
         <a href="/">
@@ -35,6 +35,6 @@ export const Navbar = () => {
 
         {enableLinks ? <LandingLinks/> : <LoggedLinks/> }
       </nav>
-    </>
+    </div>
   );
 };
