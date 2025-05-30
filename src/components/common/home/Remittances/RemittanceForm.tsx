@@ -4,8 +4,10 @@ import { Icon } from "../../ui/Icon/Icon";
 import { Select } from "../../../../components/common/Remittance/Select/Select";
 
 import { Flag } from "../../Flag/Flag";
-import { Link, useLocation } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import { getPathByClient, pathByClient } from "../../../../util/getModeClient";
+import { DinamicKeyModal } from "../../ui/modal/DinamicKeyModal/DinamicKeyModal";
+import { useModalStore } from "../../../../store/modal-store";
 interface RemittanceForm {
   isDarkMode?: boolean;
 }
@@ -26,10 +28,24 @@ export const RemittanceForm: React.FC<RemittanceForm> = ({
 
   const {pathname} = useLocation();
 
+  const navigate = useNavigate();
+
+  const { showModal } = useModalStore();
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Datos del formulario:", formData);
   };
+
+  const handleConfirm = async() => {
+      const response = await showModal( 
+        <DinamicKeyModal/>
+      );
+  
+      if (!response) return;
+  
+      navigate(`${getPathByClient(pathname)}/remesas/enviar-cuenta/proceso`);
+    };
 
   return (
     <div
@@ -142,7 +158,7 @@ export const RemittanceForm: React.FC<RemittanceForm> = ({
             </div>
           </div>
 
-          <Link type="submit" className="submit-button" to={`${getPathByClient(pathname)}/remesas/enviar-cuenta/proceso`}>
+          <Link type="submit" className="submit-button" onClick={handleConfirm}>
             Confirmar
           </Link>
         </form>
