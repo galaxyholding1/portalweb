@@ -49,7 +49,7 @@ export const RemmitanceConfirmationItem = ({ large, onClick }) => {
           </div>
         </>
       ) : (
-        <div className="details" style={large ? { marginTop: "-3rem", marginLeft: '.5rem' } : {}}>
+        <div className="details" style={large ? { marginLeft: '.5rem' } : {}}>
           <div className="left-info">
             {infoGeneral.map((item, index) => (
               <div
