@@ -1,12 +1,10 @@
 import "./RemittanceConfirmation.css"
-import sendIcon from "../../../../assets/icons/send-successful-icon.svg";
-
-
+import { Icon } from "../../ui/Icon/Icon";
 
 export const RemittanceConfirmation = () => {
   return (
     <div className="sendBox">
-    <img src={sendIcon} alt="sendIcon"/>
+      <Icon name="send_successful" width="37px"/>
     <div className="sendText">
         enviada con éxito
     </div>

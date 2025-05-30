@@ -3,6 +3,7 @@ import remesasIcon from "../../../../assets/icons/remesas_icon.svg";
 import pdfIcon from "../../../../assets/icons/pdf_icon.svg";
 import printIcon from "../../../../assets/icons/printer.svg";
 import "./RemittanceSend.css";
+import { Icon } from "../../ui/Icon/Icon";
 
 export const RemittanceSend = ({ isDarkMode = false }) => {
   return (
@@ -76,11 +77,11 @@ export const RemittanceSend = ({ isDarkMode = false }) => {
 
       <div className="action-buttons">
         <button onClick={() => alert("Descargar PDF")}>
-          <img src={pdfIcon} alt="pdfIcon" className="icon" />
+          <Icon name="pdf_icon" />
           Descargar PDF
         </button>
         <button onClick={() => window.print()}>
-          <img src={printIcon} alt="printIcon" className="icon" />
+          <Icon name="printer"/>
           Imprimir
         </button>
       </div>

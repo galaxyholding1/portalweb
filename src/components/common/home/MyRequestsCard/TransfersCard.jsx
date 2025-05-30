@@ -1,6 +1,5 @@
 import { Card } from "../Card/Card";
 import "./RequestsCard.css";
-import Arrow_Left_Right from "../../../../assets/icons/arrow_left_right.svg";
 import { Icon } from "../../ui/Icon/Icon";
 
 const transfersList = [
