@@ -1,0 +1,5 @@
+.global-modal-content{
+  position: relative;
+  height: fit-content;
+  width: fit-content;
+}

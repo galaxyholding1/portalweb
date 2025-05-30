@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { Footer } from "./components/layout/Footer/Footer";
 import { Navbar } from "./components/layout/Navbar/Navbar";
 import { themeListener } from "./util/theme-listener";
+import { GlobalModal } from "./components/common/ui/modal/modal";
 
 function App() {
   // Escucha cambios del sistema en tiempo real
@@ -13,13 +14,16 @@ function App() {
   }, []);
 
   return (
-    <div className="app">
-      <Navbar />
-      <div className="content">
-        <Router />
+    <>
+      <div className="app">
+        <Navbar />
+        <div className="content">
+          <Router />
+        </div>
+        <Footer/>
       </div>
-      <Footer/>
-    </div>
+      <GlobalModal/>
+    </>
   );
 }
 
