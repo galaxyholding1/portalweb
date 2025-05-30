@@ -42,8 +42,6 @@ export const ProtectedRoutesPeople = () => (
 
       <Route path="/remesas/filtrar" element={<RemittanceFilters />} />
       <Route path="*" element={<Navigate to="/portal-personas/home" />} />
-
-      <Route path="/clave" element={<DinamicKeyInput/>} />
     </Routes>
   </PersonPortalLayout>
 );
