@@ -4,8 +4,10 @@ import "./RemittancesGrid.css";
 import { Icon } from "../../ui/Icon/Icon";
 import { Card } from "../Card/Card";
 import { CardMoments } from "../Card/CardMoments";
-import { Link, useLocation } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import { getPathByClient } from "../../../../util/getModeClient";
+import { useModalStore } from "../../../../store/modal-store";
+import { DinamicKeyModal } from "../../ui/modal/DinamicKeyModal/DinamicKeyModal";
 
 const contacts: RemittancesInterface[] = [
   {
@@ -73,13 +75,22 @@ const contacts: RemittancesInterface[] = [
   },
 ];
 
-export const RemittancesGrid = ({
-  filter = false,
-  stateIndicator = false,
-  enableLink = false,
-}) => {
-  const CardComponent = filter ? CardMoments : Card;
+export const RemittancesGrid = () => {
+  const navigate = useNavigate();
+  const { showModal } = useModalStore();
   const { pathname } = useLocation();
+
+
+  const handleConfirm = async() => {
+    const response = await showModal( 
+      <DinamicKeyModal/>
+    );
+
+    if (!response) return;
+
+    navigate(`${getPathByClient(pathname)}/remesas/enviar-usuario/proceso`);
+  };
+
   return (
     <div className="grid-area-movements" style={{ gridRow: "span 2" }}>
       <h3 className="title">¿A quién deseas enviar dinero?</h3>
@@ -114,9 +125,9 @@ export const RemittancesGrid = ({
       </div>
 
       <div className="remittance-info">
-        <Link className="btn-add-contact" to={`${getPathByClient(pathname)}/remesas/enviar-usuario/proceso`}>
+        <button className="btn-add-contact" onClick={handleConfirm}>
           Confirmar
-        </Link>
+        </button>
         <p className="subtitle">¿No encuentras a quíen estas buscando? <a>Encontrar gente cerca de mí</a></p>
       </div>
     </div>

@@ -5,8 +5,6 @@ import { RemittanceTransaction } from "../../components/common/Remittance/Remitt
 import { Icon } from "../../components/common/ui/Icon/Icon";
 import "./MovementView.css";
 
-
-
 export const MovementView = () => {
   return (
     <div>
@@ -16,27 +14,18 @@ export const MovementView = () => {
       >
         <MovementItem amount={4000} conceptTitle="Airbnb" date={new Date()} />
 
-        <RemittanceTransaction/>
+        <RemittanceTransaction />
 
-           <div className="actions-movement-container">
+        <div className="actions-movement-container">
           <button className="button-portal">
-            <Icon
-              name="save"
-              color="white"
-            />
+            <Icon name="pdf_icon" color="white" />
             Descargar PDF
           </button>
           <button className="button-portal">
-            <Icon
-              name="printer"
-              color="white"
-            />
+            <Icon name="printer" color="white" />
             Imprimir
           </button>
         </div>
-       
-
-       
       </CardSelect>
     </div>
   );

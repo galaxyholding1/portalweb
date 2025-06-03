@@ -16,6 +16,7 @@ import { RemittanceShared } from "../pages/shared/RemittanceShared/RemittanceSha
 
 import { Remittance } from "../pages/business/Remittance/Remittance";
 import { RemittanceSend } from "../components/common/home/Remittances/RemittanceSend";
+import { DinamicKeyInput } from "../components/common/DinamicKeyInput/DinamicKeyInput";
 
 export const ProtectedRoutesPeople = () => (
   <PersonPortalLayout>
@@ -41,6 +42,8 @@ export const ProtectedRoutesPeople = () => (
 
       <Route path="/remesas/filtrar" element={<RemittanceFilters />} />
       <Route path="*" element={<Navigate to="/portal-personas/home" />} />
+
+      <Route path="/clave" element={<DinamicKeyInput/>} />
     </Routes>
   </PersonPortalLayout>
 );

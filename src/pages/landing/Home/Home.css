@@ -74,29 +74,30 @@
 }
 
 .contenido {
-  padding: 16px;
   display: flex;
   flex-direction: column;
   height: calc(100% - 150px);
   text-align: center;
-}
+  padding: 1rem;
+  gap: 1rem;
+  
+  h3 {
+    margin: 0;
+    text-align: left;
+    font-weight: bold;
+    margin-top: auto;
+    font-size: 36px;
+    font-weight: 600;
+  }
 
-.contenido h3 {
-  text-align: left;
-  margin-bottom: 8px;
-  font-weight: bold;
-  margin-top: auto;
-  font-size: 36px;
-  font-weight: 600;
-}
-
-.contenido p {
-  font-size: 14px;
-  line-height: 1.4;
-  margin-bottom: 12px;
-  flex-grow: 1;
-  overflow: hidden;
-  display: flex;
+  p {
+    margin: 0;
+    font-size: 16px;
+    flex-grow: 1;
+    display: flex;
+    text-align: left;
+    font-weight: 400;
+  }
 }
 
 .contenido button {

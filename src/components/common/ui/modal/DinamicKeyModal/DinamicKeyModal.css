@@ -1,0 +1,56 @@
+.dinamic-key-container {
+  width: min(760px, 95vw);
+  border: 1px solid var(--secondary-color);
+  border-radius: 11px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--bg-primary);
+  padding: 2.5rem 0 1.5rem;
+  gap: .5rem;
+
+  & > svg {
+    width: min(380px, 95%);
+  }
+
+  & > h1 {
+    font-weight: 500;
+    font-size: 40px;
+    color: var(--secondary-color);
+    margin: 0;
+  }
+
+  & > p {
+    margin: 0;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+  }
+}
+
+.dinamic-key-btns {
+
+  display: flex;
+  gap: .5rem;
+
+
+  & > button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: .75rem 3.5rem;;
+  }
+
+  & > .clean{
+    background-color: white;
+  }
+
+  & > .next{
+    background-color: var(--bg-secondary);
+    color: var(--primary-color)
+  }
+
+}

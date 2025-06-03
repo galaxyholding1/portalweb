@@ -12,15 +12,15 @@
   color: var(--secondary-color);
   text-align: left;
   padding-right: 4rem;
-  margin-left: -.75rem;
 }
 
 .informationBox {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   gap: 2rem;
   flex-wrap: wrap;
   margin-bottom: 2rem;
+  width: 100%;
 }
 
 .cardBox {
@@ -92,8 +92,10 @@
   font-size: 16px;
   color: var(--text-primary);
   max-width: 700px;
-  margin: 0 auto;
+  margin: 0;
   line-height: 1.5;
+  text-align: left;
+
 }
 
 @media (max-width: 768px) {
