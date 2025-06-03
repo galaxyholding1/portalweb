@@ -16,6 +16,7 @@ import { RemittanceShared } from "../pages/shared/RemittanceShared/RemittanceSha
 
 import { Remittance } from "../pages/business/Remittance/Remittance";
 import { RemittanceSend } from "../components/common/home/Remittances/RemittanceSend";
+import { DinamicKeyInput } from "../components/common/DinamicKeyInput/DinamicKeyInput";
 
 export const ProtectedRoutesPeople = () => (
   <PersonPortalLayout>

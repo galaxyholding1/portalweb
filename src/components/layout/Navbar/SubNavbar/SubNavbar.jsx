@@ -109,7 +109,7 @@ const SubNavbar = () => {
   };
 
   return (
-    <nav className="navbar">
+    <nav className="navbar-subnavbar">
       <div
         className={`menu-toggle ${isMenuOpen ? "active" : ""}`}
         onClick={() => setIsMenuOpen(!isMenuOpen)}

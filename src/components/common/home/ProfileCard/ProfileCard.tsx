@@ -1,7 +1,6 @@
 import "./ProfileCard.css";
 import { Card } from "../Card/Card";
 import { ProfileData } from "./ProfileData";
-import { Icon } from "../../ui/Icon/Icon";
 import { SaveButton } from "../../ui/Button/SaveButton";
 
 export const ProfileCard = () => {

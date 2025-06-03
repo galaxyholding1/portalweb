@@ -3,6 +3,7 @@
   padding: 1.5rem;
   min-width: min(320px, 100%);
   border: var(--secondary-color) solid 1px;
+  border-radius: 1rem;
 }
 
 .calendar-header {

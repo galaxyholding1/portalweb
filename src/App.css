@@ -49,10 +49,14 @@ body {
 
 .app>.content {
   flex: 1;
-  padding-bottom: 5rem; /* Se agrega globalmente por el footer*/
+  padding-block: 5rem; /* Se agrega globalmente por el footer y el navbar*/
 }
 
 input:focus {
   outline: none;
   box-shadow: none;
+}
+
+* {
+  font-family: Quicksand;
 }

@@ -1,0 +1,19 @@
+
+.contenedor-unitario {
+    width: 40px;
+    height: 50px;
+    border: 2px solid #333;
+    border-radius: 8px;
+    font-size: 24px;
+    line-height: 50px;
+    text-align: center;
+    color: var(--primary-color);
+    margin-block: 2rem;
+    background-color: var(--border-color);
+}
+
+.contenedor-llave {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}

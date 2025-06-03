@@ -14,6 +14,6 @@
 }
 
 .button.save {
-  background-color: var(--tertiary-color);
+  background-color: var(--bg-tertiary);
   color: var(--text-color);
 }

@@ -6,11 +6,8 @@ import "./LastConsignment.css";
 import { Icon } from "../../ui/Icon/Icon";
 import { Card } from "../Card/Card";
 import { CardMoments } from "../Card/CardMoments";
-import { MovementsItem } from "../movements/MovementsItem";
 import { Link, useLocation } from "react-router";
-
 import { getPathByClient } from "../../../../util/getModeClient";
-import { SaveButton } from "../../ui/Button/SaveButton";
 
 const contacts: RemittancesLastInterface[] = [
   {
