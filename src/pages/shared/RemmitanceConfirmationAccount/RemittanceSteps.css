@@ -1,0 +1,65 @@
+.remittance-step-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.remittance-step-container h1 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+  color: var(--secondary-color);
+}
+
+.remittance-step-container p {
+  line-height: 137%;
+  font-weight: 300;
+  margin: 0;
+}
+
+.remittance-step-unique-column {
+  flex: 1;
+  margin-top: 1.5rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: 201px;
+}
+
+.result-container {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+
+  .remmitance-item {
+    flex: 1;
+  }
+}
+
+.remittance-detail-container {
+  position: relative;
+  padding-bottom: 4rem;
+  margin-top: 0.5rem;
+}
+
+.remittance-detail-button {
+  background-color: var(--tertiary-color);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  right: 1rem;
+}
+
+.remittance-detail-header {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+  align-items: center;
+  h1 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+    color: var(--secondary-color);
+    white-space: nowrap;
+  }
+}

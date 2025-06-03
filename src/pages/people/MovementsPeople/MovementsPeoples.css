@@ -1,0 +1,21 @@
+.movements-page-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.grid-area-movements {
+  grid-column: auto;
+}
+
+
+@media screen and (max-width: 768px) {
+  .movements-page-container {
+    grid-template-columns: 1fr!important;
+    * {
+      grid-column: auto;
+      grid-row: auto;
+    }
+  }
+  
+}

@@ -1,0 +1,63 @@
+@keyframes rotar180 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+.select-remittance {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-tertiary);
+  color: var(--text-color);
+  transition: border 0.3s;
+}
+
+.select-remittance:focus {
+  outline: none;
+}
+
+.select-remittance option:checked {
+  color: #fff; /* texto blanco */
+}
+
+.select-remittance {
+  padding: 1rem;
+  font-size: 1rem;
+  color: var(--text-color);
+  
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  border: none;
+  /* z-index: -1; */
+
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.custom-select-container {
+  overflow: hidden;
+  border-radius: 1rem;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-secondary);
+  box-shadow: 0 0 0 0.5px var(--text-color);
+  transition: border 0.3s;
+  position: relative;
+  min-width: fit-content;
+
+  & > svg {
+    position: absolute;
+    right: 1rem;
+    pointer-events: none;
+  }
+  
+  & > svg.reverse {
+    /* animation: rotar180 .1s linear; */
+  }
+}

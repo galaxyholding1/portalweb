@@ -1,0 +1,15 @@
+.simple-card-container{
+  background-color: var(--bg-tertiary);
+  padding: 2rem 1rem 1rem 1rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+
+  p{
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text-color);
+  }
+}

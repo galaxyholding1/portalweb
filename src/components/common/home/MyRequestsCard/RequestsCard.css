@@ -1,0 +1,266 @@
+:root {
+    --nav-bg: #2D2D2D;
+    --nav-text: #626262;
+    --nav-active: #0066ff;
+    --nav-hover: rgba(0, 102, 255, 0.1);
+    --nav-active-bg: rgba(0, 102, 255, 0.1);
+}
+
+.requests-container {
+    background-color:var(--bg-secondary);
+    border-radius: 12px;
+    margin: 5px;
+    box-shadow: #fff;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    background:var(--bg-tertiary);
+    border-radius: 12px;
+    padding: 10px;
+    color: var(--text-color);
+}
+
+.section-header h3 {
+    font-size: 1.17em;
+   
+    color: var(--text-color);
+    font-weight: bold;
+    margin: 0;
+    unicode-bidi: isolate;
+}
+
+.ver-mas {
+    color: var( --secondary-color);
+    text-decoration: none;
+    font-size: 0.875rem;
+}
+
+.requests-list {
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-secondary);
+    border-radius: 12px;
+}
+
+.request-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: var(--bg-secondary);
+    box-shadow: var(--bg-secondary);
+    transition: all 0.3s ease;
+}
+
+.request-item:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--bg-secondary);
+}
+
+.request-icon {
+    width: auto;
+    height: auto;
+    aspect-ratio: 57/53;
+    background: var(--tertiary-color);
+    background: var(--bg-tertiary);
+    display: flex;
+    border-radius: 30%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow:var(--bg-secondary);
+    padding: .5rem;
+}
+
+.request-icon-2 {
+    width: auto;
+    height: auto;
+    aspect-ratio: 57/53;
+    display: flex;
+    right: 20px;
+    border-radius: 30%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow:var(--bg-secondary);
+    padding: .5rem;
+}
+
+.notification-dot {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 10px;
+    height: 10px;
+    background: var( --secondary-color);
+    border-radius: 50%;
+    border: 2px solid var(--nav-bg);
+    box-shadow: var(--bg-secondary);
+}
+
+.request-content {
+    flex: 1;
+}
+
+.request-title {
+    margin: 0;
+    font-size: 0.875rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.request-time {
+    font-size: 0.75rem;
+    color: var(--text-color);
+    display: block;
+    margin-top: 4px;
+}
+
+.request-status {
+    margin-left: auto;
+
+}
+
+.status-icon {
+    color: var(--nav-text);
+    font-size: 1.25rem;
+}
+
+.transfers-section {
+    background:var(--bg-secondary);
+    border-radius: 12px;
+    box-shadow: var(--bg-secondary);
+}
+
+.transfers-table {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+thead tr {
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 8px;
+}
+
+th {
+    text-align: left;
+    color: var(--primary-color);
+    font-weight: 500;
+    padding: 12px 16px;
+    font-size: 0.875rem;
+    text-transform: lowercase;
+}
+
+td {
+    padding: 12px 16px;
+    color: var(--text-color);
+    font-size: 0.875rem;
+}
+
+tbody tr {
+    height: 48px;
+    transition: all 0.3s ease;
+}
+
+tbody tr:hover {
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .requests-container {
+        margin: 10px;
+        padding: 16px;
+    }
+
+    .requests-list,
+    .transfers-section {
+        padding: 12px;
+    }
+
+    table {
+        min-width: 600px;
+    }
+
+    th,
+    td {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .requests-container {
+        margin: 8px;
+        padding: 12px;
+    }
+
+ 
+
+    .ver-mas {
+        font-size: 0.75rem;
+    }
+
+    .requests-list,
+    .transfers-section {
+        padding: 8px;
+    }
+
+    .request-item {
+        padding: 10px;
+    }
+
+    .request-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .request-title {
+        font-size: 0.8rem;
+    }
+
+    .request-time {
+        font-size: 0.7rem;
+    }
+
+    th,
+    td {
+        padding: 8px;
+        font-size: 0.8rem;
+    }
+}
+
+.notification-icon{
+    color: var( --bg-primary);
+    font-size: 1.5rem;
+    width: 60%;
+}
+
+.movement-item-icon {
+    border-radius: 1rem;
+    background-color: var(--primary-color);
+    align-self: auto;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    padding: .78rem .92rem;
+}
+
+
+.requests-section{
+    box-sizing: border-box;
+    border-radius: 1rem;
+    background-color: var(--bg-secondary);
+    width: 100%;
+    position: relative;
+    margin-bottom: 5px;
+}

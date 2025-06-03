@@ -1,0 +1,28 @@
+.contact-header{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  img {
+    width: 40px;
+    aspect-ratio: 1;
+  }
+}
+
+.contact-header-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+  h1{
+    margin: 0;
+    color: var(--text-color);
+    font-size: 14px;
+    font-weight: 600;
+  }
+  p{
+    margin: 0;
+    font-size: 12px;
+    font-weight: 400;
+  }
+}

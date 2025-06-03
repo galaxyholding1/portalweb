@@ -1,0 +1,135 @@
+.navbar-galaxy {
+  display: flex;
+  max-width: 100vw;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  padding: .75rem 1rem;
+  background-color: var(--bg-secondary);
+}
+
+.navbar-galaxy>ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  width: 40%;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+.navbar-galaxy>a {
+  display: inline-block;
+  height: auto;
+}
+
+.navbar-galaxy>a>img {
+  aspect-ratio: 877 / 208;
+  width: 250px;
+  display: block;
+  height: auto;
+}
+
+.btn-logout {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  img {
+    margin-right: 2px;
+  }
+}
+
+select {
+  all: unset;
+  padding: 0.2rem 0.5rem;
+  cursor: pointer;
+  color: var(--text-primary);
+
+  option {
+    color: var(--text-primary);
+    background-color: var(--bg-secondary);
+  }
+}
+
+.btn-go-login {
+  border-radius: 1rem;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+}
+
+.active-item {
+  color: var(--primary-color) !important;
+}
+
+
+.navbar-galaxy-secondary {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 1.5rem;
+  padding: .5rem;
+}
+
+.social-media-icon {
+  aspect-ratio: 1;
+  align-self: center;
+  display: block;
+}
+
+@media screen and (max-width: 899px) {
+  .navbar-galaxy {
+    display: none;
+  }
+
+  .navbar-galaxy-secondary {
+    font-size: .75rem;
+  }
+}
+
+.dinamic-key-container {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-tertiary);
+  border-radius: 15px;
+  padding: .25rem;
+  div {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    flex: 1;
+    align-items: center;
+  }
+  
+  span {
+    flex: 1;
+    font-size: .7rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+  }
+}
+
+.dinamic-key {
+  font-size: 1rem!important;
+  font-weight: 400!important;
+  color: var(--secondary-color)!important;
+}
+
+.logged-links{
+  display: flex;
+  gap: 1rem;
+  justify-content: end;
+  align-items: center;
+  margin: 0;
+  width: auto!important;
+}

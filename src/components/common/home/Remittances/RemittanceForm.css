@@ -1,0 +1,199 @@
+/* Contenedor general */
+.remittance-container {
+  max-width: 100%;
+  padding: 1rem;
+  background-color: var(--bg-secondary);
+  color: var(--text-color);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.remittance-container.dark {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+}
+
+/* Encabezado */
+.remittance-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.header-icon {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Títulos */
+.form-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.form-subtitle {
+  font-size: 1rem;
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+}
+
+.dark .form-subtitle {
+  color: #aaa;
+}
+
+/* Formulario */
+.remittance-form {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Grilla de 4 columnas */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Estilo de inputs y selects */
+.form-group {
+  display: flex;
+}
+
+.form-group input,
+.form-group select {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: var(--bg-tertiary);
+  color: var(--text-color);
+  transition: border 0.3s;
+  width: 100%;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+.dark .form-group input,
+.dark .form-group select {
+  background-color: #2a2a2a;
+  color: #f0f0f0;
+  border: 1px solid #444;
+}
+
+/* Botón */
+.submit-button {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.form-group select option:checked {
+  background-color: var(--primary-color); /* fondo rosado claro */
+}
+
+.submit-button:hover {
+  background-color: var(--primary-color);
+}
+
+.dark .submit-button {
+  background-color: var(--primary-color);
+}
+
+.dark .submit-button:hover {
+  background-color: var(--primary-color);
+}
+
+.form-group select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg fill='%23ccc' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1rem;
+  padding-right: 2.5rem;
+}
+
+.dark .form-group select {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg fill='%23666' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+}
+
+.container-remesas {
+  flex-wrap: wrap;
+}
+
+.remittance-container,
+.grid-area-movements {
+  /* Cada caja ocupará como mínimo 300px y crecerá hasta 1fr */
+  flex: 1 1 300px;
+}
+
+.grid-remittance {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Aplica flex a los hijos directos de .grid-remittance */
+.grid-remittance > .remittance-container,
+.grid-remittance > .grid-area-movements {
+  flex: 1 1 300px; /* mínimo 300px luego crece */
+  box-sizing: border-box; /* para que padding no rompa el ancho */
+}
+
+.parent-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* En pantallas grandes: dos columnas */
+.habitual-contact,
+.remittance-search {
+  flex: 1 1 30%; /* casi la mitad cada una */
+}
+
+/* En pantallas pequeñas: una columna */
+@media (max-width: 768px) {
+  .habitual-contact,
+  .remittance-search {
+    flex: 1 1 100%;
+  }
+}
+
+input::placeholder {
+  color: var(--text-color);
+  opacity: 1; /* Asegura que se vea bien */
+}
+
+.remittance-content{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.select-remittance-form{
+  border-radius: .5rem!important;
+}

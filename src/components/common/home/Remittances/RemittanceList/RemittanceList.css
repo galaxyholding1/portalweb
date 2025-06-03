@@ -1,0 +1,27 @@
+
+
+.remittance-list-filters{
+  display: flex;
+  gap: 1rem;
+
+}
+
+.remittance-list-card {
+  background-color: var(--bg-secondary);
+  
+}
+
+.remittance-list-card > .contact-card-detail {
+  gap: 1rem;
+  span {
+    font-size: 10px;
+    font-weight: 400;
+    white-space: nowrap;
+  }
+}
+
+.remittance-list-container .mini{
+  font-size: 24px;
+  margin: 0;
+  line-height: 22px;
+}

@@ -1,0 +1,160 @@
+.allpage {
+  padding: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.home-container {
+  padding: 0;
+}
+
+/* Accesos rápidos */
+.contenedor-accesos {
+  grid-template-columns: repeat(6, 1fr);
+  background: var(--bg-secondary);
+  border-radius: 20px;
+  display: grid;
+  justify-content: center;
+}
+
+.acceso-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s;
+  padding: 8px;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.element-style {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.accesos-font {
+  margin-top: 2px;
+  font-size: 15px;
+}
+
+.acceso-item:hover {
+  transform: scale(1.05);
+}
+
+.icon-img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 8px;
+  object-fit: contain;
+  transition: filter 0.3s ease;
+}
+
+/* Modo oscuro */
+[data-theme="dark"] .icon-img {
+  filter: invert(1) brightness(1.5);
+}
+
+/* Servicios */
+.servicios-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.servicio {
+  border-radius: 16px;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.contenido {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 150px);
+  text-align: center;
+}
+
+.contenido h3 {
+  text-align: left;
+  margin-bottom: 8px;
+  font-weight: bold;
+  margin-top: auto;
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.contenido p {
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 12px;
+  flex-grow: 1;
+  overflow: hidden;
+  display: flex;
+}
+
+.contenido button {
+  padding: 15px 30px;
+  background: transparent;
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
+  border-radius: 16px;
+  cursor: pointer;
+  font-size: 20px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  display: flex;
+  transition: all 0.3s ease;
+}
+
+.contenido button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-background-container {
+  margin-top: 2rem;
+  gap: 6rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 475px;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.carousel-background-content {
+  h1 {
+    font-weight: 500;
+    font-size: 60px;
+    leading-trim: Cap height;
+    line-height: 60px;
+    letter-spacing: 0%;
+  }
+
+  p {
+    font-weight: 500;
+    font-size: 24px;
+    leading-trim: Cap height;
+    letter-spacing: 0%;
+    font-weight: 400;
+  }
+}
+
+.carousel-background-card {
+  position: relative;
+  width: 290px;
+  aspect-ratio: 290/431;
+  background-size: cover;
+
+  h2 {
+    position: absolute;
+    bottom: 0;
+    padding: 0.5rem 1rem;
+  }
+}

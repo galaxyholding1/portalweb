@@ -1,0 +1,15 @@
+.footer-bg-container {
+  height: 85px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: -80px;
+  display: flex;
+  align-items: last baseline;
+}
+
+.footer-bg-container > div {
+  height: 85px;
+  flex: 1;
+  background-color: var(--bg-secondary);
+}

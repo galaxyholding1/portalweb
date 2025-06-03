@@ -1,0 +1,107 @@
+.remittance-container {
+  background-color: var(--bg-secondary);
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+}
+
+.remittance-container.light {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.remittance-container.dark {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.remittance-header {
+  background-color: var(--bg-tertiary);
+  padding: 0.75rem 1rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.header-icon {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.remesas_icon {
+  fill: currentColor;
+}
+
+.card-header-box {
+  background-color: var(--bg-tertiary);
+  padding: 0.75rem 1rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.transaction-container {
+  background-color: var(--bg-secondary);
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+  margin: 0 auto;
+}
+
+.header-title h2 {
+  color: var(--secondary-color);
+  margin-top: auto;
+  margin-bottom: 0%;
+}
+
+.header-title h3 {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.card {
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 1px solid #444;
+  border-radius: 14px;
+  padding: 14px 18px;
+  margin-bottom: 16px;
+}
+
+.card p {
+  margin: 6px 0;
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.4;
+}
+
+.action-buttons {
+  margin-left: 10px;
+  display: flex;
+  gap: 12px;
+  justify-content: start;
+  margin-top: 16px;
+}
+
+.icon {
+  flex: auto;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: 24px;
+}
+
+.action-buttons button {
+  background-color: var(--tertiary-color);
+  color: var(--text-secondary);
+  padding: 10px 16px;
+  border: none;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.action-buttons button:hover {
+  background-color: #2b1c69;
+}

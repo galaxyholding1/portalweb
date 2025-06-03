@@ -1,0 +1,131 @@
+.movements-header-wrapper {
+  margin-bottom: 0.5rem;
+}
+
+
+.movements-header-row {
+  display: flex;
+  align-items: center;
+  
+  gap: 0.75rem;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+
+.header-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.header-title h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+
+.filter-button {
+  display: flex;
+  margin-bottom: 0%;
+  margin-top: 1px;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1REM 0.75rem;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  height: 40px;
+}
+
+
+
+.filter-icon {
+  fill: currentColor;
+}
+
+.filter-submenu {
+  position: absolute;
+  top: 80px;
+  right: 20px;
+  background: var(--bg-primary);
+  border-radius: 0.75rem;
+  min-width: 180px;
+  z-index: 1000;
+  padding: 0.5rem;
+  border: 2px solid var(--secondary-color);
+}
+
+.submenu-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.submenu-option {
+  width: 100%;
+  padding: 1rem;
+  text-align: left;
+  background: none;
+  border: none;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-size: 0.95rem;
+  border-radius: 0.5rem;
+}
+
+.card-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+  box-sizing: border-box;
+}
+
+/* Caja del título */
+.card-header-box {
+  flex: 1; 
+  background-color: var(--bg-tertiary);
+  padding: 0.75rem 1rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+/* Botón "Ver más" */
+.card-header-link {
+  box-sizing: border-box;
+  gap: 0.5rem;
+  flex-basis: 20%;
+  background-color: var(--bg-tertiary);
+  padding: 0.75rem 0;
+  border-radius: 1rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.select-header {
+  padding: 0 2.25rem 0 0 !important;
+  color: var(--secondary-color)!important;
+  border: none!important;
+  box-shadow: none!important;
+}

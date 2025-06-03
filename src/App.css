@@ -1,3 +1,58 @@
+:root {
+  --text-color: #4B4A49;
+  --primary-color: #e7458f;
+  --secondary-color: #F0813A;
+  --tertiary-color: #4D3B8F;
+  --fourth-color: #4f975a;
+  --fifth-color: #efad43 ;
+  --sixth-color: #ff8d8d;
+
+
+  --bg-primary: #fff;
+  --bg-secondary: #f0f0f0;
+  --bg-tertiary: #D4D4D4;
+  --text-primary: #4f4e4d;
+  --text-secondary: #fff;
+  --active-color: #4caf50;
+  --border-color: #AEAEAE;
+  
+  -nav-text: var(--text-color)333;
+}
+
+[data-theme="dark"] {
+  --text-color: #fff;
+  --primary-color: #e7458e;
+  --bg-primary: #282828;
+  --bg-secondary: #414141;
+  --bg-tertiary: #626262;
+  --text-primary: #fff;
+  --text-secondary: #fff;
+  --nav-text: #ffffff
+}
+
 body {
   margin: 0;
+  background-color: var(--bg-primary);
+  min-height: 100dvh;
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+}
+
+.app {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app>.content {
+  flex: 1;
+  padding-bottom: 5rem; /* Se agrega globalmente por el footer*/
+}
+
+input:focus {
+  outline: none;
+  box-shadow: none;
 }

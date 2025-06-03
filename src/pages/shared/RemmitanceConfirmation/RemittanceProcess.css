@@ -1,0 +1,62 @@
+.remittance-process-grid {
+  display: grid;
+  gap: 3rem;
+  grid-row: 1fr;
+  grid-template-columns: 56% auto;
+  padding: 0 1rem 1.5rem 1rem ;
+}
+
+.remittance-process-actions {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  img {
+    display: flex;
+    width: 100%;
+    aspect-ratio: 482/320;
+  }
+}
+
+.remittance-process-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+
+}
+
+.remittance-process-button {
+  padding-block: 1rem;
+  font-family: Quicksand;
+  font-size: 20px;
+  font-weight: 300;
+  border-radius: 1rem;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+
+
+.remittance-process-button.back {
+  background-color: var(--secondary-color);
+}
+
+.remittance-process-button.continue {
+  background-color: var(--primary-color);
+}
+
+.remittance-process-button.back:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.remittance-process-button.continue:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.remittance-process-card{
+  background-color: transparent;
+}

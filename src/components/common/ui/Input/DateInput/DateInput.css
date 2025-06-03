@@ -1,0 +1,104 @@
+.date-input__group {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  height: 56px;
+  box-sizing: border-box;
+}
+
+.date-input__group div {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  background-color: var(--bg-secondary);
+  font-size: 1.125rem;
+  font-weight: 400;
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  margin: 0;
+  gap: 1rem;
+  justify-content: space-between;
+  padding-inline: 1rem;
+  box-sizing: border-box;
+}
+
+.date-input__field {
+  padding: 0.75rem;
+  border-radius: 1rem;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.date-input__field:focus {
+  border-color: var(--primary-color);
+}
+
+/* Tema claro */
+[data-theme="light"] .date-input__field {
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+}
+
+[data-theme="light"] .date-input__field::-webkit-calendar-picker-indicator {
+  filter: invert(0);
+  cursor: pointer;
+}
+
+/* Tema oscuro */
+[data-theme="dark"] .date-input__field {
+  border: 1px solid var(--text-color);
+  color: var(--text-color);
+}
+
+[data-theme="dark"] .date-input__field::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}
+
+/* Custom checkbox */
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.checkbox {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--text-color);
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+}
+
+.checkbox:checked {
+  background-color: transparent;
+  border-color: var(--text-color);
+}
+
+.checkbox:checked::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 6px;
+  width: 4px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
