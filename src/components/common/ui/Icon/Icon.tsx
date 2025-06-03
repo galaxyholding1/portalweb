@@ -64,7 +64,7 @@ import icStatePending from "../../../../assets/icons/ic-state-pending.svg?react"
 import bdgeOk from "../../../../assets/icons/bdge_ok.svg?react";
 import calendarDays from "../../../../assets/icons/calendar_days.svg?react";
 
-// Mapeo
+// Mapeo desde la llave, la cual será la que se indique en el componente
 export const iconsMap = {
   arrow_left_right: ArrowLeftRight,
   bell_ring: BellRing,
@@ -132,26 +132,29 @@ type IconName = keyof typeof iconsMap;
 
 interface IconProps {
   name: IconName;
-  selected?: boolean;
-  selectedColor?: string;
   width?: number;
   color?: string;
   className?: string;
   height?: number;
 }
 
+// Author: Juan Ayala
+// El componente Icon es un componente que permite renderizar
+// un icono SVG basado en su nombre. Utiliza un mapa de iconos
+// Si el icono no se encuentra, renderiza un icono de "Not Found".
+// Si encuentra una versión dark y es el tema elegido, la utiliza (sufijo _dark).
 export const Icon = ({
   name,
   width = 24,
   height,
-  selected,
-  selectedColor,
   color = "var(--text-color)",
   className,
 }: IconProps) => {
   const { theme } = useTheme();
 
   if (color !== "var(--text-color)") {
+    // colorTransform es un wrapper para transformar los colores
+    // a variables CSS, facilmente.
     color = colorTransform(color);
   }
 
@@ -168,7 +171,7 @@ export const Icon = ({
   //!SECTION
   return (
     <IconComponent
-      color={selected ? selectedColor : color}
+      color={color}
       width={width}
       height={height ?? 'auto'}
       className={className ?? ""}
@@ -176,6 +179,7 @@ export const Icon = ({
   );
 };
 
+// 
 const colorTransform = (color: string) => {
   switch (color) {
     case "primary":

@@ -1,24 +1,24 @@
+/* Declaración de las variables */
 :root {
-  --text-color: #4B4A49;
+  --text-color: #4b4a49;
   --primary-color: #e7458f;
-  --secondary-color: #F0813A;
-  --tertiary-color: #4D3B8F;
+  --secondary-color: #f0813a;
+  --tertiary-color: #4d3b8f;
   --fourth-color: #4f975a;
-  --fifth-color: #efad43 ;
+  --fifth-color: #efad43;
   --sixth-color: #ff8d8d;
-
 
   --bg-primary: #fff;
   --bg-secondary: #f0f0f0;
-  --bg-tertiary: #D4D4D4;
+  --bg-tertiary: #d4d4d4;
   --text-primary: #4f4e4d;
   --text-secondary: #fff;
   --active-color: #4caf50;
-  --border-color: #AEAEAE;
-  
-  -nav-text: var(--text-color)333;
-}
+  --border-color: #aeaeae;
 
+  -nav-text: var(--text-color) 333;
+}
+/* Declaración de las variables que cambian en dark mode*/
 [data-theme="dark"] {
   --text-color: #fff;
   --primary-color: #e7458e;
@@ -27,7 +27,7 @@
   --bg-tertiary: #626262;
   --text-primary: #fff;
   --text-secondary: #fff;
-  --nav-text: #ffffff
+  --nav-text: #ffffff;
 }
 
 body {
@@ -39,7 +39,8 @@ body {
   font-family: "Quicksand", sans-serif;
   font-weight: 500;
 }
-
+/* Contenedor principal de la app, sirve para gestionar 
+footer, navbar y contenido adecuadamente */
 .app {
   box-sizing: border-box;
   display: flex;
@@ -47,7 +48,9 @@ body {
   min-height: 100vh;
 }
 
-.app>.content {
+/* Este es el contenedor principal 
+y el contenido que el enrutador muestra*/
+.app > .content {
   flex: 1;
 }
 

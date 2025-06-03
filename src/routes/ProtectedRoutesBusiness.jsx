@@ -13,6 +13,10 @@ import { RemittanceProcess } from "../pages/shared/RemmitanceConfirmation/Remitt
 import { RemmitanceConfirmationAccount } from "../pages/shared/RemmitanceConfirmationAccount/RemmitanceConfirmationAccount";
 import { RemittanceFilters } from "../pages/shared/RemittanceFilters/RemittanceFilters";
 
+// Author: Juan Ayala
+// Se usa el layout que tiene el navbar de navegación. (subnavbar)
+// Es aqui donde se debe manejar la logica de autenticación y 
+// autorización para las rutas protegidas relacionadas al portal de empresas.
 export const ProtectedRoutesBusiness = () => {
   const { login } = useAuthStore();
   useEffect(() => login(), [login]);
