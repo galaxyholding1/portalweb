@@ -3,6 +3,7 @@ import Ve from "../../../assets/icons/flags/ve.svg?react";
 import Us from "../../../assets/icons/flags/us.svg?react";
 import Mx from "../../../assets/icons/flags/mx.svg?react";
 
+// Componente flag con las banderas de Colombia, USA, México y Venezuela
 export type CountryCode = "co" | "us" | "mx" | "ve";
 
 const countryMap = {
@@ -17,6 +18,7 @@ interface Props {
   code: CountryCode;
 }
 
+// Estilo de las banderas
 export const Flag = ({ style, code }: Props) => {
   const styles = { width: "24px", aspectRatio: 1, ...style };
 
