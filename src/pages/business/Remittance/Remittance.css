@@ -1,5 +1,12 @@
+/* Clase que define un contenedor flexible para organizar elementos */
 .grid-remittance {
-  display: f+;
+
+  /* Establece un modelo de diseño flexible (Flexbox) */
+  display: flex;
+
+  /* Permite que los elementos hijos se envuelvan en múltiples líneas si es necesario */
   flex-wrap: wrap;
+
+  /* Define un espacio (separación) de 1rem entre los elementos hijos */
   gap: 1rem;
 }

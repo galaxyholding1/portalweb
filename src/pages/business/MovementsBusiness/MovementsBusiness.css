@@ -1,24 +1,36 @@
+/* Contenedor principal de la página de movimientos */
 .movements-page-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  /* Divide la pantalla en dos columnas iguales */
   gap: 1rem;
+  /* Espacio entre las tarjetas de movimientos */
 }
 
+/* Clase para controlar el área del grid de los movimientos */
 .grid-area-movements {
   grid-column: auto;
+  /* Permite que las tarjetas se posicionen automáticamente */
 }
 
+/* Clase utilitaria para agregar espacio en la parte inferior */
 .space-b {
   padding-bottom: 5rem;
+  /* Margen inferior para separación de contenido */
 }
 
+/* Estilos responsivos para pantallas medianas y pequeñas */
 @media screen and (max-width: 768px) {
   .movements-page-container {
-    grid-template-columns: 1fr!important;
+    grid-template-columns: 1fr !important;
+
+    /* Cambia a una sola columna en móviles */
     * {
+      /* Aplica a todos los elementos hijos */
       grid-column: auto;
+      /* Resetea la posición de columnas */
       grid-row: auto;
+      /* Resetea la posición de filas */
     }
   }
-  
 }
