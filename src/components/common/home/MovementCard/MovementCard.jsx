@@ -5,6 +5,7 @@ import { getPathByClient } from "../../../../util/getModeClient";
 import { useLocation } from "react-router";
 import { Icon } from "../../ui/Icon/Icon";
 
+// Carta de movimientos completa llamando a diferentes componentes 
 export const MovementCard = ({ filter = false, stateIndicator = false, enableLink = false, totalItems = 4 }) => {
   const movements = Array.from({ length: totalItems }, () => ({
     conceptTitle: "Airbnb",
@@ -21,6 +22,7 @@ export const MovementCard = ({ filter = false, stateIndicator = false, enableLin
         morePath={`${getPathByClient(pathname)}/movimientos`}
       >
         {movements.map((mov, i) => (
+          // Componente de los items de movimientos
           <MovementsItem
             key={`${mov.conceptTitle}${i}`}
             {...mov}
