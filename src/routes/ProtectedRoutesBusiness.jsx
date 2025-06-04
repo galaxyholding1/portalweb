@@ -15,6 +15,10 @@ import { RemittanceFilters } from "../pages/shared/RemittanceFilters/RemittanceF
 import { RemittanceShared } from "../pages/shared/RemittanceShared/RemittanceShared";
 import { RemittancePeople } from "../pages/people/RemittancePeople/RemittancePeople";
 
+// Author: Juan Ayala
+// Se usa el layout que tiene el navbar de navegación. (subnavbar)
+// Es aqui donde se debe manejar la logica de autenticación y 
+// autorización para las rutas protegidas relacionadas al portal de empresas.
 export const ProtectedRoutesBusiness = () => {
   const { login } = useAuthStore();
   useEffect(() => login(), [login]);

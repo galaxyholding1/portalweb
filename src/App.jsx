@@ -7,7 +7,8 @@ import { themeListener } from "./util/theme-listener";
 import { GlobalModal } from "./components/common/ui/modal/modal";
 
 function App() {
-  // Escucha cambios del sistema en tiempo real
+  // detecta cambios de tema en el sistema operativo
+  // Y automaticamente cambia el tema de la aplicación
   useEffect(() => {
     const killListener = themeListener()
     return killListener;
