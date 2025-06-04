@@ -5,6 +5,9 @@ import { Input } from '../Input/Input'
 import { Select } from '../Select/Select'
 import './AmountContactConfirmaction.css'
 
+// Card del proceso de envío de personas
+// Esta es en la que se configuran los datos de la remesa,
+// se usa en el slidder.
 export const AmountContactConfirmation = () => {
   return (
     <SimpleCard>

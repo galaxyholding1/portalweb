@@ -1,3 +1,6 @@
+// Este helper está exclusivamente para manejar las rutas respectivas
+// dependiendo el tipo de cliente.
+
 export const pathByClient = {
   people: '/portal-personas',
   business: '/portal-empresas',

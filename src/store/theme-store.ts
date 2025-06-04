@@ -1,5 +1,8 @@
 import { create } from 'zustand'
 
+// Obtenemos el tema actual por prioridad
+// 1. Tema guardado en el local storage
+// 2. Tema ya definido anteriormente
 const getTheme = () => {
   const savedTheme = localStorage.getItem("theme");
   let theme;
@@ -24,6 +27,8 @@ type ThemeStore = {
   setTheme: () => void;
 }
 
+// con este estado lo que hacemos es manejar los temas 
+// y las preferencias del usuario facilmente
 export const useTheme = create<ThemeStore>()((set) => ({
   theme: getTheme(),
   setTheme: () => set((theme) => ({theme: theme.theme})),

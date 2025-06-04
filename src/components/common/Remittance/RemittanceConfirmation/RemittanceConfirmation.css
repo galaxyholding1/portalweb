@@ -1,18 +1,18 @@
-.sendBox{
-    text-align: center;
-    width: 25%;
-    margin-top: 0%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
+.sendBox {
+    text-align: center; /* Centra el contenido de texto horizontalmente */
+    width: 25%; /* Ancho del contenedor relativo al padre */
+    margin-top: 0%; /* Sin margen superior (puede que sea redundante si ya es 0 por defecto) */
+    display: flex; /* Usa flexbox para organizar el contenido */
+    flex-direction: column; /* Los hijos se colocan en columna */
+    align-items: center; /* Centra los elementos hijos horizontalmente */
+    gap: 5px; /* Espacio entre los elementos hijos */
 }
 
 .sendText {
-    text-align: center;
-    font-size: 18;
+    text-align: center; /* Centra el texto horizontalmente */
+    font-size: 18px; 
     color: var(--primary-color);
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 0.225px;
+    font-weight: 400; /* Peso de la fuente regular */
+    line-height: normal; /* Altura de línea por defecto del navegador */
+    letter-spacing: 0.225px; /* Espaciado entre letras sutilmente amplio */
 }

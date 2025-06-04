@@ -1,31 +1,36 @@
+/* Layout principal en dos columnas para el proceso de remesas */
 .remittance-process-grid {
   display: grid;
   gap: 3rem;
   grid-row: 1fr;
-  grid-template-columns: 56% auto;
-  padding: 0 1rem 1.5rem 1rem ;
+  grid-template-columns: 56% auto; /* Columna izquierda más ancha */
+  padding: 0 1rem 1.5rem 1rem;
 }
 
+/* Contenedor de acciones: imagen + botones */
 .remittance-process-actions {
   padding-top: 1rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
+
+  /* Imagen representativa del proceso */
   img {
     display: flex;
     width: 100%;
-    aspect-ratio: 482/320;
+    aspect-ratio: 482/320; /* Proporción fija para mantener diseño responsivo */
   }
 }
 
+/* Contenedor de los botones de navegación del proceso */
 .remittance-process-buttons {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   justify-content: center;
-
 }
 
+/* Estilos base de los botones */
 .remittance-process-button {
   padding-block: 1rem;
   font-family: Quicksand;
@@ -37,23 +42,19 @@
   cursor: pointer;
 }
 
-
-
+/* Botón de retroceso */
 .remittance-process-button.back {
   background-color: var(--secondary-color);
 }
 
+/* Botón para continuar */
 .remittance-process-button.continue {
   background-color: var(--primary-color);
 }
 
-.remittance-process-button.back:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
-
+/* Estado deshabilitado para ambos botones */
+.remittance-process-button.back:disabled,
 .remittance-process-button.continue:disabled {
   opacity: 0.6;
   cursor: not-allowed;
 }
-

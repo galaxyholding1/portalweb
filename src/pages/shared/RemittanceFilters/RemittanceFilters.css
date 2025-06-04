@@ -1,58 +1,64 @@
+/* Contenedor principal de los filtros de remesas */
 .remittance-filters-container {
-  flex: 1;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  flex: 1; /* Ocupa todo el espacio disponible del contenedor padre */
+  display: grid; /* Usa grid layout */
+  grid-template-columns: 1fr 1fr; /* Dos columnas de igual tamaño */
 
   h1 {
-    margin-block: .25rem;
+    margin-block: .25rem; /* Margen vertical reducido para títulos dentro del contenedor */
   }
 }
 
+/* Contenedor específico para los filtros (inputs y botones) */
 .remittance-list-filters {
-  margin-top: 2rem;
+  margin-top: 2rem; /* Espaciado superior para separar de otros elementos */
 }
 
+/* Estilos para los inputs dentro de los filtros */
 .remittance-list-filters input {
-  box-shadow: none;
-  border: var(--border-color) 1px solid;
-  border-radius: 1rem;
-  padding: .85rem 1rem;
+  box-shadow: none; /* Elimina cualquier sombra por defecto */
+  border: var(--border-color) 1px solid; /* Borde con color de variable */
+  border-radius: 1rem; /* Bordes redondeados */
+  padding: .85rem 1rem; /* Espaciado interno vertical y horizontal */
 }
 
+/* Estilos para los botones dentro de los filtros */
 .remittance-list-filters button {
-  background-color: var(--secondary-color);
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  border-radius: 1rem;
-  border: none;
-  min-width: 135px;
-  gap: .5rem;
-  justify-content: center;
-  color: white;
-  font-size: .75rem;
+  background-color: var(--secondary-color); /* Color de fondo secundario */
+  display: flex; /* Usa flexbox para alinear contenido */
+  align-items: center; /* Centra verticalmente */
+  cursor: pointer; /* Cambia cursor al pasar sobre el botón */
+  border-radius: 1rem; /* Bordes redondeados */
+  border: none; /* Sin borde por defecto */
+  min-width: 135px; /* Ancho mínimo fijo */
+  gap: .5rem; /* Espacio entre íconos y texto dentro del botón */
+  justify-content: center; /* Centrado horizontal */
+  color: white; /* Texto blanco */
+  font-size: .75rem; /* Tamaño de fuente pequeño */
 }
 
+/* Variante de botón con apariencia de link (botón alternativo) */
 .remittance-list-filters button.link {
-  background-color: var(--bg-secondary);
-  color: var(--text-color);
+  background-color: var(--bg-secondary); /* Fondo más neutro */
+  color: var(--text-color); /* Texto con color estándar */
 }
 
+/* Contenedor de paginación para la lista de remesas */
 .remittance-list-pagination {
-  margin-top: 1.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: .5rem;
-  
+  margin-top: 1.5rem; /* Separación superior del contenido anterior */
+  display: flex; /* Usa flexbox */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  gap: .5rem; /* Espaciado entre los elementos de la paginación */
+
   a {
-    cursor: pointer;
+    cursor: pointer; /* Cursor tipo pointer para enlaces */
     &:hover {
-      text-decoration: underline;
+      text-decoration: underline; /* Subrayado al pasar el mouse */
     }
   }
+
   svg {
-    cursor: pointer;
+    cursor: pointer; /* Permite clics en íconos SVG de flechas o navegación */
   }
 }
-

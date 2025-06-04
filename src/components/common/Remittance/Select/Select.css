@@ -1,63 +1,71 @@
+/* Animación para rotar un elemento 180 grados */
 @keyframes rotar180 {
   from {
-    transform: rotate(0deg);
+    transform: rotate(0deg); /* Rotación inicial */
   }
   to {
-    transform: rotate(180deg);
+    transform: rotate(180deg); /* Rotación final */
   }
 }
 
+/* Estilos del elemento <select> */
 .select-remittance {
-  padding: 0.75rem;
-  font-size: 1rem;
-  border-radius: 8px;
-  border: 1px solid var(--border-color);
-  background-color: var(--bg-tertiary);
-  color: var(--text-color);
-  transition: border 0.3s;
+  padding: 0.75rem; /* Espaciado interno */
+  font-size: 1rem; /* Tamaño de texto base */
+  border-radius: 8px; /* Bordes redondeados */
+  border: 1px solid var(--border-color); /* Borde con color variable */
+  background-color: var(--bg-tertiary); /* Fondo definido por variable */
+  color: var(--text-color); /* Color de texto definido por variable */
+  transition: border 0.3s; /* Transición suave para el borde */
 }
 
+/* Estilo al enfocar el select */
 .select-remittance:focus {
-  outline: none;
+  outline: none; /* Quita el contorno por defecto al enfocar */
 }
 
+/* Estilo del texto de la opción seleccionada */
 .select-remittance option:checked {
-  color: #fff; /* texto blanco */
+  color: #fff; /* Texto blanco cuando está seleccionada */
 }
 
+/* Estilos adicionales del select (puede sobrescribir lo anterior) */
 .select-remittance {
-  padding: 1rem;
-  font-size: 1rem;
-  color: var(--text-color);
-  
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
+  padding: 1rem; /* Sobrescribe el padding anterior */
+  font-size: 1rem; /* Tamaño del texto */
+  color: var(--text-color); /* Color de texto */
 
-  border: none;
-  /* z-index: -1; */
+  appearance: none; /* Oculta el ícono nativo del select */
+  -webkit-appearance: none; /* Compatibilidad con WebKit */
+  -moz-appearance: none; /* Compatibilidad con Firefox */
 
-  box-sizing: border-box;
-  width: 100%;
+  border: none; /* Elimina el borde para evitar duplicación */
+  /* z-index: -1; */ /* Comentado: podría ser usado para manejo de capas */
+
+  box-sizing: border-box; /* Incluye padding y borde en el tamaño total */
+  width: 100%; /* Ocupa todo el ancho del contenedor */
 }
 
+/* Contenedor personalizado para el select */
 .custom-select-container {
-  overflow: hidden;
-  border-radius: 1rem;
-  border: 1px solid var(--border-color);
-  background-color: var(--bg-secondary);
-  box-shadow: 0 0 0 0.5px var(--text-color);
-  transition: border 0.3s;
-  position: relative;
-  min-width: fit-content;
+  overflow: hidden; /* Oculta desbordamiento del contenido */
+  border-radius: 1rem; /* Bordes redondeados */
+  border: 1px solid var(--border-color); /* Borde con color personalizado */
+  background-color: var(--bg-secondary); /* Fondo definido por variable */
+  box-shadow: 0 0 0 0.5px var(--text-color); /* Sombra sutil tipo borde */
+  transition: border 0.3s; /* Transición para borde */
+  position: relative; /* Posiciona el ícono dentro del contenedor */
+  min-width: fit-content; /* El ancho mínimo se ajusta al contenido */
 
+  /* Estilos para el ícono (SVG) directamente dentro del contenedor */
   & > svg {
-    position: absolute;
-    right: 1rem;
-    pointer-events: none;
+    position: absolute; /* Posición absoluta dentro del contenedor */
+    right: 1rem; /* Separado del borde derecho */
+    pointer-events: none; /* El ícono no intercepta clics */
   }
-  
+
+  /* Clase que se aplicaría para animar el ícono al abrir el select */
   & > svg.reverse {
-    /* animation: rotar180 .1s linear; */
+    /* animation: rotar180 .1s linear; aplicaría rotación animada */
   }
 }

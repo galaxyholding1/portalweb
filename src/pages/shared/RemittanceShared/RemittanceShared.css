@@ -1,3 +1,4 @@
+/* Una grilla que divide el espacio vertical en dos. */
 .remittance-shared-container {
   display: grid;
   grid-template-columns: 1fr 1fr;

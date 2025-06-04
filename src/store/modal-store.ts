@@ -9,12 +9,15 @@ type ModalState = {
   isOpen: boolean;
 };
 
+// Este estado se hizo para poder manejar los modales de forma
+// asincrona, deteniendo flujos de trabajo y transfiriendo la información
+// que sea necesaria entre componentes.
 export const useModalStore = create<ModalState>((set) => ({
   modal: null,
-  resolve: null,
+  resolve: null, // Equivalente al valor de la promesa de abajo!
   isOpen: false,
   showModal: (component) => {
-    return new Promise((resolve) => {
+    return new Promise((resolve) => { // <- aqui
       set({ modal: component, isOpen: true, resolve });
     });
   },

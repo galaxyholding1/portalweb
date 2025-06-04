@@ -1,31 +1,35 @@
+/* Contenedor principal con estructura de dos columnas: contenido y acciones */
 .remittance-process-grid {
   display: grid;
   gap: 3rem;
   grid-row: 1fr;
   grid-template-columns: 56% auto;
-  padding: 0 1rem 1.5rem 1rem ;
+  padding: 0 1rem 1.5rem 1rem;
 }
 
+/* Contenedor de acciones (imagen + botones) */
 .remittance-process-actions {
   padding-top: 1rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
+
   img {
     display: flex;
     width: 100%;
-    aspect-ratio: 482/320;
+    aspect-ratio: 482/320; /* mantiene la proporción original */
   }
 }
 
+/* Contenedor de los botones de acción */
 .remittance-process-buttons {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   justify-content: center;
-
 }
 
+/* Estilo base para ambos botones */
 .remittance-process-button {
   padding-block: 1rem;
   font-family: Quicksand;
@@ -37,26 +41,24 @@
   cursor: pointer;
 }
 
-
-
+/* Botón de retroceso */
 .remittance-process-button.back {
   background-color: var(--secondary-color);
 }
 
+/* Botón de continuar */
 .remittance-process-button.continue {
   background-color: var(--primary-color);
 }
 
-.remittance-process-button.back:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
-
+/* Botones deshabilitados */
+.remittance-process-button.back:disabled,
 .remittance-process-button.continue:disabled {
   opacity: 0.6;
   cursor: not-allowed;
 }
 
-.remittance-process-card{
+/* Estilo genérico de tarjeta, sin fondo por defecto */
+.remittance-process-card {
   background-color: transparent;
 }

@@ -11,6 +11,7 @@ import { TransactionResult } from "./TransactionResult/TransactionResult";
 import { RemittanceDetail } from "./RemittanceDetail/RemittanceDetail";
 
 export const RemittanceProcess = () => {
+  // Funcionamiento del stepper en base a estado
   const [step, setStep] = useState(1);
 
   // Provisional, dependiendo funcionamiento de capa de negocio
@@ -21,17 +22,19 @@ export const RemittanceProcess = () => {
     4: <RemittanceDetail />,
   };
 
+  // Funcionamiento del stepper en base a estado
   const totalSteps = Object.values(componentByStep).length;
-
   return (
     <Card title={"Remesas"} icon={<Icon name="remesas_icon" />} className="remittance-process-card">
       <div className="remittance-process-grid">
         <div className="remittance-process-content">
+          {/* Provisional, dependiendo funcionamiento de capa de negocio */}
           {componentByStep[step]}
         </div>
         <div className="remittance-process-actions">
           <img src={banner} alt="Banner" />
           <div className="remittance-process-buttons">
+            {/* Funcionamiento del stepper en base a estado */}
             <button 
               disabled={step == 1} 
               onClick={() => setStep(step - 1)}

@@ -8,6 +8,7 @@ export const AmountConfiguration = () => {
     <div className='remittance-step-container'>
       <h1>Monto / Cantidad</h1>
       <p>Ingresa los datos de tu envio de remesa correctos</p>
+      {/* Muestra 3 contenedores con 2 cards cada uno. */}
       <Carousel
         components = {[
           <div className='remittance-step-columns'>

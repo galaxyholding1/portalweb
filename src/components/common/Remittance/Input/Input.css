@@ -1,29 +1,30 @@
 .input-remittance {
-  box-sizing: border-box;
-  background-color: transparent;
-  box-shadow: 0 0 0 0.5px var(--text-color);
-  font-weight: 300;
-  color: var(--text-color);
-  transition: border-color 0.3s ease;
-  border-radius: 1rem;
-  max-width: 100%;
-  border: var(--border-color) 1px solid;
-  padding: 0.75rem 1rem;
-  width: 100%;
-  font-size: 18px;
-  font-family: Quicksand, sans-serif;
+  box-sizing: border-box; /* Asegura que padding y border se incluyan en el tamaño total del input */
+  background-color: transparent; /* Fondo transparente para que combine con el fondo del contenedor */
+  box-shadow: 0 0 0 0.5px var(--text-color); /* Sombra sutil que simula un borde suave */
+  font-weight: 300; /* Fuente con peso ligero */
+  color: var(--text-color); /* Color del texto usando variable CSS */
+  transition: border-color 0.3s ease; /* Transición suave cuando cambie el borde */
+  border-radius: 1rem; /* Bordes redondeados */
+  max-width: 100%; /* Limita el ancho máximo al 100% del contenedor */
+  border: var(--border-color) 1px solid; /* Borde sólido con color definido por variable */
+  padding: 0.75rem 1rem; /* Espaciado interno: vertical 0.75rem, horizontal 1rem */
+  width: 100%; /* Ocupa todo el ancho disponible */
+  font-size: 18px; /* Tamaño de fuente */
+  font-family: Quicksand, sans-serif; /* Fuente principal Quicksand con fallback sans-serif */
 }
 
 .input-remittance::placeholder {
-  color: var(--text-color);
+  color: var(--text-color); /* El placeholder usa el mismo color que el texto */
 }
 
 .input-container {
-  position: relative;
+  position: relative; /* Permite posicionar elementos hijos de forma absoluta dentro del contenedor */
+
   svg {
-    position: absolute;
-    top: 50%;
-    right: 1rem;
-    transform: translateY(-50%);
+    position: absolute; /* Posiciona el ícono de forma absoluta dentro del input */
+    top: 50%; /* Lo centra verticalmente */
+    right: 1rem; /* Lo separa del borde derecho */
+    transform: translateY(-50%); /* Ajusta el centrado vertical exacto */
   }
 }
