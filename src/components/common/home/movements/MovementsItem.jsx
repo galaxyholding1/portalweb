@@ -4,6 +4,7 @@ import { Icon } from "../../ui/Icon/Icon";
 import { useNavigate } from "react-router";
 import { StateIndicator } from "./StateIndicator/StateIndicator";
 
+// Tarjeta completa para reutilizar como componente en MovementsCard
 export const MovementsItem = ({
   id,
   amount,
@@ -21,11 +22,12 @@ export const MovementsItem = ({
       /**movimientos/${id} */
     }
   };
-
   const state = "sucess";
+  // Retorno de la lógica que se usa para generar el item
   return (
     <div className="movement-item">
       <div className="movement-item-icon">
+        {/* Importación del ícono */}
         <Icon name="money" color="white" />
       </div>
       <div className="movement-item-details">
@@ -38,11 +40,13 @@ export const MovementsItem = ({
           onClick={handleClickNavigate}
           style={{ cursor: "pointer" }}
         >
+          {/* Importación del ícono */}
           <Icon name="note_search" alt="" />
         </div>
       )}
       {stateIndicator && (
-        <StateIndicator state={state}/>
+        // Indicador de estado
+        <StateIndicator state={state} />
       )}
 
       <div className="movement-item-amount">

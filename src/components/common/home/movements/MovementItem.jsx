@@ -2,6 +2,7 @@ import { Formatter } from "../../../../util/formatter"
 import "./movements.css";
 import { Icon } from "../../ui/Icon/Icon";
 
+// Apartado de los items de los movimientos con su respectivo ícono y el formato de la fecha
 export const MovementItem = ({ amount, conceptTitle, date }) => {
   return (
     <div className="movement-item">
