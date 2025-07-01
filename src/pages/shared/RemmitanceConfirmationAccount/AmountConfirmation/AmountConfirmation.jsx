@@ -1,22 +1,20 @@
 import React from "react";
-
-// Componente que muestra información resumida de la remesa
+// Component that displays summarized remittance information
 import { RemmitanceConfirmationItem } from "../../../../components/common/home/RemmitanceConfirmationItem/RemmitanceConfirmationItem";
-
-// Advertencia o mensaje importante antes de continuar
+// Warning or important message before proceeding
 import { ConfirmationWarning } from "../../../../components/common/Remittance/ConfirmationWarning/ConfirmationWarning";
 
-// Componente de revisión y confirmación del monto antes de enviar la remesa
+// Component for reviewing and confirming the amount before sending the remittance
 export const AmountConfirmation = () => {
   return (
     <div className="remittance-step-container">
-      {/* Título principal del paso */}
+      {/* Main title of the step */}
       <h1>Revision y Confirmación</h1>
 
-      {/* Card con detalles de la transacción */}
+      {/* Card with transaction details */}
       <RemmitanceConfirmationItem large />
 
-      {/* Mensaje de advertencia o confirmación extra */}
+      {/* Warning or extra confirmation message */}
       <ConfirmationWarning />
     </div>
   );

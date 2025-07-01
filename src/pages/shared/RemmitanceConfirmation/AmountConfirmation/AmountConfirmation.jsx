@@ -4,13 +4,13 @@ import { AmountContactConfirmation } from '../../../../components/common/Remitta
 import { RemittanceForm } from '../../../../components/common/home/Remittances/RemittanceForm'
 import { RemmitanceConfirmationItem } from '../../../../components/common/home/RemmitanceConfirmationItem/RemmitanceConfirmationItem'
 
-// Son la confirmación del proceso de personas.
+// These are the confirmation for the people process.
 export const AmountConfirmation = () => {
   return (
     <div className='remittance-step-container'>
       <h1>Revisión y confirmación</h1>
       <p>Confirma que los datos que agregaste esten correctos antes de hacer el envío</p>
-      {/* Es una grilla que divide su espacio en dos. */}
+      {/* It's a grid that divides its space into two. */}
       <div className='remittance-step-columns' style={{maxHeight: 200 }}>
         <RemmitanceConfirmationItem/>
         <RemmitanceConfirmationItem/>

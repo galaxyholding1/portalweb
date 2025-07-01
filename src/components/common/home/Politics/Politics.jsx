@@ -1,5 +1,7 @@
 import "./Politics.css";
 
+/** * Politics Component
+ */
 export const Politics = () => {
   return (
   <div className="politicas-container">

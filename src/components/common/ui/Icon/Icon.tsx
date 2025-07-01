@@ -1,7 +1,7 @@
 import React from "react";
 import { useTheme } from "../../../../store/theme-store";
 
-// Importaciones individuales
+// Individual icon imports
 import ArrowLeftRight from "../../../../assets/icons/arrow_left_right.svg?react";
 import BellRing from "../../../../assets/icons/bell_ring.svg?react";
 import Cents from "../../../../assets/icons/cents.svg?react";
@@ -68,7 +68,7 @@ import icStatePending from "../../../../assets/icons/ic-state-pending.svg?react"
 import bdgeOk from "../../../../assets/icons/bdge_ok.svg?react";
 import calendarDays from "../../../../assets/icons/calendar_days.svg?react";
 
-// Mapeo desde la llave, la cual será la que se indique en el componente
+// Mapping from the key, which will be the one indicated in the component
 export const iconsMap = {
   arrow_left_right: ArrowLeftRight,
   bell_ring: BellRing,
@@ -148,10 +148,10 @@ interface IconProps {
 }
 
 // Author: Juan Ayala
-// El componente Icon es un componente que permite renderizar
-// un icono SVG basado en su nombre. Utiliza un mapa de iconos
-// Si el icono no se encuentra, renderiza un icono de "Not Found".
-// Si encuentra una versión dark y es el tema elegido, la utiliza (sufijo _dark).
+// The Icon component is a component that allows rendering
+// an SVG icon based on its name. It uses an icon map.
+// If the icon is not found, it renders a "Not Found" icon.
+// If it finds a dark version and it is the chosen theme, it uses it (suffix _dark).
 export const Icon = ({
   name,
   width = 24,
@@ -163,12 +163,12 @@ export const Icon = ({
   const { theme } = useTheme();
 
   if (color !== "var(--text-color)") {
-    // colorTransform es un wrapper para transformar los colores
-    // a variables CSS, facilmente.
+    // colorTransform is a wrapper to easily transform colors
+    // to CSS variables.
     color = colorTransform(color);
   }
 
-  //SECTION Verificación de existencia
+  //SECTION Existence verification
 
   const iconKey =
     theme === "dark" && iconsMap[`${name}_dark`] ? `${name}_dark` : name;
@@ -190,7 +190,8 @@ export const Icon = ({
   );
 };
 
-// 
+// colorTransform is a helper function that converts
+// predefined color strings into corresponding CSS variables.
 const colorTransform = (color: string) => {
   switch (color) {
     case "primary":

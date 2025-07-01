@@ -1,6 +1,9 @@
 import React from "react";
 import './LabelAreaSwitchs.css'
 
+/**
+ * LabelAreaSwitchs Component
+ */
 export const LabelAreaSwitchs = ({ options, optionValues, setOptionValues }) => {
   return (
     <div className="operations-list">

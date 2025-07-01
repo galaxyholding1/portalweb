@@ -33,12 +33,15 @@ const antiPhishingOptions = [
 ];
 
 export const SecurityCard = () => {
+  // Manages the state for password change form inputs.
   const {
     formValues: passwordForm,
     handleInputChange: handlePasswordInputChange,
   } = useForm(initialForm);
 
+  // State for the selected two-factor authentication method.
   const [authMethod, setAuthMethod] = useState("sms");
+  // State for toggling operations where 2FA or anti-phishing codes are applied.
   const [operations, setOperations] = useState({
     fiat: false,
     crypto: true,
@@ -51,8 +54,10 @@ export const SecurityCard = () => {
   return (
     <Card title="Seguridad" icon={<Icon name="file_document" />}>
       <div className="security-grid">
+        {/* Section for two-factor authentication settings. */}
         <div className="auth-section">
           <h3 className="main-section-title">Autentificación de doble factor</h3>
+          {/* Radio button group for selecting 2FA method. */}
           <RadioInput
             options={authOptions}
             value={authMethod}
@@ -60,11 +65,13 @@ export const SecurityCard = () => {
           />
         </div>
 
+        {/* Section for operations where two-factor authentication can be used. */}
         <div className="operations-section">
           <h3 className="section-title">
             Operaciones en las que puedo utilizar la autentificación de doble
             factor
           </h3>
+          {/* Switch components for enabling/disabling 2FA on specific operations. */}
           <LabelAreaSwitchs
             optionValues={operations}
             setOptionValues={setOperations}
@@ -72,9 +79,11 @@ export const SecurityCard = () => {
           />
         </div>
 
+        {/* Section for changing the user's password. */}
         <div className="password-section">
           <h3 className="section-title">Cambiar contraseña</h3>
           <div className="password-inputs">
+            {/* Input for the old password. */}
             <PasswordInput
               className='password-input-card-security'
               handleInputChange={handlePasswordInputChange}
@@ -82,6 +91,7 @@ export const SecurityCard = () => {
               name={"oldPassword"}
               placeholder={"Escribe la contraseña actual"}
             />
+            {/* Input for the new password. */}
             <PasswordInput
               className='password-input-card-security'
               handleInputChange={handlePasswordInputChange}
@@ -89,6 +99,7 @@ export const SecurityCard = () => {
               name={"newPasswordConfirmation"}
               placeholder={"Escribe la nueva contraseña"}
             />
+            {/* Input for confirming the new password. */}
             <PasswordInput
               className='password-input-card-security'
               handleInputChange={handlePasswordInputChange}
@@ -99,15 +110,18 @@ export const SecurityCard = () => {
           </div>
         </div>
 
+        {/* Section for anti-phishing code settings. */}
         <div className="antiphishing-section">
           <h3 className="section-title">Código antiphishing</h3>
+          {/* Switch components for enabling/disabling anti-phishing for specific operations. */}
           <LabelAreaSwitchs
             optionValues={antiPhishingOptions}
-            setOptionValues={setOperations}
-            options={operationOptions}
+            setOptionValues={setOperations} 
+            options={operationOptions} 
           />
         </div>
 
+        {/* Button to save all security changes. */}
         <SaveButton/>
       </div>
     </Card>

@@ -2,6 +2,7 @@ import { Card } from "../Card/Card";
 import "./RequestsCard.css";
 import { Icon } from "../../ui/Icon/Icon";
 
+// Card for the requests preview
 const requestsList = [
   {
     id: 1,
@@ -23,6 +24,8 @@ const requestsList = [
   },
 ];
 
+// Card for the requests preview
+// It shows the last requests made by the user
 export const RequestsCard = () => {
   const screenType = "Business";
   return (

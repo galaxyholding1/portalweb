@@ -1,9 +1,9 @@
 import { Icon } from "../ui/Icon/Icon";
 
-// Se usa actualmente en el navbar superior
-// y en el footer.
+// Currently used in the top navbar
+// and in the footer.
 
-const socialIcons = [ // Se definiran cuando estén listas.
+const socialIcons = [ // To be defined when ready.
   { name: 'facebook', href: "/" },
   { name: 'instagram', href: "/" },
   { name: 'x', href: "/" },

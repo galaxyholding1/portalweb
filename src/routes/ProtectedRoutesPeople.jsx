@@ -10,7 +10,7 @@ import { RemittancePeople } from "../pages/people/RemittancePeople/RemittancePeo
 import { RemmitanceConfirmationItem } from "../components/common/home/RemmitanceConfirmationItem/RemmitanceConfirmationItem";
 import { RemittanceProcess } from "../pages/shared/RemmitanceConfirmation/RemittanceProcess";
 import { RemittanceFilters } from "../pages/shared/RemittanceFilters/RemittanceFilters";
-import { RemmitanceConfirmationAccount } from "../pages/shared/RemmitanceConfirmationAccount/RemmitanceConfirmationAccount";
+import { RemmitanceConfirmationAccount } from "../pages/shared/RemmitanceConfirmationAccount/RemittanceConfirmationAccount";
 import { RemittanceInformation } from "../components/common/Remittance/RemittanceInformation/RemittanceInformation";
 import { RemittanceShared } from "../pages/shared/RemittanceShared/RemittanceShared";
 

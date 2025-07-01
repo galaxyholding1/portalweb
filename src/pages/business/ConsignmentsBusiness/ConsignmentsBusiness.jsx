@@ -1,51 +1,51 @@
 /**
- * @fileoverview Componente de la página de remesas para el portal de negocios
+ * @fileoverview Component for the remittances page for the business portal
  * @requires react
  */
 
-// Importación de hooks y recursos necesarios
+// Import necessary hooks and resources
 import { useState } from "react";
-// Importación de la imagen del banner para la sección hero
+// Import banner image for the hero section
 import bannerImage from "../../../assets/images/banner-home.png";
-// Importación de estilos compartidos con la versión de personas
+// Import shared styles with the people's version
 import "../../people/ConsignmentsPeople/ConsignmentsPeople.css";
 
 /**
- * @constant {string[]} tabs - Lista de pestañas disponibles en la página de remesas
- * Define las diferentes secciones de información que se mostrarán al usuario
+ * @constant {string[]} tabs - List of available tabs on the remittances page
+ * Defines the different information sections to be displayed to the user
  */
 const tabs = [
-  "Enviar y recibir", // Información sobre el proceso de envío y recepción de remesas
-  "Líneas de atención", // Canales de atención al cliente
-  "Beneficios", // Ventajas del servicio de remesas
-  "Características", // Funcionalidades y detalles del servicio
-  "Tasas y tarifas", // Información sobre costos y comisiones
-  "Documentos", // Documentación necesaria para el servicio
+  "Enviar y recibir", // Information about the process of sending and receiving remittances
+  "Líneas de atención", // Customer service channels
+  "Beneficios", // Benefits of the remittance service
+  "Características", // Features and details of the service
+  "Tasas y tarifas", // Information about costs and fees
+  "Documentos", // Required documentation for the service
 ];
 
 /**
- * Componente ConsignmentsBusiness
+ * ConsignmentsBusiness Component
  *
  * @component
- * @description Renderiza la página principal de remesas para el portal de negocios.
- * Muestra información detallada sobre el servicio de remesas de Galaxy Pay,
- * incluyendo una sección de presentación y un sistema de pestañas para
- * navegar entre diferentes tipos de información.
+ * @description Renders the main remittances page for the business portal.
+ * Displays detailed information about Galaxy Pay's remittance service,
+ * including a presentation section and a tab system to
+ * navigate between different types of information.
  *
- * @returns {JSX.Element} Página de remesas con información y navegación por pestañas
+ * @returns {JSX.Element} Remittances page with information and tab navigation
  */
 export const ConsignmentsBusiness = () => {
   /**
-   * Estado para controlar la pestaña activa
-   * @type {[number, function]} Par de estado y función actualizadora
+   * State to control the active tab
+   * @type {[number, function]} State pair and update function
    */
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
     <div className="consignments-container">
-      {/* Sección de presentación con información principal */}
+      {/* Presentation section with main information */}
       <div className="consignments-presentation">
-        {/* Contenedor del texto principal */}
+        {/* Container for the main text */}
         <div className="consignments-text">
           <h1>
             Remesas <br />
@@ -61,16 +61,16 @@ export const ConsignmentsBusiness = () => {
             Establecimiento Bancario.
           </p>
         </div>
-        {/* Contenedor de la imagen hero */}
+        {/* Container for the hero image */}
         <div className="consignments-hero">
           <img src={bannerImage} alt="remesas_galaxy_pay" />
         </div>
       </div>
 
-      {/* Sección de pestañas con información detallada */}
+      {/* Tabs section with detailed information */}
       <div className="consignments-detail">
         <div className="tabs">
-          {/* Navegación de pestañas */}
+          {/* Tab navigation */}
           <div className="tab-header">
             {tabs.map((tab, index) => (
               <button
@@ -84,7 +84,7 @@ export const ConsignmentsBusiness = () => {
               </button>
             ))}
           </div>
-          {/* Contenido de la pestaña seleccionada */}
+          {/* Content of the selected tab */}
           <div className="tab-content">
             <h2>{tabs[activeIndex]}</h2>
           </div>

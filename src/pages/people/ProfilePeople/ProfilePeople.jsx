@@ -2,7 +2,7 @@ import React from "react";
 import { ProfileCard } from "../../../components/common/home/ProfileCard/ProfileCard";
 import "../../business/MovementsBusiness/MovementsBusiness.css";
 
-// En este apartado se llama a los distintos componentes para mostrarlos en la página
+// This section calls the different components to display them on the page
 export const ProfilePeople = () => {
   return (
     <div className="space-b">

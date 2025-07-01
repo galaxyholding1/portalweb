@@ -1,5 +1,8 @@
 import './CustomInput.css'
 
+/**
+ * CustomInput Component
+ */
 export const CustomInput = ({ value, handleInputChange, name, placeholder, type = 'text' }) => (
   <div className="input-container">
     <input

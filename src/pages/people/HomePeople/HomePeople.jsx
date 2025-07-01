@@ -5,7 +5,7 @@ import { RequestsCard } from "../../../components/common/home/MyRequestsCard/Req
 import { TransfersCard } from "../../../components/common/home/MyRequestsCard/TransfersCard";
 import "./HomePeople.css";
 
-// En este apartado se llama a los distintos componentes para mostrarlos en la página
+// This section calls the different components to display them on the page
 export const HomePeople = () => {
   return (
     <div className="dashboard-grid">

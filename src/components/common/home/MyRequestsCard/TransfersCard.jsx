@@ -24,26 +24,31 @@ const transfersList = [
 ];
 
 export const TransfersCard = () => {
-  const screenType = "Business";
+  // Determines the type of screen/client, used for dynamic routing.
+  const screenType = "Business"; 
   return (
     <div className="transfers-section">
+      {/* Card component for displaying the title and an icon. */}
       <Card
-        title="Transferencias"
+        title="Transferencias" // "Transfers"
         icon={
           <Icon name="arrow_left_right"/>
         }
-        morePath={`/${screenType}/requests`}
+        morePath={`/${screenType}/requests`} // Path to view more transfer requests.
       />
+      {/* Table to display the list of transfers. */}
       <div className="transfers-table">
         <table>
+          {/* Table header with column titles. */}
           <thead>
             <tr>
-              <th>tipo</th>
-              <th>número</th>
-              <th>monto</th>
-              <th>destino</th>
+              <th>tipo</th> {/* "type" */}
+              <th>número</th> {/* "number" */}
+              <th>monto</th> {/* "amount" */}
+              <th>destino</th> {/* "destination" */}
             </tr>
           </thead>
+          {/* Table body, mapping through the transfersList to render each row. */}
           <tbody>
             {transfersList.map((transfer, index) => (
               <tr key={index}>

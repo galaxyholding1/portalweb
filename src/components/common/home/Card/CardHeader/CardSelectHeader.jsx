@@ -8,6 +8,8 @@ export const CardSelectHeader = ({ icon, title }) => {
         {icon}
         <h3>{title}</h3>
       </div>
+      {/* Select component for filtering or options related to the card's content. */}
+      {/* The options provided are placeholders and should be replaced with dynamic data. */}
       <Select
         options={[
           {label: '01-05-2025', value: '01-05-2025'},

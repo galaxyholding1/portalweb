@@ -1,18 +1,18 @@
-// Importa la librería principal de React para poder utilizar JSX y componentes
+// Import the main React library to use JSX and components
 import React from "react";
 
-// Importa el componente ProfileCard desde su ruta relativa dentro del proyecto
+// Import the ProfileCard component from its relative path within the project
 import { ProfileCard } from "../../../components/common/home/ProfileCard/ProfileCard";
 
-// Importa los estilos CSS específicos para el componente MovementsBusiness
+// Import specific CSS styles for the MovementsBusiness component
 import "../MovementsBusiness/MovementsBusiness.css";
 
-// Define y exporta el componente funcional ProfileBusiness
+// Define and export the functional component ProfileBusiness
 export const ProfileBusiness = () => {
   return (
-    // Contenedor principal con una clase CSS 'space-b' que aplica estilos definidos en el CSS importado
+    // Main container with a CSS class 'space-b' that applies styles defined in the imported CSS
     <div className="space-b">
-      {/* Renderiza el componente ProfileCard dentro del contenedor */}
+      {/* Renders the ProfileCard component inside the container */}
       <ProfileCard />
     </div>
   );

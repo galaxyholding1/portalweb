@@ -13,7 +13,7 @@ interface Props {
   showState?: boolean;
   className?: string;
 }
-
+/// LastRemittancesCard Component
 export const LastRemittancesCard: React.FC<Props> = ({ data, className, showStateIcon = true, showState = false }) => {
   return (
     <div className={"contact-card-container" + (className ? ` ${className}` : "")}>
@@ -27,6 +27,7 @@ export const LastRemittancesCard: React.FC<Props> = ({ data, className, showStat
 
       <div className="contact-card-detail">
         <Flag code="co"/>
+        {/* Conditionally renders the StateIndicator component if showState is true. */}
         { showState && ( <StateIndicator state="pending"/> ) }
         <div className="column">
           <strong className="price">
@@ -34,6 +35,7 @@ export const LastRemittancesCard: React.FC<Props> = ({ data, className, showStat
           </strong>
           <span> {Formatter.formatDateLiteral(new Date(data.date))}</span>
         </div>
+        {/* Conditionally renders an icon (e.g., success badge) if showStateIcon is true. */}
         {showStateIcon && <Icon name="bdgeOk" />}
       </div>
     </div>

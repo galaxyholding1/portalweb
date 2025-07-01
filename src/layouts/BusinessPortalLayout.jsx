@@ -1,7 +1,7 @@
 import SubNavbar from "../components/layout/Navbar/SubNavbar/SubNavbar";
 
 // Author: Juan Ayala
-// Este layout centraliza el estilo para el portal de personas
+// This layout centralizes the style for the business portal
 export const BusinessPortalLayout = ({children}) => {
   return (
     <div className="page-container">

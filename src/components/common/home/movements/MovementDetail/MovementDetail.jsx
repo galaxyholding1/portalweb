@@ -1,6 +1,6 @@
 import React from "react";
 
-// Logica de los detalles de movimientos con título y descripción
+// Logic for movement details with title and description
 export const MovementDetail = ({items}) => {
   return (
     <div className="movement-section">

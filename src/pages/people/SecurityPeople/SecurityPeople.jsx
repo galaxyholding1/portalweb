@@ -3,7 +3,7 @@ import { SecurityCard } from "../../../components/common/home/SecurityCard/Secur
 import SubNavbar from "../../../components/layout/Navbar/SubNavbar/SubNavbar";
 import "./SecurityPeople.css";
 
-// En este apartado se llama a los distintos componentes para mostrarlos en la página
+// This section calls the different components to display them on the page
 export const SecurityPeople = () => {
   return <SecurityCard />;
 };

@@ -2,10 +2,10 @@ import React, { useEffect } from "react";
 import "./DinamicKeyInput.css";
 
 {
-  /*  Esta es la ruta en donde esta http://localhost:5173/portal-personas/clave   */
+  /* This is the path where it is located: http://localhost:5173/portal-personas/clave */
 }
 
-// Lógica de los 6 apartados de la llave con estilos y funcionamiento
+// Logic for the 6 key sections with styles and functionality
 export const DinamicKeyInput = ({ keyCode, setKey }) => {
   useEffect(() => {
     window.blur();
@@ -25,7 +25,7 @@ export const DinamicKeyInput = ({ keyCode, setKey }) => {
       window.removeEventListener("keydown", handleKeyDown);
     };
   }, [keyCode, setKey]);
-
+  // Renders the 6 key sections
   return (
     <div className="contenedor-llave">
       {Array.from({ length: 6 }).map((_, i) => (

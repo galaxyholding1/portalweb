@@ -1,26 +1,26 @@
 /**
- * @fileoverview Componente de inicio de sesión para el portal de negocios
+ * @fileoverview Login component for the business portal
  * @module LoginBusiness
  */
 
-// Importaciones de React Router para navegación y enlaces
+// React Router imports for navigation and links
 import { Link, useNavigate } from "react-router";
-// Estilos específicos del componente
+// Component-specific styles
 import "./LoginBusiness.css";
-// Hook personalizado para manejo de formularios
+// Custom hook for form handling
 import { useForm } from "../../../hooks/useForm";
-// Componentes de entrada personalizados
+// Custom input components
 import { PasswordInput } from "../../../components/common/ui/Input/PasswordInput";
 import { CustomInput } from "../../../components/common/ui/Input/CustomInput";
 
-// Imagen del banner para la página de inicio de sesión
+// Banner image for the login page
 import bannerImage from "../../../assets/images/banner-home.png";
 
 /**
- * Estado inicial del formulario de inicio de sesión
+ * Initial state of the login form
  * @type {Object}
- * @property {string} username - Nombre de usuario o identificación
- * @property {string} password - Contraseña del usuario
+ * @property {string} username - User or identification name
+ * @property {string} password - User password
  */
 const initialFormState = {
   username: "",
@@ -28,17 +28,17 @@ const initialFormState = {
 };
 
 /**
- * Componente de inicio de sesión para el portal de negocios
- * @returns {JSX.Element} Formulario de inicio de sesión con campos para usuario y contraseña
+ * Login component for the business portal
+ * @returns {JSX.Element} Login form with fields for username and password
  */
 export const LoginBusiness = () => {
-  // Hook personalizado para manejar el estado del formulario
+  // Custom hook to manage form state
   const { formValues, handleInputChange } = useForm(initialFormState);
   const navigate = useNavigate();
 
   /**
-   * Maneja el envío del formulario de inicio de sesión
-   * @param {Event} e - Evento del formulario
+   * Handles the submission of the login form
+   * @param {Event} e - Form event
    */
   const handleLogin = (e) => {
     e.preventDefault();
@@ -49,15 +49,15 @@ export const LoginBusiness = () => {
   return (
     <div className="login-screen">
       <main className="login-container">
-        {/* Formulario de inicio de sesión */}
+        {/* Login form */}
         <form onSubmit={handleLogin}>
           <h3 className="login-title">Inicio de sesión</h3>
           <p className="login-description">
             si no tienes un usuario asignado ingresa tu número de identidad.
           </p>
-          {/* Contenedor de campos del formulario */}
+          {/* Form fields container */}
           <div className="form-container">
-            {/* Campo de entrada para el nombre de usuario/identificación */}
+            {/* Input field for username/identification */}
             <CustomInput
               handleInputChange={handleInputChange}
               value={formValues.username}
@@ -65,7 +65,7 @@ export const LoginBusiness = () => {
               placeholder="NIT o CFI"
             />
 
-            {/* Campo de entrada para la contraseña */}
+            {/* Input field for password */}
             <PasswordInput
               handleInputChange={handleInputChange}
               value={formValues.password}
@@ -73,12 +73,12 @@ export const LoginBusiness = () => {
             />
           </div>
 
-          {/* Botón de envío del formulario */}
+          {/* Form submission button */}
           <button type="submit" className="btn-login-people">
             iniciar sesión
           </button>
 
-          {/* Enlaces de ayuda */}
+          {/* Help links */}
           <nav className="login-links">
             <Link>¿olvidaste tu usuario?</Link>
             <br />
@@ -86,9 +86,9 @@ export const LoginBusiness = () => {
           </nav>
         </form>
 
-        {/* Sección del banner */}
+        {/* Banner section */}
         <div className="banner">
-          {/* Banner Visual */}
+          {/* Visual Banner */}
           <img src={bannerImage} alt="Banner Visual" />
         </div>
       </main>

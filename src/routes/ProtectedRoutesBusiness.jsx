@@ -10,7 +10,7 @@ import { MovementView } from "../pages/shared/MovementView";
 import { ProfileBusiness } from "../pages/business/ProfileBusiness/ProfileBusiness";
 import { Remittance } from "../pages/business/Remittance/Remittance";
 import { RemittanceProcess } from "../pages/shared/RemmitanceConfirmation/RemittanceProcess";
-import { RemmitanceConfirmationAccount } from "../pages/shared/RemmitanceConfirmationAccount/RemmitanceConfirmationAccount";
+import { RemmitanceConfirmationAccount } from "../pages/shared/RemmitanceConfirmationAccount/RemittanceConfirmationAccount";
 import { RemittanceFilters } from "../pages/shared/RemittanceFilters/RemittanceFilters";
 import { RemittanceShared } from "../pages/shared/RemittanceShared/RemittanceShared";
 import { RemittancePeople } from "../pages/people/RemittancePeople/RemittancePeople";

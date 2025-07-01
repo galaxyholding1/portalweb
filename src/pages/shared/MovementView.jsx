@@ -8,18 +8,18 @@ import "./MovementView.css";
 export const MovementView = () => {
   return (
     <div>
-      {/* Tarjeta principal con título e ícono */}
+      {/* Main card with title and icon */}
       <CardSelect
         title={"Detalle de movimientos"}
         icon={<Icon name="moving_desk" />}
       >
-        {/* Ejemplo de movimiento individual (puedes renderizar varios dinámicamente) */}
+        {/* Example of an individual movement (can render multiple dynamically) */}
         <MovementItem amount={4000} conceptTitle="Airbnb" date={new Date()} />
 
-        {/* Sección detallada de la transacción (fecha, usuario, estado, etc.) */}
+        {/* Detailed transaction section (date, user, status, etc.) */}
         <RemittanceTransaction />
 
-        {/* Acciones disponibles: descargar PDF o imprimir */}
+        {/* Available actions: download PDF or print */}
         <div className="actions-movement-container">
           <button className="button-portal">
             <Icon name="pdf_icon" color="white" />

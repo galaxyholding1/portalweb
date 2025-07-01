@@ -1,23 +1,23 @@
-// Importa los estilos específicos de este componente
+// Imports specific styles for this component
 import './RemittanceFilters.css'
 
-// Importa la lista de remesas, probablemente con filtros o resultados
+// Imports the list of remittances, probably with filters or results
 import { RemittanceList } from '../../../components/common/home/Remittances/RemittanceList/RemittanceList'
 
-// Importa el componente informativo sobre remesas, con tarjetas visuales de opciones
+// Imports the informative remittance component, with visual option cards
 import { RemittanceInformation } from '../../../components/common/Remittance/RemittanceInformation/RemittanceInformation'
 
-// Componente principal que representa la vista de filtros y opciones de envío de remesas
+// Main component representing the remittance filters and sending options view
 export const RemittanceFilters = () => {
   return (
-    // Contenedor general de la página
+    // General page container
     <div className='page-container'>
-      {/* Contenedor con grid para mostrar filtros y opciones en paralelo */}
+      {/* Container with grid to display filters and options in parallel */}
       <div className="remittance-filters-container">
-        {/* Lista de remesas con opciones filtrables */}
+        {/* Remittance list with filterable options */}
         <RemittanceList/>
 
-        {/* Información visual sobre métodos para enviar dinero */}
+        {/* Visual information about money sending methods */}
         <RemittanceInformation/>
       </div>
     </div>

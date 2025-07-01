@@ -1,45 +1,43 @@
 /**
- * @fileoverview Componente del dashboard principal para el portal de negocios
+ * @fileoverview Main dashboard component for the business portal
  * @requires react
  */
-
-// Importación de componentes de tarjetas para el dashboard
+// Import dashboard card components
 import { BalanceCard } from "../../../components/common/home/BalanceCard/BalanceCard";
 import { MovementCard } from "../../../components/common/home/MovementCard/MovementCard";
 import { MovementCardPreview } from "../../../components/common/home/MovementCardPreview/MovementCardPreview";
 import { RequestsCard } from "../../../components/common/home/MyRequestsCard/RequestsCard";
 import { TransfersCard } from "../../../components/common/home/MyRequestsCard/TransfersCard";
-
-// Importación de estilos compartidos con la versión de personas
+// Import styles shared with the people's version
 import "../../people/HomePeople/HomePeople.css";
 
 /**
- * Componente HomeBusiness
+ * HomeBusiness Component
  *
  * @component
- * @description Renderiza el dashboard principal del portal de negocios.
- * Este dashboard muestra un resumen completo de la información financiera
- * y transaccional del usuario, organizado en diferentes tarjetas informativas.
+ * @description Renders the main dashboard of the business portal.
+ * This dashboard displays a comprehensive summary of the user's financial
+ * and transactional information, organized into different informative cards.
  *
- * La disposición de los elementos se controla mediante CSS Grid a través
- * de la clase 'dashboard-grid' para una presentación organizada y responsive.
+ * The layout of the elements is controlled by CSS Grid via
+ * the 'dashboard-grid' class for an organized and responsive presentation.
  *
- * @returns {JSX.Element} Dashboard con múltiples tarjetas informativas
+ * @returns {JSX.Element} Dashboard with multiple informative cards
  */
 export const HomeBusiness = () => {
   return (
     <div className="dashboard-grid">
-      {/* Tarjeta que muestra el saldo y la información financiera principal */}
+      {/* Card showing main balance and financial information */}
       <BalanceCard />
 
-      {/* Vista previa de los movimientos y transacciones recientes */}
+      {/* Preview of recent movements and transactions */}
       <MovementCardPreview />
 
-      {/* Contenedor para las tarjetas de aplicaciones y transferencias */}
+      {/* Container for applications and transfers cards */}
       <div className="grid-area-applications">
-        {/* Tarjeta que muestra las solicitudes pendientes */}
+        {/* Card showing pending requests */}
         <RequestsCard />
-        {/* Tarjeta que muestra el historial de transferencias */}
+        {/* Card showing transfer history */}
         <TransfersCard />
       </div>
     </div>

@@ -2,14 +2,14 @@ import "./RemittanceFilterListModal.css";
 import DateInput from "../../ui/Input/DateInput/DateInput";
 import Checkbox from "../../ui/Input/CheckboxInput/Checkbox";
 import { Select } from "../../Remittance/Select/Select";
-
 import { motion, AnimatePresence } from "framer-motion";
-
 import NumberInput from "../../ui/Input/NumberInput/NumberInput";
 import Button from "../../ui/Input/ButtonInput/Button";
 import { CalendarModal } from "../Card/CardHeader/Filter/CalendarModal";
 import { useForm } from "../../../../hooks/useForm";
 
+/// Modal for filtering remittances
+/// It allows users to filter remittances by date, status, type, origin, country
 const initialValues = {
   startDate: "",
   endDate: "",
@@ -52,6 +52,8 @@ export const RemittanceFilterListModal = ({
   const handleApply = () => {
     onApplyFilters(filters);
   };
+
+  // Function to handle date changes
   return (
     <>
       <AnimatePresence>

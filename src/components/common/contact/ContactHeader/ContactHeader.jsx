@@ -2,7 +2,7 @@ import './ContactHeader.css'
 import { Flag } from '../../Flag/Flag'
 import imageContact from '../../../../assets/images/contact-image.png'
 
-// Componente reutilizable para el header de la información del contacto
+// Reusable component for contact information header
 export const ContactHeader = () => {
   return (
     <div className='contact-header'>

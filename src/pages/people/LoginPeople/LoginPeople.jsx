@@ -6,17 +6,17 @@ import { CustomInput } from "../../../components/common/ui/Input/CustomInput";
 
 import bannerImage from "../../../assets/images/banner-home.png";
 
-// Estado inicial del formulario de inicio de sesión
+// Initial state for the login form
 const initialFormState = {
   username: "",
   password: "",
 };
 
-// Componente funcional que representa la pantalla del login para personas
+// Functional component representing the login screen for individuals
 export const LoginPeople = () => {
   const { formValues, handleInputChange } = useForm(initialFormState);
   const navigate = useNavigate();
-  // Función que se ejecuta cuando se envía el formulario
+  // Function executed when the form is submitted
   const handleLogin = (e) => {
     e.preventDefault();
     console.log(formValues);
@@ -24,16 +24,16 @@ export const LoginPeople = () => {
   };
 
   return (
-    // Contenedor general de la pantalla de login
+    // General container for the login screen
     <div className="login-screen">
       <main className="login-container">
-        {/* Formulario de inicio de sesión */}
+        {/* Login form */}
         <form onSubmit={handleLogin}>
           <h3 className="login-title">Inicio de sesión</h3>
           <p className="login-description">
             si no tienes un usuario asignado ingresa tu número de identidad.
           </p>
-          {/* Inputs del formulario */}
+          {/* Form inputs */}
           <div className="form-container">
             <CustomInput
               handleInputChange={handleInputChange}
@@ -61,7 +61,7 @@ export const LoginPeople = () => {
         </form>
 
         <div className="banner">
-          {/* Banner Visual */}
+          {/* Visual Banner */}
           <img src={bannerImage} alt="Banner Visual" />
         </div>
       </main>

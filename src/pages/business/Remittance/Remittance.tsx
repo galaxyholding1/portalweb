@@ -1,29 +1,26 @@
-// Importa el componente MovementCard desde su ruta relativa
+// Imports the MovementCard component from its relative path
 import { MovementCard } from "../../../components/common/home/MovementCard/MovementCard";
-
-// Importa el componente RemittanceForm desde su ruta relativa
+// Imports the RemittanceForm component from its relative path
 import { RemittanceForm } from "../../../components/common/home/Remittances/RemittanceForm";
-
-// Importa el componente LastConsignment desde su ruta relativa
+// Imports the LastConsignment component from its relative path
 import { LastConsignment } from "../../../components/common/home/RemittancesCard/LastConsignment";
-
-// Importa los estilos CSS específicos para el componente Remittance
+// Imports the specific CSS styles for the Remittance component
 import "./Remittance.css";
 
-// Define y exporta el componente funcional Remittance
+// Defines and exports the functional component Remittance
 export const Remittance = () => {
   return (
-    // Contenedor principal con clase CSS que define la estructura en grid
+    // Main container with CSS class that defines the grid structure
     <div className="dashboard-grid">
-      {/* Renderiza el formulario de remesas */}
+      {/* Renders the remittance form */}
       <RemittanceForm />
 
-      {/* Contenedor secundario para mostrar las aplicaciones relacionadas */}
+      {/* Secondary container to display related applications */}
       <div className="grid-area-applications">
-        {/* Renderiza el componente MovementCard con una prop llamada stateIndicator */}
+        {/* Renders the MovementCard component with a prop called stateIndicator */}
         <MovementCard stateIndicator />
 
-        {/* Renderiza el componente que muestra el último consignado */}
+        {/* Renders the component that displays the last consignment */}
         <LastConsignment />
       </div>
     </div>

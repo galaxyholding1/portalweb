@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./NameSearchModal.css";
+
 interface NameSearchModalProps {
   isOpen: boolean;
   onClose: () => void;
@@ -9,24 +10,35 @@ export const NameSearchModal: React.FC<NameSearchModalProps> = ({
   isOpen,
   onClose,
 }) => {
+  // State to hold the value of the search input.
   const [searchValue, setSearchValue] = useState("");
 
+  // Handles the search action when the search button is clicked.
   const handleSearch = () => {
+    // Prevents searching if the input is empty.
     if (!searchValue.trim()) {
       alert("Por favor, ingrese un nombre para buscar");
       return;
     }
+    // Displays an alert with the search query (for demonstration purposes).
     alert(`Buscando movimientos con el nombre: ${searchValue}`);
+    // Clears the search input after searching.
     setSearchValue("");
+    // Closes the modal.
     onClose();
   };
 
+  // If the modal is not open, return null to render nothing.
   if (!isOpen) return null;
 
   return (
+    // Modal overlay that covers the background and closes the modal when clicked.
     <div className="modal-overlay" onClick={onClose}>
+      {/* Modal content, prevents closing when clicked inside. */}
       <div className="name-modal" onClick={(e) => e.stopPropagation()}>
+        {/* Title of the modal. */}
         <h4 className="modal-title">Buscar por nombre</h4>
+        {/* Input field for the search query. */}
         <input
           type="text"
           value={searchValue}
@@ -34,7 +46,9 @@ export const NameSearchModal: React.FC<NameSearchModalProps> = ({
           placeholder="Ingrese el nombre del movimiento"
           className="name-input"
         />
+        {/* Button to trigger the search. */}
         <button className="search-button" onClick={handleSearch}>
+          {/* SVG icon for the search button. */}
           <svg
             className="search-icon"
             viewBox="0 0 24 24"

@@ -1,3 +1,5 @@
+//    business: string;
+//    initials: string;
 export interface RemittancesInterface {
   id: number;
   user: string;

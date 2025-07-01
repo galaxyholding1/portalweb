@@ -4,7 +4,8 @@ import { FooterSocialLinks } from "./FooterSocialLinks/FooterSocialLinks";
 import { NeedHelp } from "./NeedHelp/NeedHelp";
 import { Link } from 'react-router-dom';
 
-
+// Footer Component
+// This component renders the footer section of the website, including links to policies, regulations, and social media.
 export const Footer = () => {
   return (
     <>

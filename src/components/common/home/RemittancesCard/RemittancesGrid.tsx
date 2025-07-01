@@ -9,6 +9,8 @@ import { getPathByClient } from "../../../../util/getModeClient";
 import { useModalStore } from "../../../../store/modal-store";
 import { DinamicKeyModal } from "../../ui/modal/DinamicKeyModal/DinamicKeyModal";
 
+// This component displays a grid of contacts for remittances, allowing users to select a contact for sending money.
+// It includes a search bar for finding contacts and a button to confirm the selection.
 const contacts: RemittancesInterface[] = [
   {
     id: 1,
@@ -75,6 +77,9 @@ const contacts: RemittancesInterface[] = [
   },
 ];
 
+// It includes a search bar for finding contacts and a button to confirm the selection.
+// It also handles navigation to a dynamic key modal for further actions.
+// It uses the useNavigate hook from react-router for navigation and the useModalStore for showing
 export const RemittancesGrid = () => {
   const navigate = useNavigate();
   const { showModal } = useModalStore();
@@ -133,3 +138,4 @@ export const RemittancesGrid = () => {
     </div>
   );
 };
+

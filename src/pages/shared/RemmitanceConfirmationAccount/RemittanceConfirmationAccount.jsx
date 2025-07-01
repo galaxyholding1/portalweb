@@ -9,12 +9,12 @@ import { TransactionResult } from "./TransactionResult/TransactionResult";
 import { RemittanceDetail } from "./RemittanceDetail/RemittanceDetail";
 
 export const RemmitanceConfirmationAccount = () => {
-  const [step, setStep] = useState(1); // Control del paso actual
+  const [step, setStep] = useState(1); // Current step control
 
-  // Función para avanzar al siguiente paso
+  // Function to advance to the next step
   const handlerNext = () => setStep((step) => step + 1);
 
-  // Mapeo de componentes por paso
+  // Component mapping by step
   const componentByStep = {
     1: <AmountConfirmation />,
     2: <TransactionResult handlerContinue={handlerNext} />,
@@ -26,17 +26,17 @@ export const RemmitanceConfirmationAccount = () => {
   return (
     <Card title={"Remesas"} icon={<Icon name="remesas_icon" />}>
       <div className="remittance-process-grid">
-        {/* Contenido dinámico del paso actual */}
+        {/* Dynamic content for the current step */}
         <div className="remittance-process-content">
           {componentByStep[step]}
         </div>
 
-        {/* Sección lateral con imagen y botones */}
+        {/* Side section with image and buttons */}
         <div className="remittance-process-actions">
           <img src={banner} alt="Banner" />
 
           <div className="remittance-process-buttons">
-            {/* Botón para retroceder */}
+            {/* Button to go back */}
             <button
               disabled={step == 1}
               onClick={() => setStep(step - 1)}
@@ -45,7 +45,7 @@ export const RemmitanceConfirmationAccount = () => {
               regresar
             </button>
 
-            {/* Botón para avanzar */}
+            {/* Button to go forward */}
             <button
               disabled={step >= totalSteps}
               onClick={() => setStep(step + 1)}

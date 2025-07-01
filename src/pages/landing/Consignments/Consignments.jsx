@@ -2,6 +2,7 @@ import { useState } from "react";
 import bannerImage from "../../../assets/images/banner-home.png";
 import "./Consignments.css";
 
+// Defines the tab labels
 const tabs = [
   "Enviar y recibir",
   "Líneas de atención",
@@ -12,11 +13,14 @@ const tabs = [
 ];
 
 export const ConsignmentsPeople = () => {
+  // Manages the active tab's index
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
     <div className="consignments-container">
+      {/* Presentation section */}
       <div className="consignments-presentation">
+        {/* Text content */}
         <div className="consignments-text">
           <h1>
             Remesas <br />
@@ -31,12 +35,15 @@ export const ConsignmentsPeople = () => {
             Establecimiento Bancario.
           </p>
         </div>
+        {/* Hero image */}
         <div className="consignments-hero">
           <img src={bannerImage} alt="remesas_galaxy_pay"/>
         </div>
       </div>
+      {/* Detail section with tabs */}
       <div className="consignments-detail">
         <div className="tabs">
+          {/* Tab headers */}
           <div className="tab-header">
             {tabs.map((tab, index) => (
               <button
@@ -50,6 +57,7 @@ export const ConsignmentsPeople = () => {
               </button>
             ))}
           </div>
+          {/* Tab content displays the active tab's title */}
           <div className="tab-content">
             <h2>{tabs[activeIndex]}</h2>
           </div>

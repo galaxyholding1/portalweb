@@ -1,7 +1,7 @@
 import { MovementCard } from "../../../components/common/home/MovementCard/MovementCard"
 import "./MovementsPeoples.css"
 
-// En este apartado se llama a los distintos componentes para mostrarlos en la página
+// This section calls the different components to display them on the page
 export const MovementsPeoples = () => {
     return (
         <div className="movements-page-container">

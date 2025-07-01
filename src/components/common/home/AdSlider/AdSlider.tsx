@@ -9,7 +9,7 @@ const images = [
 ];
 
 interface AdSliderProps {
-  speed?: number; // velocidad en milisegundos
+  speed?: number; // speed in milliseconds
 }
 
 const AdSlider: React.FC<AdSliderProps> = ({ speed = 8000 }) => {
@@ -21,16 +21,16 @@ const AdSlider: React.FC<AdSliderProps> = ({ speed = 8000 }) => {
         transition={{
           repeat: Infinity,
           ease: "linear",
-          duration: speed / 1000, // velocidad en segundos
+          duration: speed / 1000, // speed in seconds
         }}
         style={{ display: "flex", gap: "10px", width: "fit-content" }}
       >
-        {/* Repetimos las imágenes para efecto continuo */}
+        {/* We repeat the images for a continuous effect */}
         {[...images, ...images].map((src, index) => (
           <img
             key={index}
             src={src}
-            alt={`Publicidad ${index + 1}`}
+            alt={`Advertisement ${index + 1}`}
             className="w-[300px] h-[200px] object-cover"
             style={{ minWidth: "300px" }}
           />

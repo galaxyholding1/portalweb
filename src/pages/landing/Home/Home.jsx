@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import "./Home.css";
 
-// Importaciones 
+// Imports
 import Carosuel from "../../../components/landing/Slider/Carousel";
 import CarouselBackground from "../../../components/landing/Slider/CarouselBackground";
 import CarouselFullscreen from "../../../components/landing/Slider/CarouselFullscreen";
@@ -15,7 +15,7 @@ import imageBanner2 from "../../../assets/images/image_banner_two_2.svg";
 import { CarouselCards } from "../../../components/layout/Carousel/CarouselCards/CarouselCards";
 
 
-// Lista de accesos rápidos, cada uno con un ícono, etiqueta y ruta asociada
+// List of quick accesses, each with an icon, label, and associated path
 const accesos = [
   { icon: "tramites_digitales", label: "Trámites digitales", path: "/tramites" },
   { icon: "negociar_deuda", label: "Negociar deuda", path: "/negociar" },
@@ -25,7 +25,7 @@ const accesos = [
   { icon: "solicita_turno", label: "Solicita tu turno", path: "/turno" },
 ];
 
-// Lista de servicios destacados con su estilo, imagen y enlace
+// List of featured services with their style, image, and link
 const servicios = [
   {
     id: 1,
@@ -53,7 +53,7 @@ const servicios = [
   },
 ];
 
-// Slides que se mostrarán en el carrusel final
+// Slides to be displayed in the final carousel
 const slidesBG = [
   { title: "Pide un préstamo de hasta 30.000 €", image: imageBanner1 },
   { title: "Descárgate nuestra app", image: imageBanner2 },
@@ -62,31 +62,31 @@ const slidesBG = [
 ];
 
 export const Home = () => {
-  /* SECTION: simula un logout automático al entrar a la página de inicio */
+  /* SECTION: simulates an automatic logout upon entering the home page */
   const { logout, isAuthenticated } = useAuthStore();
 
   useEffect(() => {
-    logout(); // Se ejecuta una vez al montar el componente
+    logout(); // Executes once when the component mounts
   }, [logout, isAuthenticated]);
   /*!SECTION*/
 
   return (
     <>
-      {/* Contenedor principal de la página */}
+      {/* Main page container */}
       <div className="allpage">
-        {/* Carrusel superior de bienvenida o promociones */}
+        {/* Top carousel for welcome or promotions */}
         <Carosuel />
 
-        {/* Contenedor central con accesos rápidos y servicios */}
+        {/* Central container with quick accesses and services */}
         <div className="home-container">
-          {/* Sección de accesos rápidos a funcionalidades clave */}
+          {/* Quick access section to key functionalities */}
           <section className="accesos-rapidos">
             <div className="contenedor-accesos">
               {accesos.map((item) => (
                 <div
                   className="acceso-item"
                   key={item.label}
-                  onClick={() => (window.location.href = item.path)} // redirige al hacer clic
+                  onClick={() => (window.location.href = item.path)} // redirects on click
                   style={{ cursor: "pointer" }}
                 >
                   <Icon name={item.icon} className="element-style" />
@@ -96,7 +96,7 @@ export const Home = () => {
             </div>
           </section>
 
-          {/* Sección de servicios destacados */}
+          {/* Featured services section */}
           <div className="servicios-wrapper">
             {servicios.map((servicio) => (
               <div
@@ -104,12 +104,12 @@ export const Home = () => {
                 className={`servicio tarjeta-${servicio.id}`}
                 style={{
                   backgroundColor: servicio.color,
-                  flex: servicio.id === 1 ? 2 : 1, // el primer servicio ocupa el doble de espacio
+                  flex: servicio.id === 1 ? 2 : 1, // the first service takes up twice the space
                 }}
               >
-                {/* Imagen del servicio */}
+                {/* Service image */}
                 <img src={servicio.imagen} alt={servicio.titulo} />
-                {/* Contenido textual del servicio */}
+                {/* Service text content */}
                 <div className="contenido">
                   <h3>{servicio.titulo}</h3>
                   <p>{servicio.texto}</p>
@@ -123,12 +123,12 @@ export const Home = () => {
         </div>
       </div>
 
-      {/* Sección de carrusel de tarjetas con fondo completo */}
+      {/* Full-width card carousel section */}
       <div className="full-width-section">
         <CarouselFullscreen />
       </div>
 
-      {/* Carrusel de tarjetas con imágenes de fondo */}
+      {/* Card carousel with background images */}
       <div className="carousel-background-container">
         <div className="carousel-background-content">
           <h1>Nuestros créditos son todo ventajas</h1>
@@ -140,11 +140,11 @@ export const Home = () => {
           </p>
         </div>
 
-        {/* Carrusel con tarjetas que muestran los slides definidos */}
+        {/* Carousel with cards displaying the defined slides */}
         <CarouselCards
           cards={slidesBG.map((slide) => (
-            <div 
-              className="carousel-background-card" 
+            <div
+              className="carousel-background-card"
               key={slide.title}
               style={{
                 backgroundImage: `url(${slide.image})`,
@@ -160,4 +160,3 @@ export const Home = () => {
     </>
   );
 };
-

@@ -1,41 +1,35 @@
 import React from "react";
-
-// Tarjeta contenedora general
+// General container card
 import { SimpleCard } from "../../../../components/common/home/Card/SimpleCard/SimpleCard";
-
-// Header con información del contacto (avatar, nombre, etc.)
+// Header with contact information (avatar, name, etc.)
 import { ContactHeader } from "../../../../components/common/contact/ContactHeader/ContactHeader";
-
-// Componente con la información detallada de la remesa (fecha, usuario, estado, etc.)
+// Component with detailed remittance information (date, user, status, etc.)
 import { RemittanceTransaction } from "../../../../components/common/Remittance/RemittanceTransaction/RemittanceTransaction";
-
-// Botón personalizado reutilizable
+// Reusable custom button
 import { Button } from "../../../../components/common/ui/Button/Button";
-
-// Íconos SVG reutilizables
+// Reusable SVG icons
 import { Icon } from "../../../../components/common/ui/Icon/Icon";
-
-// Botón para mostrar más detalles (por ejemplo, colapsar información)
+// Button to show more details (e.g., collapse information)
 import { DetailsButton } from "../../../../components/common/Remittance/DetailsButton/DetailsButton";
 
-// Vista detallada de una remesa realizada
+// Detailed view of a completed remittance
 export const RemittanceDetail = () => {
   return (
     <SimpleCard className="remittance-detail-container">
-      {/* Encabezado con datos del contacto y estado */}
+      {/* Header with contact data and status */}
       <div className="remittance-detail-header">
         <ContactHeader />
         <h1>Monto: 80,00 VEF</h1>
         <Icon name="bdgeOk" width={25} />
       </div>
 
-      {/* Información general de la transacción */}
+      {/* General transaction information */}
       <RemittanceTransaction />
 
-      {/* Botón para mostrar más detalles */}
+      {/* Button to show more details */}
       <DetailsButton />
 
-      {/* Botón para exportar la remesa en PDF */}
+      {/* Button to export the remittance as PDF */}
       <Button
         icon={<Icon name="pdf_icon" />}
         className="remittance-detail-button"

@@ -1,24 +1,24 @@
 /**
- * @fileoverview Componente que muestra la página de movimientos para el portal de negocios
+ * @fileoverview Component that displays the movements page for the business portal
  * @module MovementsBusiness
  */
 
-// Importación del componente de tarjeta de movimientos
+// Importation of the movement card component
 import { MovementCard } from "../../../components/common/home/MovementCard/MovementCard";
-// Importación de estilos específicos del componente
+// Importation of component-specific styles
 import "./MovementsBusiness.css";
 
 /**
- * Componente que renderiza la página de movimientos
- * Muestra dos tarjetas de movimientos con capacidad de filtrado y navegación
- * @returns {JSX.Element} Página de movimientos con dos tarjetas de movimientos
+ * Component that renders the movements page
+ * Displays two movement cards with filtering and navigation capabilities
+ * @returns {JSX.Element} Movements page with two movement cards
  */
 export const MovementsBusiness = () => {
   return (
     <div className="movements-page-container">
-      {/* Primera tarjeta de movimientos con filtro y enlace habilitado */}
+      {/* First movement card with filter and link enabled */}
       <MovementCard filter enableLink totalItems={8} />
-      {/* Segunda tarjeta de movimientos con filtro y enlace habilitado */}
+      {/* Second movement card with filter and link enabled */}
       <MovementCard filter enableLink totalItems={8} />
     </div>
   );
