@@ -18,6 +18,10 @@ import { Remittance } from "../pages/business/Remittance/Remittance";
 import { RemittanceSend } from "../components/common/home/Remittances/RemittanceSend";
 import { DinamicKeyInput } from "../components/common/DinamicKeyInput/DinamicKeyInput";
 
+// Author: Juan Ayala
+// Se usa el layout que tiene el navbar de navegación. (subnavbar)
+// Es aqui donde se debe manejar la logica de autenticación y 
+// autorización para las rutas protegidas relacionadas al portal de personas.
 export const ProtectedRoutesPeople = () => (
   <PersonPortalLayout>
     <Routes>

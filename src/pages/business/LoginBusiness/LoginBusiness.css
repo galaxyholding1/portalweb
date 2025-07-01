@@ -1,15 +1,22 @@
+/* Contenedor principal del formulario de inicio de sesión */
 .login-container {
   max-width: 90vw;
+  /* Ancho máximo del contenedor */
   display: grid;
   grid-template-columns: min(30%, 400px) 1fr;
+  /* Columna del formulario limitada a 30% o 400px */
   /* grid-template-columns: 30% 1fr; */
   grid-template-rows: 1fr;
   gap: 10rem;
+  /* Espacio entre el formulario y el banner */
   margin-inline: auto;
+  /* Centrado horizontal */
   margin-block: 2rem;
+  /* Margen vertical */
   padding: 1rem 0 2rem 0;
 }
 
+/* Estilos del formulario dentro del contenedor */
 .login-container form {
   top: 20px;
   position: relative;
@@ -19,12 +26,16 @@
   align-items: center;
   gap: 1rem;
   padding: 4rem 0.5rem 0.5rem 3rem;
-  p, h3 {
+
+  /* Alineación de párrafos y títulos */
+  p,
+  h3 {
     align-self: flex-start;
     margin: 0;
   }
 }
 
+/* Estilos del título de inicio de sesión */
 .login-title {
   font-size: 20px;
   font-style: normal;
@@ -33,18 +44,21 @@
   text-align: center;
 }
 
+/* Estilos del texto descriptivo */
 .login-description {
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
 }
 
+/* Contenedor de los campos del formulario */
 .form-container {
   height: auto;
   width: 358px;
   border-radius: 80px;
 }
 
+/* Estilos de los campos de entrada */
 .form-container input {
   width: 100%;
   padding: 12px;
@@ -53,6 +67,7 @@
   font-weight: 400;
 }
 
+/* Estilos del botón de inicio de sesión */
 .btn-login-people {
   width: 358px;
   padding: 1rem;
@@ -66,33 +81,39 @@
   font-weight: 400;
 }
 
-.login-container form > nav {
+/* Estilos de la navegación dentro del formulario */
+.login-container form>nav {
   display: flex;
   flex-direction: column;
   align-items: end;
   align-self: last baseline;
 }
 
+/* Estilos del contenedor del banner */
 .banner {
   position: relative;
   grid-column: 2 / 3;
   grid-row: 1 / 3;
 }
 
+/* Estilos del párrafo dentro del banner */
 .banner p {
   padding-left: 2rem;
 }
 
+/* Estilos de los enlaces de ayuda */
 .login-links {
   text-align: center;
 }
 
+/* Contenedor de publicidad */
 .ad-container {
   margin-top: 1rem;
   overflow: hidden;
 }
 
-.banner > img {
+/* Estilos de la imagen del banner */
+.banner>img {
   /* aspect-ratio: 519/333; */
   width: 558px;
   padding-top: 80px;
@@ -101,43 +122,53 @@
   border-radius: 16px;
 }
 
+/* Alineación del banner */
 .banner {
   display: flex;
   justify-content: center;
 }
 
+/* Estilos responsivos para tablets y dispositivos medianos */
 @media (max-width: 1024px) {
+
+  /* Ajustes del contenedor principal */
   .login-container {
     grid-template-columns: 1fr;
     gap: 4rem;
     padding-inline: 1rem;
   }
 
+  /* Ajustes del banner para vista responsive */
   .banner {
     grid-column: auto;
     grid-row: auto;
     order: -1;
+    /* Mueve el banner al inicio en móviles */
     justify-content: center;
   }
 
-  .banner > img {
+  /* Ajustes de la imagen del banner */
+  .banner>img {
     padding-top: 0;
     width: 100%;
     max-width: 90vw;
     height: auto;
   }
 
+  /* Ajustes del contenedor del formulario */
   .form-container {
     width: 100%;
     max-width: 90vw;
     border-radius: 40px;
   }
 
+  /* Ajustes del botón de inicio de sesión */
   .btn-login-people {
     width: 100%;
     max-width: 90vw;
   }
 
+  /* Ajustes del formulario */
   .login-container form {
     padding: 1rem;
     left: 0;
@@ -145,7 +176,10 @@
   }
 }
 
+/* Estilos responsivos para dispositivos móviles medianos */
 @media (max-width: 600px) {
+
+  /* Reducción de tamaños de fuente y espaciado */
   .login-title {
     font-size: 18px;
   }
@@ -165,8 +199,10 @@
   }
 }
 
-
+/* Estilos responsivos para dispositivos móviles pequeños */
 @media (max-width: 400px) {
+
+  /* Ajustes adicionales de espaciado y tamaño */
   .login-container {
     padding-inline: 0.5rem;
     gap: 2rem;
@@ -200,7 +236,7 @@
     font-size: 13px;
   }
 
-  .banner > img {
+  .banner>img {
     max-width: 100%;
     height: auto;
     padding-top: 0;

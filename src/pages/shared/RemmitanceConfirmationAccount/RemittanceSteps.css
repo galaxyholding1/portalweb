@@ -1,9 +1,11 @@
+/* Contenedor principal para los pasos de remesas */
 .remittance-step-container {
   display: flex;
   flex-direction: column;
   height: 100%;
 }
 
+/* Título del paso */
 .remittance-step-container h1 {
   font-size: 20px;
   font-weight: 600;
@@ -11,12 +13,14 @@
   color: var(--secondary-color);
 }
 
+/* Texto secundario del paso */
 .remittance-step-container p {
   line-height: 137%;
   font-weight: 300;
   margin: 0;
 }
 
+/* Layout de una sola columna con altura fija */
 .remittance-step-unique-column {
   flex: 1;
   margin-top: 1.5rem;
@@ -26,22 +30,26 @@
   grid-template-rows: 201px;
 }
 
+/* Contenedor del resultado de una transacción */
 .result-container {
   display: flex;
   width: 100%;
   gap: 1rem;
 
+  /* Ajuste para el ítem visual */
   .remmitance-item {
     flex: 1;
   }
 }
 
+/* Contenedor general del detalle de remesa */
 .remittance-detail-container {
   position: relative;
   padding-bottom: 4rem;
   margin-top: 0.5rem;
 }
 
+/* Botón para descargar detalles en PDF */
 .remittance-detail-button {
   background-color: var(--tertiary-color);
   color: #fff;
@@ -50,11 +58,13 @@
   right: 1rem;
 }
 
+/* Encabezado con ícono, nombre y monto */
 .remittance-detail-header {
   display: flex;
   width: 100%;
   gap: 1rem;
   align-items: center;
+
   h1 {
     font-size: 20px;
     font-weight: 600;

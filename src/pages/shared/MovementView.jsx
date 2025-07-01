@@ -8,14 +8,18 @@ import "./MovementView.css";
 export const MovementView = () => {
   return (
     <div>
+      {/* Tarjeta principal con título e ícono */}
       <CardSelect
         title={"Detalle de movimientos"}
         icon={<Icon name="moving_desk" />}
       >
+        {/* Ejemplo de movimiento individual (puedes renderizar varios dinámicamente) */}
         <MovementItem amount={4000} conceptTitle="Airbnb" date={new Date()} />
 
+        {/* Sección detallada de la transacción (fecha, usuario, estado, etc.) */}
         <RemittanceTransaction />
 
+        {/* Acciones disponibles: descargar PDF o imprimir */}
         <div className="actions-movement-container">
           <button className="button-portal">
             <Icon name="pdf_icon" color="white" />

@@ -1,19 +1,22 @@
 import React from "react";
-import { SimpleCard } from "../../../../components/common/home/Card/SimpleCard/SimpleCard";
-import { AmountContactConfirmation } from "../../../../components/common/Remittance/AmountContactConfirmation/AmountContactConfirmation";
-import { RemittanceForm } from "../../../../components/common/home/Remittances/RemittanceForm";
+
+// Componente que muestra información resumida de la remesa
 import { RemmitanceConfirmationItem } from "../../../../components/common/home/RemmitanceConfirmationItem/RemmitanceConfirmationItem";
-import { Select } from "../../../../components/common/Remittance/Select/Select";
-import { RemittanceConfirmation } from "../../../../components/common/Remittance/RemittanceConfirmation/RemittanceConfirmation";
+
+// Advertencia o mensaje importante antes de continuar
 import { ConfirmationWarning } from "../../../../components/common/Remittance/ConfirmationWarning/ConfirmationWarning";
 
+// Componente de revisión y confirmación del monto antes de enviar la remesa
 export const AmountConfirmation = () => {
   return (
     <div className="remittance-step-container">
+      {/* Título principal del paso */}
       <h1>Revision y Confirmación</h1>
 
+      {/* Card con detalles de la transacción */}
       <RemmitanceConfirmationItem large />
 
+      {/* Mensaje de advertencia o confirmación extra */}
       <ConfirmationWarning />
     </div>
   );

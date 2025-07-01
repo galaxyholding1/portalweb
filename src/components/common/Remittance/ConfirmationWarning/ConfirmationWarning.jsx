@@ -1,6 +1,7 @@
 import { Icon } from '../../ui/Icon/Icon'
 import './ConfirmationWarning.css'
 
+// Esta advertencia sale en la pantalla de confirmación de remesas
 export const ConfirmationWarning = () => {
   return (
     <div className='confirmation-warning'>

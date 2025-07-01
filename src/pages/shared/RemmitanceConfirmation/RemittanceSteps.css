@@ -1,44 +1,51 @@
+/* Contenedor principal del paso de remesa, en columna */
 .remittance-step-container {
   display: flex;
   flex-direction: column;
   height: 100%;
 }
 
-.remittance-step-container h1{
+/* Título del paso */
+.remittance-step-container h1 {
   font-size: 20px;
   font-weight: 600;
   margin: 0;
   color: var(--secondary-color);
 }
 
-.remittance-step-container p{
+/* Descripción o subtítulo */
+.remittance-step-container p {
   line-height: 137%;
   font-weight: 300;
   margin: 0;
 }
 
+/* Contenedor de columnas del contenido del paso */
 .remittance-step-columns {
   flex: 1;
   margin-top: 1.5rem;
   display: grid;
   gap: 1rem;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr; /* dos columnas iguales */
 }
 
+/* Ítem de resultado de remesa con layout vertical y centrado */
 .remittance-result-item {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   align-items: center;
   width: 50%;
+
   .remmitance-item {
     box-sizing: border-box;
     width: 100%;
   }
 }
 
+/* Contenedor de resultados con desplazamiento vertical */
 .result-container {
-  align-items:center ;  
+  align-items: center;
   height: 100%;
-  translate: 0 -10%;
+  translate: 0 -10%; /* mueve hacia arriba */
 }

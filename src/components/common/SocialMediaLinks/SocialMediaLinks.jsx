@@ -1,12 +1,13 @@
 import { Icon } from "../ui/Icon/Icon";
 
-const socialIcons = [
+// Se usa actualmente en el navbar superior
+// y en el footer.
+
+const socialIcons = [ // Se definiran cuando estén listas.
   { name: 'facebook', href: "/" },
   { name: 'instagram', href: "/" },
   { name: 'x', href: "/" },
 ];
-
-
 
 export const SocialMediaLinks = () => (
     <span style={{display: "flex", gap: ".5rem"}}>

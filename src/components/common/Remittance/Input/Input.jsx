@@ -1,5 +1,6 @@
 import './Input.css'
 
+// Componente personalizado del input de remesas.
 export const Input = ({ value, handleInputChange, name, placeholder, icon, type = 'text', className = "" }) => (
   <div className={`input-container`}>
     { icon && icon }

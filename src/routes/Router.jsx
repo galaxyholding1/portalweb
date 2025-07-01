@@ -6,7 +6,8 @@ import { ProtectedRoutesBusiness } from "./ProtectedRoutesBusiness";
 import { ProtectedRoutesPeople } from "./ProtectedRoutesPeople";
 import { Politics } from "../components/common/home/Politics/Politics";
 
-
+// Author: Juan Ayala
+// Este el enrutador principal de la aplicación, que define tanto las rutas públicas como protegidas.
 export const Router = () => {
   return (
     <Routes>
