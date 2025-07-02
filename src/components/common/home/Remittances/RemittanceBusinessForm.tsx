@@ -1,13 +1,22 @@
 import { useState } from "react";
 import "./RemittanceForm.css";
 import { Icon } from "../../ui/Icon/Icon";
+
+// Props interface for the component
 interface RemittanceForm {
   isDarkMode?: boolean;
 }
 
+/**
+ * RemittanceBusinessForm component renders a form to initiate a business remittance transaction.
+ * Includes inputs for recipient information, remittance type, identification, account and amount.
+ *
+ * @param {boolean} isDarkMode - Optional flag to toggle dark mode styling.
+ */
 export const RemittanceBusinessForm: React.FC<RemittanceForm> = ({
   isDarkMode = false,
 }) => {
+  // Local state to store form data
   const [formData, setFormData] = useState({
     recipientName: "",
     remittanceType: "",
@@ -19,13 +28,15 @@ export const RemittanceBusinessForm: React.FC<RemittanceForm> = ({
     amount: "",
   });
 
+  // Handle form submission
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Datos del formulario:", formData);
+    console.log("Form data submitted:", formData);
   };
 
   return (
     <div className={`remittance-container ${isDarkMode ? "dark" : ""}`}>
+      {/* Header section with icon */}
       <div className="remittance-header">
         <div className="header-icon">
           <Icon name={"credit_card"} className="nav-icon-img" />
@@ -33,41 +44,44 @@ export const RemittanceBusinessForm: React.FC<RemittanceForm> = ({
         </div>
       </div>
 
+      {/* Search for frequent contacts */}
       <div className="parent-container">
         <div className="habitual-contact">
           <span className="icon">
             <Icon name="icUser" />
           </span>
-          <span> ¿A quíen deseas enviar dinero?</span>
+          <span> Who do you want to send money to?</span>
         </div>
         <div className="remittance-search">
           <div className="search-bar">
             <input
               type="text"
-              placeholder="Buscar por nombre, email, número..."
+              placeholder="Search by name, email, number..."
             />
             <span className="search-icon">
               <Icon name="icSearch" />
             </span>
           </div>
           <a href="#" className="see-more">
-            ver más
+            See more
           </a>
         </div>
       </div>
 
+      {/* Remittance form section */}
       <div className="remittance-content">
         <p className="form-subtitle">
-          Seleccionar uno de los contactos habituales
+          Select one of your frequent contacts
         </p>
 
         <form onSubmit={handleSubmit} className="remittance-form">
           <div className="container-remesas">
+            {/* First grid of fields */}
             <div className="form-grid">
               <div className="form-group">
                 <input
                   type="text"
-                  placeholder="Nombre a quien envías"
+                  placeholder="Recipient's name"
                   value={formData.recipientName}
                   onChange={(e) =>
                     setFormData({ ...formData, recipientName: e.target.value })
@@ -81,9 +95,9 @@ export const RemittanceBusinessForm: React.FC<RemittanceForm> = ({
                     setFormData({ ...formData, identification: e.target.value })
                   }
                 >
-                  <option value="">Identificación</option>
+                  <option value="">Identification</option>
                   <option value="dni">DNI</option>
-                  <option value="passport">Pasaporte</option>
+                  <option value="passport">Passport</option>
                 </select>
               </div>
               <div className="form-group">
@@ -93,9 +107,9 @@ export const RemittanceBusinessForm: React.FC<RemittanceForm> = ({
                     setFormData({ ...formData, accountType: e.target.value })
                   }
                 >
-                  <option value="">Tipo de cuenta</option>
-                  <option value="savings">Ahorros</option>
-                  <option value="checking">Corriente</option>
+                  <option value="">Account type</option>
+                  <option value="savings">Savings</option>
+                  <option value="checking">Checking</option>
                 </select>
               </div>
               <div className="form-group">
@@ -105,13 +119,14 @@ export const RemittanceBusinessForm: React.FC<RemittanceForm> = ({
                     setFormData({ ...formData, currency: e.target.value })
                   }
                 >
-                  <option value="">Moneda</option>
+                  <option value="">Currency</option>
                   <option value="USD">USD</option>
                   <option value="EUR">EUR</option>
                 </select>
               </div>
             </div>
 
+            {/* Second grid of fields */}
             <div className="form-grid">
               <div className="form-group">
                 <select
@@ -123,15 +138,15 @@ export const RemittanceBusinessForm: React.FC<RemittanceForm> = ({
                     })
                   }
                 >
-                  <option value="">Tipo de remesa</option>
-                  <option value="instant">Instantánea</option>
+                  <option value="">Remittance type</option>
+                  <option value="instant">Instant</option>
                   <option value="regular">Regular</option>
                 </select>
               </div>
               <div className="form-group">
                 <input
                   type="text"
-                  placeholder="Número de identificación"
+                  placeholder="Identification number"
                   value={formData.identificationNumber}
                   onChange={(e) =>
                     setFormData({
@@ -144,7 +159,7 @@ export const RemittanceBusinessForm: React.FC<RemittanceForm> = ({
               <div className="form-group">
                 <input
                   type="text"
-                  placeholder="Número de cuenta"
+                  placeholder="Account number"
                   value={formData.accountNumber}
                   onChange={(e) =>
                     setFormData({
@@ -157,7 +172,7 @@ export const RemittanceBusinessForm: React.FC<RemittanceForm> = ({
               <div className="form-group">
                 <input
                   type="number"
-                  placeholder="Monto a transferir"
+                  placeholder="Amount to transfer"
                   value={formData.amount}
                   onChange={(e) =>
                     setFormData({
@@ -170,8 +185,9 @@ export const RemittanceBusinessForm: React.FC<RemittanceForm> = ({
             </div>
           </div>
 
+          {/* Submit button */}
           <button type="submit" className="submit-button">
-            Confirmar
+            Confirm
           </button>
         </form>
       </div>
