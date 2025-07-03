@@ -93,7 +93,7 @@ select {
   gap: 1.5rem;
   padding: .5rem;
   background-color: var(--bg-primary);
-  
+  font-size: 14px;
 }
 
 .social-media-icon {
