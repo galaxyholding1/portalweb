@@ -1,0 +1,5 @@
+.theme-switcher {
+  position: absolute;
+  cursor: pointer;
+  right: 2rem;
+}

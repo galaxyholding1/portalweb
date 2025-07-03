@@ -4,16 +4,16 @@ import { Link, useLocation } from "react-router";
 // Defines the main navigation items for the landing page.
 const navItems = [
   { name: "Inicio", path: "/" }, // "Home"
-  { name: "Necesidades", path: "/necesidades" }, // "Needs"
-  { name: "Productos y Servicios", path: "/productos" }, // "Products and Services"
-  { name: "Educación financiera", path: "/educacion" }, // "Financial Education"
+  { name: "Necesidades", path: null }, // "Needs"
+  { name: "Productos y Servicios", path: null }, // "Products and Services"
+  { name: "Educación financiera", path: null }, // "Financial Education"
 ];
 
 // Defines the options for the dropdown select, typically leading to different login or specialized sections.
 const linksSelect = [
   { name: "Negocios especializados", path: "/" }, // "Specialized Business" - Note: path '/' might conflict with 'Inicio'
-  { name: "Sucursal Personas", path: "/login-personas" }, // "People Branch"
-  { name: "Sucursal Empresas", path: "/login-empresas" }, // "Business Branch"
+  { name: "Personas", path: "/login-personas" }, // "People Branch"
+  { name: "Empresas", path: "/login-empresas" }, // "Business Branch"
 ];
 
 export const LandingLinks = () => {

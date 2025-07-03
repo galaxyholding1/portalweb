@@ -10,8 +10,11 @@ export const themeListener = () => {
     localStorage.setItem("theme", newTheme);
     useTheme.setState({ theme: newTheme }); // Estado global del tema
   };
-  
+
   mediaQuery.addEventListener("change", handleChange);
-  const removeListener = () => mediaQuery.removeEventListener("change", handleChange);
+
+  const removeListener = () =>
+    mediaQuery.removeEventListener("change", handleChange);
   return removeListener; // Se retorna para poder limpiar
 };
+

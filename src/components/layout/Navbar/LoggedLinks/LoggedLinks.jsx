@@ -10,7 +10,7 @@ import { Icon } from "../../../common/ui/Icon/Icon";
 const navItems = [
   { name: "Solicitud de productos", path: "/home" }, // "Product Request"
   { name: "Seguridad", path: "/seguridad" }, // "Security"
-  { name: "Contactános", path: "/contactanos" }, // "Contact Us"
+  { name: "Contactános", path: null }, // "Contact Us"
 ]
 
 export const LoggedLinks = () => {
@@ -32,7 +32,7 @@ export const LoggedLinks = () => {
       {navItems.map(({ name, path }, i) => (
         <Link
           // Dynamically constructs the `to` path by combining the client's base path with the item's path.
-          to={getPathByClient(pathname) + path}
+          to={path && getPathByClient(pathname) + path}
           key={i + path} // Unique key for each link.
           // Applies the "active-item" class if the current pathname matches the link's path, for styling.
           className={pathname == path ? "active-item" : ""}

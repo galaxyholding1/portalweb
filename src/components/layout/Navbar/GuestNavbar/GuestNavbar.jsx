@@ -1,18 +1,22 @@
 import { Link, useLocation } from "react-router";
 import { SocialMediaLinks } from "../../../common/SocialMediaLinks/SocialMediaLinks";
+import { Icon } from "../../../common/ui/Icon/Icon";
+import { useTheme } from "../../../../store/theme-store";
+import './GuestNavbar.css'
 
 // Defines the navigation links for the secondary navbar.
 const secondaryLinks = [
   { name: "Personas", path: "/" },
-  { name: "Negocios", path: "/home-empresas" },
-  { name: "Corporativos", path: "/corporativos" },
-  { name: "Negocios especializados", path: "/especializados" },
+  { name: "Negocios", path: null },
+  { name: "Corporativos", path: null },
+  { name: "Negocios especializados", path: null },
 ];
 
 export const GuestNavbar = () => {
   // `useLocation` hook from React Router provides access to the current location object,
   // from which `pathname` (the current URL path) is extracted.
   const { pathname } = useLocation();
+  const { theme, toggle } = useTheme();
 
   return (
     <nav className="navbar-galaxy-secondary">
@@ -30,7 +34,13 @@ export const GuestNavbar = () => {
       ))}
 
       {/* Renders the SocialMediaLinks component, which displays social media icons/links. */}
-      { <SocialMediaLinks/> }
+      {<SocialMediaLinks />}
+
+      <Icon
+        onClick={toggle}
+        name={theme == "dark" ? "sun" : "moon"}
+        className="theme-switcher"
+      />
     </nav>
   );
 };

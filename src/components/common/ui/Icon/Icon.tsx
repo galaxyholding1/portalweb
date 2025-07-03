@@ -67,6 +67,8 @@ import icUser from "../../../../assets/icons/ic-user.svg?react";
 import icStatePending from "../../../../assets/icons/ic-state-pending.svg?react";
 import bdgeOk from "../../../../assets/icons/bdge_ok.svg?react";
 import calendarDays from "../../../../assets/icons/calendar_days.svg?react";
+import Moon from "../../../../assets/icons/moon.svg?react";
+import Sun from "../../../../assets/icons/sun.svg?react";
 
 // Mapping from the key, which will be the one indicated in the component
 export const iconsMap = {
@@ -119,7 +121,7 @@ export const iconsMap = {
   ticket: Ticket,
   tramites_digitales: TramitesDigitales,
   ver_mas_icon: VerMasIcon,
-  user_icon:userIcon,
+  user_icon: userIcon,
   x: XIcon,
   x_dark: XIconDark,
   leftarrow: leftarrow,
@@ -134,6 +136,8 @@ export const iconsMap = {
   slider: Slider,
   calendar_days: calendarDays,
   add_plus_circle: addPlusCircle,
+  moon: Moon,
+  sun: Sun,
 };
 
 type IconName = keyof typeof iconsMap;
@@ -145,6 +149,7 @@ interface IconProps {
   className?: string;
   height?: number;
   aspectRatio?: number;
+  onClick?: () => void;
 }
 
 // Author: Juan Ayala
@@ -159,6 +164,7 @@ export const Icon = ({
   color = "var(--text-color)",
   aspectRatio = 1,
   className,
+  onClick = () => {},
 }: IconProps) => {
   const { theme } = useTheme();
 
@@ -177,15 +183,17 @@ export const Icon = ({
     | React.FC<React.SVGProps<SVGSVGElement>>
     | undefined;
 
-  if (!IconComponent) return <NotFound width={24} color="red" />;
+  if (!IconComponent)
+    return <NotFound width={24} color="red" className={className} />;
   //!SECTION
   return (
     <IconComponent
       color={color}
       width={width}
-      height={height ?? 'auto'}
+      height={height ?? "auto"}
       className={className ?? ""}
       aspect-ratio={aspectRatio}
+      onClick={onClick}
     />
   );
 };

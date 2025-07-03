@@ -37,7 +37,7 @@
 
 .accesos-font {
   margin-top: 2px;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .acceso-item:hover {
@@ -80,7 +80,7 @@
   text-align: center;
   padding: 1rem;
   gap: 1rem;
-  
+  color: white!important;
   h3 {
     margin: 0;
     text-align: left;
@@ -92,7 +92,7 @@
 
   p {
     margin: 0;
-    font-size: 16px;
+    font-size: 14px;
     flex-grow: 1;
     display: flex;
     text-align: left;
@@ -103,15 +103,16 @@
 .contenido button {
   padding: 15px 30px;
   background: transparent;
-  color: var(--text-color);
-  border: 1px solid var(--text-color);
+  color: white!important;
+  border: 1px solid white;
   border-radius: 16px;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 18px;
   margin: 0 auto;
   margin-bottom: 10px;
   display: flex;
   transition: all 0.3s ease;
+  
 }
 
 .contenido button:hover {

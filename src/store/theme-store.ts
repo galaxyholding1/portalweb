@@ -22,15 +22,26 @@ const getTheme = () => {
   return theme;
 }
 
+const setThemeGlobal = (theme) => {
+  localStorage.setItem('theme', theme)
+  document.documentElement.setAttribute("data-theme", theme);
+}
+
 type ThemeStore = {
   theme: 'dark' | 'light';
   setTheme: () => void;
+  toggle: () => void;
 }
 
 // con este estado lo que hacemos es manejar los temas 
 // y las preferencias del usuario facilmente
-export const useTheme = create<ThemeStore>()((set) => ({
+export const useTheme = create<ThemeStore>()((set, get) => ({
   theme: getTheme(),
-  setTheme: () => set((theme) => ({theme: theme.theme})),
+  setTheme: () => set((theme) => ({ theme: theme.theme })),
+  toggle: () => {
+    const theme = get().theme === 'dark' ? 'light' : 'dark'
+    setThemeGlobal(theme)
+    set({ theme })
+  }
 }))
 
