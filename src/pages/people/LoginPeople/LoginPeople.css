@@ -61,7 +61,7 @@
   cursor: pointer;
   text-align: center;
   background-color: var(--primary-color);
-  color: var(--text-color);
+  color: white;
   font-size: 20px;
   font-weight: 400;
 }

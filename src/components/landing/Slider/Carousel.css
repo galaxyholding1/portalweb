@@ -26,7 +26,6 @@
   transition: transform 0.5s ease-in-out;
 }
 
-
 .text-section {
   flex: 1;
   padding: 35px;
@@ -65,7 +64,6 @@
   font-size: 0.9rem;
   transition: background-color 0.2s ease;
   padding: 15px 50px;
-  
 }
 
 .carrousel-button a {

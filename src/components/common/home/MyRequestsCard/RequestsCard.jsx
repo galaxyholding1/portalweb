@@ -33,7 +33,7 @@ export const RequestsCard = () => {
       <Card
         title="Mis solicitudes"
         icon={<Icon name="file_document" alt="documento"/>}
-        morePath={`/${screenType}/requests`}
+        // morePath={`/${screenType}/requests`}}
       />
       <div className="requests-list">
         {requestsList.map((request) => (

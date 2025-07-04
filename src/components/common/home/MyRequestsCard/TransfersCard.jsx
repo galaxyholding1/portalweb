@@ -34,7 +34,7 @@ export const TransfersCard = () => {
         icon={
           <Icon name="arrow_left_right"/>
         }
-        morePath={`/${screenType}/requests`} // Path to view more transfer requests.
+        // morePath={`/${screenType}/requests`} // Path to view more transfer requests.
       />
       {/* Table to display the list of transfers. */}
       <div className="transfers-table">

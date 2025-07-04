@@ -14,7 +14,6 @@
   font-size: 1rem; /* Tamaño de texto base */
   border-radius: 8px; /* Bordes redondeados */
   border: 1px solid var(--border-color); /* Borde con color variable */
-  background-color: var(--bg-tertiary); /* Fondo definido por variable */
   color: var(--text-color); /* Color de texto definido por variable */
   transition: border 0.3s; /* Transición suave para el borde */
 }
@@ -51,7 +50,7 @@
   overflow: hidden; /* Oculta desbordamiento del contenido */
   border-radius: 1rem; /* Bordes redondeados */
   border: 1px solid var(--border-color); /* Borde con color personalizado */
-  background-color: var(--bg-secondary); /* Fondo definido por variable */
+  background-color: var(--bg-tertiary); /* Fondo definido por variable */
   box-shadow: 0 0 0 0.5px var(--text-color); /* Sombra sutil tipo borde */
   transition: border 0.3s; /* Transición para borde */
   position: relative; /* Posiciona el ícono dentro del contenedor */

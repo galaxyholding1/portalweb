@@ -33,7 +33,7 @@ const servicios = [
     titulo: "Servicio 01",
     texto: "Protege tu casa y familia con Prosegur Alarms. Gratis instalación si pagas con tarjeta Bancolombia. *Aplican TyC",
     imagen: serviceOne,
-    link: "/servicio-01",
+    link: null,
   },
   {
     id: 2,
@@ -41,7 +41,7 @@ const servicios = [
     titulo: "Servicio 02",
     texto: "Protege tu casa y familia con Prosegur Alarms. Gratis.",
     imagen: serviceTwo,
-    link: "/servicio-02",
+    link: null,
   },
   {
     id: 3,
@@ -49,7 +49,7 @@ const servicios = [
     titulo: "Servicio 03",
     texto: "Protege tu casa y familia con Prosegur Alarms. Gratis instalación si pagas con tarjetas de crédito.",
     imagen: serviceThree,
-    link: "/servicio-03",
+    link: null,
   },
 ];
 

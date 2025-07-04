@@ -19,9 +19,9 @@ export const CarouselCards = ({ cards }) => {
             // `transform`: Translates cards horizontally to center the active one and position others.
             // The `115%` value dictates the spacing and overlap between cards.
             style={{
-              transform: `translate(${115 * (i - index)}%, 0) scale(${
-                index == i ? 1 : 0.85
-              })`,
+              transform: `translateX(${
+                97 * (i - index)
+              }%) translateY(0) scale(${index == i ? 1 : 0.85})`,
               transformOrigin: "center center",
             }}
           >

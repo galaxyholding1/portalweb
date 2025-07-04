@@ -11,9 +11,9 @@ const navItems = [
 
 // Defines the options for the dropdown select, typically leading to different login or specialized sections.
 const linksSelect = [
-  { name: "Negocios especializados", path: "/" }, // "Specialized Business" - Note: path '/' might conflict with 'Inicio'
   { name: "Personas", path: "/login-personas" }, // "People Branch"
   { name: "Empresas", path: "/login-empresas" }, // "Business Branch"
+  { name: "Negocios especializados", path: "/" }, // "Specialized Business" - Note: path '/' might conflict with 'Inicio'
 ];
 
 export const LandingLinks = () => {
